@@ -1,0 +1,25 @@
+{
+  "agentId": "csatnps-aggregator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent csatnps-aggregator-github-pack (CSATNPSAggregator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"csatnps-aggregator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"csatnps-aggregator-github-pack.tool.read\",\n    \"csatnps-aggregator-github-pack.tool.search\",\n    \"csatnps-aggregator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "0a52d003027ba2ff3150ba9305328b97f1f4062fc7bc577b3363f6643e42f66a"
+  },
+  "generatedAt": "2026-03-24T04:54:31.493Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "csatnps-aggregator-github-pack",
+    "CSATNPSAggregator Agent"
+  ],
+  "sourceChecksum": "2baa09916bf7d492979d1e329ccc1db975d51445891f3d9300c576a81339be64",
+  "sourcePath": ".github/agents/cycle-09/csatnps-aggregator.agent.md"
+}

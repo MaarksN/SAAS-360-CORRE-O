@@ -1,0 +1,84 @@
+{
+  "adapters": {
+    "adapterFactoryPath": "apps/worker/src/agents/runtime.tools.ts",
+    "adapterMode": "manifest-capability-tool",
+    "entries": [
+      {
+        "action": "tool:execute",
+        "adapterType": "ManifestCapabilityTool",
+        "ready": true,
+        "toolId": "annual-report-analyzer-github-pack.tool.read",
+        "toolName": "Read"
+      },
+      {
+        "action": "tool:execute",
+        "adapterType": "ManifestCapabilityTool",
+        "ready": true,
+        "toolId": "annual-report-analyzer-github-pack.tool.search",
+        "toolName": "Search"
+      },
+      {
+        "action": "tool:execute",
+        "adapterType": "ManifestCapabilityTool",
+        "ready": true,
+        "toolId": "annual-report-analyzer-github-pack.tool.agent",
+        "toolName": "Agent"
+      }
+    ],
+    "ready": true
+  },
+  "collaborators": [
+    "planner-github-pack",
+    "implementer-github-pack",
+    "reviewer-github-pack"
+  ],
+  "evidence": {
+    "dryRunArtifactPath": "packages/agent-packs/github-agents-v1/annual-report-analyzer-github-pack/evidence.json",
+    "generatedAt": "2026-03-24T04:54:30.658Z",
+    "ready": true,
+    "sourceChecksum": "18b1ea1d5b7feaa113161f11d4ac31378aee94c592689e8fbe398732bbf459f4",
+    "sourcePath": ".github/agents/cycle-04/annual-report-analyzer.agent.md"
+  },
+  "integration": {
+    "apiBindingPath": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "catalogRoot": "packages/agent-packs/github-agents-v1",
+    "discoverableQueries": [
+      "annual-report-analyzer-github-pack",
+      "AnnualReportAnalyzer Agent"
+    ],
+    "ready": true,
+    "runtimeProvider": "manifest-runtime",
+    "runtimeToolsBindingPath": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBindingPath": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "manifest": {
+    "manifestPath": "packages/agent-packs/github-agents-v1/annual-report-analyzer-github-pack/manifest.json",
+    "manifestVersion": "1.0.0",
+    "ready": true
+  },
+  "policy": {
+    "enginePath": "packages/agents-core/src/policy/engine.ts",
+    "ready": true,
+    "requiredActions": [
+      "tool:execute",
+      "memory:read",
+      "memory:write",
+      "learning:read",
+      "learning:write",
+      "audit:write",
+      "report:read",
+      "approval:request",
+      "decision:recommend",
+      "workflow:trigger"
+    ],
+    "ruleCount": 10
+  },
+  "readiness": {
+    "adapters": true,
+    "evidence": true,
+    "integration": true,
+    "manifest": true,
+    "overall": true,
+    "policy": true
+  }
+}

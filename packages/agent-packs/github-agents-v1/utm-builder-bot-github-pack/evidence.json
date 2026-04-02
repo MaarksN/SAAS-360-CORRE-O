@@ -1,0 +1,25 @@
+{
+  "agentId": "utm-builder-bot-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent utm-builder-bot-github-pack (UTMBuilderBot Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"utm-builder-bot-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"utm-builder-bot-github-pack.tool.read\",\n    \"utm-builder-bot-github-pack.tool.search\",\n    \"utm-builder-bot-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "23dd6aeda9f16d31410f391403e77a201304863cc13a4c4304681fdd5483dc43"
+  },
+  "generatedAt": "2026-03-24T04:54:31.438Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "utm-builder-bot-github-pack",
+    "UTMBuilderBot Agent"
+  ],
+  "sourceChecksum": "b7272cfe726831f6cfebf3793c4070082d953abbb4d32dcfc0c726a0db469871",
+  "sourcePath": ".github/agents/cycle-08/utm-builder-bot.agent.md"
+}

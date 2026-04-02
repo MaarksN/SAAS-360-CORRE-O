@@ -1,0 +1,25 @@
+{
+  "agentId": "resource-balancer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent resource-balancer-github-pack (ResourceBalancer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"resource-balancer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"resource-balancer-github-pack.tool.read\",\n    \"resource-balancer-github-pack.tool.search\",\n    \"resource-balancer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "d107584c14c5d8f6b378d52d314409ae60a9f4f57d5708b2de1a5fab57e89c58"
+  },
+  "generatedAt": "2026-03-24T04:54:30.483Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "resource-balancer-github-pack",
+    "ResourceBalancer Agent"
+  ],
+  "sourceChecksum": "1f3af5fd8cf60c3a51dc7fa7805172f7841fb11e4bb97b33308202c979d4771a",
+  "sourcePath": ".github/agents/cycle-02/resource-balancer.agent.md"
+}

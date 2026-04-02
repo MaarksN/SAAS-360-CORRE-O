@@ -1,0 +1,25 @@
+{
+  "agentId": "spend-controller-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent spend-controller-github-pack (SpendController Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"spend-controller-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"spend-controller-github-pack.tool.read\",\n    \"spend-controller-github-pack.tool.search\",\n    \"spend-controller-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "6a52270afc6504f4aa74f7632b62e1a17374b990b0eaaa28e84892993ba772d0"
+  },
+  "generatedAt": "2026-03-24T04:54:30.305Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "spend-controller-github-pack",
+    "SpendController Agent"
+  ],
+  "sourceChecksum": "bd59e5762634afeb8c609abd3aec142d97fef4af9f79d1c9e6ff345e24586c77",
+  "sourcePath": ".github/agents/cycle-01/spend-controller.agent.md"
+}

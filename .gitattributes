@@ -1,0 +1,26 @@
+* text=auto eol=lf
+<<<<<<< Updated upstream
+*.bat eol=crlf
+*.cmd eol=crlf
+*.sh eol=lf
+*.py eol=lf
+*.ts eol=lf
+*.js eol=lf
+*.json eol=lf
+*.md eol=lf
+=======
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.sh text eol=lf
+*.md text diff=markdown
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.sql text eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+>>>>>>> Stashed changes

@@ -1,0 +1,25 @@
+{
+  "agentId": "proration-calculator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent proration-calculator-github-pack (ProrationCalculator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"proration-calculator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"proration-calculator-github-pack.tool.read\",\n    \"proration-calculator-github-pack.tool.search\",\n    \"proration-calculator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "e9c45a4737690287a093a442a4afda0823d4617d93071ebf70e2899c6f7a9d33"
+  },
+  "generatedAt": "2026-03-24T04:54:32.285Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "proration-calculator-github-pack",
+    "ProrationCalculator Agent"
+  ],
+  "sourceChecksum": "fb1961662ee2d371f272936f36213408adc80f4a721cb992d1ad0db31731d34d",
+  "sourcePath": ".github/agents/cycle-12/proration-calculator.agent.md"
+}

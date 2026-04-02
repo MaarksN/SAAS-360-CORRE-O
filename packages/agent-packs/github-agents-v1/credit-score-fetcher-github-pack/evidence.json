@@ -1,0 +1,25 @@
+{
+  "agentId": "credit-score-fetcher-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent credit-score-fetcher-github-pack (CreditScoreFetcher Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"credit-score-fetcher-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"credit-score-fetcher-github-pack.tool.read\",\n    \"credit-score-fetcher-github-pack.tool.search\",\n    \"credit-score-fetcher-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "42d6750b951dd4ed311363fad28b0b1b18ce841bc17a50fcac1989075d5a9efc"
+  },
+  "generatedAt": "2026-03-24T04:54:32.401Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "credit-score-fetcher-github-pack",
+    "CreditScoreFetcher Agent"
+  ],
+  "sourceChecksum": "8c286eea213ce096d254fe7a7aef9c44999e8a2a298095de8d4dbe4d5e943819",
+  "sourcePath": ".github/agents/cycle-13/credit-score-fetcher.agent.md"
+}

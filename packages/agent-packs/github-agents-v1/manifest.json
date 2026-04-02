@@ -1,0 +1,79 @@
+{
+  "agent": {
+    "changelog": [
+      "1.0.0 - Descriptor updated for 334 compiled GitHub agents"
+    ],
+    "description": "Catalog descriptor for the compiled .github/agents collection routed through manifest-runtime.",
+    "id": "github-agents-v1-catalog",
+    "kind": "catalog",
+    "name": "GitHub Agents Compiled Collection",
+    "prompt": "Expose, segment and document the compiled GitHub agents collection with manifest, readiness and dry-run evidence.",
+    "tenantId": "catalog",
+    "version": "1.0.0"
+  },
+  "keywords": [
+    "github agents",
+    "compiled collection",
+    "manifest runtime",
+    "catalog",
+    "readiness",
+    "dry run evidence"
+  ],
+  "manifestVersion": "1.0.0",
+  "policies": [
+    {
+      "actions": [
+        "report:read",
+        "audit:write"
+      ],
+      "effect": "allow",
+      "id": "github-agents-v1-catalog.policy.catalog",
+      "name": "Compiled collection governance policy"
+    }
+  ],
+  "skills": [
+    {
+      "description": "Expose compiled collection metadata and readiness coverage.",
+      "id": "github-agents-v1-catalog.skill.collection-governance",
+      "inputSchema": {
+        "type": "object"
+      },
+      "name": "Collection Governance",
+      "outputSchema": {
+        "type": "object"
+      }
+    }
+  ],
+  "tags": {
+    "domain": [
+      "governance"
+    ],
+    "industry": [
+      "cross-industry"
+    ],
+    "level": [
+      "suite"
+    ],
+    "persona": [
+      "catalog-admin"
+    ],
+    "use-case": [
+      "discover",
+      "compiled-github-agents"
+    ]
+  },
+  "tools": [
+    {
+      "description": "Expose compiled collection metadata for marketplace and readiness surfaces.",
+      "id": "github-agents-v1-catalog.tool.collection-index",
+      "inputSchema": {
+        "type": "object"
+      },
+      "name": "Collection Index",
+      "outputSchema": {
+        "type": "object"
+      },
+      "timeoutMs": 15000
+    }
+  ]
+}

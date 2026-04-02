@@ -1,0 +1,43 @@
+{
+  "name": "@birthub/agents-core",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --import tsx --test \"src/**/*.test.ts\"",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "docs": "typedoc --out docs src/index.ts"
+  },
+  "dependencies": {
+    "@birthub/logger": "workspace:^",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsx": "^4.21.0",
+    "typedoc": "^0.28.17",
+    "typescript": "^5.9.3"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./tools": {
+      "types": "./dist/tools/index.d.ts",
+      "import": "./dist/tools/index.js"
+    },
+    "./tools/*": {
+      "types": "./dist/tools/*.d.ts",
+      "import": "./dist/tools/*.js"
+    },
+    "./policy/*": {
+      "types": "./dist/policy/*.d.ts",
+      "import": "./dist/policy/*.js"
+    }
+  }
+}

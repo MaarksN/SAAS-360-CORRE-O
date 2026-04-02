@@ -1,0 +1,25 @@
+{
+  "agentId": "comms-surveillance-bot-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent comms-surveillance-bot-github-pack (CommsSurveillanceBot Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"comms-surveillance-bot-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"comms-surveillance-bot-github-pack.tool.read\",\n    \"comms-surveillance-bot-github-pack.tool.search\",\n    \"comms-surveillance-bot-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "bb4eb1b15a26ea9037efa7f1f9b591e2e26b2fd74c568e1df6618117b67b2950"
+  },
+  "generatedAt": "2026-03-24T04:54:32.478Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "comms-surveillance-bot-github-pack",
+    "CommsSurveillanceBot Agent"
+  ],
+  "sourceChecksum": "a0deb761ad91825a9f162f892a722ffd0a02e5313eb93624a9e5457f813d773b",
+  "sourcePath": ".github/agents/cycle-14/comms-surveillance-bot.agent.md"
+}

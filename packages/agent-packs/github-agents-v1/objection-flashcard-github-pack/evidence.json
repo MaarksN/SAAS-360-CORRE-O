@@ -1,0 +1,25 @@
+{
+  "agentId": "objection-flashcard-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent objection-flashcard-github-pack (ObjectionFlashcard Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"objection-flashcard-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"objection-flashcard-github-pack.tool.read\",\n    \"objection-flashcard-github-pack.tool.search\",\n    \"objection-flashcard-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "44abbf6b4d463463170e048e451c87d9f35402bbc432646cc1f86ac66e29a0c2"
+  },
+  "generatedAt": "2026-03-24T04:54:30.854Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "objection-flashcard-github-pack",
+    "ObjectionFlashcard Agent"
+  ],
+  "sourceChecksum": "2baf347e699d2b0e9af44d1df73fcaa1cceb0ffce201e7c06d2a389f3c40fc89",
+  "sourcePath": ".github/agents/cycle-05/objection-flashcard.agent.md"
+}

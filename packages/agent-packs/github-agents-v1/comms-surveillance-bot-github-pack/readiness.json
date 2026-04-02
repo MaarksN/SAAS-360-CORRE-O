@@ -1,0 +1,84 @@
+{
+  "adapters": {
+    "adapterFactoryPath": "apps/worker/src/agents/runtime.tools.ts",
+    "adapterMode": "manifest-capability-tool",
+    "entries": [
+      {
+        "action": "tool:execute",
+        "adapterType": "ManifestCapabilityTool",
+        "ready": true,
+        "toolId": "comms-surveillance-bot-github-pack.tool.read",
+        "toolName": "Read"
+      },
+      {
+        "action": "tool:execute",
+        "adapterType": "ManifestCapabilityTool",
+        "ready": true,
+        "toolId": "comms-surveillance-bot-github-pack.tool.search",
+        "toolName": "Search"
+      },
+      {
+        "action": "tool:execute",
+        "adapterType": "ManifestCapabilityTool",
+        "ready": true,
+        "toolId": "comms-surveillance-bot-github-pack.tool.agent",
+        "toolName": "Agent"
+      }
+    ],
+    "ready": true
+  },
+  "collaborators": [
+    "planner-github-pack",
+    "implementer-github-pack",
+    "reviewer-github-pack"
+  ],
+  "evidence": {
+    "dryRunArtifactPath": "packages/agent-packs/github-agents-v1/comms-surveillance-bot-github-pack/evidence.json",
+    "generatedAt": "2026-03-24T04:54:32.478Z",
+    "ready": true,
+    "sourceChecksum": "a0deb761ad91825a9f162f892a722ffd0a02e5313eb93624a9e5457f813d773b",
+    "sourcePath": ".github/agents/cycle-14/comms-surveillance-bot.agent.md"
+  },
+  "integration": {
+    "apiBindingPath": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "catalogRoot": "packages/agent-packs/github-agents-v1",
+    "discoverableQueries": [
+      "comms-surveillance-bot-github-pack",
+      "CommsSurveillanceBot Agent"
+    ],
+    "ready": true,
+    "runtimeProvider": "manifest-runtime",
+    "runtimeToolsBindingPath": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBindingPath": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "manifest": {
+    "manifestPath": "packages/agent-packs/github-agents-v1/comms-surveillance-bot-github-pack/manifest.json",
+    "manifestVersion": "1.0.0",
+    "ready": true
+  },
+  "policy": {
+    "enginePath": "packages/agents-core/src/policy/engine.ts",
+    "ready": true,
+    "requiredActions": [
+      "tool:execute",
+      "memory:read",
+      "memory:write",
+      "learning:read",
+      "learning:write",
+      "audit:write",
+      "report:read",
+      "approval:request",
+      "decision:recommend",
+      "workflow:trigger"
+    ],
+    "ruleCount": 10
+  },
+  "readiness": {
+    "adapters": true,
+    "evidence": true,
+    "integration": true,
+    "manifest": true,
+    "overall": true,
+    "policy": true
+  }
+}

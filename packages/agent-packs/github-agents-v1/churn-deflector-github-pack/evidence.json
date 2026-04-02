@@ -1,0 +1,25 @@
+{
+  "agentId": "churn-deflector-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent churn-deflector-github-pack (ChurnDeflector Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"churn-deflector-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"churn-deflector-github-pack.tool.read\",\n    \"churn-deflector-github-pack.tool.search\",\n    \"churn-deflector-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "3f184c6958c40e55ea1359701b2ac31c9f276fb6105ce3e17600336854c06816"
+  },
+  "generatedAt": "2026-03-24T04:54:30.198Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "churn-deflector-github-pack",
+    "ChurnDeflector Agent"
+  ],
+  "sourceChecksum": "8a12c060aac308f4bbb864ca27693e169bc8ffdc643c105b9ffdb984af6b8f4c",
+  "sourcePath": ".github/agents/cycle-01/churn-deflector.agent.md"
+}

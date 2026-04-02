@@ -1,0 +1,47 @@
+{
+  "[SOURCE]": "BirthHub360_Agentes_Parallel_Plan - ExpansionMapper",
+  "source_traceability": "BirthHub360_Agentes_Parallel_Plan - ExpansionMapper",
+  "input": {
+    "constraints": {
+      "currency": "BRL",
+      "language": "pt-BR",
+      "maxActions": 5
+    },
+    "requestId": "seed-expansionmapper-001",
+    "sections": [
+      "emerging_signals",
+      "category_acceleration",
+      "competitor_momentum",
+      "content_velocity",
+      "topic_clusters"
+    ],
+    "segments": [
+      "enterprise",
+      "mid_market",
+      "partners"
+    ],
+    "targetSignalConfidencePct": 44,
+    "tenantId": "tenant_exec_seed",
+    "window": {
+      "endDate": "2026-03-31",
+      "startDate": "2026-03-01"
+    }
+  },
+  "mock_external_sources": {
+    "market_trend_feed": {
+      "dominantTheme": "AI workflow orchestration with measurable revenue impact",
+      "momentumIndex": 71.2,
+      "trendVelocityPct": 64.5
+    },
+    "social_signal_stream": {
+      "emergingTopic": "board-level visibility on CAC-to-payback acceleration",
+      "engagementLiftPct": 38.4,
+      "sentimentShiftPct": 9.7
+    },
+    "category_growth_engine": {
+      "competitorPressurePct": 28.1,
+      "projectedCategoryGrowthPct": 47.3,
+      "whitespaceOpportunityPct": 61.9
+    }
+  }
+}

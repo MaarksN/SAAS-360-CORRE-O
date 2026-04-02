@@ -1,0 +1,11 @@
+timestamp=20260322-205239
+reference_commit=09c4a36
+workspace=C:\Users\Marks\Documents\GitHub\PROJETO-FINAL-BIRTHUB-360-INNOVATION
+commands=
+01 corepack pnpm install --frozen-lockfile
+02 corepack pnpm monorepo:doctor
+03 corepack pnpm release:scorecard
+04 corepack pnpm lint:core
+05 corepack pnpm typecheck:core
+06 corepack pnpm test:core
+07 corepack pnpm build:core

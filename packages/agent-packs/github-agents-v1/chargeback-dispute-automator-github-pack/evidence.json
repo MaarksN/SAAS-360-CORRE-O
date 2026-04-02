@@ -1,0 +1,25 @@
+{
+  "agentId": "chargeback-dispute-automator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent chargeback-dispute-automator-github-pack (ChargebackDisputeAutomator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"chargeback-dispute-automator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"chargeback-dispute-automator-github-pack.tool.read\",\n    \"chargeback-dispute-automator-github-pack.tool.search\",\n    \"chargeback-dispute-automator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "0c25a3ac71b70f038a63a10bc816f69be5bfe6fd206bfc45e2348cb240cba047"
+  },
+  "generatedAt": "2026-03-24T04:54:32.470Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "chargeback-dispute-automator-github-pack",
+    "ChargebackDisputeAutomator Agent"
+  ],
+  "sourceChecksum": "284281c7314ef995427b48719ca3952cdca664dd60b18b5fb6e238bbfab9c9fd",
+  "sourcePath": ".github/agents/cycle-14/chargeback-dispute-automator.agent.md"
+}

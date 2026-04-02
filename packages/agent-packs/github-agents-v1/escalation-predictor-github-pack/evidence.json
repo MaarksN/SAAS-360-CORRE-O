@@ -1,0 +1,25 @@
+{
+  "agentId": "escalation-predictor-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent escalation-predictor-github-pack (EscalationPredictor Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"escalation-predictor-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"escalation-predictor-github-pack.tool.read\",\n    \"escalation-predictor-github-pack.tool.search\",\n    \"escalation-predictor-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "689598872430c04837a8934b311d5326e9566a6131a665c3532085976d3b5454"
+  },
+  "generatedAt": "2026-03-24T04:54:30.231Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "escalation-predictor-github-pack",
+    "EscalationPredictor Agent"
+  ],
+  "sourceChecksum": "4c28aee4a151b61be9f84cbcb884a445202712caa899c9133f1e4ba1903be0a4",
+  "sourcePath": ".github/agents/cycle-01/escalation-predictor.agent.md"
+}

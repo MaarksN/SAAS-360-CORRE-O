@@ -1,0 +1,25 @@
+{
+  "agentId": "territory-balancer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent territory-balancer-github-pack (TerritoryBalancer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"territory-balancer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"territory-balancer-github-pack.tool.read\",\n    \"territory-balancer-github-pack.tool.search\",\n    \"territory-balancer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "399201ff7064b103825e5417385a47176597642fae148390102be39040f917f2"
+  },
+  "generatedAt": "2026-03-24T04:54:31.921Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "territory-balancer-github-pack",
+    "TerritoryBalancer Agent"
+  ],
+  "sourceChecksum": "4121139dfa89483324c40b93e3492263c1dbcac258b9d48293fb95f7539960cb",
+  "sourcePath": ".github/agents/cycle-10/territory-balancer.agent.md"
+}

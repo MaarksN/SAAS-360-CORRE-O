@@ -1,0 +1,25 @@
+{
+  "agentId": "process-walkthrough-automator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent process-walkthrough-automator-github-pack (ProcessWalkthroughAutomator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"process-walkthrough-automator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"process-walkthrough-automator-github-pack.tool.read\",\n    \"process-walkthrough-automator-github-pack.tool.search\",\n    \"process-walkthrough-automator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "4916d2eac599e611a1edf529107baa9f6aa25de41e9f5d827603389d509d64c5"
+  },
+  "generatedAt": "2026-03-24T04:54:32.705Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "process-walkthrough-automator-github-pack",
+    "ProcessWalkthroughAutomator Agent"
+  ],
+  "sourceChecksum": "610d8ee625d83c5b62d4a001ac85c33d0d9132b0c5123291dbcb34b9e2828e46",
+  "sourcePath": ".github/agents/cycle-15/process-walkthrough-automator.agent.md"
+}

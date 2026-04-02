@@ -1,0 +1,5 @@
+# Temporary legacy exceptions.
+# Format: <sha> <optional note>
+6948a3f bootstrap commit before conventional-commit enforcement
+512dde4000634bc12b03c9162ea57935f03c5525 legacy baseline commit before branch policy hardening
+f628a7ade8ca37624052039b78a4f9efd4eef131 legacy baseline commit before branch policy hardening

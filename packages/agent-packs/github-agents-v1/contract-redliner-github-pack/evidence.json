@@ -1,0 +1,25 @@
+{
+  "agentId": "contract-redliner-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent contract-redliner-github-pack (ContractRedliner Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"contract-redliner-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"contract-redliner-github-pack.tool.read\",\n    \"contract-redliner-github-pack.tool.search\",\n    \"contract-redliner-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "3b40f8869adca1cdfe9f48973ffa31e1530acdb26bf0b869f7a9ca77cb6a8ae2"
+  },
+  "generatedAt": "2026-03-24T04:54:32.210Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "contract-redliner-github-pack",
+    "ContractRedliner Agent"
+  ],
+  "sourceChecksum": "787ed46e11ee39fa373fc24b39246577cce38ff3163011874064ffdd1d97cc15",
+  "sourcePath": ".github/agents/cycle-12/contract-redliner.agent.md"
+}

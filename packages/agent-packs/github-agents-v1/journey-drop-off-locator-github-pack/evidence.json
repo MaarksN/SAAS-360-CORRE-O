@@ -1,0 +1,25 @@
+{
+  "agentId": "journey-drop-off-locator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent journey-drop-off-locator-github-pack (JourneyDropOffLocator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"journey-drop-off-locator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"journey-drop-off-locator-github-pack.tool.read\",\n    \"journey-drop-off-locator-github-pack.tool.search\",\n    \"journey-drop-off-locator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "98a3b2c2b8454d35bd158f7abde166fc365014a6caaeeaa4986a62f572b5bb80"
+  },
+  "generatedAt": "2026-03-24T04:54:32.048Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "journey-drop-off-locator-github-pack",
+    "JourneyDropOffLocator Agent"
+  ],
+  "sourceChecksum": "9282a6f47561f7b8470bb4f0038449b1ff9d16aa7764370ec1dd3e2784f7f5f0",
+  "sourcePath": ".github/agents/cycle-11/journey-drop-off-locator.agent.md"
+}

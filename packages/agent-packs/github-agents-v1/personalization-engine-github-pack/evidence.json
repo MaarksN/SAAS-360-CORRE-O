@@ -1,0 +1,25 @@
+{
+  "agentId": "personalization-engine-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent personalization-engine-github-pack (PersonalizationEngine Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"personalization-engine-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"personalization-engine-github-pack.tool.read\",\n    \"personalization-engine-github-pack.tool.search\",\n    \"personalization-engine-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "05608e23dcd7ce2b2b9b301f3e611e89059c097458b23727e81b87cff53af888"
+  },
+  "generatedAt": "2026-03-24T04:54:30.606Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "personalization-engine-github-pack",
+    "PersonalizationEngine Agent"
+  ],
+  "sourceChecksum": "8c0ec6661c6a92e03cc2af8174cb285eb3eaadc79a15b201a32407dea4d6e3f4",
+  "sourcePath": ".github/agents/cycle-03/personalization-engine.agent.md"
+}

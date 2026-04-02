@@ -1,0 +1,25 @@
+{
+  "agentId": "pricing-tester-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent pricing-tester-github-pack (PricingTester Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"pricing-tester-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"pricing-tester-github-pack.tool.read\",\n    \"pricing-tester-github-pack.tool.search\",\n    \"pricing-tester-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "e9cd5c84540377f06a8d373232ccd20da25208dc1388473ab7b580c6e4285fb6"
+  },
+  "generatedAt": "2026-03-24T04:54:30.885Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "pricing-tester-github-pack",
+    "PricingTester Agent"
+  ],
+  "sourceChecksum": "b20d0f56dad587127e84493bf40946250ad0383ba0ea50b257b93df420baf4a1",
+  "sourcePath": ".github/agents/cycle-05/pricing-tester.agent.md"
+}

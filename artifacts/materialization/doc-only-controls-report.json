@@ -1,0 +1,73 @@
+{
+  "generatedAt": "2026-04-01T02:34:05.336Z",
+  "checks": {
+    "codeowners-present": {
+      "status": "pass"
+    },
+    "f11-evidence-bundle-complete": {
+      "status": "pass",
+      "missingF11Evidence": []
+    },
+    "frozen-lockfile-in-workflows": {
+      "status": "pass"
+    },
+    "workflow-timeouts": {
+      "status": "pass",
+      "missingTimeout": []
+    },
+    "branch-protection-baseline": {
+      "status": "pass",
+      "hasDevelopBranchProtection": true,
+      "hasMainBranchProtection": true,
+      "missingStatusChecksByBranch": {
+        "develop": [],
+        "main": []
+      },
+      "missingStatusChecks": []
+    },
+    "setup-node-version-pinned": {
+      "status": "pass",
+      "setupNodeLines": [
+        "v6",
+        "v6",
+        "v6",
+        "v6",
+        "v6",
+        "v6"
+      ]
+    },
+    "setup-python-version-pinned": {
+      "status": "pass",
+      "setupPythonLines": [
+        "v6",
+        "v6",
+        "v6"
+      ]
+    },
+    "node-version-aligned-with-nvmrc": {
+      "status": "pass",
+      "nvmrc": "24.14.0"
+    },
+    "python-version-aligned-with-python-version": {
+      "status": "pass",
+      "pythonVersion": "3.12"
+    },
+    "pnpm-version-pinned-in-packageManager": {
+      "status": "pass",
+      "packageManager": "pnpm@9.1.0"
+    },
+    "f11-docs-consistent-with-latest-closure": {
+      "status": "pass",
+      "staleMentions": []
+    },
+    "pr-template-merge-markers": {
+      "status": "pass"
+    },
+    "legacy-db-imports-quarantined": {
+      "status": "pass",
+      "forbiddenImportHits": []
+    }
+  },
+  "blockers": [],
+  "warnings": []
+}

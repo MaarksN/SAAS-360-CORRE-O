@@ -1,0 +1,565 @@
+{
+  "generatedAt": "2026-03-23T02:41:05.090Z",
+  "filesScanned": 813,
+  "functionsScanned": 5229,
+  "modules": [
+    {
+      "module": "packages/agents-core",
+      "functions": 485,
+      "avgComplexity": 4.87,
+      "p95Complexity": 9,
+      "maxComplexity": 471,
+      "functionsAtOrAbove20": 7,
+      "hotspots": [
+        {
+          "file": "packages/agents-core/docs/assets/main.js",
+          "function": "<anonymous>",
+          "line": 3,
+          "complexity": 471
+        },
+        {
+          "file": "packages/agents-core/docs/assets/main.js",
+          "function": "<anonymous>",
+          "line": 3,
+          "complexity": 281
+        },
+        {
+          "file": "packages/agents-core/docs/assets/main.js",
+          "function": "<anonymous>",
+          "line": 3,
+          "complexity": 281
+        },
+        {
+          "file": "packages/agents-core/docs/assets/main.js",
+          "function": "<anonymous>",
+          "line": 4,
+          "complexity": 28
+        },
+        {
+          "file": "packages/agents-core/docs/assets/main.js",
+          "function": "V",
+          "line": 4,
+          "complexity": 28
+        },
+        {
+          "file": "packages/agents-core/docs/assets/main.js",
+          "function": "<anonymous>",
+          "line": 4,
+          "complexity": 28
+        },
+        {
+          "file": "packages/agents-core/docs/assets/main.js",
+          "function": "ot",
+          "line": 5,
+          "complexity": 27
+        }
+      ]
+    },
+    {
+      "module": "apps/api",
+      "functions": 1194,
+      "avgComplexity": 2.95,
+      "p95Complexity": 9,
+      "maxComplexity": 38,
+      "functionsAtOrAbove20": 3,
+      "hotspots": [
+        {
+          "file": "apps/api/src/modules/connectors/router.ts",
+          "function": "createConnectorsRouter",
+          "line": 170,
+          "complexity": 38
+        },
+        {
+          "file": "apps/api/src/modules/agents/service.config.ts",
+          "function": "parseAgentConfig",
+          "line": 6,
+          "complexity": 26
+        },
+        {
+          "file": "apps/api/src/app/auth-routes.ts",
+          "function": "registerAuthRoutes",
+          "line": 28,
+          "complexity": 22
+        }
+      ]
+    },
+    {
+      "module": "packages/workflows-core",
+      "functions": 68,
+      "avgComplexity": 3.34,
+      "p95Complexity": 10,
+      "maxComplexity": 35,
+      "functionsAtOrAbove20": 1,
+      "hotspots": [
+        {
+          "file": "packages/workflows-core/src/nodes/executeStep.ts",
+          "function": "executeStep",
+          "line": 31,
+          "complexity": 35
+        }
+      ]
+    },
+    {
+      "module": "apps/web",
+      "functions": 614,
+      "avgComplexity": 2.69,
+      "p95Complexity": 9,
+      "maxComplexity": 35,
+      "functionsAtOrAbove20": 4,
+      "hotspots": [
+        {
+          "file": "apps/web/app/(dashboard)/workflows/[id]/runs/page.tsx",
+          "function": "WorkflowRunsPage",
+          "line": 84,
+          "complexity": 35
+        },
+        {
+          "file": "apps/web/app/(dashboard)/settings/developers/webhooks/page.tsx",
+          "function": "DeveloperWebhooksPage",
+          "line": 35,
+          "complexity": 33
+        },
+        {
+          "file": "apps/web/components/agents/FeedbackWidget.tsx",
+          "function": "FeedbackWidget",
+          "line": 40,
+          "complexity": 20
+        },
+        {
+          "file": "apps/web/stores/notification-store.ts",
+          "function": "<anonymous>",
+          "line": 72,
+          "complexity": 20
+        }
+      ]
+    },
+    {
+      "module": "apps/dashboard",
+      "functions": 411,
+      "avgComplexity": 2.29,
+      "p95Complexity": 6,
+      "maxComplexity": 33,
+      "functionsAtOrAbove20": 4,
+      "hotspots": [
+        {
+          "file": "apps/dashboard/components/sales-os/ToolView.tsx",
+          "function": "ToolView",
+          "line": 18,
+          "complexity": 33
+        },
+        {
+          "file": "apps/dashboard/app/sales/page.tsx",
+          "function": "SalesPage",
+          "line": 81,
+          "complexity": 26
+        },
+        {
+          "file": "apps/dashboard/components/agent-activity-log.tsx",
+          "function": "AgentActivityLog",
+          "line": 40,
+          "complexity": 21
+        },
+        {
+          "file": "apps/dashboard/components/sales-os/ChatMentor.tsx",
+          "function": "ChatMentor",
+          "line": 21,
+          "complexity": 21
+        }
+      ]
+    },
+    {
+      "module": "packages/agents",
+      "functions": 812,
+      "avgComplexity": 3.33,
+      "p95Complexity": 21,
+      "maxComplexity": 31,
+      "functionsAtOrAbove20": 42,
+      "hotspots": [
+        {
+          "file": "packages/agents/executivos/brandguardian/agent.ts",
+          "function": "run",
+          "line": 489,
+          "complexity": 31
+        },
+        {
+          "file": "packages/agents/executivos/churndeflector/agent.ts",
+          "function": "run",
+          "line": 489,
+          "complexity": 31
+        },
+        {
+          "file": "packages/agents/executivos/competitorxray/agent.ts",
+          "function": "run",
+          "line": 487,
+          "complexity": 31
+        },
+        {
+          "file": "packages/agents/executivos/crisisnavigator/agent.ts",
+          "function": "run",
+          "line": 487,
+          "complexity": 31
+        },
+        {
+          "file": "packages/agents/executivos/culturepulse/agent.ts",
+          "function": "run",
+          "line": 489,
+          "complexity": 31
+        },
+        {
+          "file": "packages/agents/executivos/expansionmapper/agent.ts",
+          "function": "run",
+          "line": 489,
+          "complexity": 31
+        },
+        {
+          "file": "packages/agents/executivos/marketsentinel/agent.ts",
+          "function": "run",
+          "line": 489,
+          "complexity": 31
+        },
+        {
+          "file": "packages/agents/executivos/narrativeweaver/agent.ts",
+          "function": "run",
+          "line": 497,
+          "complexity": 31
+        },
+        {
+          "file": "packages/agents/executivos/pipelineoracle/agent.ts",
+          "function": "run",
+          "line": 490,
+          "complexity": 31
+        },
+        {
+          "file": "packages/agents/executivos/pricingoptimizer/agent.ts",
+          "function": "run",
+          "line": 487,
+          "complexity": 31
+        }
+      ]
+    },
+    {
+      "module": "apps/api-gateway",
+      "functions": 521,
+      "avgComplexity": 2.26,
+      "p95Complexity": 7,
+      "maxComplexity": 25,
+      "functionsAtOrAbove20": 3,
+      "hotspots": [
+        {
+          "file": "apps/api-gateway/src/schemas/lead-schemas.ts",
+          "function": "listLeadsQuerySchema",
+          "line": 83,
+          "complexity": 25
+        },
+        {
+          "file": "apps/api-gateway/src/schemas/lead-schemas.ts",
+          "function": "updateLeadBodySchema",
+          "line": 32,
+          "complexity": 21
+        },
+        {
+          "file": "apps/api-gateway/src/repositories/lead-repository.ts",
+          "function": "list",
+          "line": 66,
+          "complexity": 20
+        }
+      ]
+    },
+    {
+      "module": "apps/worker",
+      "functions": 450,
+      "avgComplexity": 2.39,
+      "p95Complexity": 8,
+      "maxComplexity": 24,
+      "functionsAtOrAbove20": 3,
+      "hotspots": [
+        {
+          "file": "apps/worker/src/worker.process-job.ts",
+          "function": "createJobProcessor",
+          "line": 36,
+          "complexity": 24
+        },
+        {
+          "file": "apps/worker/src/worker.process-job.ts",
+          "function": "<anonymous>",
+          "line": 45,
+          "complexity": 24
+        },
+        {
+          "file": "apps/worker/src/agents/conversations.ts",
+          "function": "ensureConversationThread",
+          "line": 58,
+          "complexity": 20
+        }
+      ]
+    },
+    {
+      "module": "packages/database",
+      "functions": 213,
+      "avgComplexity": 2.55,
+      "p95Complexity": 10,
+      "maxComplexity": 22,
+      "functionsAtOrAbove20": 1,
+      "hotspots": [
+        {
+          "file": "packages/database/scripts/check-migration-governance.ts",
+          "function": "main",
+          "line": 21,
+          "complexity": 22
+        }
+      ]
+    },
+    {
+      "module": "apps/voice-engine",
+      "functions": 44,
+      "avgComplexity": 2.3,
+      "p95Complexity": 5,
+      "maxComplexity": 17,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/integrations",
+      "functions": 57,
+      "avgComplexity": 1.81,
+      "p95Complexity": 5,
+      "maxComplexity": 13,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/testing",
+      "functions": 14,
+      "avgComplexity": 2.5,
+      "p95Complexity": 12,
+      "maxComplexity": 12,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/config",
+      "functions": 43,
+      "avgComplexity": 2.63,
+      "p95Complexity": 9,
+      "maxComplexity": 12,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/logger",
+      "functions": 53,
+      "avgComplexity": 2.45,
+      "p95Complexity": 8,
+      "maxComplexity": 11,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/agents-registry",
+      "functions": 46,
+      "avgComplexity": 2.11,
+      "p95Complexity": 5,
+      "maxComplexity": 9,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "agents/ae",
+      "functions": 4,
+      "avgComplexity": 4.5,
+      "p95Complexity": 8,
+      "maxComplexity": 8,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "agents/financeiro",
+      "functions": 4,
+      "avgComplexity": 4.5,
+      "p95Complexity": 8,
+      "maxComplexity": 8,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "agents/juridico",
+      "functions": 4,
+      "avgComplexity": 4.5,
+      "p95Complexity": 8,
+      "maxComplexity": 8,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "agents/marketing",
+      "functions": 4,
+      "avgComplexity": 4.5,
+      "p95Complexity": 8,
+      "maxComplexity": 8,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "agents/pos_venda",
+      "functions": 4,
+      "avgComplexity": 4.5,
+      "p95Complexity": 8,
+      "maxComplexity": 8,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "apps/agent-orchestrator",
+      "functions": 13,
+      "avgComplexity": 3.46,
+      "p95Complexity": 8,
+      "maxComplexity": 8,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/auth",
+      "functions": 18,
+      "avgComplexity": 1.78,
+      "p95Complexity": 7,
+      "maxComplexity": 7,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "agents/sdr",
+      "functions": 4,
+      "avgComplexity": 3.5,
+      "p95Complexity": 6,
+      "maxComplexity": 6,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/agent-runtime",
+      "functions": 5,
+      "avgComplexity": 2.8,
+      "p95Complexity": 6,
+      "maxComplexity": 6,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/llm-client",
+      "functions": 7,
+      "avgComplexity": 3.14,
+      "p95Complexity": 6,
+      "maxComplexity": 6,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/queue",
+      "functions": 50,
+      "avgComplexity": 1.52,
+      "p95Complexity": 4,
+      "maxComplexity": 5,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "agents/analista",
+      "functions": 4,
+      "avgComplexity": 2.5,
+      "p95Complexity": 4,
+      "maxComplexity": 4,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "agents/ldr",
+      "functions": 3,
+      "avgComplexity": 2,
+      "p95Complexity": 4,
+      "maxComplexity": 4,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "agents/shared",
+      "functions": 4,
+      "avgComplexity": 1.75,
+      "p95Complexity": 4,
+      "maxComplexity": 4,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/conversation-core",
+      "functions": 10,
+      "avgComplexity": 1.3,
+      "p95Complexity": 3,
+      "maxComplexity": 3,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/security",
+      "functions": 14,
+      "avgComplexity": 1.29,
+      "p95Complexity": 3,
+      "maxComplexity": 3,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/agent-packs",
+      "functions": 11,
+      "avgComplexity": 1.36,
+      "p95Complexity": 2,
+      "maxComplexity": 2,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/db",
+      "functions": 20,
+      "avgComplexity": 1.2,
+      "p95Complexity": 2,
+      "maxComplexity": 2,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/emails",
+      "functions": 5,
+      "avgComplexity": 1.4,
+      "p95Complexity": 2,
+      "maxComplexity": 2,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/shared",
+      "functions": 2,
+      "avgComplexity": 1,
+      "p95Complexity": 1,
+      "maxComplexity": 1,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/shared-types",
+      "functions": 2,
+      "avgComplexity": 1,
+      "p95Complexity": 1,
+      "maxComplexity": 1,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    },
+    {
+      "module": "packages/utils",
+      "functions": 12,
+      "avgComplexity": 1,
+      "p95Complexity": 1,
+      "maxComplexity": 1,
+      "functionsAtOrAbove20": 0,
+      "hotspots": []
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "agentId": "false-positive-reducer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent false-positive-reducer-github-pack (FalsePositiveReducer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"false-positive-reducer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"false-positive-reducer-github-pack.tool.read\",\n    \"false-positive-reducer-github-pack.tool.search\",\n    \"false-positive-reducer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "1c345480dada961bbd1407146caea0569701e53167a92685d1e714b7a6d0e19d"
+  },
+  "generatedAt": "2026-03-24T04:54:32.676Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "false-positive-reducer-github-pack",
+    "FalsePositiveReducer Agent"
+  ],
+  "sourceChecksum": "a9d78939143b858aa82b309f58753e022b4d1342747afa181af1a5a537e6c3ec",
+  "sourcePath": ".github/agents/cycle-15/false-positive-reducer.agent.md"
+}

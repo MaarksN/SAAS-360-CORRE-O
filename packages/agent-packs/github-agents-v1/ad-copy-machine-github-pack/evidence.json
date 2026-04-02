@@ -1,0 +1,25 @@
+{
+  "agentId": "ad-copy-machine-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent ad-copy-machine-github-pack (AdCopyMachine Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"ad-copy-machine-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"ad-copy-machine-github-pack.tool.read\",\n    \"ad-copy-machine-github-pack.tool.search\",\n    \"ad-copy-machine-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "531c6bd83a933b49d8daaff2bea6bc0f7ce59b1e6ddd9dce26b3b1e48fc2a6ef"
+  },
+  "generatedAt": "2026-03-24T04:54:31.101Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "ad-copy-machine-github-pack",
+    "AdCopyMachine Agent"
+  ],
+  "sourceChecksum": "53cf97490feb4c797a30027f64bd93f0bd281079f0a8f0ea6b713b9705066367",
+  "sourcePath": ".github/agents/cycle-07/ad-copy-machine.agent.md"
+}

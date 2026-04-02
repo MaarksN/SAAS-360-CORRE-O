@@ -1,0 +1,25 @@
+{
+  "agentId": "executive-demo-curator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent executive-demo-curator-github-pack (ExecutiveDemoCurator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"executive-demo-curator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"executive-demo-curator-github-pack.tool.read\",\n    \"executive-demo-curator-github-pack.tool.search\",\n    \"executive-demo-curator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "d0540d7317fc0fbcee38bdc5a2def7b4b0d090a08c197bbd44299203bedc803f"
+  },
+  "generatedAt": "2026-03-24T04:54:30.965Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "executive-demo-curator-github-pack",
+    "ExecutiveDemoCurator Agent"
+  ],
+  "sourceChecksum": "fff434bcbee0e8b526edbc1eb311307a87ca67d25a3cf5f14ed3c53611688c56",
+  "sourcePath": ".github/agents/cycle-06/executive-demo-curator.agent.md"
+}

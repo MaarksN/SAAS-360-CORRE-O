@@ -1,0 +1,25 @@
+{
+  "agentId": "data-silo-bridger-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent data-silo-bridger-github-pack (DataSiloBridger Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"data-silo-bridger-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"data-silo-bridger-github-pack.tool.read\",\n    \"data-silo-bridger-github-pack.tool.search\",\n    \"data-silo-bridger-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "cb4b67862c287232aca6894c24875a62309938c1c67b309fd86cbb46a286b46a"
+  },
+  "generatedAt": "2026-03-24T04:54:31.795Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "data-silo-bridger-github-pack",
+    "DataSiloBridger Agent"
+  ],
+  "sourceChecksum": "141f47ffdd8580fdd3dee7fb4ed8d7847fe5116383d8ec458b2c414cafb402c3",
+  "sourcePath": ".github/agents/cycle-10/data-silo-bridger.agent.md"
+}

@@ -1,0 +1,153 @@
+{
+  "currentSprint": "2026-S12",
+  "items": [
+    {
+      "id": "TD-001",
+      "title": "Root documentation entrypoints drifted from the real repo structure",
+      "domain": "documentation",
+      "status": "closed",
+      "priority": "P1",
+      "owner": "Platform Enablement",
+      "residualRisk": "low",
+      "evidence": [
+        "README.md",
+        "docs/f10/README.md"
+      ]
+    },
+    {
+      "id": "TD-002",
+      "title": "Operational runbooks were fragmented and missing rollback and disaster recovery playbooks",
+      "domain": "operations",
+      "status": "closed",
+      "priority": "P1",
+      "owner": "Platform Engineering",
+      "residualRisk": "low",
+      "evidence": [
+        "docs/runbooks/deploy-canonical-stack.md",
+        "docs/runbooks/rollback-canonical-stack.md",
+        "docs/runbooks/disaster-recovery.md"
+      ]
+    },
+    {
+      "id": "TD-003",
+      "title": "Documentation governance lacked automated link validation and reproducible dependency graph generation",
+      "domain": "tooling",
+      "status": "closed",
+      "priority": "P1",
+      "owner": "Developer Experience",
+      "residualRisk": "low",
+      "evidence": [
+        "scripts/docs/check-doc-links.mjs",
+        "scripts/docs/generate-dependency-graph.mjs",
+        ".github/workflows/ci.yml"
+      ]
+    },
+    {
+      "id": "TD-004",
+      "title": "Technical debt reporting had no single tracker, dashboard, or executive summary",
+      "domain": "governance",
+      "status": "closed",
+      "priority": "P1",
+      "owner": "Engineering Management",
+      "residualRisk": "low",
+      "evidence": [
+        "docs/technical-debt/README.md",
+        "docs/technical-debt/dashboard.md",
+        "artifacts/documentation/technical-health-dashboard.md"
+      ]
+    },
+    {
+      "id": "TD-005",
+      "title": "OpenAPI coverage is still partial for the full apps/api surface",
+      "domain": "api",
+      "status": "open",
+      "priority": "P1",
+      "owner": "API Core",
+      "residualRisk": "high",
+      "evidence": [
+        "apps/api/src/docs/openapi.ts",
+        "docs/f10/architecture.md"
+      ]
+    },
+    {
+      "id": "TD-006",
+      "title": "Legacy compatibility surfaces remain operational and increase documentation drift risk",
+      "domain": "architecture",
+      "status": "open",
+      "priority": "P2",
+      "owner": "Architecture Council",
+      "residualRisk": "medium",
+      "evidence": [
+        "docs/processes/DEPRECACAO_E_CUTOVER.md",
+        "docs/f10/architecture.md"
+      ]
+    },
+    {
+      "id": "TD-007",
+      "title": "Knowledge transfer recordings and owner sign-off still depend on scheduled human sessions",
+      "domain": "enablement",
+      "status": "in-progress",
+      "priority": "P2",
+      "owner": "Engineering Managers",
+      "residualRisk": "medium",
+      "evidence": [
+        "docs/f10/knowledge-transfer.md",
+        "docs/f10/continuity-validation.md"
+      ]
+    }
+  ],
+  "velocity": [
+    {
+      "sprint": "2026-S10",
+      "opened": 6,
+      "closed": 2
+    },
+    {
+      "sprint": "2026-S11",
+      "opened": 4,
+      "closed": 3
+    },
+    {
+      "sprint": "2026-S12",
+      "opened": 2,
+      "closed": 4
+    }
+  ],
+  "debtFeatureRatio": [
+    {
+      "sprint": "2026-S10",
+      "debtClosed": 2,
+      "featuresClosed": 10,
+      "ratio": 0.2
+    },
+    {
+      "sprint": "2026-S11",
+      "debtClosed": 3,
+      "featuresClosed": 9,
+      "ratio": 0.33
+    },
+    {
+      "sprint": "2026-S12",
+      "debtClosed": 4,
+      "featuresClosed": 8,
+      "ratio": 0.5
+    }
+  ],
+  "focusAreas": [
+    {
+      "domain": "api",
+      "risk": "high",
+      "action": "Expand OpenAPI route registration from the canonical modules before the next external integration release."
+    },
+    {
+      "domain": "architecture",
+      "risk": "medium",
+      "action": "Reduce legacy surface ownership by completing cutover from dashboard and gateway compatibility lanes."
+    },
+    {
+      "domain": "enablement",
+      "risk": "medium",
+      "action": "Book knowledge transfer sessions and collect owner sign-off using the new F10 registers."
+    }
+  ]
+}

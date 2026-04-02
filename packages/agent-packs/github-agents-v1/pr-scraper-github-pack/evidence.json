@@ -1,0 +1,25 @@
+{
+  "agentId": "pr-scraper-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent pr-scraper-github-pack (PRScraper Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"pr-scraper-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"pr-scraper-github-pack.tool.read\",\n    \"pr-scraper-github-pack.tool.search\",\n    \"pr-scraper-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "dd19e4c3b1640fc4c1a56716a5e6d23b9c8c63dad37fd3d105939c214fdaa80b"
+  },
+  "generatedAt": "2026-03-24T04:54:31.387Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "pr-scraper-github-pack",
+    "PRScraper Agent"
+  ],
+  "sourceChecksum": "dac507344e6be84cb0a0c258037f7ed54ee18b2421fd15c3ab459ec520e19b7f",
+  "sourcePath": ".github/agents/cycle-08/pr-scraper.agent.md"
+}

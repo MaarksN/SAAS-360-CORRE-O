@@ -1,0 +1,25 @@
+{
+  "agentId": "adoption-metric-analyzer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent adoption-metric-analyzer-github-pack (AdoptionMetricAnalyzer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"adoption-metric-analyzer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"adoption-metric-analyzer-github-pack.tool.read\",\n    \"adoption-metric-analyzer-github-pack.tool.search\",\n    \"adoption-metric-analyzer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "8a3eb3e4c98fc0bf25d5fdc3f3d506d1744325aa14cf7e8050a451a39d4d6bae"
+  },
+  "generatedAt": "2026-03-24T04:54:31.445Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "adoption-metric-analyzer-github-pack",
+    "AdoptionMetricAnalyzer Agent"
+  ],
+  "sourceChecksum": "f974f748c3505da08d173c162e0c2e9214cc98eb91f3d128e955e528a9e0bad4",
+  "sourcePath": ".github/agents/cycle-09/adoption-metric-analyzer.agent.md"
+}

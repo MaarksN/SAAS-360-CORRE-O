@@ -1,0 +1,25 @@
+{
+  "agentId": "enrichment-bot-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent enrichment-bot-github-pack (EnrichmentBot Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"enrichment-bot-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"enrichment-bot-github-pack.tool.read\",\n    \"enrichment-bot-github-pack.tool.search\",\n    \"enrichment-bot-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "4d1212b188e96b41dcbd188940b85bc8edf396e1b84b6e36f1d00a790939ffac"
+  },
+  "generatedAt": "2026-03-24T04:54:30.564Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "enrichment-bot-github-pack",
+    "EnrichmentBot Agent"
+  ],
+  "sourceChecksum": "813afabf3994ec0ab451ac3054ccb47178c294d2dac46a9a4e7b7dcb037bf2de",
+  "sourcePath": ".github/agents/cycle-03/enrichment-bot.agent.md"
+}

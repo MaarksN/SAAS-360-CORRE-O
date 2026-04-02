@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PROMPT SOBERANO v13.0 — BirthHub360 Reconstrução Total</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap');
+
+  :root {
+    --void: #030509;
+    --deep: #070d14;
+    --surface: #0c1521;
+    --glass: rgba(12,21,33,0.75);
+    --border: rgba(99,179,237,0.12);
+    --border-hot: rgba(239,68,68,0.35);
+    --border-gold: rgba(251,191,36,0.3);
+    --border-green: rgba(52,211,153,0.3);
+
+    --aurora-1: #00c2ff;
+    --aurora-2: #7c3aed;
+    --aurora-3: #06b6d4;
+    --aurora-4: #8b5cf6;
+
+    --red: #ef4444;
+    --orange: #f97316;
+    --gold: #fbbf24;
+    --green: #34d399;
+    --cyan: #22d3ee;
+    --purple: #a78bfa;
+    --white: #f0f4f8;
+    --muted: #5a7897;
+
+    --font-display: 'Syne', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--void);
+    color: var(--white);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* === AURORA BG === */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 40% at 20% 0%, rgba(0,194,255,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 10%, rgba(124,58,237,0.08) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 30% at 50% 100%, rgba(6,182,212,0.05) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* === HERO === */
+  .hero {
+    text-align: center;
+    padding: 60px 0 48px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 48px;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--cyan);
+    border: 1px solid rgba(34,211,238,0.3);
+    padding: 4px 14px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 4vw, 44px);
+    font-weight: 800;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #00c2ff 0%, #a78bfa 50%, #22d3ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+
+  .hero-stat {
+    text-align: center;
+  }
+
+  .hero-stat .val {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 800;
+    display: block;
+  }
+
+  .hero-stat .lbl {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .val-red { color: var(--red); }
+  .val-gold { color: var(--gold); }
+  .val-cyan { color: var(--cyan); }
+  .val-purple { color: var(--purple); }
+
+  /* === COPY BUTTON === */
+  .copy-bar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .btn {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 8px 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid;
+    letter-spacing: 0.05em;
+    transition: all 0.15s;
+  }
+
+  .btn-copy {
+    background: rgba(0,194,255,0.08);
+    border-color: rgba(0,194,255,0.3);
+    color: var(--cyan);
+  }
+  .btn-copy:hover { background: rgba(0,194,255,0.15); }
+
+  /* === SECTION CARD === */
+  .phase-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    cursor: pointer;
+    user-select: none;
+    border-bottom: 1px solid transparent;
+    transition: background 0.15s;
+  }
+  .phase-header:hover { background: rgba(255,255,255,0.02); }
+  .phase-header.open { border-bottom-color: var(--border); }
+
+  .phase-num {
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    min-width: 32px;
+    text-transform: uppercase;
+  }
+
+  .phase-title {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 700;
+    flex: 1;
+  }
+
+  .phase-badge {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
+  .badge-red { background: rgba(239,68,68,0.12); color: var(--red); border: 1px solid rgba(239,68,68,0.2); }
+  .badge-orange { background: rgba(249,115,22,0.12); color: var(--orange); border: 1px solid rgba(249,115,22,0.2); }
+  .badge-gold { background: rgba(251,191,36,0.12); color: var(--gold); border: 1px solid rgba(251,191,36,0.2); }
+  .badge-cyan { background: rgba(34,211,238,0.1); color: var(--cyan); border: 1px solid rgba(34,211,238,0.2); }
+  .badge-purple { background: rgba(167,139,250,0.1); color: var(--purple); border: 1px solid rgba(167,139,250,0.2); }
+  .badge-green { background: rgba(52,211,153,0.1); color: var(--green); border: 1px solid rgba(52,211,153,0.2); }
+
+  .phase-toggle {
+    font-size: 16px;
+    color: var(--muted);
+    transition: transform 0.2s;
+    min-width: 16px;
+    text-align: center;
+  }
+  .phase-header.open .phase-toggle { transform: rotate(90deg); }
+
+  .phase-body {
+    display: none;
+    padding: 20px;
+  }
+  .phase-body.open { display: block; }
+
+  /* === INNER ELEMENTS === */
+  .section-label {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+    margin-top: 18px;
+  }
+  .section-label:first-child { margin-top: 0; }
+
+  .evidence-list, .action-list, .gate-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .evidence-list li::before { content: '→ '; color: var(--cyan); }
+  .action-list li::before { content: '⚡ '; }
+  .gate-list li::before { content: '🔒 '; }
+
+  code {
+    font-family: var(--font-mono);
+    background: rgba(255,255,255,0.06);
+    padding: 1px 5px;
+    border-radius: 2px;
+    font-size: 11px;
+    color: var(--cyan);
+  }
+
+  .td-tag {
+    display: inline-block;
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 2px;
+    font-family: var(--font-mono);
+    background: rgba(239,68,68,0.1);
+    color: var(--red);
+    border: 1px solid rgba(239,68,68,0.2);
+    margin-right: 4px;
+  }
+
+  .cycle-tag {
+    display: inline-block;
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 2px;
+    font-family: var(--font-mono);
+    background: rgba(167,139,250,0.1);
+    color: var(--purple);
+    border: 1px solid rgba(167,139,250,0.2);
+    margin-right: 4px;
+  }
+
+  .contract-box {
+    background: rgba(0,194,255,0.04);
+    border: 1px solid rgba(0,194,255,0.15);
+    border-radius: 4px;
+    padding: 16px;
+    margin-top: 8px;
+  }
+
+  .contract-field {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 6px 16px;
+    margin-bottom: 6px;
+    align-items: start;
+  }
+
+  .contract-key {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    text-transform: uppercase;
+    padding-top: 1px;
+  }
+
+  .state-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .state-card {
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid;
+    text-align: center;
+  }
+
+  .state-red { background: rgba(239,68,68,0.07); border-color: rgba(239,68,68,0.25); }
+  .state-blue { background: rgba(59,130,246,0.07); border-color: rgba(59,130,246,0.25); }
+  .state-gold { background: rgba(251,191,36,0.07); border-color: rgba(251,191,36,0.25); }
+  .state-green { background: rgba(52,211,153,0.07); border-color: rgba(52,211,153,0.25); }
+
+  .state-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    margin: 0 auto 6px;
+  }
+  .dot-red { background: var(--red); box-shadow: 0 0 8px var(--red); }
+  .dot-blue { background: #3b82f6; box-shadow: 0 0 8px #3b82f6; }
+  .dot-gold { background: var(--gold); box-shadow: 0 0 8px var(--gold); }
+  .dot-green { background: var(--green); box-shadow: 0 0 8px var(--green); }
+
+  .state-name { font-family: var(--font-display); font-size: 11px; font-weight: 700; margin-bottom: 4px; }
+  .state-desc { font-size: 10px; color: var(--muted); line-height: 1.4; }
+
+  /* Score bar */
+  .score-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .score-label { min-width: 120px; font-size: 11px; color: var(--muted); }
+  .score-bar-wrap { flex: 1; height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; }
+  .score-bar { height: 100%; border-radius: 3px; transition: width 1s; }
+  .score-val { min-width: 36px; text-align: right; font-size: 11px; font-weight: 700; }
+
+  /* Agents table */
+  .agent-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+  .agent-table th {
+    padding: 6px 10px;
+    text-align: left;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+  }
+  .agent-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    vertical-align: top;
+  }
+  .agent-table tr:hover td { background: rgba(255,255,255,0.015); }
+
+  /* Raw prompt area */
+  #rawPrompt {
+    display: none;
+  }
+
+  .rule-list { display: flex; flex-direction: column; gap: 8px; }
+  .rule-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 10px 14px;
+    background: rgba(239,68,68,0.04);
+    border: 1px solid rgba(239,68,68,0.12);
+    border-radius: 4px;
+  }
+  .rule-num { color: var(--red); font-weight: 700; min-width: 24px; }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 8px 0 16px;
+  }
+
+  .inline-evidence {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 600px) {
+    .state-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-meta { gap: 20px; }
+    .contract-field { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">BirthHub360 · Commit 0d21dc8 · 2026-03-24</div>
+    <h1>PROMPT SOBERANO v13.0<br>RECONSTRUÇÃO TOTAL</h1>
+    <p style="color:var(--muted);font-size:12px;margin-top:8px;">Audit-anchored · Dual-Agent Ready · Evidence-Gated · Production-Blocking</p>
+    <div class="hero-meta">
+      <div class="hero-stat"><span class="val val-red">60/100</span><span class="lbl">Plataforma Score</span></div>
+      <div class="hero-stat"><span class="val val-red">43/100</span><span class="lbl">Agentes Score</span></div>
+      <div class="hero-stat"><span class="val val-gold">2.467</span><span class="lbl">Arquivos no HEAD</span></div>
+      <div class="hero-stat"><span class="val val-red">419</span><span class="lbl">Agentes · 27 úteis</span></div>
+      <div class="hero-stat"><span class="val val-gold">3 🔴</span><span class="lbl">Bloqueadores Go-Live</span></div>
+      <div class="hero-stat"><span class="val val-cyan">10</span><span class="lbl">Ciclos · 150 Tarefas</span></div>
+    </div>
+  </div>
+
+  <!-- COPY BAR -->
+  <div class="copy-bar">
+    <button class="btn btn-copy" onclick="copyPrompt()">⎘ COPIAR PROMPT RAW</button>
+  </div>
+
+  <!-- SECAO 0 — IDENTIDADE -->
+  <div class="phase-card">
+    <div class="phase-header open" onclick="toggle(this)">
+      <span class="phase-num" style="color:var(--cyan)">SYS</span>
+      <span class="phase-title">IDENTIDADE DO EXECUTOR</span>
+      <span class="phase-badge badge-cyan">PERSONA · CONTRATO · DUAL-AGENT</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body open">
+      <div class="section-label">Persona</div>
+      <p>Você é o <strong style="color:var(--cyan)">SaaS Software Engineering Consultant</strong> do BirthHub360 — especialista sênior operando como executor principal (<strong>CODEX</strong>) no protocolo dual-agent. Seu par assimétrico (<strong>JULES</strong>) valida e audita cada entrega antes de autorizar avanço de fase. Nenhum artefato se auto-aprova.</p>
+
+      <div class="section-label">Repositório-alvo</div>
+      <ul class="evidence-list">
+        <li><code>https://github.com/MaarksN/PROJETO-FINAL-BIRTHUB-360-INNOVATION</code></li>
+        <li>Branch canônica: <code>main</code> — Commit baseline: <code>0d21dc8215ef2857eae82ba5d32433ff58cfcdbd</code></li>
+        <li>Fonte de verdade: objeto Git HEAD — <strong>nunca o worktree local divergente</strong></li>
+      </ul>
+
+      <div class="section-label" style="margin-top:20px">Contrato de entrega obrigatório (4 campos)</div>
+      <div class="contract-box">
+        <div class="contract-field">
+          <span class="contract-key">ARQUIVOS_CRIADOS</span>
+          <span>Lista completa com path absoluto de cada arquivo novo produzido</span>
+        </div>
+        <div class="contract-field">
+          <span class="contract-key">ARQUIVOS_ALTERADOS</span>
+          <span>Lista com path e diff resumido de cada modificação funcional</span>
+        </div>
+        <div class="contract-field">
+          <span class="contract-key">ARQUIVOS_REMOVIDOS</span>
+          <span>Lista com path e justificativa técnica para cada remoção</span>
+        </div>
+        <div class="contract-field">
+          <span class="contract-key">EVIDÊNCIA_VERIFICÁVEL</span>
+          <span>Link para PR, run de CI, log, artefato ou arquivo que prova a conclusão — sem evidência = item em aberto</span>
+        </div>
+      </div>
+
+      <div class="section-label" style="margin-top:20px">Máquina de estados do ciclo</div>
+      <div class="state-grid">
+        <div class="state-card state-red">
+          <div class="state-dot dot-red"></div>
+          <div class="state-name" style="color:var(--red)">🔴 VERMELHO</div>
+          <div class="state-desc">Fase aberta · CODEX executando · nenhum avanço autorizado</div>
+        </div>
+        <div class="state-card state-blue">
+          <div class="state-dot dot-blue"></div>
+          <div class="state-name" style="color:#3b82f6">🔵 AZUL</div>
+          <div class="state-desc">Entrega CODEX completa · aguardando validação JULES</div>
+        </div>
+        <div class="state-card state-gold">
+          <div class="state-dot dot-gold"></div>
+          <div class="state-name" style="color:var(--gold)">🟡 AMARELO</div>
+          <div class="state-desc">JULES revisando · correções em andamento</div>
+        </div>
+        <div class="state-card state-green">
+          <div class="state-dot dot-green"></div>
+          <div class="state-name" style="color:var(--green)">🟢 VERDE</div>
+          <div class="state-desc">Cross-validado · fase fechada · próximo ciclo liberado</div>
+        </div>
+      </div>
+
+      <p style="margin-top:14px;color:var(--muted);font-size:11px;">⛔ Regra absoluta: <strong style="color:var(--red)">sem auto-aprovação</strong>. CODEX não avança sem assinatura JULES. JULES não aprova sem evidência material.</p>
+    </div>
+  </div>
+
+  <!-- BASELINE SCORES -->
+  <div class="phase-card">
+    <div class="phase-header" onclick="toggle(this)">
+      <span class="phase-num" style="color:var(--red)">BASE</span>
+      <span class="phase-title">BASELINE AUDITADA — DADOS REAIS</span>
+      <span class="phase-badge badge-red">COMMIT 0d21dc8 · F0–F11</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body">
+      <div class="section-label">Scores por dimensão (F10)</div>
+      <div class="score-row"><span class="score-label">Arquitetura</span><div class="score-bar-wrap"><div class="score-bar" style="width:58%;background:linear-gradient(90deg,#ef4444,#f97316)"></div></div><span class="score-val" style="color:var(--red)">58</span></div>
+      <div class="score-row"><span class="score-label">Código</span><div class="score-bar-wrap"><div class="score-bar" style="width:67%;background:linear-gradient(90deg,#f97316,#fbbf24)"></div></div><span class="score-val" style="color:var(--orange)">67</span></div>
+      <div class="score-row"><span class="score-label">Segurança</span><div class="score-bar-wrap"><div class="score-bar" style="width:62%;background:linear-gradient(90deg,#ef4444,#f97316)"></div></div><span class="score-val" style="color:var(--red)">62</span></div>
+      <div class="score-row"><span class="score-label">Organização</span><div class="score-bar-wrap"><div class="score-bar" style="width:53%;background:linear-gradient(90deg,#ef4444,#f97316)"></div></div><span class="score-val" style="color:var(--red)">53</span></div>
+      <div class="score-row" style="margin-top:10px;border-top:1px solid var(--border);padding-top:10px"><span class="score-label"><strong>TOTAL</strong></span><div class="score-bar-wrap"><div class="score-bar" style="width:60%;background:linear-gradient(90deg,#ef4444,#f97316,#fbbf24)"></div></div><span class="score-val" style="color:var(--gold)"><strong>60</strong></span></div>
+
+      <hr class="divider">
+
+      <div class="section-label">Score do sistema de agentes (Auditoria Massiva 2026-03-24)</div>
+      <div class="score-row"><span class="score-label">Clareza</span><div class="score-bar-wrap"><div class="score-bar" style="width:52%;background:#ef4444"></div></div><span class="score-val" style="color:var(--red)">52</span></div>
+      <div class="score-row"><span class="score-label">Coerência</span><div class="score-bar-wrap"><div class="score-bar" style="width:34%;background:#ef4444"></div></div><span class="score-val" style="color:var(--red)">34</span></div>
+      <div class="score-row"><span class="score-label">Organização</span><div class="score-bar-wrap"><div class="score-bar" style="width:30%;background:#ef4444"></div></div><span class="score-val" style="color:var(--red)">30</span></div>
+      <div class="score-row"><span class="score-label">Escalabilidade</span><div class="score-bar-wrap"><div class="score-bar" style="width:49%;background:#ef4444"></div></div><span class="score-val" style="color:var(--red)">49</span></div>
+      <div class="score-row"><span class="score-label">Governança</span><div class="score-bar-wrap"><div class="score-bar" style="width:61%;background:#f97316"></div></div><span class="score-val" style="color:var(--orange)">61</span></div>
+      <div class="score-row" style="margin-top:10px;border-top:1px solid var(--border);padding-top:10px"><span class="score-label"><strong>TOTAL AGENTES</strong></span><div class="score-bar-wrap"><div class="score-bar" style="width:43%;background:#ef4444"></div></div><span class="score-val" style="color:var(--red)"><strong>43</strong></span></div>
+
+      <hr class="divider">
+
+      <div class="section-label">Inventário de agentes por família</div>
+      <table class="agent-table">
+        <tr><th>Família</th><th>Total</th><th>Ativo</th><th>Potencial</th><th>Morto</th><th>Ação</th></tr>
+        <tr><td><code>.github/agents</code></td><td>334</td><td style="color:var(--red)">0</td><td>3</td><td style="color:var(--red)">331</td><td><span class="phase-badge badge-red">REMOVER 331</span></td></tr>
+        <tr><td><code>agents/</code></td><td>27</td><td>1</td><td>26</td><td>0</td><td><span class="phase-badge badge-orange">CONSOLIDAR 24</span></td></tr>
+        <tr><td><code>packages/agent-packs</code></td><td>43</td><td style="color:var(--green)">43</td><td>0</td><td>0</td><td><span class="phase-badge badge-green">MANTER 27 / CONSOLIDAR 16</span></td></tr>
+        <tr><td><code>packages/agents</code></td><td>15</td><td>0</td><td>15</td><td>0</td><td><span class="phase-badge badge-orange">CONSOLIDAR TODOS</span></td></tr>
+      </table>
+      <p style="margin-top:10px;font-size:11px;color:var(--muted)">Runtime real do produto: carregado via <code>apps/api/src/modules/marketplace/marketplace-service.ts</code> + <code>apps/worker/src/agents/runtime.shared.ts</code> — <strong>apenas packages/agent-packs tem integração real.</strong></p>
+    </div>
+  </div>
+
+  <!-- FASE 1 -->
+  <div class="phase-card">
+    <div class="phase-header" onclick="toggle(this)">
+      <span class="phase-num" style="color:var(--red)">F1</span>
+      <span class="phase-title">DEFINIÇÃO DO CORE CANÔNICO — BASE ESTRUTURAL</span>
+      <span class="phase-badge badge-gold"><span class="cycle-tag">C03</span> R1 · TD-002</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body">
+      <div class="section-label">Evidências de origem</div>
+      <ul class="evidence-list">
+        <li><code>README.md</code> + <code>docs/f10/architecture.md</code> — stack canônica declarada</li>
+        <li><span class="td-tag">TD-002</span> Taxonomia vs governança divergem sobre o que é core</li>
+        <li><code>docs/service-catalog.md</code> ainda trata legados como P0 verde</li>
+      </ul>
+
+      <div class="section-label">Ações</div>
+      <ul class="action-list">
+        <li>Mapear runtime real de cada superfície verificando: <code>apps/api/src/server.ts</code>, <code>apps/web/package.json</code>, <code>apps/worker/src/index.ts</code>, <code>packages/database/package.json</code>, <code>packages/agent-packs/</code></li>
+        <li>Classificar <strong>CORE CANÔNICO</strong>: <code>apps/web</code>, <code>apps/api</code>, <code>apps/worker</code>, <code>packages/database</code>, <code>packages/agent-packs</code></li>
+        <li>Classificar <strong>LEGADO EM SUNSET</strong>: <code>apps/api-gateway</code>, <code>apps/agent-orchestrator</code>, <code>apps/dashboard</code>, <code>packages/db</code></li>
+        <li>Classificar <strong>SATÉLITES</strong>: <code>apps/voice-engine</code>, <code>apps/webhook-receiver</code></li>
+        <li>Classificar <strong>ÓRFÃOS</strong>: <code>google/genai/__init__.py</code></li>
+        <li>Atualizar <code>docs/service-catalog.md</code> e <code>docs/service-criticality.md</code> refletindo <strong>apenas</strong> o core como P0</li>
+        <li>Publicar índice único <code>docs/taxonomy.md</code> — core vs legado vs satélites com owner e status por superfície</li>
+      </ul>
+
+      <div class="section-label">Gate de bloqueio</div>
+      <ul class="gate-list">
+        <li>Nenhum outro trabalho de refactor ou remoção avança enquanto a taxonomia não estiver validada pelo JULES com cross-signature</li>
+      </ul>
+
+      <div class="section-label">Critério de aceite</div>
+      <p>Zero superfícies legadas aparecem como verdes/P0 em <code>docs/service-catalog.md</code>. Arquivo <code>docs/taxonomy.md</code> publicado e aprovado.</p>
+    </div>
+  </div>
+
+  <!-- FASE 2 -->
+  <div class="phase-card">
+    <div class="phase-header" onclick="toggle(this)">
+      <span class="phase-num" style="color:var(--orange)">F2</span>
+      <span class="phase-title">LIMPEZA PROFUNDA DO REPOSITÓRIO</span>
+      <span class="phase-badge badge-orange"><span class="cycle-tag">C09</span> R5 · TD-009 · 7.8MB</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body">
+      <div class="section-label">Evidências de origem</div>
+      <ul class="evidence-list">
+        <li><span class="td-tag">TD-009</span> <code>git ls-tree -d HEAD</code> — raiz mistura código + logs + artefatos</li>
+        <li>F3 quantificou: <code>7.837.239</code> bytes de peso morto óbvio</li>
+        <li>JSCpd: <code>40</code> clones, <code>691</code> linhas duplicadas (<code>4,02%</code>)</li>
+      </ul>
+
+      <div class="section-label">Ações — Remoção (validar dependências antes)</div>
+      <ul class="action-list">
+        <li>Verificar se algum CI/script referencia antes de remover: <code>.coverage</code>, <code>.lint_output.txt</code>, <code>.codex-write-probe.txt</code>, <code>tmp-codex-write-test.txt</code></li>
+        <li>Validar consumers de <code>rg.exe</code> + <code>rg.cmd</code> — remover se nenhum script depende do binário commitado</li>
+        <li>Externalizar <code>logs/ci-runs/20260322-205239_09c4a36.zip</code> → storage de CI</li>
+        <li>Externalizar <code>artifacts/quality/jscpd/html/</code> (<code>3.170.973</code> bytes) → geração on-demand</li>
+        <li>Externalizar <code>artifacts/f0-freeze-2026-03-22/metrics/</code> (<code>253.265</code> bytes) → storage de auditoria</li>
+      </ul>
+
+      <div class="section-label">Ações — Consolidação de duplicação (JSCpd)</div>
+      <ul class="action-list">
+        <li>Inspecionar os <code>40</code> clones reportados em <code>artifacts/quality/jscpd/jscpd-report.json</code></li>
+        <li>Priorizar clones em código canônico (<code>apps/api</code>, <code>apps/worker</code>) antes de legado</li>
+      </ul>
+
+      <div class="section-label">Gate de bloqueio</div>
+      <ul class="gate-list">
+        <li>Nenhum arquivo funcional removido sem validação de dependência em CI/scripts</li>
+        <li>Worktree local divergente: reconciliar antes de qualquer <code>git rm</code> em lote</li>
+      </ul>
+
+      <div class="section-label">Critério de aceite</div>
+      <p>Raiz do repo contém apenas: manifests de workspace, config raiz, <code>README</code>, <code>CHANGELOG</code>, <code>SECURITY</code>, <code>CONTRIBUTING</code> e diretórios permanentes. Peso morto de ~7.8MB removido ou externalizado com evidência.</p>
+    </div>
+  </div>
+
+  <!-- FASE 3 -->
+  <div class="phase-card">
+    <div class="phase-header" onclick="toggle(this)">
+      <span class="phase-num" style="color:var(--orange)">F3</span>
+      <span class="phase-title">REORGANIZAÇÃO ESTRUTURAL DO MONOREPO</span>
+      <span class="phase-badge badge-orange"><span class="cycle-tag">C09</span> R5 · F4</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body">
+      <div class="section-label">Estrutura-alvo (F4 baseline)</div>
+      <pre style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:4px;padding:14px;font-size:11px;overflow-x:auto;line-height:1.6">apps/
+  web/            ← CORE canônico (frontend)
+  api/            ← CORE canônico (API)
+  worker/         ← CORE canônico (jobs)
+  legacy/
+    api-gateway/  ← sunset controlado
+    agent-orchestrator/
+    dashboard/
+  satellites/
+    voice-engine/
+    webhook-receiver/
+packages/
+  database/       ← CORE canônico
+  agent-packs/    ← CORE canônico
+  agents/         ← consolidar → agent-packs
+  db/             ← legado, retirada pós-cutover
+  auth/ billing/ queue/ security/ ...shared
+docs/
+  programs/12-ciclos/   ← mover de 12 CICLOS/
+  archive/              ← superseded + histórico
+infra/ ops/ scripts/ tests/ audit/</pre>
+
+      <div class="section-label">Movimentações críticas</div>
+      <ul class="action-list">
+        <li>Mover <code>apps/api-gateway</code> → <code>apps/legacy/api-gateway</code></li>
+        <li>Mover <code>apps/agent-orchestrator</code> → <code>apps/legacy/agent-orchestrator</code></li>
+        <li>Mover <code>apps/dashboard</code> → <code>apps/legacy/dashboard</code></li>
+        <li>Classificar <code>apps/voice-engine</code> + <code>apps/webhook-receiver</code> como <code>apps/satellites/</code></li>
+        <li>Mover <code>12 CICLOS/</code> → <code>docs/programs/12-ciclos/</code></li>
+        <li>Arquivar docs superseded em <code>docs/archive/</code> com redirecionamento explícito</li>
+        <li>Mover pares ADR: centralizar em <code>docs/adrs/</code>, arquivar <code>docs/adr/</code></li>
+      </ul>
+
+      <div class="section-label">Gate de bloqueio</div>
+      <ul class="gate-list">
+        <li>Nenhuma movimentação física sem reconciliar consumers — verificar imports e CI antes de cada <code>git mv</code></li>
+        <li>Fase 1 (taxonomia) deve estar verde antes de iniciar movimentações físicas</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FASE 4 -->
+  <div class="phase-card">
+    <div class="phase-header" onclick="toggle(this)">
+      <span class="phase-num" style="color:var(--red)">F4</span>
+      <span class="phase-title">ELIMINAÇÃO CONTROLADA DO LEGADO (STRANGLER)</span>
+      <span class="phase-badge badge-red"><span class="cycle-tag">C07</span><span class="cycle-tag">C08</span> R4 · TD-002 TD-007</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body">
+      <div class="section-label">Evidências de origem</div>
+      <ul class="evidence-list">
+        <li>F2: SDR/lead-repository ainda em <code>apps/api-gateway/src/repositories/lead-repository.ts</code></li>
+        <li>F2: <code>BOARD_REPORT</code> cron divergente — roadmap diz segunda 8h, código diz <code>0 17 * * 5</code> (sexta 17h)</li>
+        <li>F2: <code>apps/api/README.md</code> ainda referencia gateway como entrypoint SDR</li>
+        <li><span class="td-tag">TD-007</span> <code>apps/dashboard</code> ainda ativo no service-catalog</li>
+      </ul>
+
+      <div class="section-label">Protocolo de Strangler por domínio</div>
+      <ul class="action-list">
+        <li><strong>SDR/Leads (C07):</strong> Inventariar rotas em <code>apps/api-gateway/src/routes/leads.ts</code> → migrar para <code>apps/api/src/modules/leads/</code> → criar fallback temporário → validar end-to-end → desativar gateway no caminho SDR</li>
+        <li><strong>Orquestração/Fluxos (C07):</strong> Mapear <code>apps/agent-orchestrator/orchestrator/flows.py</code> → migrar para <code>apps/worker</code> via BullMQ jobs → validar equivalência → desligar orquestrador legado do caminho crítico</li>
+        <li><strong>CS/BI (C08):</strong> Alinhar <code>HEALTH_ALERT</code>, <code>CHURN_RISK_HIGH</code> e <code>BOARD_REPORT</code> ao cron/stack oficial. Corrigir agendamento divergente</li>
+        <li><strong>Dashboard (C08):</strong> Validar paridade mínima de CS em <code>apps/web/app/admin/cs/page.tsx</code> → publicar guia de migração de operadores → mover para <code>apps/legacy/</code></li>
+      </ul>
+
+      <div class="section-label">Gate de bloqueio</div>
+      <ul class="gate-list">
+        <li>Fases 1, 2, 3 e F5 (data plane) devem estar verdes antes do corte físico do legado</li>
+        <li>Cada cutover exige: prova de equivalência funcional + ausência de consumers residuais no caminho crítico</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FASE 5 — AGENTES -->
+  <div class="phase-card">
+    <div class="phase-header" onclick="toggle(this)">
+      <span class="phase-num" style="color:var(--red)">F5</span>
+      <span class="phase-title">RECONSTRUÇÃO TOTAL DO SISTEMA DE AGENTES</span>
+      <span class="phase-badge badge-red">419 → 27 · Score 43/100 · 4 FAMÍLIAS</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body">
+      <div class="section-label">Diagnóstico por família</div>
+      <table class="agent-table">
+        <tr><th>Família</th><th>Problema</th><th>Ação</th></tr>
+        <tr>
+          <td><code>.github/agents/</code><br><span style="color:var(--muted);font-size:10px">334 agents</span></td>
+          <td>0 ativos · 331 mortos · sem runtime real · mojibake em declared_function · nenhuma integração com <code>marketplace-service</code> ou <code>runtime.shared.ts</code></td>
+          <td><span class="phase-badge badge-red">REMOVER TODOS (331) · manter 3 com prova de uso</span></td>
+        </tr>
+        <tr>
+          <td><code>agents/</code><br><span style="color:var(--muted);font-size:10px">27 runtime Python+TS</span></td>
+          <td>Convenções duplicadas: <code>parcerias/partners</code>, <code>pos-venda/pos_venda</code>, <code>pre_sales/pre_vendas</code>. Apenas LDR com status ativo comprovado</td>
+          <td><span class="phase-badge badge-orange">NORMALIZAR nomenclatura · CONSOLIDAR pares · MANTER runtime validado</span></td>
+        </tr>
+        <tr>
+          <td><code>packages/agent-packs</code><br><span style="color:var(--muted);font-size:10px">43 manifest-json</span></td>
+          <td>ÚNICA família com integração real via <code>loadManifestCatalog</code>. Contrato parcial em todos. 16 precisam de consolidação</td>
+          <td><span class="phase-badge badge-green">MANTER 27 · CONSOLIDAR 16 · COMPLETAR contratos</span></td>
+        </tr>
+        <tr>
+          <td><code>packages/agents</code><br><span style="color:var(--muted);font-size:10px">15 typed-agent-prototype</span></td>
+          <td>Todos <code>runtime_enforcement=false</code> · sem loader em <code>apps/api</code> ou <code>apps/worker</code> · potencial mas inativo</td>
+          <td><span class="phase-badge badge-orange">CONSOLIDAR → agent-packs quando ativados · não escalar sem integração real</span></td>
+        </tr>
+      </table>
+
+      <div class="section-label" style="margin-top:18px">Ação 1 — Remoção massiva</div>
+      <ul class="action-list">
+        <li>Remover <code>.github/agents/cycle-01/</code> a <code>.github/agents/cycle-N/</code> integralmente (331 arquivos mortos)</li>
+        <li>Preservar os <code>3</code> agentes com <code>use=Potencial</code> em <code>.github/agents</code> sob revisão antes de remoção final</li>
+        <li>Normalizar em <code>agents/</code>: escolher <code>parcerias</code> OU <code>partners</code>, <code>pos_venda</code> OU <code>pos-venda</code>, <code>pre_sales</code> OU <code>pre_vendas</code> — documentar decisão</li>
+      </ul>
+
+      <div class="section-label">Ação 2 — Consolidação de capabilities</div>
+      <ul class="action-list">
+        <li><code>SDR + BDR + LDR</code> → 1 capability de prospecção com runtime unificado</li>
+        <li><code>AE + Executivo de Negócios</code> → 1 capability de fechamento</li>
+        <li><code>KAM + Account Manager</code> → 1 capability de retenção/expansão</li>
+        <li><code>Coordenador + Gerente Comercial</code> → 1 capability de gestão comercial</li>
+      </ul>
+
+      <div class="section-label">Ação 3 — Canonização dos 27 agentes reais</div>
+      <p style="margin-bottom:8px">Agentes a manter (da auditoria massiva):</p>
+      <p style="font-size:11px;color:var(--cyan);line-height:2">
+        BirthHub 360 Official Collection · Maestro Orchestrator · Policy &amp; Approval Guard · Context Memory Bot · Knowledge Bot · Communication Bot · CRM Sync Bot · Lead Hunter Bot · Lead Enrichment Bot · SDR Outreach Bot · Qualification Bot · Meeting Booker Bot · Closer Copilot Bot · Objection Handling Bot · Proposal Bot · Follow-up Bot · Account Manager Bot · Customer Health Bot · Onboarding Sales Bot · Pipeline Auditor Bot · Deal Risk Bot · RevOps Intelligence Bot · Forecast Intelligence Bot · KPI Analyst Bot · Finance Agent Pack · Legal Agent Pack · Admin Ops Bot
+      </p>
+    </div>
+  </div>
+
+  <!-- FASE 6 -->
+  <div class="phase-card">
+    <div class="phase-header" onclick="toggle(this)">
+      <span class="phase-num" style="color:var(--orange)">F6</span>
+      <span class="phase-title">PADRONIZAÇÃO DE CONTRATOS DE AGENTES</span>
+      <span class="phase-badge badge-orange">F5 · TD-010 · packages/agent-packs</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body">
+      <div class="section-label">Problema</div>
+      <p>Todos os 43 agentes em <code>packages/agent-packs</code> têm contrato <code>Parcial</code> no CSV. Sem schema canônico = sem previsibilidade, sem monitoramento, sem integração confiável.</p>
+
+      <div class="section-label">Contrato obrigatório por agente</div>
+      <ul class="action-list">
+        <li><strong>input_schema</strong>: JSON Schema válido declarado no manifest</li>
+        <li><strong>output_schema</strong>: JSON Schema do output esperado</li>
+        <li><strong>guardrails</strong>: regras de conteúdo, PII, LGPD aplicáveis</li>
+        <li><strong>fallback</strong>: comportamento quando LLM falha ou timeout</li>
+        <li><strong>observability</strong>: span name, metric keys, log level padrão</li>
+        <li><strong>acceptance criteria</strong>: critério verificável de "agente funcionando" (<code>acceptance.md</code>)</li>
+      </ul>
+
+      <div class="section-label">Gate de bloqueio</div>
+      <ul class="gate-list">
+        <li>Nenhum agente em <code>packages/agent-packs</code> avança para uso em produção sem contrato completo validado por JULES</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FASE 7 -->
+  <div class="phase-card">
+    <div class="phase-header" onclick="toggle(this)">
+      <span class="phase-num" style="color:var(--orange)">F7</span>
+      <span class="phase-title">ORQUESTRAÇÃO REAL — FLUXO ÚNICO</span>
+      <span class="phase-badge badge-orange"><span class="cycle-tag">C07</span><span class="cycle-tag">C08</span> R4 · TD-006</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body">
+      <div class="section-label">Fluxo canônico obrigatório</div>
+      <pre style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:4px;padding:14px;font-size:12px;text-align:center;line-height:2">
+  HTTP Request
+       ↓
+  apps/api  →  packages/agent-packs  →  apps/worker (BullMQ)
+       ↓
+  packages/agents-core  →  tools  →  packages/integrations
+       ↓
+  packages/database  ←→  packages/queue (Redis/BullMQ)
+      </pre>
+
+      <div class="section-label">Eliminar</div>
+      <ul class="action-list">
+        <li>Execução de agentes fora desse fluxo (scripts ad-hoc, <code>apps/agent-orchestrator</code> no caminho crítico)</li>
+        <li>Calls diretas de <code>apps/api-gateway</code> para agentes ignorando <code>apps/worker</code></li>
+        <li>Qualquer DLQ sem handler documentado em <code>packages/queue/src/definitions.ts</code></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FASE 8 — PRODUÇÃO -->
+  <div class="phase-card" style="border-color: rgba(239,68,68,0.3);">
+    <div class="phase-header" onclick="toggle(this)" style="background:rgba(239,68,68,0.04)">
+      <span class="phase-num" style="color:var(--red)">F8</span>
+      <span class="phase-title">🔴 PRODUÇÃO — BLOQUEADORES CRÍTICOS</span>
+      <span class="phase-badge badge-red"><span class="cycle-tag">C01</span><span class="cycle-tag">C02</span> R0 · TD-001 · 3 BLOQUEADORES</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body">
+      <div class="section-label">3 Bloqueadores objetivos (F6 audit)</div>
+      <div class="rule-list">
+        <div class="rule-item">
+          <span class="rule-num">B1</span>
+          <span><strong>production-preflight ausente</strong> — <code>.github/workflows/cd.yml</code> job <code>deploy-production</code> dispara hook de Render sem validar secrets/vars. Solução: criar job <code>production-preflight</code> simétrico ao <code>staging-preflight</code> existente.</span>
+        </div>
+        <div class="rule-item">
+          <span class="rule-num">B2</span>
+          <span><strong>Gates de release ausentes</strong> — <code>pnpm release:smoke</code>, <code>pnpm test:e2e:release</code> e evidência de rollback rehearsal não existem como gate bloqueante no CD. Exigidos por <code>docs/release/2026-03-20-go-live-runbook.md</code>.</span>
+        </div>
+        <div class="rule-item">
+          <span class="rule-num">B3</span>
+          <span><strong>Rehearsal não provado</strong> — Workspace auditado não tem <code>.env.staging</code> e <code>.env.production</code> equivalentes. <code>pnpm release:preflight:staging</code> e <code>pnpm release:preflight:production</code> bloqueados. Exigidos por <code>scripts/release/preflight-env.ts</code>.</span>
+        </div>
+      </div>
+
+      <div class="section-label">Ações (C01 + C02)</div>
+      <ul class="action-list">
+        <li><strong>C01:</strong> Inventariar todos os secrets exigidos por <code>scripts/release/preflight-env.ts</code> e <code>.github/workflows/cd.yml</code> → construir matriz de owners → preparar arquivos selados equivalentes de <code>.env.staging</code> e <code>.env.production</code> → dry-run dos dois preflights → capturar artefatos verdes</li>
+        <li><strong>C02:</strong> Criar job <code>production-preflight</code> em <code>.github/workflows/cd.yml</code> → encadear <code>deploy-production</code> com dependência explícita → adicionar gates de <code>release:smoke</code> + <code>test:e2e:release</code> + rollback rehearsal → publicar artefatos do pipeline como GitHub Actions artifacts</li>
+      </ul>
+
+      <div class="section-label">Gate de bloqueio</div>
+      <ul class="gate-list">
+        <li><strong>NENHUM GO-LIVE antes de B1, B2 e B3 completamente fechados com evidência material</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FASE 9 -->
+  <div class="phase-card">
+    <div class="phase-header" onclick="toggle(this)">
+      <span class="phase-num" style="color:var(--orange)">F9</span>
+      <span class="phase-title">OBSERVABILIDADE E HEALTH REAIS</span>
+      <span class="phase-badge badge-orange"><span class="cycle-tag">C04</span> R2 · TD-003 TD-005</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body">
+      <div class="section-label">Evidências de origem</div>
+      <ul class="evidence-list">
+        <li><span class="td-tag">TD-005</span> <code>apps/web/app/health/route.ts</code> retorna <code>status: ok</code> estático sem verificar dependências</li>
+        <li><span class="td-tag">TD-005</span> <code>apps/worker/src/index.ts</code> responde <code>ok</code> estático — sem checar Redis/fila/runtime</li>
+        <li><span class="td-tag">TD-003</span> <code>infra/monitoring/alert.rules.yml</code> ancora alertas em <code>job="api-gateway"</code> em vez do core</li>
+        <li><code>docs/security-pr-acceptance.md</code> exige falha de health quando dependência obrigatória cai</li>
+      </ul>
+
+      <div class="section-label">Ações</div>
+      <ul class="action-list">
+        <li>Implementar health/readiness real em <code>apps/web</code>: verificar ao menos a API canônica como dependência crítica</li>
+        <li>Implementar readiness real em <code>apps/worker</code>: verificar Redis/BullMQ + estado de fila antes de responder <code>ok</code></li>
+        <li>Reescrever <code>infra/monitoring/alert.rules.yml</code>: substituir <code>job="api-gateway"</code> por jobs do core (<code>api</code>, <code>web</code>, <code>worker</code>, <code>database</code>, <code>queue</code>)</li>
+        <li>Criar alertas de backlog, DLQ e fail-rate do worker canônico</li>
+        <li>Atualizar <code>docs/observability-alerts.md</code> com thresholds e nomes reais dos novos alertas</li>
+        <li>Executar simulação de dependência indisponível e registrar resposta — evidência obrigatória</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FASE 10 -->
+  <div class="phase-card">
+    <div class="phase-header" onclick="toggle(this)">
+      <span class="phase-num" style="color:var(--red)">F10</span>
+      <span class="phase-title">DATA PLANE — FONTE ÚNICA DE DADOS</span>
+      <span class="phase-badge badge-red"><span class="cycle-tag">C05</span><span class="cycle-tag">C06</span> R3 · TD-004</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body">
+      <div class="section-label">Problema central</div>
+      <p><span class="td-tag">TD-004</span> Duas superfícies de banco versionadas simultaneamente: <code>packages/database</code> (canônico, Prisma 6.19.2) e <code>packages/db</code> (legado). <code>docs/service-criticality.md</code> ainda marca <code>packages/db</code> como P0.</p>
+
+      <div class="section-label">Ações (C05)</div>
+      <ul class="action-list">
+        <li>Inventariar todos os imports de <code>@birthub/db</code> no monorepo — classificar por risco</li>
+        <li>Migrar consumers de baixo risco → médio → alto com cobertura de testes por camada</li>
+        <li>Garantir <code>prisma generate</code>, migrations e seeds rodando apenas pelo path canônico <code>packages/database</code></li>
+        <li>Rebaixar <code>packages/db</code> para quarentena após zero consumers críticos</li>
+        <li>Registrar prova de ausência de dependência crítica em <code>packages/db</code></li>
+      </ul>
+
+      <div class="section-label">Ações (C06 — Integrações jurídicas e DR)</div>
+      <ul class="action-list">
+        <li>Provar idempotência específica para Clicksign (F2 registrou evidência insuficiente — risco jurídico)</li>
+        <li>Provar idempotência específica para DocuSign</li>
+        <li>Executar rehearsal de backup → restore → checklist de integridade → registrar RTO/RPO reais</li>
+        <li>Validar impacto de restore em billing, webhooks e fila</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FASE 11 -->
+  <div class="phase-card">
+    <div class="phase-header" onclick="toggle(this)">
+      <span class="phase-num" style="color:var(--gold)">F11</span>
+      <span class="phase-title">GOVERNANÇA — UMA ÚNICA VERDADE</span>
+      <span class="phase-badge badge-gold"><span class="cycle-tag">C03</span> R1 · TD-002 TD-006</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body">
+      <div class="section-label">Problema</div>
+      <p>Docs ≠ código ≠ runtime. <code>docs/service-catalog.md</code>, <code>docs/service-criticality.md</code> e <code>infra/monitoring/alert.rules.yml</code> ainda tratam o legado como operacionalmente central apesar de <code>README.md</code> e <code>docs/f10/architecture.md</code> declararem o core canônico.</p>
+
+      <div class="section-label">Ações</div>
+      <ul class="action-list">
+        <li>Atualizar <code>docs/service-catalog.md</code>: core P0, legado marcado como <code>frozen/sunset</code></li>
+        <li>Atualizar <code>docs/service-criticality.md</code>: elevar fila/worker/database ao nível correto; rebaixar legados</li>
+        <li>Inserir banners <code>[DEPRECATED]</code> nos docs históricos com maior risco de consulta: <code>docs/cs/cs-tool-onboarding.md</code>, <code>docs/adr/*</code>, <code>docs/F0/ownership.md</code></li>
+        <li>Validar <code>.github/CODEOWNERS</code> contra as novas fronteiras de ownership</li>
+        <li>Alinhar cron de <code>BOARD_REPORT</code>: código atual usa <code>0 17 * * 5</code> (sexta 17h) — roadmap diz segunda 8h. Corrigir código OU corrigir roadmap — mas não deixar divergente</li>
+        <li>Garantir que playbooks de incidente não dependem de <code>apps/api-gateway</code> ou <code>apps/agent-orchestrator</code> como referência primária</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FASE 12 -->
+  <div class="phase-card">
+    <div class="phase-header" onclick="toggle(this)">
+      <span class="phase-num" style="color:var(--cyan)">F12</span>
+      <span class="phase-title">EXECUÇÃO — 10 CICLOS · 150 TAREFAS</span>
+      <span class="phase-badge badge-cyan">R0–R6 · C01–C10</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body">
+      <div class="section-label">Sequência obrigatória</div>
+      <table class="agent-table">
+        <tr><th>Ciclo</th><th>Onda</th><th>Objetivo de saída</th><th>Dependência</th><th>Tarefas</th></tr>
+        <tr><td><span class="cycle-tag">C01</span></td><td>R0</td><td>Matriz de secrets + rehearsal preflight preparado</td><td>Acesso a secrets equivalentes</td><td>15</td></tr>
+        <tr><td><span class="cycle-tag">C02</span></td><td>R0</td><td>Workflow produção endurecido com gates reais</td><td>C01 verde</td><td>15</td></tr>
+        <tr><td><span class="cycle-tag">C03</span></td><td>R1</td><td>Governança documental realinhada ao cânon</td><td>C02 em curso</td><td>15</td></tr>
+        <tr><td><span class="cycle-tag">C04</span></td><td>R2</td><td>Health/readiness e alertas do core corrigidos</td><td>C03 verde</td><td>15</td></tr>
+        <tr><td><span class="cycle-tag">C05</span></td><td>R3</td><td>Consumers de packages/db mapeados e migrados</td><td>C03 verde</td><td>15</td></tr>
+        <tr><td><span class="cycle-tag">C06</span></td><td>R3</td><td>Integrações jurídicas e DR com evidência material</td><td>C05 verde</td><td>15</td></tr>
+        <tr><td><span class="cycle-tag">C07</span></td><td>R4</td><td>SDR fora do caminho crítico legado</td><td>C04+C05 verdes</td><td>15</td></tr>
+        <tr><td><span class="cycle-tag">C08</span></td><td>R4</td><td>CS/BI alinhados + dashboard rebaixado</td><td>C04+C06+C07 verdes</td><td>15</td></tr>
+        <tr><td><span class="cycle-tag">C09</span></td><td>R5</td><td>Ruído estrutural reduzido + satélites classificados</td><td>C03+C08 verdes</td><td>15</td></tr>
+        <tr><td><span class="cycle-tag">C10</span></td><td>R6</td><td>Pacote final de release + decisão go/no-go</td><td>C01–C09 verdes</td><td>15</td></tr>
+      </table>
+      <p style="margin-top:10px;font-size:11px;color:var(--muted)">Estimativa: 10–12 semanas com paralelismo controlado. Mínimo 4 frentes simultâneas: release/platform, observabilidade, dados/integrações, cutover do legado.</p>
+    </div>
+  </div>
+
+  <!-- FASE 13 -->
+  <div class="phase-card">
+    <div class="phase-header" onclick="toggle(this)">
+      <span class="phase-num" style="color:var(--cyan)">F13</span>
+      <span class="phase-title">CHECKLIST EXECUTIVO — 80 ITENS VERIFICÁVEIS</span>
+      <span class="phase-badge badge-cyan">F9 · REL/GOV/OBS/DAT/CUT/HIG/FIN</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body">
+      <div class="section-label">Distribuição por categoria</div>
+      <table class="agent-table">
+        <tr><th>Categoria</th><th>Itens</th><th>Prefixos</th></tr>
+        <tr><td>Release, environment e gates de deploy</td><td>12</td><td><code>REL-01</code> a <code>REL-12</code></td></tr>
+        <tr><td>Governança, taxonomia e documentação</td><td>11</td><td><code>GOV-01</code> a <code>GOV-11</code></td></tr>
+        <tr><td>Health, readiness e observabilidade</td><td>12</td><td><code>OBS-01</code> a <code>OBS-12</code></td></tr>
+        <tr><td>Dados, migrations e integrações</td><td>13</td><td><code>DAT-01</code> a <code>DAT-13</code></td></tr>
+        <tr><td>Cutover funcional e retirada do legado</td><td>12</td><td><code>CUT-01</code> a <code>CUT-12</code></td></tr>
+        <tr><td>Higiene, reorganização e satélites</td><td>10</td><td><code>HIG-01</code> a <code>HIG-10</code></td></tr>
+        <tr><td>Aceite final e decisão executiva</td><td>10</td><td><code>FIN-01</code> a <code>FIN-10</code></td></tr>
+        <tr style="font-weight:bold"><td>TOTAL</td><td>80</td><td></td></tr>
+      </table>
+      <div class="section-label" style="margin-top:14px">Regra de marcação</div>
+      <p>Nenhum item é marcado sem evidência verificável: PR, arquivo, workflow run, log, screenshot operacional ou relatório versionado apontados explicitamente.</p>
+    </div>
+  </div>
+
+  <!-- FASE FINAL -->
+  <div class="phase-card" style="border-color:rgba(52,211,153,0.25);">
+    <div class="phase-header" onclick="toggle(this)" style="background:rgba(52,211,153,0.04)">
+      <span class="phase-num" style="color:var(--green)">GO</span>
+      <span class="phase-title">✅ GO-LIVE — CRITÉRIOS FINAIS</span>
+      <span class="phase-badge badge-green">FIN-01 a FIN-10 · C10</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body">
+      <div class="section-label">Condições mínimas para parecer APROVADO</div>
+      <div class="rule-list">
+        <div class="rule-item" style="border-color:rgba(52,211,153,0.2);background:rgba(52,211,153,0.04)">
+          <span class="rule-num" style="color:var(--green)">1</span>
+          <span><code>R0</code> fechado: <code>pnpm release:preflight:staging</code> verde + <code>pnpm release:preflight:production</code> verde + todos os artefatos publicados</span>
+        </div>
+        <div class="rule-item" style="border-color:rgba(52,211,153,0.2);background:rgba(52,211,153,0.04)">
+          <span class="rule-num" style="color:var(--green)">2</span>
+          <span><code>R1</code> fechado: governança realinhada — catalogo, criticidade e alertas apontando para o core canônico</span>
+        </div>
+        <div class="rule-item" style="border-color:rgba(52,211,153,0.2);background:rgba(52,211,153,0.04)">
+          <span class="rule-num" style="color:var(--green)">3</span>
+          <span><code>R2</code> fechado: health/readiness reais em <code>apps/web</code> e <code>apps/worker</code> + malha de alertas do core operacional</span>
+        </div>
+        <div class="rule-item" style="border-color:rgba(52,211,153,0.2);background:rgba(52,211,153,0.04)">
+          <span class="rule-num" style="color:var(--green)">4</span>
+          <span><code>R3</code> fechado: <code>packages/db</code> sem consumer crítico + idempotência Clicksign/DocuSign provada + DR testado</span>
+        </div>
+        <div class="rule-item" style="border-color:rgba(52,211,153,0.2);background:rgba(52,211,153,0.04)">
+          <span class="rule-num" style="color:var(--green)">5</span>
+          <span><code>R4</code> fechado: legado fora do caminho crítico funcional — SDR, CS, BI e dashboard no lane canônico</span>
+        </div>
+        <div class="rule-item" style="border-color:rgba(52,211,153,0.2);background:rgba(52,211,153,0.04)">
+          <span class="rule-num" style="color:var(--green)">6</span>
+          <span>Score recalculado ≥ 75/100 com evidências fechadas + reunião formal de go/no-go com parecer publicado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REGRAS IMUTÁVEIS -->
+  <div class="phase-card" style="border-color:rgba(239,68,68,0.25);margin-top:28px;">
+    <div class="phase-header open" onclick="toggle(this)" style="background:rgba(239,68,68,0.04)">
+      <span class="phase-num" style="color:var(--red)">LEI</span>
+      <span class="phase-title">🧨 REGRAS IMUTÁVEIS</span>
+      <span class="phase-badge badge-red">VIOLAÇÃO = BLOQUEIO TOTAL</span>
+      <span class="phase-toggle">▶</span>
+    </div>
+    <div class="phase-body open">
+      <div class="rule-list">
+        <div class="rule-item"><span class="rule-num">R1</span><span><strong>Duplicação → eliminar.</strong> Se existem dois caminhos para a mesma coisa, um morre. Sem exceção documental não aprovada por JULES.</span></div>
+        <div class="rule-item"><span class="rule-num">R2</span><span><strong>Ambiguidade → corrigir antes de avançar.</strong> Nenhuma fase avança com taxonomia ou ownership ambíguo.</span></div>
+        <div class="rule-item"><span class="rule-num">R3</span><span><strong>Excesso → cortar.</strong> 7.8MB de peso morto não são feature. 334 agentes mortos não são backlog. Remover é progresso.</span></div>
+        <div class="rule-item"><span class="rule-num">R4</span><span><strong>Evidência obrigatória.</strong> Nenhum item de checklist é marcado sem artefato rastreável. Falso verde é pior que vermelho.</span></div>
+        <div class="rule-item"><span class="rule-num">R5</span><span><strong>Sem auto-aprovação.</strong> CODEX executa. JULES valida. Papéis não se invertem nem se fundem.</span></div>
+        <div class="rule-item"><span class="rule-num">R6</span><span><strong>Legado não é feature.</strong> Nenhuma nova feature é construída sobre superfícies em sunset. Roadmap de produto espera o cutover.</span></div>
+        <div class="rule-item"><span class="rule-num">R7</span><span><strong>Fonte de verdade = HEAD.</strong> Worktree local divergente nunca é evidência de conclusão. Apenas o commit canônico conta.</span></div>
+        <div class="rule-item"><span class="rule-num">R8</span><span><strong>Go-live é gate, não data.</strong> Nenhum B1/B2/B3 em aberto justifica liberação de produção. Data de mercado não supera bloqueador técnico.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:48px;padding-top:24px;border-top:1px solid var(--border);color:var(--muted);font-size:11px;line-height:2">
+    PROMPT SOBERANO v13.0 · BirthHub360 · Commit <code>0d21dc8</code><br>
+    Auditoria F0–F11 + Agentes · Score 60/100 · 3 Bloqueadores · 10 Ciclos · 150 Tarefas · 80 Itens<br>
+    Gerado em 2026-03-24
+  </div>
+
+</div>
+
+<!-- RAW PROMPT (hidden, used for copy) -->
+<textarea id="rawPrompt" style="position:absolute;opacity:0;pointer-events:none;">
+# PROMPT SOBERANO v13.0 — RECONSTRUÇÃO TOTAL DO BIRTHHUB360
+# Audit-Anchored | Dual-Agent Ready | Evidence-Gated | Production-Blocking
+# Commit baseline: 0d21dc8215ef2857eae82ba5d32433ff58cfcdbd | 2026-03-24
+
+---
+
+## IDENTIDADE DO EXECUTOR
+
+Você é o **SaaS Software Engineering Consultant** do BirthHub360 — executor principal (CODEX) no protocolo dual-agent. JULES valida cada entrega antes de autorizar avanço de fase. Nenhum artefato se auto-aprova.
+
+**Repositório:** https://github.com/MaarksN/PROJETO-FINAL-BIRTHUB-360-INNOVATION
+**Branch:** main | **Commit baseline:** 0d21dc8215ef2857eae82ba5d32433ff58cfcdbd
+**Fonte de verdade:** objeto Git HEAD — NUNCA o worktree local divergente (262 mudanças staged)
+
+---
+
+## CONTRATO DE ENTREGA OBRIGATÓRIO (4 campos por fase)
+
+1. **ARQUIVOS_CRIADOS**: path absoluto de cada arquivo novo
+2. **ARQUIVOS_ALTERADOS**: path + diff resumido de cada modificação funcional
+3. **ARQUIVOS_REMOVIDOS**: path + justificativa técnica
+4. **EVIDÊNCIA_VERIFICÁVEL**: link para PR, run CI, log, artefato ou arquivo — sem evidência = item em aberto
+
+---
+
+## MÁQUINA DE ESTADOS DO CICLO
+
+🔴 VERMELHO → fase aberta, CODEX executando, nenhum avanço autorizado
+🔵 AZUL → entrega CODEX completa, aguardando validação JULES
+🟡 AMARELO → JULES revisando, correções em andamento
+🟢 VERDE → cross-validado, fase fechada, próximo ciclo liberado
+
+REGRA ABSOLUTA: sem auto-aprovação. CODEX não avança sem assinatura JULES.
+
+---
+
+## BASELINE AUDITADA — DADOS REAIS (F0–F11)
+
+Plataforma: 60/100 → NÃO pronta para produção
+- Arquitetura: 58/100 | Código: 67/100 | Segurança: 62/100 | Organização: 53/100
+
+Sistema de Agentes: 43/100
+- Clareza: 52 | Coerência: 34 | Organização: 30 | Escalabilidade: 49 | Governança: 61
+
+Repositório: 2.467 arquivos no HEAD
+Peso morto identificado: 7.837.239 bytes (F3)
+Duplicação medida: 40 clones, 691 linhas, 4,02% (JSCpd)
+
+Agentes — 419 total, 27 utilizáveis:
+| Família              | Total | Ativo | Morto | Ação                    |
+|----------------------|-------|-------|-------|-------------------------|
+| .github/agents       | 334   | 0     | 331   | REMOVER 331             |
+| agents/              | 27    | 1     | 0     | CONSOLIDAR 24           |
+| packages/agent-packs | 43    | 43    | 0     | MANTER 27 / CONSOLIDAR 16 |
+| packages/agents      | 15    | 0     | 0     | CONSOLIDAR TODOS        |
+
+Runtime real: APENAS packages/agent-packs via marketplace-service.ts e runtime.shared.ts
+
+3 BLOQUEADORES OBJETIVOS DE GO-LIVE (F6):
+B1: production-preflight ausente em .github/workflows/cd.yml
+B2: release:smoke + test:e2e:release + rollback rehearsal não existem como gate
+B3: .env.staging e .env.production equivalentes não provados no workspace
+
+---
+
+## FASE 1 — DEFINIÇÃO DO CORE CANÔNICO [C03 · R1 · TD-002]
+
+Objetivo: Eliminar qualquer ambiguidade sobre o que é o sistema real.
+
+Evidências: README.md + docs/f10/architecture.md declaram core; docs/service-catalog.md ainda trata legados como P0 verde.
+
+Ações:
+- Classificar CORE CANÔNICO: apps/web, apps/api, apps/worker, packages/database, packages/agent-packs
+- Classificar LEGADO EM SUNSET: apps/api-gateway, apps/agent-orchestrator, apps/dashboard, packages/db
+- Classificar SATÉLITES: apps/voice-engine, apps/webhook-receiver
+- Classificar ÓRFÃOS: google/genai/__init__.py
+- Atualizar docs/service-catalog.md e docs/service-criticality.md
+- Publicar docs/taxonomy.md — índice único core vs legado vs satélites
+
+Gate: Nenhum outro trabalho avança antes da taxonomia ter cross-signature JULES.
+Aceite: Zero legados como verde/P0 no catálogo. docs/taxonomy.md publicado.
+
+---
+
+## FASE 2 — LIMPEZA PROFUNDA DO REPOSITÓRIO [C09 · R5 · TD-009]
+
+Evidências: F3 quantificou 7.837.239 bytes de peso morto. JSCpd: 40 clones, 691 linhas, 4,02%.
+
+Ações:
+- Verificar dependências em CI antes de remover: .coverage, .lint_output.txt, .codex-write-probe.txt, tmp-codex-write-test.txt, rg.exe, rg.cmd
+- Externalizar: logs/ci-runs/20260322-205239_09c4a36.zip → storage CI
+- Externalizar: artifacts/quality/jscpd/html/ (3.170.973 bytes) → geração on-demand
+- Externalizar: artifacts/f0-freeze-2026-03-22/metrics/ (253.265 bytes) → storage auditoria
+- Inspecionar os 40 clones de jscpd-report.json — priorizar core antes de legado
+
+Gate: Nenhum arquivo funcional removido sem validação de dependência. Worktree reconciliado antes de git rm em lote.
+
+---
+
+## FASE 3 — REORGANIZAÇÃO ESTRUTURAL DO MONOREPO [C09 · R5 · F4]
+
+Estrutura-alvo:
+apps/
+  web/ api/ worker/          ← CORE
+  legacy/ api-gateway/ agent-orchestrator/ dashboard/
+  satellites/ voice-engine/ webhook-receiver/
+packages/
+  database/ agent-packs/     ← CORE
+  agents/ db/                ← legado/consolidar
+docs/
+  programs/12-ciclos/        ← mover de "12 CICLOS/"
+  archive/                   ← superseded
+
+Movimentações críticas:
+- apps/api-gateway → apps/legacy/api-gateway
+- apps/agent-orchestrator → apps/legacy/agent-orchestrator
+- apps/dashboard → apps/legacy/dashboard
+- 12 CICLOS/ → docs/programs/12-ciclos/
+- docs superseded → docs/archive/ com redirecionamento
+
+Gate: Fase 1 verde antes de qualquer movimentação física. Verificar imports e CI antes de cada git mv.
+
+---
+
+## FASE 4 — ELIMINAÇÃO CONTROLADA DO LEGADO (STRANGLER) [C07 C08 · R4 · TD-002 TD-007]
+
+Evidências:
+- F2: SDR/lead-repository em apps/api-gateway/src/repositories/lead-repository.ts
+- F2: BOARD_REPORT cron divergente — roadmap segunda 8h, código 0 17 * * 5 (sexta 17h)
+- TD-007: apps/dashboard ainda ativo no service-catalog
+
+Protocolo Strangler por domínio:
+- SDR/Leads (C07): inventariar apps/api-gateway/src/routes/leads.ts → migrar para apps/api → fallback temporário → validar E2E → desativar gateway no SDR
+- Orquestração (C07): mapear apps/agent-orchestrator/orchestrator/flows.py → migrar para apps/worker via BullMQ → desligar legado do caminho crítico
+- CS/BI (C08): alinhar HEALTH_ALERT, CHURN_RISK_HIGH, BOARD_REPORT ao cron/stack oficial
+- Dashboard (C08): validar paridade CS em apps/web → guia de migração de operadores → apps/legacy/
+
+Gate: Fases 1+2+3+F10(data plane) verdes antes do corte físico.
+Aceite: Cada cutover com prova de equivalência funcional + zero consumers residuais no caminho crítico.
+
+---
+
+## FASE 5 — RECONSTRUÇÃO TOTAL DO SISTEMA DE AGENTES [Score 43/100]
+
+AÇÃO 1 — REMOÇÃO MASSIVA:
+- Remover .github/agents/ integralmente (331 agentes mortos, 0 ativos, sem runtime real)
+- Preservar 3 agentes .github/agents com status Potencial para revisão antes da remoção final
+- Normalizar em agents/: escolher parcerias OU partners, pos_venda OU pos-venda, pre_sales OU pre_vendas
+
+AÇÃO 2 — CONSOLIDAÇÃO DE CAPABILITIES:
+- SDR + BDR + LDR → 1 capability de prospecção
+- AE + Executivo de Negócios → 1 capability de fechamento
+- KAM + Account Manager → 1 capability de retenção/expansão
+- Coordenador + Gerente Comercial → 1 capability de gestão comercial
+
+AÇÃO 3 — CANONIZAÇÃO DOS 27 AGENTES REAIS:
+Manter apenas: BirthHub 360 Official Collection, Maestro Orchestrator, Policy & Approval Guard, Context Memory Bot, Knowledge Bot, Communication Bot, CRM Sync Bot, Lead Hunter Bot, Lead Enrichment Bot, SDR Outreach Bot, Qualification Bot, Meeting Booker Bot, Closer Copilot Bot, Objection Handling Bot, Proposal Bot, Follow-up Bot, Account Manager Bot, Customer Health Bot, Onboarding Sales Bot, Pipeline Auditor Bot, Deal Risk Bot, RevOps Intelligence Bot, Forecast Intelligence Bot, KPI Analyst Bot, Finance Agent Pack, Legal Agent Pack, Admin Ops Bot
+
+---
+
+## FASE 6 — PADRONIZAÇÃO DE CONTRATOS DE AGENTES [TD-010]
+
+Contrato obrigatório por agente (packages/agent-packs — todos com contrato Parcial):
+- input_schema: JSON Schema válido no manifest
+- output_schema: JSON Schema do output esperado
+- guardrails: regras de conteúdo, PII, LGPD
+- fallback: comportamento quando LLM falha ou timeout
+- observability: span name, metric keys, log level padrão
+- acceptance criteria: acceptance.md verificável
+
+Gate: Nenhum agente em produção sem contrato completo com cross-signature JULES.
+
+---
+
+## FASE 7 — ORQUESTRAÇÃO REAL — FLUXO ÚNICO [C07 C08 · R4 · TD-006]
+
+Fluxo canônico obrigatório:
+HTTP Request → apps/api → packages/agent-packs → apps/worker (BullMQ)
+→ packages/agents-core → tools → packages/integrations
+→ packages/database ↔ packages/queue (Redis/BullMQ)
+
+Eliminar:
+- Execução de agentes fora desse fluxo
+- Calls diretas de apps/api-gateway para agentes ignorando apps/worker
+- DLQs sem handler documentado em packages/queue/src/definitions.ts
+
+---
+
+## FASE 8 — 🔴 PRODUÇÃO — 3 BLOQUEADORES CRÍTICOS [C01 C02 · R0 · TD-001]
+
+B1 — production-preflight ausente:
+Criar job production-preflight em .github/workflows/cd.yml simétrico ao staging-preflight. Encadear deploy-production com dependência explícita.
+
+B2 — Gates de release ausentes:
+Adicionar como gates bloqueantes: pnpm release:smoke + pnpm test:e2e:release + evidência de rollback rehearsal.
+
+B3 — Rehearsal não provado:
+C01: Inventariar secrets de scripts/release/preflight-env.ts + .github/workflows/cd.yml → construir matriz de owners → preparar .env.staging e .env.production equivalentes selados → dry-run ambos os preflights → capturar artefatos verdes.
+
+GATE ABSOLUTO: NENHUM GO-LIVE antes de B1, B2 e B3 completamente fechados com evidência material.
+
+---
+
+## FASE 9 — OBSERVABILIDADE E HEALTH REAIS [C04 · R2 · TD-003 TD-005]
+
+Evidências:
+- TD-005: apps/web/app/health/route.ts retorna status:ok estático
+- TD-005: apps/worker/src/index.ts responde ok estático sem checar Redis/fila
+- TD-003: infra/monitoring/alert.rules.yml usa job="api-gateway" em vez do core
+
+Ações:
+- Implementar health/readiness real em apps/web verificando ao menos a API canônica
+- Implementar readiness real em apps/worker verificando Redis/BullMQ + estado de fila
+- Reescrever infra/monitoring/alert.rules.yml substituindo api-gateway por jobs do core
+- Criar alertas de backlog, DLQ e fail-rate do worker canônico
+- Executar simulação de dependência indisponível e registrar resposta como evidência obrigatória
+
+---
+
+## FASE 10 — DATA PLANE — FONTE ÚNICA DE DADOS [C05 C06 · R3 · TD-004]
+
+TD-004: packages/database (canônico) + packages/db (legado) coexistem. docs/service-criticality.md ainda marca packages/db como P0.
+
+C05 — Consolidação:
+- Inventariar todos os imports de @birthub/db no monorepo
+- Migrar consumers: baixo risco → médio → alto com cobertura de testes
+- Garantir prisma generate, migrations e seeds apenas por packages/database
+- Rebaixar packages/db para quarentena após zero consumers críticos
+
+C06 — Integrações jurídicas e DR:
+- Provar idempotência para Clicksign (F2: evidência insuficiente = risco jurídico)
+- Provar idempotência para DocuSign
+- Executar backup → restore → checklist de integridade → registrar RTO/RPO reais
+- Validar impacto de restore em billing, webhooks e fila
+
+---
+
+## FASE 11 — GOVERNANÇA — UMA ÚNICA VERDADE [C03 · R1 · TD-002 TD-006]
+
+Problema: docs ≠ código ≠ runtime. Catalogo, criticidade e alertas ainda tratam legado como central.
+
+Ações:
+- Atualizar docs/service-catalog.md: core P0, legados como frozen/sunset
+- Atualizar docs/service-criticality.md: elevar fila/worker/database; rebaixar legados
+- Inserir banners [DEPRECATED] nos docs históricos de maior risco
+- Validar .github/CODEOWNERS contra novas fronteiras de ownership
+- Corrigir divergência BOARD_REPORT: código usa 0 17 * * 5 (sexta 17h) vs roadmap segunda 8h
+- Garantir playbooks de incidente sem dependência de api-gateway/agent-orchestrator
+
+---
+
+## FASE 12 — EXECUÇÃO: 10 CICLOS · 150 TAREFAS [R0–R6]
+
+Sequência obrigatória:
+C01 (R0): Secrets + preflight | depende: acesso a secrets equivalentes
+C02 (R0): Workflow produção endurecido | depende: C01 verde
+C03 (R1): Governança documental realinhada | depende: C02 em curso
+C04 (R2): Health/readiness + alertas do core | depende: C03 verde
+C05 (R3): packages/db consumers mapeados e migrados | depende: C03 verde
+C06 (R3): Integrações jurídicas e DR | depende: C05 verde
+C07 (R4): SDR fora do caminho legado | depende: C04+C05 verdes
+C08 (R4): CS/BI + dashboard rebaixado | depende: C04+C06+C07 verdes
+C09 (R5): Ruído estrutural reduzido | depende: C03+C08 verdes
+C10 (R6): Pacote final + go/no-go | depende: C01–C09 verdes
+
+Estimativa: 10–12 semanas com paralelismo controlado.
+
+---
+
+## FASE 13 — CHECKLIST EXECUTIVO: 80 ITENS
+
+Categorias:
+- REL-01 a REL-12: Release, environment e gates de deploy (12 itens)
+- GOV-01 a GOV-11: Governança, taxonomia e documentação (11 itens)
+- OBS-01 a OBS-12: Health, readiness e observabilidade (12 itens)
+- DAT-01 a DAT-13: Dados, migrations e integrações (13 itens)
+- CUT-01 a CUT-12: Cutover funcional e retirada do legado (12 itens)
+- HIG-01 a HIG-10: Higiene, reorganização e satélites (10 itens)
+- FIN-01 a FIN-10: Aceite final e decisão executiva (10 itens)
+
+Regra: nenhum item marcado sem evidência verificável com artefato rastreável.
+
+---
+
+## FASE FINAL — GO-LIVE: 6 CONDIÇÕES MÍNIMAS
+
+1. R0 fechado: preflight:staging verde + preflight:production verde + artefatos publicados
+2. R1 fechado: governança realinhada ao core canônico
+3. R2 fechado: health/readiness reais em apps/web e apps/worker + alertas do core operacionais
+4. R3 fechado: packages/db sem consumer crítico + idempotência Clicksign/DocuSign provada + DR testado
+5. R4 fechado: legado fora do caminho crítico — SDR, CS, BI, dashboard no lane canônico
+6. Score recalculado ≥ 75/100 + reunião formal go/no-go + parecer publicado
+
+---
+
+## REGRAS IMUTÁVEIS (violação = bloqueio total)
+
+R1: Duplicação → eliminar. Dois caminhos para a mesma coisa: um morre.
+R2: Ambiguidade → corrigir antes de avançar. Nenhuma fase avança com taxonomy ou ownership ambíguo.
+R3: Excesso → cortar. 7.8MB de peso morto não são feature. 334 agentes mortos não são backlog.
+R4: Evidência obrigatória. Falso verde é pior que vermelho.
+R5: Sem auto-aprovação. CODEX executa. JULES valida. Papéis não se invertem.
+R6: Legado não é feature. Nenhuma nova feature sobre superfícies em sunset.
+R7: Fonte de verdade = HEAD. Worktree local divergente nunca é evidência de conclusão.
+R8: Go-live é gate, não data. Nenhum B1/B2/B3 em aberto justifica liberação de produção.
+
+---
+
+PROMPT SOBERANO v13.0 · BirthHub360 · Commit 0d21dc8
+Auditoria F0–F11 + Agentes Massiva · Score 60/100 · 3 Bloqueadores · 10 Ciclos · 150 Tarefas · 80 Itens
+2026-03-24
+</textarea>
+
+<script>
+  function toggle(header) {
+    header.classList.toggle('open');
+    const body = header.nextElementSibling;
+    body.classList.toggle('open');
+  }
+
+  function copyPrompt() {
+    const raw = document.getElementById('rawPrompt').value.trim();
+    navigator.clipboard.writeText(raw).then(() => {
+      const btn = document.querySelector('.btn-copy');
+      const original = btn.textContent;
+      btn.textContent = '✓ COPIADO!';
+      btn.style.background = 'rgba(52,211,153,0.15)';
+      btn.style.borderColor = 'rgba(52,211,153,0.4)';
+      btn.style.color = '#34d399';
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.style.background = '';
+        btn.style.borderColor = '';
+        btn.style.color = '';
+      }, 2000);
+    }).catch(() => {
+      const ta = document.getElementById('rawPrompt');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '1';
+      ta.style.top = '0';
+      ta.style.left = '0';
+      ta.style.width = '100%';
+      ta.style.height = '100px';
+      ta.style.zIndex = '9999';
+      ta.select();
+      document.execCommand('copy');
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+    });
+  }
+
+  // Open first section by default already done via class
+  // Animate score bars on load
+  window.addEventListener('load', () => {
+    const bars = document.querySelectorAll('.score-bar');
+    bars.forEach(bar => {
+      const w = bar.style.width;
+      bar.style.width = '0';
+      setTimeout(() => bar.style.width = w, 100);
+    });
+  });
+</script>
+</body>
+</html>

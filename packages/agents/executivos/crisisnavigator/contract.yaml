@@ -1,0 +1,194 @@
+# [SOURCE] BirthHub360_Agentes_Parallel_Plan - CrisisNavigator
+name: CrisisNavigator
+domain: executivos
+cycle: 1
+description: Orquestra resposta executiva a crises operacionais, reputacionais e de compliance, priorizando mitigacao, comunicacao e recuperacao.
+
+preconditions:
+  - Input valido validado contra CrisisNavigatorInputSchema.
+  - Dependencias de engine (tools) configuradas para telemetria e historico.
+
+postconditions:
+  - Output strict retornado aderente ao CrisisNavigatorOutputSchema.
+  - Eventos de telemetria despachados.
+
+input_schema:
+  type: object
+  strict: true
+  properties:
+    tenantId:
+      type: string
+    requestId:
+      type: string
+    targetRecoveryPct:
+      type: number
+    window:
+      type: object
+      strict: true
+      properties:
+        startDate:
+          type: string
+        endDate:
+          type: string
+    segments:
+      type: array
+      items:
+        type: string
+    sections:
+      type: array
+      items:
+        type: string
+    constraints:
+      type: object
+      strict: true
+      properties:
+        maxActions:
+          type: number
+        language:
+          type: string
+        currency:
+          type: string
+
+output_schema:
+  type: object
+  strict: true
+  properties:
+    agent:
+      type: string
+      value: CrisisNavigator
+    domain:
+      type: string
+      value: executivos
+    status:
+      type: string
+      enum: [success, fallback, error]
+    summary:
+      type: string
+    generatedAt:
+      type: string
+    crisisBrief:
+      type: object
+      strict: true
+      properties:
+        headline:
+          type: string
+        projectedRecoveryPct:
+          type: number
+        recommendedResponseFront:
+          type: string
+        signals:
+          type: array
+          items:
+            type: object
+            strict: true
+            properties:
+              metric:
+                type: string
+              value:
+                type: number
+              interpretation:
+                type: string
+              confidence:
+                type: string
+                enum: [high, medium, low]
+        riskSignals:
+          type: array
+          items:
+            type: object
+            strict: true
+            properties:
+              signal:
+                type: string
+              severity:
+                type: string
+                enum: [critical, high, medium, low]
+              mitigation:
+                type: string
+        actions:
+          type: array
+          items:
+            type: object
+            strict: true
+            properties:
+              recommendation:
+                type: string
+              owner:
+                type: string
+              targetDate:
+                type: string
+              priority:
+                type: string
+                enum: [critical, high, medium, low]
+    observability:
+      type: object
+      strict: true
+      properties:
+        metrics:
+          type: object
+          strict: true
+          properties:
+            durationMs:
+              type: number
+            toolCalls:
+              type: number
+            toolFailures:
+              type: number
+            retries:
+              type: number
+        events:
+          type: array
+          items:
+            type: object
+    fallback:
+      type: object
+      strict: true
+      properties:
+        applied:
+          type: boolean
+        mode:
+          type: string
+        reasons:
+          type: array
+          items:
+            type: string
+
+failure_behavior: degraded_report
+
+fallback:
+  strategy: canonical
+  retry:
+    maxAttempts: 3
+    baseDelayMs: 500
+
+raci:
+  responsible: CrisisNavigator
+  accountable: COO
+  consulted: Legal
+  informed: CEO
+
+security:
+  access_level: executive-only
+  pii_handled: false
+  data_retention: transient
+
+observability:
+  events:
+    - crisisnavigator.request.received
+    - crisisnavigator.contract.loaded
+    - crisisnavigator.tool.call.started
+    - crisisnavigator.tool.call.succeeded
+    - crisisnavigator.tool.call.failed
+    - crisisnavigator.retry.scheduled
+    - crisisnavigator.fallback.applied
+    - crisisnavigator.response.generated
+  metrics:
+    - duration_ms
+    - tool_calls
+    - tool_failures
+    - retries
+  alerts:
+    - tool_failures > 5
+    - duration_ms > 15000
+
+runtime_enforcement: false
+runtime_cycle: 16

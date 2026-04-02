@@ -1,0 +1,48 @@
+name: Repository Health
+
+on:
+  schedule:
+    - cron: '0 12 * * 1'
+  push:
+    branches:
+      - 'codex/**'
+  workflow_dispatch:
+
+jobs:
+  repository-health:
+    name: repository-health
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 9.1.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Clean stale untracked artifacts
+        run: pnpm artifacts:clean -- --apply
+
+      - name: Generate repository health report
+        run: pnpm monorepo:doctor
+
+      - name: Upload doctor artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: repository-health-artifacts
+          path: artifacts/doctor
+          if-no-files-found: ignore

@@ -1,0 +1,223 @@
+name: Security Scan
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - develop
+      - 'codex/**'
+
+permissions:
+  contents: read
+
+jobs:
+  semgrep:
+    name: semgrep (typescript + express)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Run Semgrep
+        uses: semgrep/semgrep-action@v1
+        with:
+          config: >-
+            p/typescript
+            p/expressjs
+
+  dependency-audit:
+    name: npm audit (high+)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 9.1.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Audit dependencies
+        run: pnpm audit --audit-level=high
+
+  python-security:
+    name: python-security
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 9.1.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+          node-version-file: .nvmrc
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version-file: .python-version
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Python dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-test.txt bandit pip-audit "safety>=3.7.0"
+
+      - name: Enforce Python workflow hard-fail policy
+        run: python scripts/ci/check-python-workflow-hard-fail.py
+
+      - name: Run Bandit
+        run: python -m bandit -q -r agents apps/webhook-receiver -x "*/tests/*" -lll
+
+      - name: Run pip-audit
+        run: python -m pip_audit -r requirements-test.txt --ignore-vuln CVE-2026-4539
+
+      - name: Run Safety
+        run: python -m safety check --full-report -r requirements-test.txt
+
+  rbac-suite:
+    name: RBAC suite
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: birthub_cycle3
+          POSTGRES_PASSWORD: postgrespassword
+          POSTGRES_USER: postgres
+        options: >-
+          --health-cmd "pg_isready -U postgres -d birthub_cycle3"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+        ports:
+          - 5432:5432
+      redis:
+        image: redis:7.2-alpine
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+        ports:
+          - 6379:6379
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 9.1.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma client
+        run: pnpm db:generate
+        env:
+          DATABASE_URL: postgresql://postgres:postgrespassword@localhost:5432/birthub_cycle3
+
+      - name: Run RBAC tests
+        run: pnpm test:rbac
+        env:
+          API_CORS_ORIGINS: http://localhost:3001
+          DATABASE_URL: postgresql://postgres:postgrespassword@localhost:5432/birthub_cycle3
+          NODE_ENV: test
+          REDIS_URL: redis://localhost:6379
+          SESSION_SECRET: ci-secret
+          WEB_BASE_URL: http://localhost:3001
+
+  zap-baseline:
+    name: OWASP ZAP baseline
+    if: ${{ vars.ZAP_TARGET_URL != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: ZAP baseline scan
+        uses: zaproxy/action-baseline@v0.15.0
+        with:
+          allow_issue_writing: false
+          cmd_options: -a
+          target: ${{ vars.ZAP_TARGET_URL }}
+
+  security-report:
+    name: security coverage report
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: always()
+    needs:
+      - semgrep
+      - dependency-audit
+      - python-security
+      - rbac-suite
+      - zap-baseline
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 9.1.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify auth guards
+        run: pnpm security:guards
+
+      - name: Generate security report
+        run: pnpm security:report
+        env:
+          NPM_AUDIT_STATUS: ${{ needs.dependency-audit.result }}
+          PYTHON_SECURITY_STATUS: ${{ needs.python-security.result }}
+          RBAC_STATUS: ${{ needs.rbac-suite.result }}
+          SEMGREP_STATUS: ${{ needs.semgrep.result }}
+          ZAP_STATUS: ${{ needs.zap-baseline.result }}
+
+      - name: Upload security report
+        uses: actions/upload-artifact@v7
+        with:
+          name: security-coverage-report
+          path: docs/security/security-coverage-report.md

@@ -1,0 +1,25 @@
+{
+  "agentId": "conversion-forecaster-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent conversion-forecaster-github-pack (ConversionForecaster Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"conversion-forecaster-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"conversion-forecaster-github-pack.tool.read\",\n    \"conversion-forecaster-github-pack.tool.search\",\n    \"conversion-forecaster-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "bf813756ac7c191072763946d2173020a1a39c55359c4d7e8c541390a1b4a6ba"
+  },
+  "generatedAt": "2026-03-24T04:54:30.681Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "conversion-forecaster-github-pack",
+    "ConversionForecaster Agent"
+  ],
+  "sourceChecksum": "1b8d0af8b022f439cd73f170e9f862eb43d9f8253967208a4a6ba60b64617a6c",
+  "sourcePath": ".github/agents/cycle-04/conversion-forecaster.agent.md"
+}

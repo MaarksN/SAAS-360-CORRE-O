@@ -1,0 +1,59 @@
+name: Reusable Node Check
+
+on:
+  workflow_call:
+    inputs:
+      command:
+        required: true
+        type: string
+      fetch_depth:
+        default: 1
+        required: false
+        type: number
+      timeout_minutes:
+        default: 20
+        required: false
+        type: number
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: ${{ inputs.timeout_minutes }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: ${{ inputs.fetch_depth }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 9.1.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright browsers
+        if: contains(inputs.command, 'test:e2e')
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Prisma diagnostics
+        run: |
+          node -e "const pkg=require('./packages/database/package.json'); console.log('prisma(dev):', pkg.devDependencies?.prisma ?? 'missing'); console.log('@prisma/client(dep):', pkg.dependencies?.['@prisma/client'] ?? 'missing');"
+          pnpm ls @prisma/client
+          pnpm ls prisma
+          cat packages/database/prisma/schema.prisma | grep -A 5 datasource || true
+          sha256sum packages/database/prisma/schema.prisma || true
+
+      - name: Run command
+        run: ${{ inputs.command }}

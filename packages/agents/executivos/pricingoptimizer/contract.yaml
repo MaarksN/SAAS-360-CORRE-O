@@ -1,0 +1,194 @@
+# [SOURCE] BirthHub360_Agentes_Parallel_Plan - PricingOptimizer
+name: PricingOptimizer
+domain: executivos
+cycle: 1
+description: Analisa inteligencia de concorrentes, gaps de features e benchmarks de preco para sugerir campos de batalha otimizados e aumentar taxas de conversao.
+
+preconditions:
+  - Input valido validado contra PricingOptimizerInputSchema.
+  - Dependencias de engine (tools) configuradas para telemetria e historico.
+
+postconditions:
+  - Output strict retornado aderente ao PricingOptimizerOutputSchema.
+  - Eventos de telemetria despachados.
+
+input_schema:
+  type: object
+  strict: true
+  properties:
+    tenantId:
+      type: string
+    requestId:
+      type: string
+    targetWinRateLiftPct:
+      type: number
+    window:
+      type: object
+      strict: true
+      properties:
+        startDate:
+          type: string
+        endDate:
+          type: string
+    segments:
+      type: array
+      items:
+        type: string
+    sections:
+      type: array
+      items:
+        type: string
+    constraints:
+      type: object
+      strict: true
+      properties:
+        maxActions:
+          type: number
+        language:
+          type: string
+        currency:
+          type: string
+
+output_schema:
+  type: object
+  strict: true
+  properties:
+    agent:
+      type: string
+      value: PricingOptimizer
+    domain:
+      type: string
+      value: executivos
+    status:
+      type: string
+      enum: [success, fallback, error]
+    summary:
+      type: string
+    generatedAt:
+      type: string
+    competitorBrief:
+      type: object
+      strict: true
+      properties:
+        headline:
+          type: string
+        projectedWinRateLiftPct:
+          type: number
+        recommendedBattlefront:
+          type: string
+        signals:
+          type: array
+          items:
+            type: object
+            strict: true
+            properties:
+              metric:
+                type: string
+              value:
+                type: number
+              interpretation:
+                type: string
+              confidence:
+                type: string
+                enum: [high, medium, low]
+        riskSignals:
+          type: array
+          items:
+            type: object
+            strict: true
+            properties:
+              signal:
+                type: string
+              severity:
+                type: string
+                enum: [critical, high, medium, low]
+              mitigation:
+                type: string
+        actions:
+          type: array
+          items:
+            type: object
+            strict: true
+            properties:
+              recommendation:
+                type: string
+              owner:
+                type: string
+              targetDate:
+                type: string
+              priority:
+                type: string
+                enum: [critical, high, medium, low]
+    observability:
+      type: object
+      strict: true
+      properties:
+        metrics:
+          type: object
+          strict: true
+          properties:
+            durationMs:
+              type: number
+            toolCalls:
+              type: number
+            toolFailures:
+              type: number
+            retries:
+              type: number
+        events:
+          type: array
+          items:
+            type: object
+    fallback:
+      type: object
+      strict: true
+      properties:
+        applied:
+          type: boolean
+        mode:
+          type: string
+        reasons:
+          type: array
+          items:
+            type: string
+
+failure_behavior: degraded_report
+
+fallback:
+  strategy: canonical
+  retry:
+    maxAttempts: 3
+    baseDelayMs: 500
+
+raci:
+  responsible: PricingOptimizer
+  accountable: CPO
+  consulted: PMM
+  informed: Sales
+
+security:
+  access_level: executive-only
+  pii_handled: false
+  data_retention: transient
+
+observability:
+  events:
+    - pricingoptimizer.request.received
+    - pricingoptimizer.contract.loaded
+    - pricingoptimizer.tool.call.started
+    - pricingoptimizer.tool.call.succeeded
+    - pricingoptimizer.tool.call.failed
+    - pricingoptimizer.retry.scheduled
+    - pricingoptimizer.fallback.applied
+    - pricingoptimizer.response.generated
+  metrics:
+    - duration_ms
+    - tool_calls
+    - tool_failures
+    - retries
+  alerts:
+    - tool_failures > 5
+    - duration_ms > 15000
+
+runtime_enforcement: false
+runtime_cycle: 16

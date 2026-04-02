@@ -1,0 +1,25 @@
+{
+  "agentId": "niche-explorer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent niche-explorer-github-pack (NicheExplorer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"niche-explorer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"niche-explorer-github-pack.tool.read\",\n    \"niche-explorer-github-pack.tool.search\",\n    \"niche-explorer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "f123b2ad7f49edadea3453ebe11e59315fbc4cce857f6e7010e5e396d3f3a9ab"
+  },
+  "generatedAt": "2026-03-24T04:54:30.719Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "niche-explorer-github-pack",
+    "NicheExplorer Agent"
+  ],
+  "sourceChecksum": "9ec85a2d761b9522fc1c3d6deabf33d5635a0808f0bf340d7f32d1ee53c290ed",
+  "sourcePath": ".github/agents/cycle-04/niche-explorer.agent.md"
+}

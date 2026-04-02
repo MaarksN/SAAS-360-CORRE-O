@@ -1,0 +1,25 @@
+{
+  "agentId": "crm-cleanser-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent crm-cleanser-github-pack (CRMCleanser Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"crm-cleanser-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"crm-cleanser-github-pack.tool.read\",\n    \"crm-cleanser-github-pack.tool.search\",\n    \"crm-cleanser-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "345be9fb7445e9356acc8b37f03e094305d5dc4d9a765791df90a6c471195c01"
+  },
+  "generatedAt": "2026-03-24T04:54:31.772Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "crm-cleanser-github-pack",
+    "CRMCleanser Agent"
+  ],
+  "sourceChecksum": "4b7283acef0c9421a3aff934012e3afa99710a6de4a195393957e78dc69bd6cb",
+  "sourcePath": ".github/agents/cycle-10/crm-cleanser.agent.md"
+}

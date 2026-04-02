@@ -1,0 +1,342 @@
+groups:
+  - name: birthub-core-operational
+    rules:
+      - alert: ApiUnavailable
+        expr: up{job="api"} == 0
+        for: 2m
+        labels:
+          severity: critical
+          domain: api
+          slo: availability
+          sla_severity: P0
+          owner_primary: platform-api
+          owner_backup: platform-architecture
+          communication_channel: bh360-api-ownership
+        annotations:
+          summary: "API indisponível"
+          description: "O job da API não responde há pelo menos 2 minutos."
+
+      - alert: ApiHighErrorRate
+        expr: sum(rate(birthub_http_requests_total{status=~"5.."}[5m])) / clamp_min(sum(rate(birthub_http_requests_total[5m])), 0.001) > 0.05
+        for: 10m
+        labels:
+          severity: critical
+          domain: api
+          slo: availability
+          sla_severity: P1
+          owner_primary: platform-api
+          owner_backup: platform-architecture
+          communication_channel: bh360-api-ownership
+        annotations:
+          summary: "API com fail-rate elevado"
+          description: "Taxa de respostas 5xx acima de 5% por 10 minutos."
+
+      - alert: ApiHighLatencyP95
+        expr: histogram_quantile(0.95, sum by (le) (rate(birthub_http_request_duration_ms_bucket[5m]))) > 500
+        for: 10m
+        labels:
+          severity: warning
+          domain: api
+          slo: latency
+          sla_severity: P2
+          owner_primary: platform-api
+          owner_backup: platform-architecture
+          communication_channel: bh360-api-ownership
+        annotations:
+          summary: "Latência p95 da API alta"
+          description: "p95 acima de 500ms por 10 minutos."
+
+      - alert: WebUnavailable
+        expr: up{job="web"} == 0
+        for: 2m
+        labels:
+          severity: critical
+          domain: web
+          slo: availability
+          sla_severity: P0
+          owner_primary: platform-web
+          owner_backup: platform-architecture
+          communication_channel: bh360-web-ownership
+        annotations:
+          summary: "Web indisponível"
+          description: "O job web não responde há pelo menos 2 minutos."
+
+      - alert: WebAvailabilityDegraded
+        expr: sum(rate(birthub_web_healthcheck_requests_total{status="degraded"}[5m])) / clamp_min(sum(rate(birthub_web_healthcheck_requests_total[5m])), 0.001) > 0.05
+        for: 10m
+        labels:
+          severity: critical
+          domain: web
+          slo: availability
+          sla_severity: P1
+          owner_primary: platform-web
+          owner_backup: platform-architecture
+          communication_channel: bh360-web-ownership
+        annotations:
+          summary: "Disponibilidade da web degradada"
+          description: "Mais de 5% das verificações de health/readiness estão degradadas."
+
+      - alert: WebHighLatencyP95
+        expr: histogram_quantile(0.95, sum by (le, endpoint) (rate(birthub_web_healthcheck_duration_ms_bucket{endpoint="readiness"}[5m]))) > 400
+        for: 10m
+        labels:
+          severity: warning
+          domain: web
+          slo: latency
+          sla_severity: P2
+          owner_primary: platform-web
+          owner_backup: platform-architecture
+          communication_channel: bh360-web-ownership
+        annotations:
+          summary: "Latência p95 da readiness web alta"
+          description: "p95 da readiness web acima de 400ms por 10 minutos."
+
+      - alert: WorkerUnavailable
+        expr: up{job="worker"} == 0
+        for: 2m
+        labels:
+          severity: critical
+          domain: worker
+          slo: availability
+          sla_severity: P0
+          owner_primary: platform-automation
+          owner_backup: platform-api
+          communication_channel: bh360-worker-ownership
+        annotations:
+          summary: "Worker indisponível"
+          description: "O job worker não responde há pelo menos 2 minutos."
+
+      - alert: WorkerQueueBacklogHigh
+        expr: birthub_worker_queue_backlog_total > 200
+        for: 10m
+        labels:
+          severity: warning
+          domain: queue
+          slo: saturation
+          sla_severity: P2
+          owner_primary: platform-automation
+          owner_backup: platform-api
+          communication_channel: bh360-worker-ownership
+        annotations:
+          summary: "Backlog de filas do worker elevado"
+          description: "Backlog total acima de 200 jobs por 10 minutos."
+
+      - alert: WorkerDlqGrowing
+        expr: increase(birthub_worker_queue_dlq_total[10m]) > 5
+        for: 5m
+        labels:
+          severity: critical
+          domain: queue
+          slo: reliability
+          sla_severity: P1
+          owner_primary: platform-automation
+          owner_backup: platform-api
+          communication_channel: bh360-worker-ownership
+        annotations:
+          summary: "DLQ do worker crescendo"
+          description: "Mais de 5 novos jobs falhos em 10 minutos."
+
+      - alert: WorkerHighFailRate
+        expr: sum(rate(birthub_worker_jobs_total{status="failed"}[5m])) / clamp_min(sum(rate(birthub_worker_jobs_total[5m])), 0.001) > 0.1
+        for: 10m
+        labels:
+          severity: critical
+          domain: worker
+          slo: reliability
+          sla_severity: P1
+          owner_primary: platform-automation
+          owner_backup: platform-api
+          communication_channel: bh360-worker-ownership
+        annotations:
+          summary: "Fail-rate do worker acima do limite"
+          description: "Mais de 10% dos jobs processados falham por 10 minutos."
+
+      - alert: DatabaseConnectionPoolSaturation
+        expr: birthub_db_connection_pool_usage_ratio > 0.9
+        for: 10m
+        labels:
+          severity: warning
+          domain: database
+          slo: saturation
+          sla_severity: P2
+          owner_primary: platform-data
+          owner_backup: platform-api
+          communication_channel: bh360-database-ownership
+        annotations:
+          summary: "Pool de conexões do banco saturado"
+          description: "Uso do pool de conexões acima de 90% por 10 minutos."
+
+      - alert: DatabaseQueryErrorSpike
+        expr: sum(rate(birthub_db_queries_total{status="error"}[5m])) > 2
+        for: 10m
+        labels:
+          severity: critical
+          domain: database
+          slo: reliability
+          sla_severity: P1
+          owner_primary: platform-data
+          owner_backup: platform-api
+          communication_channel: bh360-database-ownership
+        annotations:
+          summary: "Erros de consulta no banco em alta"
+          description: "Taxa de erros de query acima de 2/s por 10 minutos."
+
+      - alert: QueueExporterUnavailable
+        expr: up{job="queue"} == 0
+        for: 5m
+        labels:
+          severity: warning
+          domain: queue
+          slo: observability
+          sla_severity: P2
+          owner_primary: platform-automation
+          owner_backup: platform-data
+          communication_channel: bh360-worker-ownership
+        annotations:
+          summary: "Observabilidade de fila indisponível"
+          description: "Job de observabilidade de queue sem dados por 5 minutos."
+
+  - name: birthub-observability-coverage
+    rules:
+      - alert: ApiMetricsMissing
+        expr: absent(birthub_http_requests_total)
+        for: 5m
+        labels:
+          severity: warning
+          domain: api
+          slo: observability
+          sla_severity: P2
+          owner_primary: platform-api
+          owner_backup: platform-architecture
+          communication_channel: bh360-api-ownership
+        annotations:
+          summary: "Métricas da API ausentes"
+          description: "A série birthub_http_requests_total não está sendo coletada."
+
+      - alert: WebMetricsMissing
+        expr: absent(birthub_web_healthcheck_requests_total)
+        for: 5m
+        labels:
+          severity: warning
+          domain: web
+          slo: observability
+          sla_severity: P2
+          owner_primary: platform-web
+          owner_backup: platform-architecture
+          communication_channel: bh360-web-ownership
+        annotations:
+          summary: "Métricas da web ausentes"
+          description: "A série birthub_web_healthcheck_requests_total não está sendo coletada."
+
+      - alert: WorkerMetricsMissing
+        expr: absent(birthub_worker_jobs_total)
+        for: 5m
+        labels:
+          severity: warning
+          domain: worker
+          slo: observability
+          sla_severity: P2
+          owner_primary: platform-automation
+          owner_backup: platform-api
+          communication_channel: bh360-worker-ownership
+        annotations:
+          summary: "Métricas do worker ausentes"
+          description: "A série birthub_worker_jobs_total não está sendo coletada."
+
+  - name: birthub-sla-governance
+    rules:
+      - alert: SlaAtRiskP0
+        expr: sum(ALERTS{alertstate="firing",sla_severity="P0",alertname!~"SlaAtRiskP[0-3]|SlaBreachedP[0-3]"}) > 0
+        for: 90m
+        labels:
+          severity: warning
+          sla_severity: P0
+          sla_state: at_risk_75
+          escalation_target: owner_primary_owner_backup
+        annotations:
+          summary: "SLA P0 em risco (>=75% do prazo)"
+          description: "Incidente P0 ativo por pelo menos 90 minutos sem encerramento."
+
+      - alert: SlaBreachedP0
+        expr: sum(ALERTS{alertstate="firing",sla_severity="P0",alertname!~"SlaAtRiskP[0-3]|SlaBreachedP[0-3]"}) > 0
+        for: 2h
+        labels:
+          severity: critical
+          sla_severity: P0
+          sla_state: breached_100
+          escalation_target: cto_engineering_manager_platform_architecture
+        annotations:
+          summary: "SLA P0 violado"
+          description: "Incidente P0 ativo por 2 horas ou mais."
+
+      - alert: SlaAtRiskP1
+        expr: sum(ALERTS{alertstate="firing",sla_severity="P1",alertname!~"SlaAtRiskP[0-3]|SlaBreachedP[0-3]"}) > 0
+        for: 6h
+        labels:
+          severity: warning
+          sla_severity: P1
+          sla_state: at_risk_75
+          escalation_target: owner_primary_owner_backup
+        annotations:
+          summary: "SLA P1 em risco (>=75% do prazo)"
+          description: "Incidente P1 ativo por pelo menos 6 horas sem encerramento."
+
+      - alert: SlaBreachedP1
+        expr: sum(ALERTS{alertstate="firing",sla_severity="P1",alertname!~"SlaAtRiskP[0-3]|SlaBreachedP[0-3]"}) > 0
+        for: 8h
+        labels:
+          severity: critical
+          sla_severity: P1
+          sla_state: breached_100
+          escalation_target: engineering_manager_platform_architecture
+        annotations:
+          summary: "SLA P1 violado"
+          description: "Incidente P1 ativo por 8 horas ou mais."
+
+      - alert: SlaAtRiskP2
+        expr: sum(ALERTS{alertstate="firing",sla_severity="P2",alertname!~"SlaAtRiskP[0-3]|SlaBreachedP[0-3]"}) > 0
+        for: 54h
+        labels:
+          severity: warning
+          sla_severity: P2
+          sla_state: at_risk_75
+          escalation_target: owner_primary_owner_backup
+        annotations:
+          summary: "SLA P2 em risco (>=75% do prazo)"
+          description: "Incidente P2 ativo por pelo menos 54 horas sem encerramento."
+
+      - alert: SlaBreachedP2
+        expr: sum(ALERTS{alertstate="firing",sla_severity="P2",alertname!~"SlaAtRiskP[0-3]|SlaBreachedP[0-3]"}) > 0
+        for: 72h
+        labels:
+          severity: critical
+          sla_severity: P2
+          sla_state: breached_100
+          escalation_target: engineering_manager_domain_owner
+        annotations:
+          summary: "SLA P2 violado"
+          description: "Incidente P2 ativo por 72 horas ou mais."
+
+      - alert: SlaAtRiskP3
+        expr: sum(ALERTS{alertstate="firing",sla_severity="P3",alertname!~"SlaAtRiskP[0-3]|SlaBreachedP[0-3]"}) > 0
+        for: 252h
+        labels:
+          severity: warning
+          sla_severity: P3
+          sla_state: at_risk_75
+          escalation_target: owner_primary_owner_backup
+        annotations:
+          summary: "SLA P3 em risco (>=75% do prazo)"
+          description: "Incidente P3 ativo por pelo menos 10 dias e 12 horas."
+
+      - alert: SlaBreachedP3
+        expr: sum(ALERTS{alertstate="firing",sla_severity="P3",alertname!~"SlaAtRiskP[0-3]|SlaBreachedP[0-3]"}) > 0
+        for: 336h
+        labels:
+          severity: critical
+          sla_severity: P3
+          sla_state: breached_100
+          escalation_target: domain_owner_sprint_planning
+        annotations:
+          summary: "SLA P3 violado"
+          description: "Incidente P3 ativo por 2 semanas ou mais."

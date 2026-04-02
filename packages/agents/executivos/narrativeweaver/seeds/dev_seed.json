@@ -1,0 +1,47 @@
+{
+  "[SOURCE]": "BirthHub360_Agentes_Parallel_Plan - NarrativeWeaver",
+  "source_traceability": "BirthHub360_Agentes_Parallel_Plan - NarrativeWeaver",
+  "input": {
+    "audiences": [
+      "board",
+      "investors",
+      "leadership_team"
+    ],
+    "constraints": {
+      "currency": "BRL",
+      "language": "pt-BR",
+      "maxActions": 5
+    },
+    "requestId": "seed-narrativeweaver-001",
+    "sections": [
+      "board_narrative",
+      "earnings_storyline",
+      "execution_proof",
+      "risk_disclosure",
+      "strategy_alignment"
+    ],
+    "targetClarityScorePct": 75,
+    "tenantId": "tenant_exec_seed",
+    "window": {
+      "endDate": "2026-03-31",
+      "startDate": "2026-03-01"
+    }
+  },
+  "mock_external_sources": {
+    "earnings_signal_feed": {
+      "dominantDriver": "pipeline quality improving while churn pressure is stabilizing",
+      "guidanceConfidencePct": 67.4,
+      "varianceNarrativeRiskPct": 24.1
+    },
+    "stakeholder_sentiment_stream": {
+      "boardAlignmentPct": 71.8,
+      "concernTopic": "cash conversion timing under aggressive growth commitments",
+      "investorConfidenceShiftPct": 9.6
+    },
+    "strategy_coherence_engine": {
+      "executionCredibilityPct": 73.2,
+      "messageConsistencyPct": 78.9,
+      "narrativeGapPct": 18.7
+    }
+  }
+}

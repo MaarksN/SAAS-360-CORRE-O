@@ -1,0 +1,47 @@
+{
+  "[SOURCE]": "BirthHub360_Agentes_Parallel_Plan - CrisisNavigator",
+  "source_traceability": "BirthHub360_Agentes_Parallel_Plan - CrisisNavigator",
+  "input": {
+    "constraints": {
+      "currency": "BRL",
+      "language": "pt-BR",
+      "maxActions": 5
+    },
+    "requestId": "seed-crisisnavigator-001",
+    "sections": [
+      "battlecards",
+      "feature_gaps",
+      "pricing_benchmarks",
+      "threat_signals",
+      "win_loss_patterns"
+    ],
+    "segments": [
+      "enterprise",
+      "mid_market",
+      "strategic_accounts"
+    ],
+    "targetRecoveryPct": 23,
+    "tenantId": "tenant_exec_seed",
+    "window": {
+      "endDate": "2026-03-31",
+      "startDate": "2026-03-01"
+    }
+  },
+  "mock_external_sources": {
+    "competitor_intel_feed": {
+      "aggressiveMover": "vertical suite challenger with aggressive bundle pricing",
+      "displacementPressurePct": 46.8,
+      "strategicThreatIndex": 58.2
+    },
+    "pricing_benchmark_engine": {
+      "discountGapPct": -6.4,
+      "premiumJustificationScore": 64.5,
+      "priceElasticityRiskPct": 27.3
+    },
+    "feature_gap_analyzer": {
+      "differentiationScore": 69.1,
+      "highestGapTheme": "enterprise governance automation with auditable workflows",
+      "parityCoveragePct": 61.7
+    }
+  }
+}

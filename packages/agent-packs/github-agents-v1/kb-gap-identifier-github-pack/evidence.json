@@ -1,0 +1,25 @@
+{
+  "agentId": "kb-gap-identifier-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent kb-gap-identifier-github-pack (KBGapIdentifier Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"kb-gap-identifier-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"kb-gap-identifier-github-pack.tool.read\",\n    \"kb-gap-identifier-github-pack.tool.search\",\n    \"kb-gap-identifier-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "996f8981c2a9fd024a3e61179ac0c733b85174224b36295dac653d032738dac0"
+  },
+  "generatedAt": "2026-03-24T04:54:31.549Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "kb-gap-identifier-github-pack",
+    "KBGapIdentifier Agent"
+  ],
+  "sourceChecksum": "183f0fc2a8c6375d2728c1ff3d21eece5a748edebf609ad3d7e52d23cf01df55",
+  "sourcePath": ".github/agents/cycle-09/kb-gap-identifier.agent.md"
+}

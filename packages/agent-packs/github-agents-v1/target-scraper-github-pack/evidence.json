@@ -1,0 +1,25 @@
+{
+  "agentId": "target-scraper-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent target-scraper-github-pack (TargetScraper Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"target-scraper-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"target-scraper-github-pack.tool.read\",\n    \"target-scraper-github-pack.tool.search\",\n    \"target-scraper-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "566c5db3a1394c27c93c2c895c5079c5d1cc417e6029d2289fc4a83dcd33c749"
+  },
+  "generatedAt": "2026-03-24T04:54:30.621Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "target-scraper-github-pack",
+    "TargetScraper Agent"
+  ],
+  "sourceChecksum": "8d09084278c46cffcf3d3422c07590e573953ea812fda86656c8457c03109a40",
+  "sourcePath": ".github/agents/cycle-03/target-scraper.agent.md"
+}

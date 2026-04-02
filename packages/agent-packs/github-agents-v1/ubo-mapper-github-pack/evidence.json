@@ -1,0 +1,25 @@
+{
+  "agentId": "ubo-mapper-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent ubo-mapper-github-pack (UBOMapper Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"ubo-mapper-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"ubo-mapper-github-pack.tool.read\",\n    \"ubo-mapper-github-pack.tool.search\",\n    \"ubo-mapper-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "b253794fb5a048480ea4b16265a1d6397368acb26f34edb0d7e1a20fd1fa7b45"
+  },
+  "generatedAt": "2026-03-24T04:54:32.580Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "ubo-mapper-github-pack",
+    "UBOMapper Agent"
+  ],
+  "sourceChecksum": "0e85db180096f5f6f3170305e597e869803390cec9114af315932d3a164e5588",
+  "sourcePath": ".github/agents/cycle-14/ubo-mapper.agent.md"
+}

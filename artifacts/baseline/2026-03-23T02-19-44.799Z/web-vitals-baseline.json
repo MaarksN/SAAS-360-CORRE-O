@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-03-23T02:20:21.915Z",
+  "notes": {
+    "fid": "FID captured via first-input PerformanceObserver."
+  },
+  "routes": [
+    "/",
+    "/pricing"
+  ],
+  "runs": [
+    {
+      "cls": 0,
+      "fidMs": 4.7,
+      "iteration": 1,
+      "lcpMs": 336,
+      "route": "/"
+    },
+    {
+      "cls": 0,
+      "fidMs": 0.8,
+      "iteration": 2,
+      "lcpMs": 436,
+      "route": "/"
+    },
+    {
+      "cls": 0,
+      "fidMs": 0.4,
+      "iteration": 3,
+      "lcpMs": 452,
+      "route": "/"
+    },
+    {
+      "cls": 0,
+      "fidMs": 0.6,
+      "iteration": 1,
+      "lcpMs": 316,
+      "route": "/pricing"
+    },
+    {
+      "cls": 0,
+      "fidMs": 0.6,
+      "iteration": 2,
+      "lcpMs": 200,
+      "route": "/pricing"
+    },
+    {
+      "cls": 0,
+      "fidMs": 0.4,
+      "iteration": 3,
+      "lcpMs": 188,
+      "route": "/pricing"
+    }
+  ],
+  "summary": {
+    "clsMedian": 0,
+    "fidMedianMs": 0.6,
+    "lcpMedianMs": 326
+  }
+}

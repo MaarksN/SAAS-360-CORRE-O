@@ -1,0 +1,76 @@
+{
+  "generatedAt": "2026-03-23T02:42:09.084Z",
+  "inputs": {
+    "semgrepPath": "artifacts/security/semgrep-f0-initial.json",
+    "auditPath": "artifacts/security/pnpm-audit-high.json",
+    "inlineCredentialsPath": "artifacts/security/inline-credential-scan.json"
+  },
+  "summary": {
+    "semgrepFindings": 5,
+    "inlineCredentialFindings": 1,
+    "dependencyAuditHigh": 0,
+    "dependencyAuditCritical": 0
+  },
+  "owasp": [
+    {
+      "id": "A01",
+      "title": "Broken Access Control",
+      "status": "monitoring",
+      "evidence": "security:guards executed (auth guard coverage)"
+    },
+    {
+      "id": "A02",
+      "title": "Cryptographic Failures",
+      "status": "finding",
+      "evidence": "2 semgrep finding(s) on crypto usage"
+    },
+    {
+      "id": "A03",
+      "title": "Injection",
+      "status": "monitoring",
+      "evidence": "Semgrep TypeScript/Express rules executed"
+    },
+    {
+      "id": "A04",
+      "title": "Insecure Design",
+      "status": "monitoring",
+      "evidence": "Threat model and security guardrails documented"
+    },
+    {
+      "id": "A05",
+      "title": "Security Misconfiguration",
+      "status": "ok",
+      "evidence": "pnpm audit high=0 critical=0"
+    },
+    {
+      "id": "A06",
+      "title": "Vulnerable and Outdated Components",
+      "status": "ok",
+      "evidence": "dependency audit snapshot archived"
+    },
+    {
+      "id": "A07",
+      "title": "Identification and Authentication Failures",
+      "status": "monitoring",
+      "evidence": "RBAC/auth guard checks in local security gate"
+    },
+    {
+      "id": "A08",
+      "title": "Software and Data Integrity Failures",
+      "status": "monitoring",
+      "evidence": "CI governance + lockfile integrity in baseline logs"
+    },
+    {
+      "id": "A09",
+      "title": "Security Logging and Monitoring Failures",
+      "status": "monitoring",
+      "evidence": "monitoring rules and dashboard tracked in infra/monitoring"
+    },
+    {
+      "id": "A10",
+      "title": "Server-Side Request Forgery",
+      "status": "monitoring",
+      "evidence": "policy and guardrails documented; requires DAST lane"
+    }
+  ]
+}

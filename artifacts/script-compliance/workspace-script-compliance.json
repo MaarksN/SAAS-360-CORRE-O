@@ -1,0 +1,917 @@
+{
+  "criteria": {
+    "runtime-overlay": "Package only owns a tsx worker shim and relies on validated shared packages for compile-time guarantees.",
+    "shared-source-only": "Package exposes shared source-only modules consumed directly from repository code.",
+    "template-only": "Package contains runtime-loaded templates and does not publish a standalone distributable artifact.",
+    "types-only": "Package exports only types or schemas and is validated transitively by consumer typechecks."
+  },
+  "generatedAt": "2026-03-31T04:20:09.802Z",
+  "rows": [
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/agent-packs",
+      "name": "@birthub/agent-packs",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "packages/agent-packs/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test test/**/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/agent-runtime",
+      "name": "@birthub/agent-runtime",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "packages/agent-runtime/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --experimental-strip-types --test src/__tests__/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/agents-core",
+      "name": "@birthub/agents-core",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "packages/agents-core/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test \"src/**/*.test.ts\"",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/agents-registry",
+      "name": "@birthub/agents-registry",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "packages/agents-registry/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc -p tsconfig.json --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test \"test/**/*.test.ts\"",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc -p tsconfig.json",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "apps/api",
+      "name": "@birthub/api",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "apps/api/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc -p tsconfig.json --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test tests/**/*.test.ts test/**/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc -p tsconfig.json",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/auth",
+      "name": "@birthub/auth",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P1",
+      "relativePath": "packages/auth/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test src/__tests__/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/config",
+      "name": "@birthub/config",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "packages/config/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc -p tsconfig.json --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test src/**/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc -p tsconfig.json",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/conversation-core",
+      "name": "@birthub/conversation-core",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "packages/conversation-core/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test src/__tests__/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/database",
+      "name": "@birthub/database",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "packages/database/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc -p tsconfig.json --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test src/**/*.test.ts test/**/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc -p tsconfig.json",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/emails",
+      "name": "@birthub/emails",
+      "notes": "build: Email templates are rendered in-place by consumers and do not ship a separate library build.",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "packages/emails/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "echo 'email templates linted'",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test templates/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "echo \"N/A: no build step\"",
+          "criterion": "template-only",
+          "justification": "Email templates are rendered in-place by consumers and do not ship a separate library build.",
+          "status": "na"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/integrations",
+      "name": "@birthub/integrations",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P1",
+      "relativePath": "packages/integrations/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test src/**/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/llm-client",
+      "name": "@birthub/llm-client",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P1",
+      "relativePath": "packages/llm-client/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test src/**/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/logger",
+      "name": "@birthub/logger",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "packages/logger/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc -p tsconfig.json --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test src/**/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc -p tsconfig.json",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/queue",
+      "name": "@birthub/queue",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P1",
+      "relativePath": "packages/queue/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test \"tests/**/*.test.ts\"",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/security",
+      "name": "@birthub/security",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P1",
+      "relativePath": "packages/security/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --experimental-strip-types --test src/__tests__/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/shared",
+      "name": "@birthub/shared",
+      "notes": "build: Shared error helpers are consumed directly from source and do not require an isolated bundle.",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "packages/shared/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test errors/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "echo \"N/A: no build step\"",
+          "criterion": "shared-source-only",
+          "justification": "Shared error helpers are consumed directly from source and do not require an isolated bundle.",
+          "status": "na"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/shared-types",
+      "name": "@birthub/shared-types",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "packages/shared-types/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test src/**/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/testing",
+      "name": "@birthub/testing",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "packages/testing/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc -p tsconfig.json --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test src/**/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc -p tsconfig.json",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/utils",
+      "name": "@birthub/utils",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P1",
+      "relativePath": "packages/utils/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test src/__tests__/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "apps/voice-engine",
+      "name": "@birthub/voice-engine",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "apps/voice-engine/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint src",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc -p tsconfig.json --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test src/**/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc -p tsconfig.json",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "apps/web",
+      "name": "@birthub/web",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "apps/web/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc -p tsconfig.json --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test tests/**/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "next build",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "apps/worker",
+      "name": "@birthub/worker",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "apps/worker/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint .",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc -p tsconfig.json --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test src/**/*.test.ts test/**/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc -p tsconfig.json",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "approvedBy": "Lead tecnico de plataforma",
+      "approvedOn": "2026-03-22",
+      "deadline": "2026-03-29",
+      "directory": "packages/workflows-core",
+      "name": "@birthub/workflows-core",
+      "notes": "",
+      "owner": "Platform Engineering",
+      "priority": "P2",
+      "relativePath": "packages/workflows-core/package.json",
+      "reviewer": "Platform Tech Lead",
+      "risk": "low",
+      "scripts": {
+        "lint": {
+          "command": "eslint . --config eslint.config.mjs",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "typecheck": {
+          "command": "tsc -p tsconfig.json --noEmit",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "test": {
+          "command": "node --import tsx --test test/**/*.test.ts",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        },
+        "build": {
+          "command": "tsc -p tsconfig.json",
+          "criterion": null,
+          "justification": null,
+          "status": "ok"
+        }
+      }
+    }
+  ],
+  "summary": {
+    "generatedAt": "2026-03-31T04:20:09.802Z",
+    "totals": {
+      "missing": 0,
+      "na": 2,
+      "ok": 90,
+      "workspaces": 23
+    }
+  }
+}

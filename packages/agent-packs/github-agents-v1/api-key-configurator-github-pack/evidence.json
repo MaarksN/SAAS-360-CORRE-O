@@ -1,0 +1,25 @@
+{
+  "agentId": "api-key-configurator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent api-key-configurator-github-pack (APIKeyConfigurator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"api-key-configurator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"api-key-configurator-github-pack.tool.read\",\n    \"api-key-configurator-github-pack.tool.search\",\n    \"api-key-configurator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "e24bbe29dbca6cc0a12487f4a4b59adea735de3ffcbd89425adc56860ab0f592"
+  },
+  "generatedAt": "2026-03-24T04:54:31.470Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "api-key-configurator-github-pack",
+    "APIKeyConfigurator Agent"
+  ],
+  "sourceChecksum": "bc581b4fde800d68e4fedd85a5758bdd7f2e3b6ff2a2baf7eb9aed9c188c2b42",
+  "sourcePath": ".github/agents/cycle-09/api-key-configurator.agent.md"
+}

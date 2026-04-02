@@ -1,0 +1,8 @@
+<<<<<<< Updated upstream
+# Ignored commits for formatting and renaming
+afba155918941dcbfaa2184cf996d67a826878c2
+=======
+# Add pure formatting or mechanical rewrite commits here.
+# Example:
+# abc1234 format: run prettier on monorepo
+>>>>>>> Stashed changes

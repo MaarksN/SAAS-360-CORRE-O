@@ -1,0 +1,8 @@
+{
+  "appliedOperations": 0,
+  "checkedAt": "2026-03-24T20:21:38.366Z",
+  "dryRun": true,
+  "qualityChecks": null,
+  "rollbackSqlPath": "C:\\Users\\Marks\\Documents\\GitHub\\PROJETO-FINAL-BIRTHUB-360-INNOVATION\\docs\\release\\rollback_v1.sql",
+  "skipped": true
+}

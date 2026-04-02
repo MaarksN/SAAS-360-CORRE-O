@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BirthHub360//Ownership Governance//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bh360-ownership-quarterly-review-20260701@birthhub360.internal
+DTSTAMP:20260322T120000Z
+DTSTART;TZID=America/Sao_Paulo:20260701T100000
+DTEND;TZID=America/Sao_Paulo:20260701T110000
+RRULE:FREQ=MONTHLY;INTERVAL=3;BYMONTHDAY=1
+SUMMARY:F0 Ownership Matrix - Revisao Trimestral
+DESCRIPTION:Revisar owners primarios/backups\, cobertura de componentes criticos\, canais oficiais\, handoffs e validacao de acessos.
+LOCATION:Slack #bh360-devops-ownership
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

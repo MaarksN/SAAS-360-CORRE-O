@@ -1,0 +1,25 @@
+{
+  "agentId": "media-mix-optimizer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent media-mix-optimizer-github-pack (MediaMixOptimizer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"media-mix-optimizer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"media-mix-optimizer-github-pack.tool.read\",\n    \"media-mix-optimizer-github-pack.tool.search\",\n    \"media-mix-optimizer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "33f3614cc478f081bf6eeec34fc51a23b1b7c4315f8e603844b83a0b7d49bc0d"
+  },
+  "generatedAt": "2026-03-24T04:54:32.081Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "media-mix-optimizer-github-pack",
+    "MediaMixOptimizer Agent"
+  ],
+  "sourceChecksum": "7e8bf6d2040decbba70a4ad273a83f555f5d9efefb6dcbc9d870da2a92913d5e",
+  "sourcePath": ".github/agents/cycle-11/media-mix-optimizer.agent.md"
+}

@@ -1,0 +1,25 @@
+{
+  "agentId": "narrative-weaver-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent narrative-weaver-github-pack (NarrativeWeaver Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"narrative-weaver-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"narrative-weaver-github-pack.tool.read\",\n    \"narrative-weaver-github-pack.tool.search\",\n    \"narrative-weaver-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "f82f07e060075453d8bcf86e7fff7a6c7bd27ecd7165a50db0dcf1a5aed890cb"
+  },
+  "generatedAt": "2026-03-24T04:54:30.263Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "narrative-weaver-github-pack",
+    "NarrativeWeaver Agent"
+  ],
+  "sourceChecksum": "1e61c2f35dd6ed90b272615041e801924d6d5911a5e7a1a3209cc771d1b9e3d9",
+  "sourcePath": ".github/agents/cycle-01/narrative-weaver.agent.md"
+}

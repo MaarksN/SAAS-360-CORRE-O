@@ -1,0 +1,25 @@
+{
+  "agentId": "schema-markup-generator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent schema-markup-generator-github-pack (SchemaMarkupGenerator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"schema-markup-generator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"schema-markup-generator-github-pack.tool.read\",\n    \"schema-markup-generator-github-pack.tool.search\",\n    \"schema-markup-generator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "a1b70daa51ab036a60f547fb26793bd8d9a35b459618f807a3b2b02cbde1ee91"
+  },
+  "generatedAt": "2026-03-24T04:54:31.394Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "schema-markup-generator-github-pack",
+    "SchemaMarkupGenerator Agent"
+  ],
+  "sourceChecksum": "cdf1141fd0f9eb41432177fbf538df0d6e0614a29c5ca628fd46d108608247da",
+  "sourcePath": ".github/agents/cycle-08/schema-markup-generator.agent.md"
+}

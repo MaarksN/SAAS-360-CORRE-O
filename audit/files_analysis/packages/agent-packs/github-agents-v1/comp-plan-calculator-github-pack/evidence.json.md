@@ -1,0 +1,34 @@
+# packages/agent-packs/github-agents-v1/comp-plan-calculator-github-pack/evidence.json
+
+## Purpose
+- Executable source under packages. No explicit named exports detected.
+
+## Architectural Role
+- Shared package surface used across the monorepo.
+
+## Dependencies
+- Imports/refs: none
+- Env vars: none
+- Related tests: tests/e2e/workflow-editor-evidence.spec.ts
+
+## Operational Relevance
+- Included in the SaaS score because it directly shapes runtime behavior or quality gates.
+
+## Problems
+- No heuristic issues were triggered by the static scan.
+
+## Risk Score
+- 15/100
+
+## Status
+- OK
+
+## Evidence
+- Kind: runtime
+- Language: JSON
+- Top level: packages
+- Size: 1218 bytes
+- SHA-256: b8a24756f92ac5f285d787a1ef5b0cb745856892a5090ccd1cb3e4d720adbf64
+- Direct imports/refs: none
+- Env vars: none
+- Related tests: tests/e2e/workflow-editor-evidence.spec.ts

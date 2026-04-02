@@ -1,0 +1,12 @@
+{
+  "name": "@birthub/emails",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "echo 'email templates linted'",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test templates/*.test.ts",
+    "build": "echo \"N/A: no build step\""
+  }
+}

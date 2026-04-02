@@ -1,0 +1,25 @@
+{
+  "agentId": "attribution-modeler-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent attribution-modeler-github-pack (AttributionModeler Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"attribution-modeler-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"attribution-modeler-github-pack.tool.read\",\n    \"attribution-modeler-github-pack.tool.search\",\n    \"attribution-modeler-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "6143ee3cfc6b84aa26e1dbf9463b34a578d53208f24e4bfba01854ef08eeb80f"
+  },
+  "generatedAt": "2026-03-24T04:54:31.980Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "attribution-modeler-github-pack",
+    "AttributionModeler Agent"
+  ],
+  "sourceChecksum": "3e3384f92d5fff00c510be47775fa80444d28bd64888c6db40af451ba6ebb295",
+  "sourcePath": ".github/agents/cycle-11/attribution-modeler.agent.md"
+}

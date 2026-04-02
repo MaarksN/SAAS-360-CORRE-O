@@ -1,0 +1,30 @@
+<svg width="720" height="180" viewBox="0 0 720 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bhLogoBg" x1="16" y1="12" x2="132" y2="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="bhLogoShadow" x="0" y="0" width="160" height="160" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="12" flood-color="#6366F1" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+  <g filter="url(#bhLogoShadow)">
+    <rect x="16" y="16" width="128" height="128" rx="36" fill="url(#bhLogoBg)"/>
+    <rect x="18" y="18" width="124" height="124" rx="34" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+  </g>
+  <circle cx="80" cy="80" r="35" stroke="#6366F1" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="115" cy="45" r="8" fill="#10B981" stroke="#020617" stroke-width="3"/>
+  <path d="M82.4 49C89.9 54 93.8 62.5 92.8 71.6L106.9 85.6C109 87.7 109 91.1 106.9 93.2L101.8 98.4C99.7 100.5 96.3 100.5 94.2 98.4L80.1 84.4C70.9 85.4 62.4 81.5 57.4 74L67.7 72.7L75.4 65L76.7 54.7L82.4 49Z" fill="white"/>
+  <path d="M72.7 94.8L64.3 103.2" stroke="white" stroke-width="5" stroke-linecap="round"/>
+  <path d="M64.4 86.5L56 94.9" stroke="white" stroke-width="5" stroke-linecap="round"/>
+  <path d="M52 110L62.5 106.5L55.5 99.5L52 110Z" fill="#F59E0B"/>
+  <text x="184" y="88" fill="#0F172A" font-family="Outfit, Plus Jakarta Sans, sans-serif" font-size="58" font-weight="800" letter-spacing="-0.04em">
+    BirthHub
+  </text>
+  <text x="470" y="88" fill="#6366F1" font-family="Outfit, Plus Jakarta Sans, sans-serif" font-size="58" font-weight="800" letter-spacing="-0.04em">
+    360
+  </text>
+  <text x="184" y="122" fill="#334155" font-family="Plus Jakarta Sans, IBM Plex Sans, sans-serif" font-size="18" font-weight="700" letter-spacing="0.18em">
+    GOVERNED REVENUE OPERATIONS
+  </text>
+</svg>

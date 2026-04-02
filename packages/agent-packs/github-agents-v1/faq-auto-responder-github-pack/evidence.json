@@ -1,0 +1,25 @@
+{
+  "agentId": "faq-auto-responder-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent faq-auto-responder-github-pack (FAQAutoResponder Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"faq-auto-responder-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"faq-auto-responder-github-pack.tool.read\",\n    \"faq-auto-responder-github-pack.tool.search\",\n    \"faq-auto-responder-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "7cd467302067b44f0b880f95fd90e76dbe2c1767342b1c903b53a87279e55ff2"
+  },
+  "generatedAt": "2026-03-24T04:54:31.534Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "faq-auto-responder-github-pack",
+    "FAQAutoResponder Agent"
+  ],
+  "sourceChecksum": "1b369c8494437dcf082be3a11368926b6a7d5fc58e62cd027eabd0ee1216211a",
+  "sourcePath": ".github/agents/cycle-09/faq-auto-responder.agent.md"
+}

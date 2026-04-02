@@ -1,0 +1,25 @@
+{
+  "agentId": "activation-optimizer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent activation-optimizer-github-pack (ActivationOptimizer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"activation-optimizer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"activation-optimizer-github-pack.tool.read\",\n    \"activation-optimizer-github-pack.tool.search\",\n    \"activation-optimizer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "cdf913ad772f5fcb9373ecbb2c45bfbf656b5415eccce1b54702c1d99bbe6a65"
+  },
+  "generatedAt": "2026-03-24T04:54:31.093Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "activation-optimizer-github-pack",
+    "ActivationOptimizer Agent"
+  ],
+  "sourceChecksum": "c279bb48995a1f9a17846aa98fa9f6457f5d4d989563ff645e60a1fe32850974",
+  "sourcePath": ".github/agents/cycle-07/activation-optimizer.agent.md"
+}

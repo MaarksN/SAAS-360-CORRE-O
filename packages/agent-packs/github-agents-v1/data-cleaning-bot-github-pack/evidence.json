@@ -1,0 +1,25 @@
+{
+  "agentId": "data-cleaning-bot-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent data-cleaning-bot-github-pack (DataCleaningBot Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"data-cleaning-bot-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"data-cleaning-bot-github-pack.tool.read\",\n    \"data-cleaning-bot-github-pack.tool.search\",\n    \"data-cleaning-bot-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "43e31879b7a7171b6e08e8638ad0d53486a9a7400ee7a52c4e242255b93b9e3d"
+  },
+  "generatedAt": "2026-03-24T04:54:32.025Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "data-cleaning-bot-github-pack",
+    "DataCleaningBot Agent"
+  ],
+  "sourceChecksum": "ea312e3794c9f2e7d149af86db059788c985e9b006d20d851f5302f037aa7522",
+  "sourcePath": ".github/agents/cycle-11/data-cleaning-bot.agent.md"
+}

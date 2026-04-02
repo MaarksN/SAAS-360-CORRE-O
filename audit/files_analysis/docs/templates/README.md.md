@@ -1,0 +1,34 @@
+# docs/templates/README.md
+
+## Purpose
+- Documentation or non-runtime supporting material.
+
+## Architectural Role
+- Non-executable supporting material.
+
+## Dependencies
+- Imports/refs: none
+- Env vars: none
+- Related tests: none
+
+## Operational Relevance
+- Excluded from the SaaS score as doc; still inventoried for completeness.
+
+## Problems
+- No heuristic issues were triggered by the static scan.
+
+## Risk Score
+- 0/100
+
+## Status
+- OK
+
+## Evidence
+- Kind: doc
+- Language: Markdown
+- Top level: docs
+- Size: 764 bytes
+- SHA-256: 59abb22aca13bf60e5998fca7156c71e0fa8d8778ed7aef2aad382e2c11e3a05
+- Direct imports/refs: none
+- Env vars: none
+- Related tests: none

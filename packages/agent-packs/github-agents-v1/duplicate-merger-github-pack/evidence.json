@@ -1,0 +1,25 @@
+{
+  "agentId": "duplicate-merger-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent duplicate-merger-github-pack (DuplicateMerger Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"duplicate-merger-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"duplicate-merger-github-pack.tool.read\",\n    \"duplicate-merger-github-pack.tool.search\",\n    \"duplicate-merger-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "8ed52da378375b7c8829ae481f64fefc56b459dfd77e2c20cfad8873aa76bc7f"
+  },
+  "generatedAt": "2026-03-24T04:54:31.810Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "duplicate-merger-github-pack",
+    "DuplicateMerger Agent"
+  ],
+  "sourceChecksum": "79a08c6f4444a6a3e42dd1d684981d61b4603cabe3bdfd20ba876471f930ada0",
+  "sourcePath": ".github/agents/cycle-10/duplicate-merger.agent.md"
+}

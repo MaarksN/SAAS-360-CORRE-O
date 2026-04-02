@@ -1,0 +1,25 @@
+{
+  "agentId": "landing-page-morpher-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent landing-page-morpher-github-pack (LandingPageMorpher Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"landing-page-morpher-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"landing-page-morpher-github-pack.tool.read\",\n    \"landing-page-morpher-github-pack.tool.search\",\n    \"landing-page-morpher-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "37a776b1be5ad61594415948592c485bb54a674f8027ee936902bdfb34b65a8c"
+  },
+  "generatedAt": "2026-03-24T04:54:31.167Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "landing-page-morpher-github-pack",
+    "LandingPageMorpher Agent"
+  ],
+  "sourceChecksum": "e32976f6248fa41b4cf79d3858623a91332ce71e960b9e8afd76d1ed59fb7c91",
+  "sourcePath": ".github/agents/cycle-07/landing-page-morpher.agent.md"
+}

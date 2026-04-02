@@ -1,0 +1,25 @@
+{
+  "agentId": "one-on-one-prep-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent one-on-one-prep-github-pack (OneOnOnePrep Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"one-on-one-prep-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"one-on-one-prep-github-pack.tool.read\",\n    \"one-on-one-prep-github-pack.tool.search\",\n    \"one-on-one-prep-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "a9a5457dcd245f647941f16c8fae5bb02bb5263d1f937c4945e2aafd3b63c1d4"
+  },
+  "generatedAt": "2026-03-24T04:54:30.990Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "one-on-one-prep-github-pack",
+    "OneOnOnePrep Agent"
+  ],
+  "sourceChecksum": "099fc73cede834a9bc1626c26c1f81aa0fe56ba8be36bbf67a4a5831beb4f902",
+  "sourcePath": ".github/agents/cycle-06/one-on-one-prep.agent.md"
+}

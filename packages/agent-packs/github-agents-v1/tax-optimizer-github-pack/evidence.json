@@ -1,0 +1,25 @@
+{
+  "agentId": "tax-optimizer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent tax-optimizer-github-pack (TaxOptimizer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"tax-optimizer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"tax-optimizer-github-pack.tool.read\",\n    \"tax-optimizer-github-pack.tool.search\",\n    \"tax-optimizer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "653f86b25e1fbc0fde61067738c2cf1fca92d02eae990e3a6374a17d4839e3f1"
+  },
+  "generatedAt": "2026-03-24T04:54:30.313Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "tax-optimizer-github-pack",
+    "TaxOptimizer Agent"
+  ],
+  "sourceChecksum": "cb3ea9f3f4289fafd1cd1b68271b6f4dc14f2329d8789d288fad36a1e103b4e8",
+  "sourcePath": ".github/agents/cycle-01/tax-optimizer.agent.md"
+}

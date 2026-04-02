@@ -1,0 +1,25 @@
+{
+  "agentId": "acv-growth-tracker-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent acv-growth-tracker-github-pack (ACVGrowthTracker Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"acv-growth-tracker-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"acv-growth-tracker-github-pack.tool.read\",\n    \"acv-growth-tracker-github-pack.tool.search\",\n    \"acv-growth-tracker-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "ea7d940505e9096f069d23a79bdee330ab15eb751dc271ed328d8a0e24663f29"
+  },
+  "generatedAt": "2026-03-24T04:54:31.725Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "acv-growth-tracker-github-pack",
+    "ACVGrowthTracker Agent"
+  ],
+  "sourceChecksum": "a2850e7bbefd316517057e366cfa5bc8614fef7ba43b82de0ff3dc894aa028f9",
+  "sourcePath": ".github/agents/cycle-10/acv-growth-tracker.agent.md"
+}

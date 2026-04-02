@@ -1,0 +1,25 @@
+{
+  "agentId": "invoice-generator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent invoice-generator-github-pack (InvoiceGenerator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"invoice-generator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"invoice-generator-github-pack.tool.read\",\n    \"invoice-generator-github-pack.tool.search\",\n    \"invoice-generator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "9062d23abc4e883a3249fd87208fbe1ce10d985de1faae8447c844fe6e1bbf9d"
+  },
+  "generatedAt": "2026-03-24T04:54:32.247Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "invoice-generator-github-pack",
+    "InvoiceGenerator Agent"
+  ],
+  "sourceChecksum": "507665636bfcb1a2cce135c8a99f998b0dbca1d6c71695e9daff118d844df8c4",
+  "sourcePath": ".github/agents/cycle-12/invoice-generator.agent.md"
+}

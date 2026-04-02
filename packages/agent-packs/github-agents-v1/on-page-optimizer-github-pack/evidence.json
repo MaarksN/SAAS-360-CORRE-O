@@ -1,0 +1,25 @@
+{
+  "agentId": "on-page-optimizer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent on-page-optimizer-github-pack (OnPageOptimizer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"on-page-optimizer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"on-page-optimizer-github-pack.tool.read\",\n    \"on-page-optimizer-github-pack.tool.search\",\n    \"on-page-optimizer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "091ae11eaeb6983c908bd2c14c71d839d9a7c1985f6c95e999add9adf56b32cc"
+  },
+  "generatedAt": "2026-03-24T04:54:31.378Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "on-page-optimizer-github-pack",
+    "OnPageOptimizer Agent"
+  ],
+  "sourceChecksum": "df5f31eda80ed1542d12d6a9b9a88c42b3b7cd139c3b1e0b84f6876e222f294f",
+  "sourcePath": ".github/agents/cycle-08/on-page-optimizer.agent.md"
+}

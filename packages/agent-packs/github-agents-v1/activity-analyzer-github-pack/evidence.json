@@ -1,0 +1,25 @@
+{
+  "agentId": "activity-analyzer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent activity-analyzer-github-pack (ActivityAnalyzer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"activity-analyzer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"activity-analyzer-github-pack.tool.read\",\n    \"activity-analyzer-github-pack.tool.search\",\n    \"activity-analyzer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "e6262819c949f72b84e124fa044b2fa5e612dae1dbda8f4d80d2b9350642ff02"
+  },
+  "generatedAt": "2026-03-24T04:54:30.650Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "activity-analyzer-github-pack",
+    "ActivityAnalyzer Agent"
+  ],
+  "sourceChecksum": "9c32bdec1f8ff52870ee45fa1e958b6d85aeab27644e6339b7ede97f388f1f20",
+  "sourcePath": ".github/agents/cycle-04/activity-analyzer.agent.md"
+}

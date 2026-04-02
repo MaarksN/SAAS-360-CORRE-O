@@ -1,0 +1,46 @@
+name: Bug report
+description: Registrar bug com impacto funcional ou operacional
+title: "[BUG] "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: O que esta quebrado e qual o impacto?
+      placeholder: Descreva o bug e o impacto observado.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - P0
+        - P1
+        - P2
+        - P3
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Suggested owner
+      placeholder: API Core / Platform Runtime / DX
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Passos objetivos para reproduzir o problema
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Logs, links, screenshots, PRs ou artefatos
+    validations:
+      required: true

@@ -1,0 +1,25 @@
+{
+  "agentId": "pricing-elasticity-tester-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent pricing-elasticity-tester-github-pack (PricingElasticityTester Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"pricing-elasticity-tester-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"pricing-elasticity-tester-github-pack.tool.read\",\n    \"pricing-elasticity-tester-github-pack.tool.search\",\n    \"pricing-elasticity-tester-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "6a2fd3f257496089d8768a7a84ff71e1ff41c07d728fb5685d392882811175fd"
+  },
+  "generatedAt": "2026-03-24T04:54:32.105Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "pricing-elasticity-tester-github-pack",
+    "PricingElasticityTester Agent"
+  ],
+  "sourceChecksum": "02b41a6636622eaae46b4072e965117b9b272249b621aa592bad2e8af812398f",
+  "sourcePath": ".github/agents/cycle-11/pricing-elasticity-tester.agent.md"
+}

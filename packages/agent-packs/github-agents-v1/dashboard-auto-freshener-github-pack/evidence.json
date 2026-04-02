@@ -1,0 +1,25 @@
+{
+  "agentId": "dashboard-auto-freshener-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent dashboard-auto-freshener-github-pack (DashboardAutoFreshener Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"dashboard-auto-freshener-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"dashboard-auto-freshener-github-pack.tool.read\",\n    \"dashboard-auto-freshener-github-pack.tool.search\",\n    \"dashboard-auto-freshener-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "74b1804766206d9af2cfde7d35f52bbe15128e2bd4c2309c2bd7a56e792eac20"
+  },
+  "generatedAt": "2026-03-24T04:54:32.018Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "dashboard-auto-freshener-github-pack",
+    "DashboardAutoFreshener Agent"
+  ],
+  "sourceChecksum": "ce9d13e7e3aa237c9cb7799446683b93150ed5268b8a7272e600fb69fd0adc03",
+  "sourcePath": ".github/agents/cycle-11/dashboard-auto-freshener.agent.md"
+}

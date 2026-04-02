@@ -1,0 +1,84 @@
+{
+  "adapters": {
+    "adapterFactoryPath": "apps/worker/src/agents/runtime.tools.ts",
+    "adapterMode": "manifest-capability-tool",
+    "entries": [
+      {
+        "action": "tool:execute",
+        "adapterType": "ManifestCapabilityTool",
+        "ready": true,
+        "toolId": "stakeholder-persona-generator-github-pack.tool.read",
+        "toolName": "Read"
+      },
+      {
+        "action": "tool:execute",
+        "adapterType": "ManifestCapabilityTool",
+        "ready": true,
+        "toolId": "stakeholder-persona-generator-github-pack.tool.search",
+        "toolName": "Search"
+      },
+      {
+        "action": "tool:execute",
+        "adapterType": "ManifestCapabilityTool",
+        "ready": true,
+        "toolId": "stakeholder-persona-generator-github-pack.tool.agent",
+        "toolName": "Agent"
+      }
+    ],
+    "ready": true
+  },
+  "collaborators": [
+    "planner-github-pack",
+    "implementer-github-pack",
+    "reviewer-github-pack"
+  ],
+  "evidence": {
+    "dryRunArtifactPath": "packages/agent-packs/github-agents-v1/stakeholder-persona-generator-github-pack/evidence.json",
+    "generatedAt": "2026-03-24T04:54:30.741Z",
+    "ready": true,
+    "sourceChecksum": "b6a6d9babbc21ab5cb78c32919b3a9e28551e8b541a291afbd2a0e61d0f3321a",
+    "sourcePath": ".github/agents/cycle-04/stakeholder-persona-generator.agent.md"
+  },
+  "integration": {
+    "apiBindingPath": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "catalogRoot": "packages/agent-packs/github-agents-v1",
+    "discoverableQueries": [
+      "stakeholder-persona-generator-github-pack",
+      "StakeholderPersonaGenerator Agent"
+    ],
+    "ready": true,
+    "runtimeProvider": "manifest-runtime",
+    "runtimeToolsBindingPath": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBindingPath": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "manifest": {
+    "manifestPath": "packages/agent-packs/github-agents-v1/stakeholder-persona-generator-github-pack/manifest.json",
+    "manifestVersion": "1.0.0",
+    "ready": true
+  },
+  "policy": {
+    "enginePath": "packages/agents-core/src/policy/engine.ts",
+    "ready": true,
+    "requiredActions": [
+      "tool:execute",
+      "memory:read",
+      "memory:write",
+      "learning:read",
+      "learning:write",
+      "audit:write",
+      "report:read",
+      "approval:request",
+      "decision:recommend",
+      "workflow:trigger"
+    ],
+    "ruleCount": 10
+  },
+  "readiness": {
+    "adapters": true,
+    "evidence": true,
+    "integration": true,
+    "manifest": true,
+    "overall": true,
+    "policy": true
+  }
+}

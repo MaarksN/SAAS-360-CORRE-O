@@ -1,0 +1,25 @@
+{
+  "agentId": "market-expansion-modeler-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent market-expansion-modeler-github-pack (MarketExpansionModeler Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"market-expansion-modeler-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"market-expansion-modeler-github-pack.tool.read\",\n    \"market-expansion-modeler-github-pack.tool.search\",\n    \"market-expansion-modeler-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "5d0d8c7a6129646159c86d80dcf5b03bc2a4589b4d7ede0a03f3068d1d9afe3c"
+  },
+  "generatedAt": "2026-03-24T04:54:30.982Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "market-expansion-modeler-github-pack",
+    "MarketExpansionModeler Agent"
+  ],
+  "sourceChecksum": "e57281493a4e740c4bdab06bd6526f1170c1600c74df1756f381362a012acf8a",
+  "sourcePath": ".github/agents/cycle-06/market-expansion-modeler.agent.md"
+}

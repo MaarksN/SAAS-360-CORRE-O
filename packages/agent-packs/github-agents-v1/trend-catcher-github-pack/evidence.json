@@ -1,0 +1,25 @@
+{
+  "agentId": "trend-catcher-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent trend-catcher-github-pack (TrendCatcher Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"trend-catcher-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"trend-catcher-github-pack.tool.read\",\n    \"trend-catcher-github-pack.tool.search\",\n    \"trend-catcher-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "20aadaad46901f6370f1857119f4101a246a42115ba5354fe4f120a43873caae"
+  },
+  "generatedAt": "2026-03-24T04:54:30.322Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "trend-catcher-github-pack",
+    "TrendCatcher Agent"
+  ],
+  "sourceChecksum": "11e4b3612ecf1cece39aa4323cb1a56320ca04ad5033d2c2e7a7cb921d99bd8c",
+  "sourcePath": ".github/agents/cycle-01/trend-catcher.agent.md"
+}

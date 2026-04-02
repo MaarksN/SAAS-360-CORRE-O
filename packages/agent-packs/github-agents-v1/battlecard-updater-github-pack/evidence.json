@@ -1,0 +1,25 @@
+{
+  "agentId": "battlecard-updater-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent battlecard-updater-github-pack (BattlecardUpdater Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"battlecard-updater-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"battlecard-updater-github-pack.tool.read\",\n    \"battlecard-updater-github-pack.tool.search\",\n    \"battlecard-updater-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "b65a0d439dfeaba0ea6cf9b1648600ec05b0baa3b3661d444cf9f89ad8979ead"
+  },
+  "generatedAt": "2026-03-24T04:54:31.117Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "battlecard-updater-github-pack",
+    "BattlecardUpdater Agent"
+  ],
+  "sourceChecksum": "a655eb237e49c6eeffd422d395c225bbe8c64924980e9aaac19095c1dc79f608",
+  "sourcePath": ".github/agents/cycle-07/battlecard-updater.agent.md"
+}

@@ -1,0 +1,25 @@
+{
+  "agentId": "audience-segment-discoverer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent audience-segment-discoverer-github-pack (AudienceSegmentDiscoverer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"audience-segment-discoverer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"audience-segment-discoverer-github-pack.tool.read\",\n    \"audience-segment-discoverer-github-pack.tool.search\",\n    \"audience-segment-discoverer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "d427b32812be08cca051870e925ec77bdb3669ef1e8bece00551b233addbacdd"
+  },
+  "generatedAt": "2026-03-24T04:54:31.988Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "audience-segment-discoverer-github-pack",
+    "AudienceSegmentDiscoverer Agent"
+  ],
+  "sourceChecksum": "cf3751447dc03cfc0f0b88b15a6ba06ad0d7cf785a63f5826c06b4075d46b237",
+  "sourcePath": ".github/agents/cycle-11/audience-segment-discoverer.agent.md"
+}

@@ -1,0 +1,2013 @@
+{
+  "artifacts": [
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/advocacy-finder-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/advocacy-finder-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/advocacy-finder-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/advocacy-finder.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/audit-bot-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/audit-bot-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/audit-bot-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/audit-bot.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/board-prep-ai-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/board-prep-ai-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/board-prep-ai-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/board-prep-ai.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/brand-guardian-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/brand-guardian-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/brand-guardian-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/brand-guardian.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/budget-fluid-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/budget-fluid-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/budget-fluid-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/budget-fluid.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/cap-table-manager-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/cap-table-manager-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/cap-table-manager-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/cap-table-manager.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/capital-allocator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/capital-allocator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/capital-allocator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/capital-allocator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/cash-flow-clairvoyant-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/cash-flow-clairvoyant-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/cash-flow-clairvoyant-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/cash-flow-clairvoyant.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/churn-deflector-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/churn-deflector-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/churn-deflector-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/churn-deflector.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/competitor-x-ray-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/competitor-x-ray-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/competitor-x-ray-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/competitor-x-ray.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/crisis-navigator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/crisis-navigator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/crisis-navigator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/crisis-navigator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/culture-pulse-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/culture-pulse-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/culture-pulse-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/culture-pulse.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/escalation-predictor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/escalation-predictor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/escalation-predictor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/escalation-predictor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/expansion-mapper-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/expansion-mapper-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/expansion-mapper-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/expansion-mapper.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/journey-architect-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/journey-architect-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/journey-architect-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/journey-architect.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/market-sentinel-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/market-sentinel-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/market-sentinel-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/market-sentinel.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/narrative-weaver-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/narrative-weaver-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/narrative-weaver-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/narrative-weaver.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/pipeline-oracle-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/pipeline-oracle-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/pipeline-oracle-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/pipeline-oracle.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/pricing-optimizer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/pricing-optimizer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/pricing-optimizer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/pricing-optimizer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/quota-architect-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/quota-architect-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/quota-architect-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/quota-architect.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/sentiment-aggregator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/sentiment-aggregator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/sentiment-aggregator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/sentiment-aggregator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/spend-controller-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/spend-controller-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/spend-controller-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/spend-controller.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/tax-optimizer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/tax-optimizer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/tax-optimizer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/tax-optimizer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/trend-catcher-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/trend-catcher-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/trend-catcher-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/trend-catcher.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/vip-concierge-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/vip-concierge-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/vip-concierge-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-01/vip-concierge.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/agency-auditor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/agency-auditor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/agency-auditor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/agency-auditor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/board-reporting-automator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/board-reporting-automator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/board-reporting-automator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/board-reporting-automator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/bottleneck-detector-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/bottleneck-detector-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/bottleneck-detector-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/bottleneck-detector.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/burn-rate-monitor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/burn-rate-monitor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/burn-rate-monitor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/burn-rate-monitor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/capacity-planner-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/capacity-planner-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/capacity-planner-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/capacity-planner.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/channel-mixer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/channel-mixer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/channel-mixer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/channel-mixer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/compliance-enforcer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/compliance-enforcer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/compliance-enforcer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/compliance-enforcer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/deal-desk-autopilot-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/deal-desk-autopilot-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/deal-desk-autopilot-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/deal-desk-autopilot.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/executive-summary-bot-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/executive-summary-bot-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/executive-summary-bot-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/executive-summary-bot.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/forecast-rollup-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/forecast-rollup-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/forecast-rollup-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/forecast-rollup.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/fx-risk-manager-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/fx-risk-manager-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/fx-risk-manager-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/fx-risk-manager.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/global-brand-localizer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/global-brand-localizer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/global-brand-localizer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/global-brand-localizer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/health-score-architect-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/health-score-architect-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/health-score-architect-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/health-score-architect.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/marketing-tech-architect-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/marketing-tech-architect-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/marketing-tech-architect-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/marketing-tech-architect.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/playbook-generator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/playbook-generator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/playbook-generator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/playbook-generator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/procurement-policy-bot-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/procurement-policy-bot-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/procurement-policy-bot-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/procurement-policy-bot.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/renewal-forecast-engine-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/renewal-forecast-engine-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/renewal-forecast-engine-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/renewal-forecast-engine.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/rep-coach-ai-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/rep-coach-ai-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/rep-coach-ai-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/rep-coach-ai.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/resource-balancer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/resource-balancer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/resource-balancer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/resource-balancer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/scenario-modeler-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/scenario-modeler-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/scenario-modeler-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/scenario-modeler.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/strategic-partner-scout-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/strategic-partner-scout-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/strategic-partner-scout-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/strategic-partner-scout.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/supply-chain-sync-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/supply-chain-sync-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/supply-chain-sync-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/supply-chain-sync.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/territory-mapper-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/territory-mapper-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/territory-mapper-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/territory-mapper.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/tiering-optimizer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/tiering-optimizer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/tiering-optimizer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/tiering-optimizer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/vendor-negotiator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/vendor-negotiator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/vendor-negotiator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-02/vendor-negotiator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/account-mapper-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/account-mapper-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/account-mapper-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-03/account-mapper.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/calendar-sniper-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/calendar-sniper-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/calendar-sniper-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-03/calendar-sniper.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/cold-call-scripter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/cold-call-scripter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/cold-call-scripter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-03/cold-call-scripter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/data-cleaner-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/data-cleaner-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/data-cleaner-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-03/data-cleaner.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/enrichment-bot-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/enrichment-bot-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/enrichment-bot-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-03/enrichment-bot.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/follow-up-ghost-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/follow-up-ghost-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/follow-up-ghost-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-03/follow-up-ghost.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/inbound-scorer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/inbound-scorer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/inbound-scorer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-03/inbound-scorer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/intent-decoder-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/intent-decoder-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/intent-decoder-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-03/intent-decoder.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/objection-crusher-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/objection-crusher-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/objection-crusher-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-03/objection-crusher.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/personalization-engine-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/personalization-engine-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/personalization-engine-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-03/personalization-engine.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/routing-traffic-cop-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/routing-traffic-cop-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/routing-traffic-cop-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-03/routing-traffic-cop.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/target-scraper-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/target-scraper-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/target-scraper-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-03/target-scraper.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/trigger-event-watcher-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/trigger-event-watcher-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/trigger-event-watcher-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-03/trigger-event-watcher.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/voicemail-dropper-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/voicemail-dropper-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/voicemail-dropper-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-03/voicemail-dropper.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/webinar-nurturer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/webinar-nurturer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/webinar-nurturer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-03/webinar-nurturer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/activity-analyzer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/activity-analyzer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/activity-analyzer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-04/activity-analyzer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/annual-report-analyzer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/annual-report-analyzer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/annual-report-analyzer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-04/annual-report-analyzer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/competitor-displacement-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/competitor-displacement-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/competitor-displacement-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-04/competitor-displacement.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/content-to-lead-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/content-to-lead-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/content-to-lead-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-04/content-to-lead.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/conversion-forecaster-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/conversion-forecaster-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/conversion-forecaster-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-04/conversion-forecaster.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/event-qualifier-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/event-qualifier-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/event-qualifier-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-04/event-qualifier.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/gamification-master-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/gamification-master-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/gamification-master-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-04/gamification-master.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/gatekeeper-bypass-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/gatekeeper-bypass-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/gatekeeper-bypass-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-04/gatekeeper-bypass.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/multi-threader-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/multi-threader-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/multi-threader-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-04/multi-threader.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/niche-explorer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/niche-explorer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/niche-explorer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-04/niche-explorer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/partner-ecosystem-scout-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/partner-ecosystem-scout-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/partner-ecosystem-scout-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-04/partner-ecosystem-scout.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/ramp-up-assistant-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/ramp-up-assistant-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/ramp-up-assistant-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-04/ramp-up-assistant.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/stakeholder-persona-generator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/stakeholder-persona-generator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/stakeholder-persona-generator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-04/stakeholder-persona-generator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/transcript-coach-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/transcript-coach-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/transcript-coach-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-04/transcript-coach.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/vertical-translator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/vertical-translator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/vertical-translator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-04/vertical-translator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/contract-drafter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/contract-drafter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/contract-drafter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/contract-drafter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/deck-customizer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/deck-customizer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/deck-customizer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/deck-customizer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/demo-scripter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/demo-scripter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/demo-scripter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/demo-scripter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/discount-approver-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/discount-approver-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/discount-approver-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/discount-approver.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/early-adopter-nurturer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/early-adopter-nurturer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/early-adopter-nurturer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/early-adopter-nurturer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/exec-summary-generator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/exec-summary-generator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/exec-summary-generator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/exec-summary-generator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/fast-quoter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/fast-quoter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/fast-quoter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/fast-quoter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/ghosting-preventer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/ghosting-preventer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/ghosting-preventer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/ghosting-preventer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/icp-refiner-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/icp-refiner-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/icp-refiner-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/icp-refiner.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/multi-year-deal-modeller-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/multi-year-deal-modeller-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/multi-year-deal-modeller-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/multi-year-deal-modeller.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/mutual-action-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/mutual-action-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/mutual-action-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/mutual-action-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/objection-flashcard-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/objection-flashcard-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/objection-flashcard-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/objection-flashcard.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/org-nav-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/org-nav-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/org-nav-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/org-nav.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/payment-link-sender-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/payment-link-sender-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/payment-link-sender-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/payment-link-sender.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/playbook-creator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/playbook-creator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/playbook-creator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/playbook-creator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/pricing-tester-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/pricing-tester-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/pricing-tester-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/pricing-tester.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/procurement-hacker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/procurement-hacker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/procurement-hacker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/procurement-hacker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/product-feedback-looper-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/product-feedback-looper-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/product-feedback-looper-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/product-feedback-looper.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/rfp-auto-responder-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/rfp-auto-responder-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/rfp-auto-responder-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/rfp-auto-responder.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/roi-calculator-builder-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/roi-calculator-builder-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/roi-calculator-builder-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-05/roi-calculator-builder.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/architecture-diagrammer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/architecture-diagrammer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/architecture-diagrammer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/architecture-diagrammer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/comp-plan-calculator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/comp-plan-calculator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/comp-plan-calculator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/comp-plan-calculator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/deal-at-risk-alerter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/deal-at-risk-alerter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/deal-at-risk-alerter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/deal-at-risk-alerter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/demo-sandboxer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/demo-sandboxer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/demo-sandboxer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/demo-sandboxer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/discount-leak-guard-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/discount-leak-guard-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/discount-leak-guard-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/discount-leak-guard.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/executive-demo-curator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/executive-demo-curator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/executive-demo-curator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/executive-demo-curator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/leaderboard-broadcaster-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/leaderboard-broadcaster-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/leaderboard-broadcaster-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/leaderboard-broadcaster.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/market-expansion-modeler-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/market-expansion-modeler-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/market-expansion-modeler-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/market-expansion-modeler.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/one-on-one-prep-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/one-on-one-prep-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/one-on-one-prep-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/one-on-one-prep.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/pipeline-inspector-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/pipeline-inspector-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/pipeline-inspector-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/pipeline-inspector.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/poc-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/poc-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/poc-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/poc-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/quota-setter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/quota-setter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/quota-setter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/quota-setter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/roi-scenario-modeler-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/roi-scenario-modeler-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/roi-scenario-modeler-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/roi-scenario-modeler.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/security-questionnaire-filler-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/security-questionnaire-filler-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/security-questionnaire-filler-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/security-questionnaire-filler.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/strategic-alliance-scout-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/strategic-alliance-scout-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/strategic-alliance-scout-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/strategic-alliance-scout.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/tech-objection-resolver-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/tech-objection-resolver-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/tech-objection-resolver-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/tech-objection-resolver.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/tech-stack-auditor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/tech-stack-auditor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/tech-stack-auditor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/tech-stack-auditor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/use-case-generator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/use-case-generator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/use-case-generator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/use-case-generator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/value-aligner-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/value-aligner-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/value-aligner-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/value-aligner.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/win-loss-analyzer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/win-loss-analyzer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/win-loss-analyzer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-06/win-loss-analyzer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/ab-test-automator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/ab-test-automator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/ab-test-automator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/ab-test-automator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/activation-optimizer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/activation-optimizer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/activation-optimizer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/activation-optimizer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/ad-copy-machine-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/ad-copy-machine-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/ad-copy-machine-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/ad-copy-machine.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/ad-fatigue-monitor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/ad-fatigue-monitor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/ad-fatigue-monitor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/ad-fatigue-monitor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/battlecard-updater-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/battlecard-updater-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/battlecard-updater-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/battlecard-updater.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/bid-auto-adjuster-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/bid-auto-adjuster-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/bid-auto-adjuster-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/bid-auto-adjuster.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/cacltv-modeler-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/cacltv-modeler-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/cacltv-modeler-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/cacltv-modeler.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/campaign-orchestrator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/campaign-orchestrator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/campaign-orchestrator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/campaign-orchestrator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/creative-asset-tester-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/creative-asset-tester-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/creative-asset-tester-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/creative-asset-tester.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/keyword-opportunity-spotter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/keyword-opportunity-spotter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/keyword-opportunity-spotter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/keyword-opportunity-spotter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/landing-page-morpher-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/landing-page-morpher-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/landing-page-morpher-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/landing-page-morpher.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/launch-planner-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/launch-planner-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/launch-planner-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/launch-planner.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/lead-magnet-creator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/lead-magnet-creator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/lead-magnet-creator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/lead-magnet-creator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/persona-sync-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/persona-sync-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/persona-sync-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/persona-sync.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/plagiarism-tone-checker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/plagiarism-tone-checker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/plagiarism-tone-checker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/plagiarism-tone-checker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/positioning-tester-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/positioning-tester-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/positioning-tester-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/positioning-tester.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/release-note-writer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/release-note-writer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/release-note-writer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/release-note-writer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/roas-maximizer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/roas-maximizer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/roas-maximizer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/roas-maximizer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/seo-draft-writer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/seo-draft-writer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/seo-draft-writer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/seo-draft-writer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/topic-cluster-planner-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/topic-cluster-planner-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/topic-cluster-planner-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/topic-cluster-planner.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/viral-loop-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/viral-loop-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/viral-loop-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/viral-loop-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/webinar-promoter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/webinar-promoter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/webinar-promoter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-07/webinar-promoter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/backlink-scouter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/backlink-scouter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/backlink-scouter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/backlink-scouter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/brand-guideline-enforcer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/brand-guideline-enforcer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/brand-guideline-enforcer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/brand-guideline-enforcer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/cannibalization-detector-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/cannibalization-detector-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/cannibalization-detector-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/cannibalization-detector.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/churn-win-back-sequencer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/churn-win-back-sequencer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/churn-win-back-sequencer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/churn-win-back-sequencer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/content-repurposer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/content-repurposer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/content-repurposer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/content-repurposer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/crisis-comms-drafter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/crisis-comms-drafter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/crisis-comms-drafter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/crisis-comms-drafter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/dashboard-automator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/dashboard-automator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/dashboard-automator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/dashboard-automator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/data-hygiene-monitor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/data-hygiene-monitor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/data-hygiene-monitor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/data-hygiene-monitor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/distribution-automator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/distribution-automator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/distribution-automator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/distribution-automator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/drip-campaign-trigger-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/drip-campaign-trigger-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/drip-campaign-trigger-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/drip-campaign-trigger.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/influencer-vettor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/influencer-vettor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/influencer-vettor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/influencer-vettor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/lead-routing-troubleshooter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/lead-routing-troubleshooter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/lead-routing-troubleshooter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/lead-routing-troubleshooter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/mar-tech-sync-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/mar-tech-sync-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/mar-tech-sync-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/mar-tech-sync.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/newsletter-curator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/newsletter-curator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/newsletter-curator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/newsletter-curator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/on-page-optimizer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/on-page-optimizer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/on-page-optimizer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/on-page-optimizer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/pr-scraper-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/pr-scraper-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/pr-scraper-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/pr-scraper.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/schema-markup-generator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/schema-markup-generator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/schema-markup-generator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/schema-markup-generator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/sentiment-shift-alerter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/sentiment-shift-alerter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/sentiment-shift-alerter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/sentiment-shift-alerter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/serp-volatility-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/serp-volatility-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/serp-volatility-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/serp-volatility-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/subject-line-tester-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/subject-line-tester-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/subject-line-tester-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/subject-line-tester.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/unsubscribe-predictor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/unsubscribe-predictor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/unsubscribe-predictor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/unsubscribe-predictor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/utm-builder-bot-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/utm-builder-bot-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/utm-builder-bot-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-08/utm-builder-bot.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/adoption-metric-analyzer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/adoption-metric-analyzer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/adoption-metric-analyzer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/adoption-metric-analyzer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/aha-moment-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/aha-moment-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/aha-moment-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/aha-moment-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/angry-customer-escalator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/angry-customer-escalator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/angry-customer-escalator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/angry-customer-escalator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/api-key-configurator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/api-key-configurator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/api-key-configurator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/api-key-configurator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/best-practice-recommender-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/best-practice-recommender-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/best-practice-recommender-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/best-practice-recommender.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/cross-sell-mapper-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/cross-sell-mapper-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/cross-sell-mapper-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/cross-sell-mapper.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/csatnps-aggregator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/csatnps-aggregator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/csatnps-aggregator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/csatnps-aggregator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/custom-script-generator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/custom-script-generator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/custom-script-generator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/custom-script-generator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/data-migration-validator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/data-migration-validator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/data-migration-validator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/data-migration-validator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/delay-escalator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/delay-escalator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/delay-escalator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/delay-escalator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/executive-sponsor-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/executive-sponsor-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/executive-sponsor-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/executive-sponsor-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/faq-auto-responder-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/faq-auto-responder-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/faq-auto-responder-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/faq-auto-responder.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/health-score-trigger-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/health-score-trigger-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/health-score-trigger-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/health-score-trigger.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/kb-gap-identifier-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/kb-gap-identifier-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/kb-gap-identifier-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/kb-gap-identifier.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/l1-auto-resolver-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/l1-auto-resolver-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/l1-auto-resolver-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/l1-auto-resolver.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/l3-bug-replicator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/l3-bug-replicator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/l3-bug-replicator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/l3-bug-replicator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/milestone-chaser-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/milestone-chaser-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/milestone-chaser-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/milestone-chaser.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/outage-communicator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/outage-communicator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/outage-communicator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/outage-communicator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/patch-update-alerter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/patch-update-alerter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/patch-update-alerter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/patch-update-alerter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/pricing-tier-recommender-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/pricing-tier-recommender-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/pricing-tier-recommender-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/pricing-tier-recommender.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/project-plan-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/project-plan-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/project-plan-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/project-plan-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/qbr-deck-builder-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/qbr-deck-builder-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/qbr-deck-builder-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/qbr-deck-builder.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/refund-processor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/refund-processor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/refund-processor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/refund-processor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/relationship-matrix-builder-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/relationship-matrix-builder-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/relationship-matrix-builder-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/relationship-matrix-builder.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/renewal-contract-generator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/renewal-contract-generator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/renewal-contract-generator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/renewal-contract-generator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/scalability-predictor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/scalability-predictor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/scalability-predictor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/scalability-predictor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/semantic-search-kb-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/semantic-search-kb-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/semantic-search-kb-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/semantic-search-kb.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/shift-scheduler-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/shift-scheduler-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/shift-scheduler-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/shift-scheduler.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/sla-monitor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/sla-monitor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/sla-monitor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/sla-monitor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/ticket-backlog-analyzer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/ticket-backlog-analyzer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/ticket-backlog-analyzer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/ticket-backlog-analyzer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/ticket-classifier-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/ticket-classifier-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/ticket-classifier-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/ticket-classifier.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/training-video-recommender-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/training-video-recommender-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/training-video-recommender-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/training-video-recommender.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/upsell-prompt-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/upsell-prompt-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/upsell-prompt-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/upsell-prompt.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/welcome-sequencer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/welcome-sequencer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/welcome-sequencer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/welcome-sequencer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/white-space-analyzer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/white-space-analyzer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/white-space-analyzer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-09/white-space-analyzer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/acv-growth-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/acv-growth-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/acv-growth-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/acv-growth-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/api-integration-builder-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/api-integration-builder-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/api-integration-builder-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/api-integration-builder.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/approval-workflow-router-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/approval-workflow-router-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/approval-workflow-router-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/approval-workflow-router.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/channel-attrition-predictor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/channel-attrition-predictor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/channel-attrition-predictor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/channel-attrition-predictor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/cohort-analyzer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/cohort-analyzer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/cohort-analyzer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/cohort-analyzer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/competitor-intel-broadcaster-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/competitor-intel-broadcaster-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/competitor-intel-broadcaster-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/competitor-intel-broadcaster.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/crm-cleanser-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/crm-cleanser-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/crm-cleanser-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/crm-cleanser.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/custom-crm-ui-builder-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/custom-crm-ui-builder-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/custom-crm-ui-builder-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/custom-crm-ui-builder.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/data-enrichment-automator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/data-enrichment-automator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/data-enrichment-automator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/data-enrichment-automator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/data-silo-bridger-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/data-silo-bridger-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/data-silo-bridger-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/data-silo-bridger.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/discount-waterfall-modeler-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/discount-waterfall-modeler-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/discount-waterfall-modeler-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/discount-waterfall-modeler.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/duplicate-merger-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/duplicate-merger-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/duplicate-merger-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/duplicate-merger.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/forecasting-modeler-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/forecasting-modeler-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/forecasting-modeler-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/forecasting-modeler.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/funnel-leak-detector-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/funnel-leak-detector-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/funnel-leak-detector-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/funnel-leak-detector.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/gtm-alignment-scorer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/gtm-alignment-scorer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/gtm-alignment-scorer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/gtm-alignment-scorer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/lead-scoring-modeler-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/lead-scoring-modeler-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/lead-scoring-modeler-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/lead-scoring-modeler.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/legal-clause-matcher-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/legal-clause-matcher-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/legal-clause-matcher-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/legal-clause-matcher.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/mapeia-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/mapeia-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/mapeia-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/mapeia.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/margin-calculator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/margin-calculator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/margin-calculator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/margin-calculator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/micro-learning-creator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/micro-learning-creator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/micro-learning-creator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/micro-learning-creator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/non-standard-flag-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/non-standard-flag-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/non-standard-flag-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/non-standard-flag.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/onboarding-ramp-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/onboarding-ramp-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/onboarding-ramp-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/onboarding-ramp-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/playbook-updater-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/playbook-updater-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/playbook-updater-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/playbook-updater.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/price-discount-impact-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/price-discount-impact-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/price-discount-impact-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/price-discount-impact.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/process-bottleneck-alerter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/process-bottleneck-alerter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/process-bottleneck-alerter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/process-bottleneck-alerter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/quota-attainment-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/quota-attainment-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/quota-attainment-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/quota-attainment-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/territory-balancer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/territory-balancer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/territory-balancer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/territory-balancer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/tool-roi-analyzer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/tool-roi-analyzer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/tool-roi-analyzer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/tool-roi-analyzer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/validation-rule-enforcer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/validation-rule-enforcer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/validation-rule-enforcer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/validation-rule-enforcer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/voice-pitch-grader-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/voice-pitch-grader-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/voice-pitch-grader-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/voice-pitch-grader.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/webhook-monitor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/webhook-monitor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/webhook-monitor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-10/webhook-monitor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/ab-test-synthesizer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/ab-test-synthesizer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/ab-test-synthesizer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/ab-test-synthesizer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/anomaly-detector-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/anomaly-detector-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/anomaly-detector-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/anomaly-detector.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/arr-bridge-builder-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/arr-bridge-builder-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/arr-bridge-builder-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/arr-bridge-builder.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/attribution-modeler-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/attribution-modeler-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/attribution-modeler-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/attribution-modeler.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/audience-segment-discoverer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/audience-segment-discoverer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/audience-segment-discoverer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/audience-segment-discoverer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/campaign-decay-predictor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/campaign-decay-predictor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/campaign-decay-predictor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/campaign-decay-predictor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/churn-cohort-isolator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/churn-cohort-isolator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/churn-cohort-isolator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/churn-cohort-isolator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/competitor-financial-scraper-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/competitor-financial-scraper-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/competitor-financial-scraper-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/competitor-financial-scraper.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/dashboard-auto-freshener-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/dashboard-auto-freshener-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/dashboard-auto-freshener-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/dashboard-auto-freshener.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/data-cleaning-bot-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/data-cleaning-bot-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/data-cleaning-bot-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/data-cleaning-bot.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/feature-heatmapper-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/feature-heatmapper-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/feature-heatmapper-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/feature-heatmapper.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/geospatial-expansion-mapper-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/geospatial-expansion-mapper-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/geospatial-expansion-mapper-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/geospatial-expansion-mapper.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/journey-drop-off-locator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/journey-drop-off-locator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/journey-drop-off-locator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/journey-drop-off-locator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/ltv-by-channel-calculator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/ltv-by-channel-calculator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/ltv-by-channel-calculator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/ltv-by-channel-calculator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/macro-factor-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/macro-factor-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/macro-factor-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/macro-factor-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/market-share-estimator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/market-share-estimator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/market-share-estimator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/market-share-estimator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/media-mix-optimizer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/media-mix-optimizer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/media-mix-optimizer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/media-mix-optimizer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/net-retention-modeler-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/net-retention-modeler-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/net-retention-modeler-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/net-retention-modeler.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/pipeline-velocity-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/pipeline-velocity-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/pipeline-velocity-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/pipeline-velocity-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/pricing-elasticity-tester-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/pricing-elasticity-tester-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/pricing-elasticity-tester-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/pricing-elasticity-tester.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/process-flow-mapper-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/process-flow-mapper-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/process-flow-mapper-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/process-flow-mapper.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/requirements-gatherer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/requirements-gatherer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/requirements-gatherer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/requirements-gatherer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/scope-creep-detector-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/scope-creep-detector-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/scope-creep-detector-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/scope-creep-detector.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/session-replay-summarizer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/session-replay-summarizer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/session-replay-summarizer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/session-replay-summarizer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/sql-query-generator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/sql-query-generator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/sql-query-generator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/sql-query-generator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/stakeholder-update-automator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/stakeholder-update-automator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/stakeholder-update-automator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/stakeholder-update-automator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/stat-significance-tester-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/stat-significance-tester-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/stat-significance-tester-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/stat-significance-tester.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/stickiness-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/stickiness-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/stickiness-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/stickiness-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/strategic-kpi-aggregator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/strategic-kpi-aggregator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/strategic-kpi-aggregator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/strategic-kpi-aggregator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/user-story-writer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/user-story-writer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/user-story-writer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-11/user-story-writer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/bad-debt-predictor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/bad-debt-predictor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/bad-debt-predictor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/bad-debt-predictor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/cloud-spend-optimizer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/cloud-spend-optimizer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/cloud-spend-optimizer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/cloud-spend-optimizer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/collection-agency-router-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/collection-agency-router-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/collection-agency-router-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/collection-agency-router.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/contract-redliner-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/contract-redliner-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/contract-redliner-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/contract-redliner.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/disputed-charge-aggregator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/disputed-charge-aggregator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/disputed-charge-aggregator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/disputed-charge-aggregator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/dunning-automator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/dunning-automator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/dunning-automator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/dunning-automator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/failed-payment-retrier-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/failed-payment-retrier-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/failed-payment-retrier-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/failed-payment-retrier.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/instance-right-sizer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/instance-right-sizer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/instance-right-sizer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/instance-right-sizer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/invoice-generator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/invoice-generator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/invoice-generator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/invoice-generator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/ip-infringement-scraper-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/ip-infringement-scraper-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/ip-infringement-scraper-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/ip-infringement-scraper.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/nda-auto-signer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/nda-auto-signer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/nda-auto-signer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/nda-auto-signer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/payment-plan-negotiator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/payment-plan-negotiator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/payment-plan-negotiator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/payment-plan-negotiator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/promise-to-pay-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/promise-to-pay-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/promise-to-pay-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/promise-to-pay-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/proration-calculator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/proration-calculator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/proration-calculator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/proration-calculator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/regulatory-change-alerter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/regulatory-change-alerter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/regulatory-change-alerter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/regulatory-change-alerter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/risk-exposure-quantifier-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/risk-exposure-quantifier-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/risk-exposure-quantifier-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/risk-exposure-quantifier.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/saas-license-auditor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/saas-license-auditor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/saas-license-auditor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/saas-license-auditor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/tax-exemption-verifier-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/tax-exemption-verifier-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/tax-exemption-verifier-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-12/tax-exemption-verifier.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/accrual-engine-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/accrual-engine-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/accrual-engine-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/accrual-engine.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/aging-report-sender-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/aging-report-sender-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/aging-report-sender-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/aging-report-sender.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/audit-trail-builder-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/audit-trail-builder-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/audit-trail-builder-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/audit-trail-builder.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/bank-reconciliation-bot-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/bank-reconciliation-bot-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/bank-reconciliation-bot-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/bank-reconciliation-bot.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/bankruptcy-risk-monitor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/bankruptcy-risk-monitor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/bankruptcy-risk-monitor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/bankruptcy-risk-monitor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/budget-variance-pinger-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/budget-variance-pinger-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/budget-variance-pinger-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/budget-variance-pinger.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/cash-app-matcher-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/cash-app-matcher-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/cash-app-matcher-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/cash-app-matcher.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/compliance-checklist-enforcer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/compliance-checklist-enforcer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/compliance-checklist-enforcer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/compliance-checklist-enforcer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/credit-hold-releaser-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/credit-hold-releaser-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/credit-hold-releaser-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/credit-hold-releaser.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/credit-limit-recommender-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/credit-limit-recommender-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/credit-limit-recommender-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/credit-limit-recommender.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/credit-score-fetcher-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/credit-score-fetcher-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/credit-score-fetcher-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/credit-score-fetcher.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/financial-ratio-calculator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/financial-ratio-calculator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/financial-ratio-calculator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/financial-ratio-calculator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/gl-anomaly-detector-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/gl-anomaly-detector-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/gl-anomaly-detector-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/gl-anomaly-detector.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/month-end-close-automator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/month-end-close-automator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/month-end-close-automator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/month-end-close-automator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/multi-cloud-cost-modeler-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/multi-cloud-cost-modeler-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/multi-cloud-cost-modeler-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/multi-cloud-cost-modeler.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/remittance-extractor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/remittance-extractor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/remittance-extractor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/remittance-extractor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/trade-reference-checker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/trade-reference-checker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/trade-reference-checker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-13/trade-reference-checker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/address-proof-validator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/address-proof-validator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/address-proof-validator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/address-proof-validator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/audit-prep-engine-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/audit-prep-engine-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/audit-prep-engine-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/audit-prep-engine.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/chargeback-dispute-automator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/chargeback-dispute-automator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/chargeback-dispute-automator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/chargeback-dispute-automator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/comms-surveillance-bot-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/comms-surveillance-bot-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/comms-surveillance-bot-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/comms-surveillance-bot.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/crypto-tracing-bot-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/crypto-tracing-bot-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/crypto-tracing-bot-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/crypto-tracing-bot.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/high-risk-jurisdiction-pinger-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/high-risk-jurisdiction-pinger-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/high-risk-jurisdiction-pinger-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/high-risk-jurisdiction-pinger.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/id-verification-matcher-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/id-verification-matcher-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/id-verification-matcher-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/id-verification-matcher.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/liveness-check-analyzer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/liveness-check-analyzer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/liveness-check-analyzer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/liveness-check-analyzer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/money-mule-detector-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/money-mule-detector-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/money-mule-detector-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/money-mule-detector.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/pep-screener-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/pep-screener-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/pep-screener-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/pep-screener.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/policy-mapping-bot-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/policy-mapping-bot-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/policy-mapping-bot-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/policy-mapping-bot.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/regulatory-training-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/regulatory-training-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/regulatory-training-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/regulatory-training-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/sanctions-screener-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/sanctions-screener-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/sanctions-screener-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/sanctions-screener.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/sar-drafter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/sar-drafter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/sar-drafter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/sar-drafter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/synthetic-identity-detector-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/synthetic-identity-detector-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/synthetic-identity-detector-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/synthetic-identity-detector.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/transaction-link-analyzer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/transaction-link-analyzer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/transaction-link-analyzer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/transaction-link-analyzer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/ubo-mapper-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/ubo-mapper-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/ubo-mapper-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/ubo-mapper.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/velocity-rule-engine-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/velocity-rule-engine-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/velocity-rule-engine-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-14/velocity-rule-engine.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/access-right-auditor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/access-right-auditor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/access-right-auditor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/access-right-auditor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/alt-data-scorer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/alt-data-scorer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/alt-data-scorer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/alt-data-scorer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/auto-decision-engine-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/auto-decision-engine-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/auto-decision-engine-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/auto-decision-engine.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/capacity-modeler-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/capacity-modeler-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/capacity-modeler-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/capacity-modeler.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/capital-adequacy-calculator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/capital-adequacy-calculator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/capital-adequacy-calculator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/capital-adequacy-calculator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/central-bank-xml-generator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/central-bank-xml-generator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/central-bank-xml-generator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/central-bank-xml-generator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/deadline-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/deadline-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/deadline-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/deadline-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/default-probability-modeler-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/default-probability-modeler-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/default-probability-modeler-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/default-probability-modeler.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/device-fingerprint-matcher-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/device-fingerprint-matcher-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/device-fingerprint-matcher-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/device-fingerprint-matcher.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/false-positive-reducer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/false-positive-reducer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/false-positive-reducer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/false-positive-reducer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/incident-post-mortem-drafter-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/incident-post-mortem-drafter-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/incident-post-mortem-drafter-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/incident-post-mortem-drafter.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/limit-decrease-recommender-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/limit-decrease-recommender-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/limit-decrease-recommender-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/limit-decrease-recommender.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/liquidity-ratio-monitor-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/liquidity-ratio-monitor-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/liquidity-ratio-monitor-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/liquidity-ratio-monitor.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/process-walkthrough-automator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/process-walkthrough-automator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/process-walkthrough-automator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/process-walkthrough-automator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/remediation-plan-tracker-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/remediation-plan-tracker-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/remediation-plan-tracker-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/remediation-plan-tracker.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/sla-escalator-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/sla-escalator-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/sla-escalator-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/sla-escalator.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/stress-test-modeler-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/stress-test-modeler-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/stress-test-modeler-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/stress-test-modeler.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/transaction-hold-reviewer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/transaction-hold-reviewer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/transaction-hold-reviewer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/cycle-15/transaction-hold-reviewer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/implementer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/implementer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/implementer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/implementer.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/planner-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/planner-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/planner-github-pack/readiness.json",
+      "sourcePath": ".github/agents/planner.agent.md"
+    },
+    {
+      "evidencePath": "packages/agent-packs/github-agents-v1/reviewer-github-pack/evidence.json",
+      "manifestPath": "packages/agent-packs/github-agents-v1/reviewer-github-pack/manifest.json",
+      "readinessPath": "packages/agent-packs/github-agents-v1/reviewer-github-pack/readiness.json",
+      "sourcePath": ".github/agents/reviewer.agent.md"
+    }
+  ],
+  "collectionDescriptorId": "github-agents-v1-catalog",
+  "collectionName": "GitHub Agents Compiled Collection",
+  "generatedAt": "2026-03-24T04:54:32.773Z",
+  "installableCount": 334,
+  "totalCount": 335
+}

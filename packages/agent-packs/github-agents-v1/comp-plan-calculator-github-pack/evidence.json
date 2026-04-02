@@ -1,0 +1,25 @@
+{
+  "agentId": "comp-plan-calculator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent comp-plan-calculator-github-pack (CompPlanCalculator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"comp-plan-calculator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"comp-plan-calculator-github-pack.tool.read\",\n    \"comp-plan-calculator-github-pack.tool.search\",\n    \"comp-plan-calculator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "29785ba66c802eb39180c85d76eb380b9711742e4d968d56a2ff4c6136f6ed4c"
+  },
+  "generatedAt": "2026-03-24T04:54:30.934Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "comp-plan-calculator-github-pack",
+    "CompPlanCalculator Agent"
+  ],
+  "sourceChecksum": "fbfc04128b1201fb62e8951b1ad4d12bb2178a5dcf55cdcd8fd458860628b2d2",
+  "sourcePath": ".github/agents/cycle-06/comp-plan-calculator.agent.md"
+}

@@ -1,0 +1,25 @@
+{
+  "agentId": "demo-sandboxer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent demo-sandboxer-github-pack (DemoSandboxer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"demo-sandboxer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"demo-sandboxer-github-pack.tool.read\",\n    \"demo-sandboxer-github-pack.tool.search\",\n    \"demo-sandboxer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "46efd7fd95aff3fc61e4e990409c7905ec482dfd26a5ed62fc40a2968f39dbc6"
+  },
+  "generatedAt": "2026-03-24T04:54:30.949Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "demo-sandboxer-github-pack",
+    "DemoSandboxer Agent"
+  ],
+  "sourceChecksum": "b302d054308193908615d85de2258ebf1fa5793963f68ce38a59766875305a29",
+  "sourcePath": ".github/agents/cycle-06/demo-sandboxer.agent.md"
+}

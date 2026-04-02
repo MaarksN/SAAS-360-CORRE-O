@@ -1,0 +1,25 @@
+{
+  "agentId": "executive-sponsor-tracker-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent executive-sponsor-tracker-github-pack (ExecutiveSponsorTracker Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"executive-sponsor-tracker-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"executive-sponsor-tracker-github-pack.tool.read\",\n    \"executive-sponsor-tracker-github-pack.tool.search\",\n    \"executive-sponsor-tracker-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "de02e51d1f959cfe5ca3ef535e13694f57b7703bba5cd1e6ba62b87e97ad4382"
+  },
+  "generatedAt": "2026-03-24T04:54:31.526Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "executive-sponsor-tracker-github-pack",
+    "ExecutiveSponsorTracker Agent"
+  ],
+  "sourceChecksum": "8584e1b52dcb8e3c13ec713c6aa0cebec0575f89d84d3c470a947f69d2d7fe3b",
+  "sourcePath": ".github/agents/cycle-09/executive-sponsor-tracker.agent.md"
+}

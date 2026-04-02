@@ -1,0 +1,25 @@
+{
+  "agentId": "competitor-financial-scraper-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent competitor-financial-scraper-github-pack (CompetitorFinancialScraper Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"competitor-financial-scraper-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"competitor-financial-scraper-github-pack.tool.read\",\n    \"competitor-financial-scraper-github-pack.tool.search\",\n    \"competitor-financial-scraper-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "b615ce0c6ffca89f587a95963f28902c04a6a203beb01bb1d6b467cdca7c10ff"
+  },
+  "generatedAt": "2026-03-24T04:54:32.010Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "competitor-financial-scraper-github-pack",
+    "CompetitorFinancialScraper Agent"
+  ],
+  "sourceChecksum": "33d0c8fa5560a640efe314cdefb4b2022d8816a23ade79c3ea253b2a0c1ed67f",
+  "sourcePath": ".github/agents/cycle-11/competitor-financial-scraper.agent.md"
+}

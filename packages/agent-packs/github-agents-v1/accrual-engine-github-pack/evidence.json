@@ -1,0 +1,25 @@
+{
+  "agentId": "accrual-engine-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent accrual-engine-github-pack (AccrualEngine Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"accrual-engine-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"accrual-engine-github-pack.tool.read\",\n    \"accrual-engine-github-pack.tool.search\",\n    \"accrual-engine-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "4ecc617e8325ddf1c2c15793fa166122c3d6278bd5cd11544aa74ae26b0a5850"
+  },
+  "generatedAt": "2026-03-24T04:54:32.322Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "accrual-engine-github-pack",
+    "AccrualEngine Agent"
+  ],
+  "sourceChecksum": "66fa51d9b101e271d722e52028dce3cf7e065b91e7e764f45524c2edb21b6ea9",
+  "sourcePath": ".github/agents/cycle-13/accrual-engine.agent.md"
+}

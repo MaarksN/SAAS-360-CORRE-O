@@ -1,0 +1,25 @@
+{
+  "agentId": "health-score-architect-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent health-score-architect-github-pack (HealthScoreArchitect Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"health-score-architect-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"health-score-architect-github-pack.tool.read\",\n    \"health-score-architect-github-pack.tool.search\",\n    \"health-score-architect-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "f46d6a66a00cb678c121f0be91d15aabaffb43d9d35de32c2e7df0642367736d"
+  },
+  "generatedAt": "2026-03-24T04:54:30.434Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "health-score-architect-github-pack",
+    "HealthScoreArchitect Agent"
+  ],
+  "sourceChecksum": "6b03b5c7b2531552f58eb42c0c551dd1bf9bbc7559021cb875c1890228daadbe",
+  "sourcePath": ".github/agents/cycle-02/health-score-architect.agent.md"
+}

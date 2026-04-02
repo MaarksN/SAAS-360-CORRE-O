@@ -1,0 +1,25 @@
+{
+  "agentId": "journey-architect-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent journey-architect-github-pack (JourneyArchitect Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"journey-architect-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"journey-architect-github-pack.tool.read\",\n    \"journey-architect-github-pack.tool.search\",\n    \"journey-architect-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "a17f2a76f5c335b4a1f927edcbc470f56800ca671aa8d1b226656a66bf3b46e1"
+  },
+  "generatedAt": "2026-03-24T04:54:30.247Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "journey-architect-github-pack",
+    "JourneyArchitect Agent"
+  ],
+  "sourceChecksum": "949046cd68e7ad99e6652bafaaa3a8b999f6698b11804c04524869cb055a5568",
+  "sourcePath": ".github/agents/cycle-01/journey-architect.agent.md"
+}

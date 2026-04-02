@@ -1,0 +1,61 @@
+# [SOURCE] BirthHub360_Agentes_Parallel_Plan — BoardPrep AI
+name: BoardPrep AI
+domain: executives
+cycle: 1
+description: Agrega dados corporativos e gera materiais preparatórios consolidados para reuniões de conselho.
+input_schema:
+  date_range:
+    type: string
+    description: O período para o qual os dados devem ser consolidados (ex. "Q3 2023").
+  focus_areas:
+    type: array
+    items:
+      type: string
+    description: Áreas de foco específicas para a reunião (ex. ["Finanças", "Cultura", "M&A"]).
+  required_metrics:
+    type: array
+    items:
+      type: string
+    description: Métricas específicas que devem obrigatoriamente constar no relatório.
+output_schema:
+  summary_report:
+    type: string
+    description: Relatório consolidado em formato Markdown.
+  data_tables:
+    type: array
+    items:
+      type: object
+    description: Tabelas de dados formatadas extraídas dos sistemas.
+  presentation_outline:
+    type: string
+    description: Esboço sugerido para a apresentação da reunião do conselho.
+preconditions:
+  - CRM, ERP e HR systems disponíveis e autenticados.
+  - O usuário que acionou tem permissão C-Level ou VP.
+postconditions:
+  - Relatório preparatório gerado com sucesso.
+  - Relatório armazenado de forma segura no sistema.
+failure_behavior: Log do erro detalhado, interrupção da execução e notificação ao usuário que acionou.
+fallback: Notificar um analista humano/Chief of Staff para consolidação manual se os dados estiverem indisponíveis ou incompletos.
+raci:
+  triggered_by: C-Level ou VP
+  delivers_to: Board of Directors e C-Level
+  approved_by: Chief of Staff ou CEO
+security:
+  pii_handled: sim (nomes de executivos, potenciais dados de salários/bônus dependendo do escopo).
+  data_retention: 30 dias após a geração, depois excluído.
+  access_level: Acesso estritamente restrito a usuários autorizados (C-Level/Board).
+observability:
+  events_to_log:
+    - Agente acionado
+    - Início da extração de dados
+    - Falha na extração de dados
+    - Relatório gerado com sucesso
+    - Relatório entregue
+  metrics:
+    - Tempo total de geração do relatório
+    - Taxa de sucesso de conexão com as fontes de dados
+    - Tamanho do relatório gerado
+  alerts:
+    - Falha de conexão com a fonte de dados primária
+    - Timeout na geração do relatório (> 5 minutos)

@@ -1,0 +1,25 @@
+{
+  "agentId": "rfp-auto-responder-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent rfp-auto-responder-github-pack (RFPAutoResponder Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"rfp-auto-responder-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"rfp-auto-responder-github-pack.tool.read\",\n    \"rfp-auto-responder-github-pack.tool.search\",\n    \"rfp-auto-responder-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "b70a1ebc9dd5aa5c5ba59b896ca2a0e2aeb617a6f8e77e1c96a30319ec6602a3"
+  },
+  "generatedAt": "2026-03-24T04:54:30.909Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "rfp-auto-responder-github-pack",
+    "RFPAutoResponder Agent"
+  ],
+  "sourceChecksum": "63ced4d9c24ec0164d5638519c1ae140796660efbafbb88bd275a1ec173999e4",
+  "sourcePath": ".github/agents/cycle-05/rfp-auto-responder.agent.md"
+}

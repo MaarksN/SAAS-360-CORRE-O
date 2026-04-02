@@ -1,0 +1,25 @@
+{
+  "agentId": "sla-escalator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent sla-escalator-github-pack (SLAEscalator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"sla-escalator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"sla-escalator-github-pack.tool.read\",\n    \"sla-escalator-github-pack.tool.search\",\n    \"sla-escalator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "bbf2cec25600f2e89ef2bcb9e703a3e8d8693b8546bbb938580d8f1181ef7e27"
+  },
+  "generatedAt": "2026-03-24T04:54:32.719Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "sla-escalator-github-pack",
+    "SLAEscalator Agent"
+  ],
+  "sourceChecksum": "509ec8f4e2d3c0daede47d19f9415d0729720685a6ed14a686c731515d89b7ce",
+  "sourcePath": ".github/agents/cycle-15/sla-escalator.agent.md"
+}

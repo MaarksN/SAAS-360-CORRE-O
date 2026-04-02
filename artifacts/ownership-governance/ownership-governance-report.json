@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-04-01T02:34:06.685Z",
+  "checks": {
+    "matrix-exists": {
+      "status": "pass",
+      "path": "docs/operations/f0-ownership-matrix.md"
+    },
+    "service-criticality-exists": {
+      "status": "pass",
+      "path": "docs/service-criticality.md"
+    },
+    "codeowners-canonical-exists": {
+      "status": "pass",
+      "path": ".github/CODEOWNERS"
+    },
+    "root-codeowners-removed": {
+      "status": "pass",
+      "path": "CODEOWNERS"
+    },
+    "required-domains-present": {
+      "status": "pass",
+      "missingDomains": []
+    },
+    "wiki-permalink-present": {
+      "status": "pass"
+    },
+    "versioning-section-present": {
+      "status": "pass"
+    },
+    "quarterly-review-date-present": {
+      "status": "pass"
+    },
+    "jira-link-present": {
+      "status": "pass"
+    },
+    "calendar-reference-present": {
+      "status": "pass"
+    },
+    "critical-components-covered-by-codeowners": {
+      "status": "pass",
+      "criticalComponents": [
+        "apps/api",
+        "apps/web",
+        "apps/worker",
+        "packages/database",
+        "packages/agent-packs",
+        "apps/webhook-receiver",
+        "apps/voice-engine",
+        "apps/legacy/dashboard",
+        "apps/api-gateway",
+        "apps/agent-orchestrator",
+        "packages/db"
+      ],
+      "missingCoverage": []
+    }
+  },
+  "failures": []
+}

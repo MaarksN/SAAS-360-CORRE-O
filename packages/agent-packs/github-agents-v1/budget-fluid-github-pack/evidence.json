@@ -1,0 +1,25 @@
+{
+  "agentId": "budget-fluid-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent budget-fluid-github-pack (BudgetFluid Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"budget-fluid-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"budget-fluid-github-pack.tool.read\",\n    \"budget-fluid-github-pack.tool.search\",\n    \"budget-fluid-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "13a9e2a9f4bb4ebd5a7a61cd0d91e3d8fef1240d624b019de401373d166d637b"
+  },
+  "generatedAt": "2026-03-24T04:54:30.164Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "budget-fluid-github-pack",
+    "BudgetFluid Agent"
+  ],
+  "sourceChecksum": "63477393b0164339ec74086b6e2fee5c8611a7fd7929a2c7e88c7044af5d0fe2",
+  "sourcePath": ".github/agents/cycle-01/budget-fluid.agent.md"
+}

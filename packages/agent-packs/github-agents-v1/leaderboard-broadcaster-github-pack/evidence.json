@@ -1,0 +1,25 @@
+{
+  "agentId": "leaderboard-broadcaster-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent leaderboard-broadcaster-github-pack (LeaderboardBroadcaster Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"leaderboard-broadcaster-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"leaderboard-broadcaster-github-pack.tool.read\",\n    \"leaderboard-broadcaster-github-pack.tool.search\",\n    \"leaderboard-broadcaster-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "d2ceeae612b9943e81db99ecd8b88e94f7d6fde834385ff774f7a67dce3f140e"
+  },
+  "generatedAt": "2026-03-24T04:54:30.974Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "leaderboard-broadcaster-github-pack",
+    "LeaderboardBroadcaster Agent"
+  ],
+  "sourceChecksum": "7e9cec96284205a7307df557ec8a6e96768d719855369220edadbc4b7f4ac173",
+  "sourcePath": ".github/agents/cycle-06/leaderboard-broadcaster.agent.md"
+}

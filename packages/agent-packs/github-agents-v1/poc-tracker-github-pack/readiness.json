@@ -1,0 +1,84 @@
+{
+  "adapters": {
+    "adapterFactoryPath": "apps/worker/src/agents/runtime.tools.ts",
+    "adapterMode": "manifest-capability-tool",
+    "entries": [
+      {
+        "action": "tool:execute",
+        "adapterType": "ManifestCapabilityTool",
+        "ready": true,
+        "toolId": "poc-tracker-github-pack.tool.read",
+        "toolName": "Read"
+      },
+      {
+        "action": "tool:execute",
+        "adapterType": "ManifestCapabilityTool",
+        "ready": true,
+        "toolId": "poc-tracker-github-pack.tool.search",
+        "toolName": "Search"
+      },
+      {
+        "action": "tool:execute",
+        "adapterType": "ManifestCapabilityTool",
+        "ready": true,
+        "toolId": "poc-tracker-github-pack.tool.agent",
+        "toolName": "Agent"
+      }
+    ],
+    "ready": true
+  },
+  "collaborators": [
+    "planner-github-pack",
+    "implementer-github-pack",
+    "reviewer-github-pack"
+  ],
+  "evidence": {
+    "dryRunArtifactPath": "packages/agent-packs/github-agents-v1/poc-tracker-github-pack/evidence.json",
+    "generatedAt": "2026-03-24T04:54:31.006Z",
+    "ready": true,
+    "sourceChecksum": "8036ed817484a6dd66fa972e4417d3ded839648f11f9a76210084314f5a83b6c",
+    "sourcePath": ".github/agents/cycle-06/poc-tracker.agent.md"
+  },
+  "integration": {
+    "apiBindingPath": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "catalogRoot": "packages/agent-packs/github-agents-v1",
+    "discoverableQueries": [
+      "poc-tracker-github-pack",
+      "PoCTracker Agent"
+    ],
+    "ready": true,
+    "runtimeProvider": "manifest-runtime",
+    "runtimeToolsBindingPath": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBindingPath": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "manifest": {
+    "manifestPath": "packages/agent-packs/github-agents-v1/poc-tracker-github-pack/manifest.json",
+    "manifestVersion": "1.0.0",
+    "ready": true
+  },
+  "policy": {
+    "enginePath": "packages/agents-core/src/policy/engine.ts",
+    "ready": true,
+    "requiredActions": [
+      "tool:execute",
+      "memory:read",
+      "memory:write",
+      "learning:read",
+      "learning:write",
+      "audit:write",
+      "report:read",
+      "approval:request",
+      "decision:recommend",
+      "workflow:trigger"
+    ],
+    "ruleCount": 10
+  },
+  "readiness": {
+    "adapters": true,
+    "evidence": true,
+    "integration": true,
+    "manifest": true,
+    "overall": true,
+    "policy": true
+  }
+}

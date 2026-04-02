@@ -1,0 +1,25 @@
+{
+  "agentId": "icp-refiner-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent icp-refiner-github-pack (ICPRefiner Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"icp-refiner-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"icp-refiner-github-pack.tool.read\",\n    \"icp-refiner-github-pack.tool.search\",\n    \"icp-refiner-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "e1f36f5b0bcc715859cd5adb7f56bf311f96c060eb95fd8ba67aec474af5ebe6"
+  },
+  "generatedAt": "2026-03-24T04:54:30.830Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "icp-refiner-github-pack",
+    "ICPRefiner Agent"
+  ],
+  "sourceChecksum": "5122aab8c97e1d8ff6d0df6bee48fae52ec6e8ba35c71d90faf195046c94ec82",
+  "sourcePath": ".github/agents/cycle-05/icp-refiner.agent.md"
+}

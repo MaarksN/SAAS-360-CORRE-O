@@ -1,0 +1,25 @@
+{
+  "agentId": "discount-leak-guard-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent discount-leak-guard-github-pack (DiscountLeakGuard Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"discount-leak-guard-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"discount-leak-guard-github-pack.tool.read\",\n    \"discount-leak-guard-github-pack.tool.search\",\n    \"discount-leak-guard-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "120c73d1a131579bea90418bc300fea926febdd223626c93080525be73a6642c"
+  },
+  "generatedAt": "2026-03-24T04:54:30.957Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "discount-leak-guard-github-pack",
+    "DiscountLeakGuard Agent"
+  ],
+  "sourceChecksum": "8ebb6199f8f77cfd6c984cd4c223db8b56ce5dd2b054f3d5ff55bd31fe42ded3",
+  "sourcePath": ".github/agents/cycle-06/discount-leak-guard.agent.md"
+}

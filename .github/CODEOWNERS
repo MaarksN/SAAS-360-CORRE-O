@@ -1,0 +1,53 @@
+# Governance and release controls
+/.github/workflows/ @platform-devex @platform-security
+/.github/dependabot.yml @platform-devex @platform-security
+/.github/pull_request_template.md @platform-devex @platform-security
+/package.json @platform-devex @platform-security
+/pnpm-lock.yaml @platform-devex @platform-security
+/SECURITY.md @platform-security @platform-architecture
+/docs/security/ @platform-security @platform-architecture
+/docs/operations/ @platform-architecture @platform-devex
+/scripts/ci/ @platform-devex @platform-security
+/scripts/security/ @platform-security @platform-devex
+/infra/ @platform-devex @platform-architecture
+/ops/ @platform-devex @platform-architecture
+
+# Fronteiras validadas conforme docs/service-catalog.md
+
+# Core canônico (P0)
+/apps/web/ @platform-web @product-frontend
+/apps/api/ @platform-api @platform-security
+/apps/worker/ @platform-worker @platform-api
+/packages/database/ @platform-data @platform-security
+
+# Satélites operacionais
+/packages/agent-packs/ @platform-automation @growth-sdr
+/apps/webhook-receiver/ @platform-integrations @platform-api
+/apps/voice-engine/ @platform-automation @platform-worker
+/packages/queue/ @platform-worker @platform-api
+/packages/integrations/ @platform-integrations @platform-api
+/agents/ @platform-automation @growth-sdr
+
+# Legacy / quarentena (não-core)
+/apps/legacy/dashboard/ @platform-architecture @product-frontend
+/apps/api-gateway/ @platform-architecture @platform-api
+/apps/agent-orchestrator/ @platform-architecture @platform-worker
+/packages/db/ @platform-architecture @platform-data
+
+# Agents domain specializations
+/agents/ae/ @sales-ae @platform-automation
+/agents/ldr/ @growth-sdr @platform-automation
+/agents/sdr/ @growth-sdr @platform-automation
+/agents/financeiro/ @finance-engineering @platform-automation
+/agents/juridico/ @legal-ops @platform-automation
+/agents/marketing/ @marketing-ops @platform-automation
+/agents/analista/ @data-bi @platform-automation
+/agents/pos_venda/ @cs-ops @platform-automation
+/agents/pos-venda/ @cs-ops @platform-automation
+
+# Shared and fallback coverage
+/packages/security/ @platform-security @platform-architecture
+/packages/workflows-core/ @platform-workflows @platform-security
+/packages/shared-types/ @platform-api @platform-architecture
+/packages/utils/ @platform-core @platform-architecture
+* @platform-architecture @platform-devex

@@ -1,0 +1,25 @@
+{
+  "agentId": "exec-summary-generator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent exec-summary-generator-github-pack (ExecSummaryGenerator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"exec-summary-generator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"exec-summary-generator-github-pack.tool.read\",\n    \"exec-summary-generator-github-pack.tool.search\",\n    \"exec-summary-generator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "b0a21e432f8c23798f76659530879977a1047979616ab96fb88706a4bf18bee9"
+  },
+  "generatedAt": "2026-03-24T04:54:30.806Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "exec-summary-generator-github-pack",
+    "ExecSummaryGenerator Agent"
+  ],
+  "sourceChecksum": "4638b92f47e8440724941b2ac34616d15f7c0b48d0038794735ea4119c08600c",
+  "sourcePath": ".github/agents/cycle-05/exec-summary-generator.agent.md"
+}

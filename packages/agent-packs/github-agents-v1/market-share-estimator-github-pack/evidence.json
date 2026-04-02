@@ -1,0 +1,25 @@
+{
+  "agentId": "market-share-estimator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent market-share-estimator-github-pack (MarketShareEstimator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"market-share-estimator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"market-share-estimator-github-pack.tool.read\",\n    \"market-share-estimator-github-pack.tool.search\",\n    \"market-share-estimator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "8bb1ca8a3e2242ddc784674d45b6cca3550fb55685fb025c2332803d189aa9dd"
+  },
+  "generatedAt": "2026-03-24T04:54:32.075Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "market-share-estimator-github-pack",
+    "MarketShareEstimator Agent"
+  ],
+  "sourceChecksum": "f7f01de63de7376c6d40afc105616435b010fcf705c07629e43551d34a41165e",
+  "sourcePath": ".github/agents/cycle-11/market-share-estimator.agent.md"
+}

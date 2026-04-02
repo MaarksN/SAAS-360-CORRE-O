@@ -1,0 +1,29 @@
+{
+  "name": "@birthub/utils",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --import tsx --test src/__tests__/*.test.ts",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@birthub/logger": "workspace:*"
+  },
+  "devDependencies": {
+    "@opentelemetry/auto-instrumentations-node": "^0.71.0",
+    "@opentelemetry/sdk-node": "^0.214.0",
+    "@opentelemetry/sdk-trace-node": "^2.6.0",
+    "@types/node": "^25.5.0",
+    "typescript": "^5.9.3"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  }
+}

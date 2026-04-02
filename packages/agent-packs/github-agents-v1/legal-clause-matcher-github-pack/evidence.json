@@ -1,0 +1,25 @@
+{
+  "agentId": "legal-clause-matcher-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent legal-clause-matcher-github-pack (LegalClauseMatcher Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"legal-clause-matcher-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"legal-clause-matcher-github-pack.tool.read\",\n    \"legal-clause-matcher-github-pack.tool.search\",\n    \"legal-clause-matcher-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "de79b928147a031ae90c9c1e2db19fc5f5d1222ab3921ac9e9f938ea463200fd"
+  },
+  "generatedAt": "2026-03-24T04:54:31.848Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "legal-clause-matcher-github-pack",
+    "LegalClauseMatcher Agent"
+  ],
+  "sourceChecksum": "0dc5e8edf1a7c7cd1fe190cabdc55ac82f1b151f0a21ba34b8c6b55a5236bc93",
+  "sourcePath": ".github/agents/cycle-10/legal-clause-matcher.agent.md"
+}

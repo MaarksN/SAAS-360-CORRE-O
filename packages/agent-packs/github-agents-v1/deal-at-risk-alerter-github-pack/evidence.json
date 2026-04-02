@@ -1,0 +1,25 @@
+{
+  "agentId": "deal-at-risk-alerter-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent deal-at-risk-alerter-github-pack (DealAtRiskAlerter Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"deal-at-risk-alerter-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"deal-at-risk-alerter-github-pack.tool.read\",\n    \"deal-at-risk-alerter-github-pack.tool.search\",\n    \"deal-at-risk-alerter-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "73a8d8a587a3d7a201089aa0b770d85324b5710294e0a5fe340deb50db159012"
+  },
+  "generatedAt": "2026-03-24T04:54:30.942Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "deal-at-risk-alerter-github-pack",
+    "DealAtRiskAlerter Agent"
+  ],
+  "sourceChecksum": "03b9aee8e9dff9ac7d1764497a07795d0e965638346234e649ce1ebadc1af51e",
+  "sourcePath": ".github/agents/cycle-06/deal-at-risk-alerter.agent.md"
+}

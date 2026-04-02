@@ -1,0 +1,25 @@
+{
+  "agentId": "regulatory-training-tracker-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent regulatory-training-tracker-github-pack (RegulatoryTrainingTracker Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"regulatory-training-tracker-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"regulatory-training-tracker-github-pack.tool.read\",\n    \"regulatory-training-tracker-github-pack.tool.search\",\n    \"regulatory-training-tracker-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "e4b91770b616eb8426ef71c06c8fb01b5ed1d8dcdaa22c7481b9f8cd78b37314"
+  },
+  "generatedAt": "2026-03-24T04:54:32.542Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "regulatory-training-tracker-github-pack",
+    "RegulatoryTrainingTracker Agent"
+  ],
+  "sourceChecksum": "5f90f036fde22684753de173b73a86c5a675c5c39272eac25b5b938ee620004c",
+  "sourcePath": ".github/agents/cycle-14/regulatory-training-tracker.agent.md"
+}

@@ -1,0 +1,25 @@
+{
+  "agentId": "margin-calculator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent margin-calculator-github-pack (MarginCalculator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"margin-calculator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"margin-calculator-github-pack.tool.read\",\n    \"margin-calculator-github-pack.tool.search\",\n    \"margin-calculator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "2d4ad71a4a4e209ba2058d6461ee7e6ca710d3ad64494cf9e7439b2dbda8b4ea"
+  },
+  "generatedAt": "2026-03-24T04:54:31.862Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "margin-calculator-github-pack",
+    "MarginCalculator Agent"
+  ],
+  "sourceChecksum": "a685034c7bad31a1ff31084091f733471526eadb92c9eba50346121d88ea1a7c",
+  "sourcePath": ".github/agents/cycle-10/margin-calculator.agent.md"
+}

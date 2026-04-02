@@ -1,0 +1,25 @@
+{
+  "agentId": "bottleneck-detector-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent bottleneck-detector-github-pack (BottleneckDetector Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"bottleneck-detector-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"bottleneck-detector-github-pack.tool.read\",\n    \"bottleneck-detector-github-pack.tool.search\",\n    \"bottleneck-detector-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "e4e0dbe52157ef5afaacbac2df7a8c7c1809ab5e9f559b3e0bc5df97fc351244"
+  },
+  "generatedAt": "2026-03-24T04:54:30.354Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "bottleneck-detector-github-pack",
+    "BottleneckDetector Agent"
+  ],
+  "sourceChecksum": "bdeac29d4cbc086a10a32ac08c515c53e080831dd0231a6dc3dc3d90a3a644b8",
+  "sourcePath": ".github/agents/cycle-02/bottleneck-detector.agent.md"
+}

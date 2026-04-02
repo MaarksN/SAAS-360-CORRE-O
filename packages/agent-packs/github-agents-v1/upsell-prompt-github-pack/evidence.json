@@ -1,0 +1,25 @@
+{
+  "agentId": "upsell-prompt-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent upsell-prompt-github-pack (UpsellPrompt Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"upsell-prompt-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"upsell-prompt-github-pack.tool.read\",\n    \"upsell-prompt-github-pack.tool.search\",\n    \"upsell-prompt-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "1e7e862e21672c571ead0fe7a6e70521f90f6d522f977e2faaeb59c827e76b53"
+  },
+  "generatedAt": "2026-03-24T04:54:31.701Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "upsell-prompt-github-pack",
+    "UpsellPrompt Agent"
+  ],
+  "sourceChecksum": "f7e9ee74bfd232965688f12e11a5b1cd940d3407787058c1237e1b734af41ce2",
+  "sourcePath": ".github/agents/cycle-09/upsell-prompt.agent.md"
+}

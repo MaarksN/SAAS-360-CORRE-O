@@ -1,0 +1,84 @@
+{
+  "adapters": {
+    "adapterFactoryPath": "apps/worker/src/agents/runtime.tools.ts",
+    "adapterMode": "manifest-capability-tool",
+    "entries": [
+      {
+        "action": "tool:execute",
+        "adapterType": "ManifestCapabilityTool",
+        "ready": true,
+        "toolId": "attribution-modeler-github-pack.tool.read",
+        "toolName": "Read"
+      },
+      {
+        "action": "tool:execute",
+        "adapterType": "ManifestCapabilityTool",
+        "ready": true,
+        "toolId": "attribution-modeler-github-pack.tool.search",
+        "toolName": "Search"
+      },
+      {
+        "action": "tool:execute",
+        "adapterType": "ManifestCapabilityTool",
+        "ready": true,
+        "toolId": "attribution-modeler-github-pack.tool.agent",
+        "toolName": "Agent"
+      }
+    ],
+    "ready": true
+  },
+  "collaborators": [
+    "planner-github-pack",
+    "implementer-github-pack",
+    "reviewer-github-pack"
+  ],
+  "evidence": {
+    "dryRunArtifactPath": "packages/agent-packs/github-agents-v1/attribution-modeler-github-pack/evidence.json",
+    "generatedAt": "2026-03-24T04:54:31.980Z",
+    "ready": true,
+    "sourceChecksum": "3e3384f92d5fff00c510be47775fa80444d28bd64888c6db40af451ba6ebb295",
+    "sourcePath": ".github/agents/cycle-11/attribution-modeler.agent.md"
+  },
+  "integration": {
+    "apiBindingPath": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "catalogRoot": "packages/agent-packs/github-agents-v1",
+    "discoverableQueries": [
+      "attribution-modeler-github-pack",
+      "AttributionModeler Agent"
+    ],
+    "ready": true,
+    "runtimeProvider": "manifest-runtime",
+    "runtimeToolsBindingPath": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBindingPath": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "manifest": {
+    "manifestPath": "packages/agent-packs/github-agents-v1/attribution-modeler-github-pack/manifest.json",
+    "manifestVersion": "1.0.0",
+    "ready": true
+  },
+  "policy": {
+    "enginePath": "packages/agents-core/src/policy/engine.ts",
+    "ready": true,
+    "requiredActions": [
+      "tool:execute",
+      "memory:read",
+      "memory:write",
+      "learning:read",
+      "learning:write",
+      "audit:write",
+      "report:read",
+      "approval:request",
+      "decision:recommend",
+      "workflow:trigger"
+    ],
+    "ruleCount": 10
+  },
+  "readiness": {
+    "adapters": true,
+    "evidence": true,
+    "integration": true,
+    "manifest": true,
+    "overall": true,
+    "policy": true
+  }
+}

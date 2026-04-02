@@ -1,0 +1,25 @@
+{
+  "agentId": "arr-bridge-builder-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent arr-bridge-builder-github-pack (ARRBridgeBuilder Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"arr-bridge-builder-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"arr-bridge-builder-github-pack.tool.read\",\n    \"arr-bridge-builder-github-pack.tool.search\",\n    \"arr-bridge-builder-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "25a619a6d1848a46832d3f53e07fc1bcd46564a4fce6b7a8b52a7ea89ddd32c6"
+  },
+  "generatedAt": "2026-03-24T04:54:31.973Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "arr-bridge-builder-github-pack",
+    "ARRBridgeBuilder Agent"
+  ],
+  "sourceChecksum": "ce60e603ddc8ea682e173dcbd0bdba3e3a91323f2be0d501d02c9f7ddf9e06e7",
+  "sourcePath": ".github/agents/cycle-11/arr-bridge-builder.agent.md"
+}

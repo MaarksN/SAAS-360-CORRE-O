@@ -1,0 +1,25 @@
+{
+  "agentId": "routing-traffic-cop-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent routing-traffic-cop-github-pack (RoutingTrafficCop Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"routing-traffic-cop-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"routing-traffic-cop-github-pack.tool.read\",\n    \"routing-traffic-cop-github-pack.tool.search\",\n    \"routing-traffic-cop-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "f391a752b0749e85a8dde9c987e9c27089f361fa3bd62fc06cbca0eabb36071a"
+  },
+  "generatedAt": "2026-03-24T04:54:30.613Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "routing-traffic-cop-github-pack",
+    "RoutingTrafficCop Agent"
+  ],
+  "sourceChecksum": "cf3b03517a09fa1871a624494ceb79cde40f35133824fca5f2e52a4e9ec3e5dc",
+  "sourcePath": ".github/agents/cycle-03/routing-traffic-cop.agent.md"
+}

@@ -1,0 +1,25 @@
+{
+  "agentId": "org-nav-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent org-nav-github-pack (OrgNav Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"org-nav-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"org-nav-github-pack.tool.read\",\n    \"org-nav-github-pack.tool.search\",\n    \"org-nav-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "3a2f3c67b1d90356b2d56177b30680e8c91fd7264747bd0b9ee03a9ba83303b2"
+  },
+  "generatedAt": "2026-03-24T04:54:30.862Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "org-nav-github-pack",
+    "OrgNav Agent"
+  ],
+  "sourceChecksum": "3a1f00bf84ba98ef0ce8d3e77f4c58170f1edbf431b890d579a11c4e47081541",
+  "sourcePath": ".github/agents/cycle-05/org-nav.agent.md"
+}

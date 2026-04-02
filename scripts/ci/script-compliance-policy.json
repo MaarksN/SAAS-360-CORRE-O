@@ -1,0 +1,248 @@
+{
+  "defaults": {
+    "approvedBy": "Lead tecnico de plataforma",
+    "approvedOn": "2026-03-22",
+    "deadline": "2026-03-29",
+    "owner": "Platform Engineering",
+    "priority": "P2",
+    "reviewer": "Platform Tech Lead",
+    "risk": "low"
+  },
+  "naCriteria": {
+    "runtime-overlay": "Package only owns a tsx worker shim and relies on validated shared packages for compile-time guarantees.",
+    "shared-source-only": "Package exposes shared source-only modules consumed directly from repository code.",
+    "template-only": "Package contains runtime-loaded templates and does not publish a standalone distributable artifact.",
+    "types-only": "Package exports only types or schemas and is validated transitively by consumer typechecks."
+  },
+  "packages": {
+    "@birthub/auth": {
+      "priority": "P1"
+    },
+    "@birthub/emails": {
+      "scripts": {
+        "build": {
+          "criterion": "template-only",
+          "justification": "Email templates are rendered in-place by consumers and do not ship a separate library build.",
+          "status": "na"
+        }
+      }
+    },
+    "@birthub/integrations": {
+      "priority": "P1"
+    },
+    "@birthub/llm-client": {
+      "priority": "P1"
+    },
+    "@birthub/queue": {
+      "priority": "P1"
+    },
+    "@birthub/security": {
+      "priority": "P1"
+    },
+    "@birthub/shared": {
+      "scripts": {
+        "build": {
+          "criterion": "shared-source-only",
+          "justification": "Shared error helpers are consumed directly from source and do not require an isolated bundle.",
+          "status": "na"
+        }
+      }
+    },
+    "@birthub/shared-types": {},
+    "@birthub/utils": {
+      "priority": "P1"
+    },
+    "ae-agent-worker": {
+      "scripts": {
+        "lint": {
+          "criterion": "runtime-overlay",
+          "justification": "Linting is enforced in shared packages; the overlay only wires a role-specific worker entrypoint.",
+          "status": "na"
+        },
+        "build": {
+          "criterion": "runtime-overlay",
+          "justification": "The package runs a tsx worker shim and does not ship a standalone distributable bundle.",
+          "status": "na"
+        },
+        "typecheck": {
+          "criterion": "runtime-overlay",
+          "justification": "Worker imports resolve through shared package lanes; wrapper correctness is guarded by lint plus downstream package typechecks.",
+          "status": "na"
+        },
+        "test": {
+          "criterion": "runtime-overlay",
+          "justification": "Behavior is covered by shared worker suites and queue-level flows; the overlay only binds a role-specific shim.",
+          "status": "na"
+        }
+      }
+    },
+    "analista-agent-worker": {
+      "scripts": {
+        "lint": {
+          "criterion": "runtime-overlay",
+          "justification": "Linting is enforced in shared packages; the overlay only wires a role-specific worker entrypoint.",
+          "status": "na"
+        },
+        "build": {
+          "criterion": "runtime-overlay",
+          "justification": "The package runs a tsx worker shim and does not ship a standalone distributable bundle.",
+          "status": "na"
+        },
+        "typecheck": {
+          "criterion": "runtime-overlay",
+          "justification": "Worker imports resolve through shared package lanes; wrapper correctness is guarded by lint plus downstream package typechecks.",
+          "status": "na"
+        },
+        "test": {
+          "criterion": "runtime-overlay",
+          "justification": "Behavior is covered by shared worker suites and queue-level flows; the overlay only binds a role-specific shim.",
+          "status": "na"
+        }
+      }
+    },
+    "financeiro-agent-worker": {
+      "scripts": {
+        "lint": {
+          "criterion": "runtime-overlay",
+          "justification": "Linting is enforced in shared packages; the overlay only wires a role-specific worker entrypoint.",
+          "status": "na"
+        },
+        "build": {
+          "criterion": "runtime-overlay",
+          "justification": "The package runs a tsx worker shim and does not ship a standalone distributable bundle.",
+          "status": "na"
+        },
+        "typecheck": {
+          "criterion": "runtime-overlay",
+          "justification": "Worker imports resolve through shared package lanes; wrapper correctness is guarded by lint plus downstream package typechecks.",
+          "status": "na"
+        },
+        "test": {
+          "criterion": "runtime-overlay",
+          "justification": "Behavior is covered by shared worker suites and queue-level flows; the overlay only binds a role-specific shim.",
+          "status": "na"
+        }
+      }
+    },
+    "juridico-agent-worker": {
+      "scripts": {
+        "lint": {
+          "criterion": "runtime-overlay",
+          "justification": "Linting is enforced in shared packages; the overlay only wires a role-specific worker entrypoint.",
+          "status": "na"
+        },
+        "build": {
+          "criterion": "runtime-overlay",
+          "justification": "The package runs a tsx worker shim and does not ship a standalone distributable bundle.",
+          "status": "na"
+        },
+        "typecheck": {
+          "criterion": "runtime-overlay",
+          "justification": "Worker imports resolve through shared package lanes; wrapper correctness is guarded by lint plus downstream package typechecks.",
+          "status": "na"
+        },
+        "test": {
+          "criterion": "runtime-overlay",
+          "justification": "Behavior is covered by shared worker suites and queue-level flows; the overlay only binds a role-specific shim.",
+          "status": "na"
+        }
+      }
+    },
+    "ldr-agent-worker": {
+      "scripts": {
+        "lint": {
+          "criterion": "runtime-overlay",
+          "justification": "Linting is enforced in shared packages; the overlay only wires a role-specific worker entrypoint.",
+          "status": "na"
+        },
+        "build": {
+          "criterion": "runtime-overlay",
+          "justification": "The package runs a tsx worker shim and does not ship a standalone distributable bundle.",
+          "status": "na"
+        },
+        "typecheck": {
+          "criterion": "runtime-overlay",
+          "justification": "Worker imports resolve through shared package lanes; wrapper correctness is guarded by lint plus downstream package typechecks.",
+          "status": "na"
+        },
+        "test": {
+          "criterion": "runtime-overlay",
+          "justification": "Behavior is covered by shared worker suites and queue-level flows; the overlay only binds a role-specific shim.",
+          "status": "na"
+        }
+      }
+    },
+    "marketing-agent-worker": {
+      "scripts": {
+        "lint": {
+          "criterion": "runtime-overlay",
+          "justification": "Linting is enforced in shared packages; the overlay only wires a role-specific worker entrypoint.",
+          "status": "na"
+        },
+        "build": {
+          "criterion": "runtime-overlay",
+          "justification": "The package runs a tsx worker shim and does not ship a standalone distributable bundle.",
+          "status": "na"
+        },
+        "typecheck": {
+          "criterion": "runtime-overlay",
+          "justification": "Worker imports resolve through shared package lanes; wrapper correctness is guarded by lint plus downstream package typechecks.",
+          "status": "na"
+        },
+        "test": {
+          "criterion": "runtime-overlay",
+          "justification": "Behavior is covered by shared worker suites and queue-level flows; the overlay only binds a role-specific shim.",
+          "status": "na"
+        }
+      }
+    },
+    "pos_venda-agent-worker": {
+      "scripts": {
+        "lint": {
+          "criterion": "runtime-overlay",
+          "justification": "Linting is enforced in shared packages; the overlay only wires a role-specific worker entrypoint.",
+          "status": "na"
+        },
+        "build": {
+          "criterion": "runtime-overlay",
+          "justification": "The package runs a tsx worker shim and does not ship a standalone distributable bundle.",
+          "status": "na"
+        },
+        "typecheck": {
+          "criterion": "runtime-overlay",
+          "justification": "Worker imports resolve through shared package lanes; wrapper correctness is guarded by lint plus downstream package typechecks.",
+          "status": "na"
+        },
+        "test": {
+          "criterion": "runtime-overlay",
+          "justification": "Behavior is covered by shared worker suites and queue-level flows; the overlay only binds a role-specific shim.",
+          "status": "na"
+        }
+      }
+    },
+    "sdr-agent-worker": {
+      "scripts": {
+        "lint": {
+          "criterion": "runtime-overlay",
+          "justification": "Linting is enforced in shared packages; the overlay only wires a role-specific worker entrypoint.",
+          "status": "na"
+        },
+        "build": {
+          "criterion": "runtime-overlay",
+          "justification": "The package runs a tsx worker shim and does not ship a standalone distributable bundle.",
+          "status": "na"
+        },
+        "typecheck": {
+          "criterion": "runtime-overlay",
+          "justification": "Worker imports resolve through shared package lanes; wrapper correctness is guarded by lint plus downstream package typechecks.",
+          "status": "na"
+        },
+        "test": {
+          "criterion": "runtime-overlay",
+          "justification": "Behavior is covered by shared worker suites and queue-level flows; the overlay only binds a role-specific shim.",
+          "status": "na"
+        }
+      }
+    }
+  }
+}

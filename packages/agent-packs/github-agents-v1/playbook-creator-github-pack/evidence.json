@@ -1,0 +1,25 @@
+{
+  "agentId": "playbook-creator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent playbook-creator-github-pack (PlaybookCreator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"playbook-creator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"playbook-creator-github-pack.tool.read\",\n    \"playbook-creator-github-pack.tool.search\",\n    \"playbook-creator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "479cd6496c67d4c2c84e1088bedd77a906acd149e536d93455fd1075270a65bb"
+  },
+  "generatedAt": "2026-03-24T04:54:30.877Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "playbook-creator-github-pack",
+    "PlaybookCreator Agent"
+  ],
+  "sourceChecksum": "f3743495cef0bed90fd8bfbd3857bd3e80a2a54cd8ebbc7c07dcdc0232145909",
+  "sourcePath": ".github/agents/cycle-05/playbook-creator.agent.md"
+}

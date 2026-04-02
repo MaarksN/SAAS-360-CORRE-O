@@ -1,0 +1,25 @@
+{
+  "agentId": "credit-hold-releaser-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent credit-hold-releaser-github-pack (CreditHoldReleaser Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"credit-hold-releaser-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"credit-hold-releaser-github-pack.tool.read\",\n    \"credit-hold-releaser-github-pack.tool.search\",\n    \"credit-hold-releaser-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "c50bf43e2afbc955451e24a664e4adf8a94e7321a6e10f540217cbba94f40f21"
+  },
+  "generatedAt": "2026-03-24T04:54:32.385Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "credit-hold-releaser-github-pack",
+    "CreditHoldReleaser Agent"
+  ],
+  "sourceChecksum": "49bac956aee3cb1c94f72a83b0d6bd2ce789a6f9c8e0e0f6f14d97ada39f5c52",
+  "sourcePath": ".github/agents/cycle-13/credit-hold-releaser.agent.md"
+}

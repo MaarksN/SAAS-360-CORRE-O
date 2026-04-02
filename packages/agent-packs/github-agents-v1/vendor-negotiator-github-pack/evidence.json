@@ -1,0 +1,25 @@
+{
+  "agentId": "vendor-negotiator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent vendor-negotiator-github-pack (VendorNegotiator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"vendor-negotiator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"vendor-negotiator-github-pack.tool.read\",\n    \"vendor-negotiator-github-pack.tool.search\",\n    \"vendor-negotiator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "c5259fd79f832ff8eb5d874f28d9a376e1cbe9a1a624808a311208e5f1c56ac9"
+  },
+  "generatedAt": "2026-03-24T04:54:30.527Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "vendor-negotiator-github-pack",
+    "VendorNegotiator Agent"
+  ],
+  "sourceChecksum": "0a3c6cb8137c47382827a3a7d0083f385f80ad945cbbe09ba0e85973e7f319ce",
+  "sourcePath": ".github/agents/cycle-02/vendor-negotiator.agent.md"
+}

@@ -1,0 +1,46 @@
+{
+  "source_traceability": "BirthHub360_Agentes_Parallel_Plan - PipelineOracle",
+  "input": {
+    "constraints": {
+      "currency": "BRL",
+      "language": "pt-BR",
+      "maxActions": 5
+    },
+    "requestId": "seed-pipelineoracle-001",
+    "sections": [
+      "capacity_model",
+      "coverage_gaps",
+      "territory_balance",
+      "ramp_risk",
+      "incentive_alignment"
+    ],
+    "segments": [
+      "enterprise",
+      "mid_market",
+      "commercial"
+    ],
+    "targetQuotaAttainmentPct": 103,
+    "tenantId": "tenant_exec_seed",
+    "window": {
+      "endDate": "2026-03-31",
+      "startDate": "2026-03-01"
+    }
+  },
+  "mock_external_sources": {
+    "capacity_planner_feed": {
+      "availableSellingCapacityPct": 64.2,
+      "hiringReadinessPct": 71.8,
+      "rampRiskPct": 18.4
+    },
+    "territory_coverage_engine": {
+      "coverageBalanceIndex": 58.6,
+      "overloadedTerritoriesPct": 21.1,
+      "whitespacePressurePct": 34.7
+    },
+    "attainment_variance_feed": {
+      "projectedAttainmentPct": 99.4,
+      "topVarianceDriver": "quota loading mismatch across high-potential territories",
+      "varianceToPlanPct": -3.6
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "agentId": "architecture-diagrammer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent architecture-diagrammer-github-pack (ArchitectureDiagrammer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"architecture-diagrammer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"architecture-diagrammer-github-pack.tool.read\",\n    \"architecture-diagrammer-github-pack.tool.search\",\n    \"architecture-diagrammer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "47f05fcf58c80d91662cb9fecdb0a2f8686aaa7b50698f6b0516f55c2236625f"
+  },
+  "generatedAt": "2026-03-24T04:54:30.926Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "architecture-diagrammer-github-pack",
+    "ArchitectureDiagrammer Agent"
+  ],
+  "sourceChecksum": "e777eaaf06726302751b2952fa295b3548da12ad872ddcc1d4fd1e69796e1e08",
+  "sourcePath": ".github/agents/cycle-06/architecture-diagrammer.agent.md"
+}

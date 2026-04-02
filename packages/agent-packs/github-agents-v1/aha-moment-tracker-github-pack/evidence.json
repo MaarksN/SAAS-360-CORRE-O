@@ -1,0 +1,25 @@
+{
+  "agentId": "aha-moment-tracker-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent aha-moment-tracker-github-pack (AhaMomentTracker Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"aha-moment-tracker-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"aha-moment-tracker-github-pack.tool.read\",\n    \"aha-moment-tracker-github-pack.tool.search\",\n    \"aha-moment-tracker-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "83e4d2b90b0d6e0faf09b29399b2d08f7262526b9692127b5f91d4fd5aba5440"
+  },
+  "generatedAt": "2026-03-24T04:54:31.453Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "aha-moment-tracker-github-pack",
+    "AhaMomentTracker Agent"
+  ],
+  "sourceChecksum": "4a23a7b82cd994e9e34b3933d1a71221885f500ee9dd03bd8bc75e7d27b515f6",
+  "sourcePath": ".github/agents/cycle-09/aha-moment-tracker.agent.md"
+}

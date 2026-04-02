@@ -1,0 +1,25 @@
+{
+  "agentId": "synthetic-identity-detector-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent synthetic-identity-detector-github-pack (SyntheticIdentityDetector Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"synthetic-identity-detector-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"synthetic-identity-detector-github-pack.tool.read\",\n    \"synthetic-identity-detector-github-pack.tool.search\",\n    \"synthetic-identity-detector-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "ce1016502a1caabc2626a6a5ad00264ad8309be524c0c828bb70b368a80d483a"
+  },
+  "generatedAt": "2026-03-24T04:54:32.564Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "synthetic-identity-detector-github-pack",
+    "SyntheticIdentityDetector Agent"
+  ],
+  "sourceChecksum": "91513ffa8bbf46a3086fc2079f3b31d613bbb8913ed385e255dd7e5cba0fdd34",
+  "sourcePath": ".github/agents/cycle-14/synthetic-identity-detector.agent.md"
+}

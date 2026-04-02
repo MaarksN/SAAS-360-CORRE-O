@@ -1,0 +1,38 @@
+name: Documentation gap
+description: Reportar lacuna, ambiguidade ou link quebrado na documentacao
+title: "[DOCS] "
+labels:
+  - documentation
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Documentation gap
+      description: O que faltou, ficou ambiguo ou quebrou no fluxo?
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Affected page
+      placeholder: docs/f10/README.md
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - blocked onboarding
+        - blocked deployment
+        - blocked incident response
+        - minor confusion
+    validations:
+      required: true
+  - type: textarea
+    id: suggested_fix
+    attributes:
+      label: Suggested fix
+      description: Se souber, descreva o ajuste ideal.
+    validations:
+      required: false

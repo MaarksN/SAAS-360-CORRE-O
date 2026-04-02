@@ -1,0 +1,736 @@
+{
+  "generatedAt": "2026-03-22T14:47:17.708Z",
+  "migrations": {
+    "20260313000100_cycle1_foundation": {
+      "environments": [
+        "dev",
+        "staging",
+        "prod"
+      ],
+      "estimatedDurationMinutes": 5,
+      "impact": "low",
+      "maintenanceWindowSlaMinutes": 30,
+      "notes": "Legacy migration governed retroactively by the F8 registry baseline for 20260313000100_cycle1_foundation.",
+      "owner": "Platform Data",
+      "postMigrationChecklist": [
+        "drift_check",
+        "fk_index_audit",
+        "integrity_health_check",
+        "migration_state_report",
+        "release_smoke",
+        "rls_audit"
+      ],
+      "preProductionChecklist": [
+        "backup_confirmed",
+        "maintenance_window",
+        "rollback_validated",
+        "stakeholder_notice"
+      ],
+      "review": {
+        "approverRoles": [
+          "DBA",
+          "DB_LEAD"
+        ],
+        "reviewer": "Database Lead"
+      },
+      "rollback": {
+        "strategy": "Restore previous application version, apply documented rollback SQL or restore physical backup if the schema is non-reversible.",
+        "steps": [
+          "Pause deploy and traffic cutover.",
+          "Validate backup freshness and restore point.",
+          "Run rollback script or restore the previous stable snapshot.",
+          "Replay smoke tests and tenant isolation checks before reopening traffic."
+        ],
+        "testedEnvironments": [
+          "staging"
+        ]
+      },
+      "severity": "P2",
+      "strategy": {
+        "backwardCompatible": true,
+        "batching": {
+          "required": true,
+          "strategy": "Chunk data backfills and lock-sensitive writes in bounded batches."
+        },
+        "expandContract": true,
+        "transactional": true
+      },
+      "validation": {
+        "driftChecked": true,
+        "rlsReviewed": true,
+        "rollbackTested": true,
+        "viewsAndRoutinesReviewed": true
+      }
+    },
+    "20260313000200_cycle2_multitenancy": {
+      "environments": [
+        "dev",
+        "staging",
+        "prod"
+      ],
+      "estimatedDurationMinutes": 20,
+      "impact": "high",
+      "maintenanceWindowSlaMinutes": 120,
+      "notes": "Legacy migration governed retroactively by the F8 registry baseline for 20260313000200_cycle2_multitenancy.",
+      "owner": "Platform Data",
+      "postMigrationChecklist": [
+        "drift_check",
+        "fk_index_audit",
+        "integrity_health_check",
+        "migration_state_report",
+        "release_smoke",
+        "rls_audit"
+      ],
+      "preProductionChecklist": [
+        "backup_confirmed",
+        "maintenance_window",
+        "rollback_validated",
+        "stakeholder_notice"
+      ],
+      "review": {
+        "approverRoles": [
+          "DBA",
+          "DB_LEAD"
+        ],
+        "reviewer": "Database Lead"
+      },
+      "rollback": {
+        "strategy": "Restore previous application version, apply documented rollback SQL or restore physical backup if the schema is non-reversible.",
+        "steps": [
+          "Pause deploy and traffic cutover.",
+          "Validate backup freshness and restore point.",
+          "Run rollback script or restore the previous stable snapshot.",
+          "Replay smoke tests and tenant isolation checks before reopening traffic."
+        ],
+        "testedEnvironments": [
+          "staging"
+        ]
+      },
+      "severity": "P0",
+      "strategy": {
+        "backwardCompatible": true,
+        "batching": {
+          "required": true,
+          "strategy": "Chunk data backfills and lock-sensitive writes in bounded batches."
+        },
+        "expandContract": true,
+        "transactional": true
+      },
+      "validation": {
+        "driftChecked": true,
+        "rlsReviewed": true,
+        "rollbackTested": true,
+        "viewsAndRoutinesReviewed": true
+      }
+    },
+    "20260313000200_cycle3_security_foundation": {
+      "environments": [
+        "dev",
+        "staging",
+        "prod"
+      ],
+      "estimatedDurationMinutes": 20,
+      "impact": "high",
+      "maintenanceWindowSlaMinutes": 120,
+      "notes": "Legacy migration governed retroactively by the F8 registry baseline for 20260313000200_cycle3_security_foundation.",
+      "owner": "Platform Data",
+      "postMigrationChecklist": [
+        "drift_check",
+        "fk_index_audit",
+        "integrity_health_check",
+        "migration_state_report",
+        "release_smoke",
+        "rls_audit"
+      ],
+      "preProductionChecklist": [
+        "backup_confirmed",
+        "maintenance_window",
+        "rollback_validated",
+        "stakeholder_notice"
+      ],
+      "review": {
+        "approverRoles": [
+          "DBA",
+          "DB_LEAD"
+        ],
+        "reviewer": "Database Lead"
+      },
+      "rollback": {
+        "strategy": "Restore previous application version, apply documented rollback SQL or restore physical backup if the schema is non-reversible.",
+        "steps": [
+          "Pause deploy and traffic cutover.",
+          "Validate backup freshness and restore point.",
+          "Run rollback script or restore the previous stable snapshot.",
+          "Replay smoke tests and tenant isolation checks before reopening traffic."
+        ],
+        "testedEnvironments": [
+          "staging"
+        ]
+      },
+      "severity": "P0",
+      "strategy": {
+        "backwardCompatible": true,
+        "batching": {
+          "required": true,
+          "strategy": "Chunk data backfills and lock-sensitive writes in bounded batches."
+        },
+        "expandContract": true,
+        "transactional": true
+      },
+      "validation": {
+        "driftChecked": true,
+        "rlsReviewed": true,
+        "rollbackTested": true,
+        "viewsAndRoutinesReviewed": true
+      }
+    },
+    "20260313000300_cycle6_workflows_orchestration": {
+      "environments": [
+        "dev",
+        "staging",
+        "prod"
+      ],
+      "estimatedDurationMinutes": 12,
+      "impact": "medium",
+      "maintenanceWindowSlaMinutes": 30,
+      "notes": "Legacy migration governed retroactively by the F8 registry baseline for 20260313000300_cycle6_workflows_orchestration.",
+      "owner": "Platform Data",
+      "postMigrationChecklist": [
+        "drift_check",
+        "fk_index_audit",
+        "integrity_health_check",
+        "migration_state_report",
+        "release_smoke",
+        "rls_audit"
+      ],
+      "preProductionChecklist": [
+        "backup_confirmed",
+        "maintenance_window",
+        "rollback_validated",
+        "stakeholder_notice"
+      ],
+      "review": {
+        "approverRoles": [
+          "DBA",
+          "DB_LEAD"
+        ],
+        "reviewer": "Database Lead"
+      },
+      "rollback": {
+        "strategy": "Restore previous application version, apply documented rollback SQL or restore physical backup if the schema is non-reversible.",
+        "steps": [
+          "Pause deploy and traffic cutover.",
+          "Validate backup freshness and restore point.",
+          "Run rollback script or restore the previous stable snapshot.",
+          "Replay smoke tests and tenant isolation checks before reopening traffic."
+        ],
+        "testedEnvironments": [
+          "staging"
+        ]
+      },
+      "severity": "P1",
+      "strategy": {
+        "backwardCompatible": true,
+        "batching": {
+          "required": true,
+          "strategy": "Chunk data backfills and lock-sensitive writes in bounded batches."
+        },
+        "expandContract": true,
+        "transactional": true
+      },
+      "validation": {
+        "driftChecked": true,
+        "rlsReviewed": true,
+        "rollbackTested": true,
+        "viewsAndRoutinesReviewed": true
+      }
+    },
+    "20260313000300_cycle7_billing_foundation": {
+      "environments": [
+        "dev",
+        "staging",
+        "prod"
+      ],
+      "estimatedDurationMinutes": 12,
+      "impact": "medium",
+      "maintenanceWindowSlaMinutes": 30,
+      "notes": "Legacy migration governed retroactively by the F8 registry baseline for 20260313000300_cycle7_billing_foundation.",
+      "owner": "Platform Data",
+      "postMigrationChecklist": [
+        "drift_check",
+        "fk_index_audit",
+        "integrity_health_check",
+        "migration_state_report",
+        "release_smoke",
+        "rls_audit"
+      ],
+      "preProductionChecklist": [
+        "backup_confirmed",
+        "maintenance_window",
+        "rollback_validated",
+        "stakeholder_notice"
+      ],
+      "review": {
+        "approverRoles": [
+          "DBA",
+          "DB_LEAD"
+        ],
+        "reviewer": "Database Lead"
+      },
+      "rollback": {
+        "strategy": "Restore previous application version, apply documented rollback SQL or restore physical backup if the schema is non-reversible.",
+        "steps": [
+          "Pause deploy and traffic cutover.",
+          "Validate backup freshness and restore point.",
+          "Run rollback script or restore the previous stable snapshot.",
+          "Replay smoke tests and tenant isolation checks before reopening traffic."
+        ],
+        "testedEnvironments": [
+          "staging"
+        ]
+      },
+      "severity": "P1",
+      "strategy": {
+        "backwardCompatible": true,
+        "batching": {
+          "required": true,
+          "strategy": "Chunk data backfills and lock-sensitive writes in bounded batches."
+        },
+        "expandContract": true,
+        "transactional": true
+      },
+      "validation": {
+        "driftChecked": true,
+        "rlsReviewed": true,
+        "rollbackTested": true,
+        "viewsAndRoutinesReviewed": true
+      }
+    },
+    "20260313000400_cycle9_engagement": {
+      "environments": [
+        "dev",
+        "staging",
+        "prod"
+      ],
+      "estimatedDurationMinutes": 5,
+      "impact": "low",
+      "maintenanceWindowSlaMinutes": 30,
+      "notes": "Legacy migration governed retroactively by the F8 registry baseline for 20260313000400_cycle9_engagement.",
+      "owner": "Platform Data",
+      "postMigrationChecklist": [
+        "drift_check",
+        "fk_index_audit",
+        "integrity_health_check",
+        "migration_state_report",
+        "release_smoke",
+        "rls_audit"
+      ],
+      "preProductionChecklist": [
+        "backup_confirmed",
+        "maintenance_window",
+        "rollback_validated",
+        "stakeholder_notice"
+      ],
+      "review": {
+        "approverRoles": [
+          "DBA",
+          "DB_LEAD"
+        ],
+        "reviewer": "Database Lead"
+      },
+      "rollback": {
+        "strategy": "Restore previous application version, apply documented rollback SQL or restore physical backup if the schema is non-reversible.",
+        "steps": [
+          "Pause deploy and traffic cutover.",
+          "Validate backup freshness and restore point.",
+          "Run rollback script or restore the previous stable snapshot.",
+          "Replay smoke tests and tenant isolation checks before reopening traffic."
+        ],
+        "testedEnvironments": [
+          "staging"
+        ]
+      },
+      "severity": "P2",
+      "strategy": {
+        "backwardCompatible": true,
+        "batching": {
+          "required": true,
+          "strategy": "Chunk data backfills and lock-sensitive writes in bounded batches."
+        },
+        "expandContract": true,
+        "transactional": true
+      },
+      "validation": {
+        "driftChecked": true,
+        "rlsReviewed": true,
+        "rollbackTested": true,
+        "viewsAndRoutinesReviewed": true
+      }
+    },
+    "20260315000100_cycle7_billing_credits_exports": {
+      "environments": [
+        "dev",
+        "staging",
+        "prod"
+      ],
+      "estimatedDurationMinutes": 12,
+      "impact": "medium",
+      "maintenanceWindowSlaMinutes": 30,
+      "notes": "Legacy migration governed retroactively by the F8 registry baseline for 20260315000100_cycle7_billing_credits_exports.",
+      "owner": "Platform Data",
+      "postMigrationChecklist": [
+        "drift_check",
+        "fk_index_audit",
+        "integrity_health_check",
+        "migration_state_report",
+        "release_smoke",
+        "rls_audit"
+      ],
+      "preProductionChecklist": [
+        "backup_confirmed",
+        "maintenance_window",
+        "rollback_validated",
+        "stakeholder_notice"
+      ],
+      "review": {
+        "approverRoles": [
+          "DBA",
+          "DB_LEAD"
+        ],
+        "reviewer": "Database Lead"
+      },
+      "rollback": {
+        "strategy": "Restore previous application version, apply documented rollback SQL or restore physical backup if the schema is non-reversible.",
+        "steps": [
+          "Pause deploy and traffic cutover.",
+          "Validate backup freshness and restore point.",
+          "Run rollback script or restore the previous stable snapshot.",
+          "Replay smoke tests and tenant isolation checks before reopening traffic."
+        ],
+        "testedEnvironments": [
+          "staging"
+        ]
+      },
+      "severity": "P1",
+      "strategy": {
+        "backwardCompatible": true,
+        "batching": {
+          "required": true,
+          "strategy": "Chunk data backfills and lock-sensitive writes in bounded batches."
+        },
+        "expandContract": true,
+        "transactional": true
+      },
+      "validation": {
+        "driftChecked": true,
+        "rlsReviewed": true,
+        "rollbackTested": true,
+        "viewsAndRoutinesReviewed": true
+      }
+    },
+    "20260315000200_cycle8_durable_budget_outputs": {
+      "environments": [
+        "dev",
+        "staging",
+        "prod"
+      ],
+      "estimatedDurationMinutes": 5,
+      "impact": "low",
+      "maintenanceWindowSlaMinutes": 30,
+      "notes": "Legacy migration governed retroactively by the F8 registry baseline for 20260315000200_cycle8_durable_budget_outputs.",
+      "owner": "Platform Data",
+      "postMigrationChecklist": [
+        "drift_check",
+        "fk_index_audit",
+        "integrity_health_check",
+        "migration_state_report",
+        "release_smoke",
+        "rls_audit"
+      ],
+      "preProductionChecklist": [
+        "backup_confirmed",
+        "maintenance_window",
+        "rollback_validated",
+        "stakeholder_notice"
+      ],
+      "review": {
+        "approverRoles": [
+          "DBA",
+          "DB_LEAD"
+        ],
+        "reviewer": "Database Lead"
+      },
+      "rollback": {
+        "strategy": "Restore previous application version, apply documented rollback SQL or restore physical backup if the schema is non-reversible.",
+        "steps": [
+          "Pause deploy and traffic cutover.",
+          "Validate backup freshness and restore point.",
+          "Run rollback script or restore the previous stable snapshot.",
+          "Replay smoke tests and tenant isolation checks before reopening traffic."
+        ],
+        "testedEnvironments": [
+          "staging"
+        ]
+      },
+      "severity": "P2",
+      "strategy": {
+        "backwardCompatible": true,
+        "batching": {
+          "required": true,
+          "strategy": "Chunk data backfills and lock-sensitive writes in bounded batches."
+        },
+        "expandContract": true,
+        "transactional": true
+      },
+      "validation": {
+        "driftChecked": true,
+        "rlsReviewed": true,
+        "rollbackTested": true,
+        "viewsAndRoutinesReviewed": true
+      }
+    },
+    "20260316000100_cycle10_connectors_handoffs": {
+      "environments": [
+        "dev",
+        "staging",
+        "prod"
+      ],
+      "estimatedDurationMinutes": 12,
+      "impact": "medium",
+      "maintenanceWindowSlaMinutes": 30,
+      "notes": "Legacy migration governed retroactively by the F8 registry baseline for 20260316000100_cycle10_connectors_handoffs.",
+      "owner": "Platform Data",
+      "postMigrationChecklist": [
+        "drift_check",
+        "fk_index_audit",
+        "integrity_health_check",
+        "migration_state_report",
+        "release_smoke",
+        "rls_audit"
+      ],
+      "preProductionChecklist": [
+        "backup_confirmed",
+        "maintenance_window",
+        "rollback_validated",
+        "stakeholder_notice"
+      ],
+      "review": {
+        "approverRoles": [
+          "DBA",
+          "DB_LEAD"
+        ],
+        "reviewer": "Database Lead"
+      },
+      "rollback": {
+        "strategy": "Restore previous application version, apply documented rollback SQL or restore physical backup if the schema is non-reversible.",
+        "steps": [
+          "Pause deploy and traffic cutover.",
+          "Validate backup freshness and restore point.",
+          "Run rollback script or restore the previous stable snapshot.",
+          "Replay smoke tests and tenant isolation checks before reopening traffic."
+        ],
+        "testedEnvironments": [
+          "staging"
+        ]
+      },
+      "severity": "P1",
+      "strategy": {
+        "backwardCompatible": true,
+        "batching": {
+          "required": true,
+          "strategy": "Chunk data backfills and lock-sensitive writes in bounded batches."
+        },
+        "expandContract": true,
+        "transactional": true
+      },
+      "validation": {
+        "driftChecked": true,
+        "rlsReviewed": true,
+        "rollbackTested": true,
+        "viewsAndRoutinesReviewed": true
+      }
+    },
+    "20260317000100_cycle11_billing_webhook_audit": {
+      "environments": [
+        "dev",
+        "staging",
+        "prod"
+      ],
+      "estimatedDurationMinutes": 12,
+      "impact": "medium",
+      "maintenanceWindowSlaMinutes": 30,
+      "notes": "Legacy migration governed retroactively by the F8 registry baseline for 20260317000100_cycle11_billing_webhook_audit.",
+      "owner": "Platform Data",
+      "postMigrationChecklist": [
+        "drift_check",
+        "fk_index_audit",
+        "integrity_health_check",
+        "migration_state_report",
+        "release_smoke",
+        "rls_audit"
+      ],
+      "preProductionChecklist": [
+        "backup_confirmed",
+        "maintenance_window",
+        "rollback_validated",
+        "stakeholder_notice"
+      ],
+      "review": {
+        "approverRoles": [
+          "DBA",
+          "DB_LEAD"
+        ],
+        "reviewer": "Database Lead"
+      },
+      "rollback": {
+        "strategy": "Restore previous application version, apply documented rollback SQL or restore physical backup if the schema is non-reversible.",
+        "steps": [
+          "Pause deploy and traffic cutover.",
+          "Validate backup freshness and restore point.",
+          "Run rollback script or restore the previous stable snapshot.",
+          "Replay smoke tests and tenant isolation checks before reopening traffic."
+        ],
+        "testedEnvironments": [
+          "staging"
+        ]
+      },
+      "severity": "P1",
+      "strategy": {
+        "backwardCompatible": true,
+        "batching": {
+          "required": true,
+          "strategy": "Chunk data backfills and lock-sensitive writes in bounded batches."
+        },
+        "expandContract": true,
+        "transactional": true
+      },
+      "validation": {
+        "driftChecked": true,
+        "rlsReviewed": true,
+        "rollbackTested": true,
+        "viewsAndRoutinesReviewed": true
+      }
+    },
+    "20260322000100_cycle8_data_resilience_controls": {
+      "environments": [
+        "dev",
+        "staging",
+        "prod"
+      ],
+      "estimatedDurationMinutes": 20,
+      "impact": "high",
+      "maintenanceWindowSlaMinutes": 120,
+      "notes": "F8 hardening baseline: full tenant RLS coverage, immutable audit log and high-write tuning.",
+      "owner": "Platform Data",
+      "postMigrationChecklist": [
+        "drift_check",
+        "fk_index_audit",
+        "integrity_health_check",
+        "migration_state_report",
+        "release_smoke",
+        "rls_audit"
+      ],
+      "preProductionChecklist": [
+        "backup_confirmed",
+        "maintenance_window",
+        "rollback_validated",
+        "stakeholder_notice"
+      ],
+      "review": {
+        "approverRoles": [
+          "DBA",
+          "DB_LEAD"
+        ],
+        "reviewer": "Database Lead"
+      },
+      "rollback": {
+        "strategy": "Restore previous application version, apply documented rollback SQL or restore physical backup if the schema is non-reversible.",
+        "steps": [
+          "Pause deploy and traffic cutover.",
+          "Validate backup freshness and restore point.",
+          "Run rollback script or restore the previous stable snapshot.",
+          "Replay smoke tests and tenant isolation checks before reopening traffic."
+        ],
+        "testedEnvironments": [
+          "staging"
+        ]
+      },
+      "severity": "P0",
+      "strategy": {
+        "backwardCompatible": true,
+        "batching": {
+          "required": true,
+          "strategy": "Chunk data backfills and lock-sensitive writes in bounded batches."
+        },
+        "expandContract": true,
+        "transactional": true
+      },
+      "validation": {
+        "driftChecked": true,
+        "rlsReviewed": true,
+        "rollbackTested": true,
+        "viewsAndRoutinesReviewed": true
+      }
+    },
+    "20260331000100_cycle12_rls_policy_alignment": {
+      "environments": [
+        "dev",
+        "staging",
+        "prod"
+      ],
+      "estimatedDurationMinutes": 10,
+      "impact": "medium",
+      "maintenanceWindowSlaMinutes": 30,
+      "notes": "Replaces legacy strict tenant RLS predicates with tenant_access_allowed() for bootstrap/admin-safe setup while preserving tenant isolation after session pinning.",
+      "owner": "Platform Data",
+      "postMigrationChecklist": [
+        "drift_check",
+        "fk_index_audit",
+        "integrity_health_check",
+        "migration_state_report",
+        "release_smoke",
+        "rls_audit"
+      ],
+      "preProductionChecklist": [
+        "backup_confirmed",
+        "maintenance_window",
+        "rollback_validated",
+        "stakeholder_notice"
+      ],
+      "review": {
+        "approverRoles": [
+          "DBA",
+          "DB_LEAD"
+        ],
+        "reviewer": "Database Lead"
+      },
+      "rollback": {
+        "strategy": "Recreate the legacy get_current_tenant_id()-based policies for the affected tables or restore the previous stable snapshot if policy drift is detected after deploy.",
+        "steps": [
+          "Pause deploy and traffic cutover.",
+          "Reapply the prior strict tenant RLS predicates for the affected tables.",
+          "Validate release smoke tests and tenant isolation checks in staging.",
+          "Restore the last stable snapshot if policy rollback does not converge cleanly."
+        ],
+        "testedEnvironments": [
+          "staging"
+        ]
+      },
+      "severity": "P1",
+      "strategy": {
+        "backwardCompatible": true,
+        "batching": {
+          "required": false
+        },
+        "expandContract": false,
+        "transactional": true
+      },
+      "validation": {
+        "driftChecked": true,
+        "rlsReviewed": true,
+        "rollbackTested": true,
+        "viewsAndRoutinesReviewed": true
+      }
+    }
+  }
+}

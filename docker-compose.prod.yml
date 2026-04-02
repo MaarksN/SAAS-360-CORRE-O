@@ -1,0 +1,139 @@
+services:
+  caddy:
+    image: caddy:2.10-alpine
+    depends_on:
+      api:
+        condition: service_healthy
+      web:
+        condition: service_healthy
+    environment:
+      APP_DOMAIN: ${APP_DOMAIN:?set the public app domain}
+      API_DOMAIN: ${API_DOMAIN:?set the public api domain}
+      CADDY_EMAIL: ${CADDY_EMAIL:?set the email used for TLS issuance}
+    networks:
+      - edge
+      - backend
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: unless-stopped
+    volumes:
+      - ./ops/vps/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    depends_on:
+      api:
+        condition: service_healthy
+    environment:
+      NEXTAUTH_SECRET: ${NEXTAUTH_SECRET:?set a web auth secret}
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:?set the public HTTPS api URL}
+      NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:?set the public HTTPS app URL}
+      NEXT_PUBLIC_CSP_REPORT_ONLY: "false"
+      NEXT_PUBLIC_ENVIRONMENT: production
+      NEXT_PUBLIC_POSTHOG_HOST: ${NEXT_PUBLIC_POSTHOG_HOST:-}
+      NEXT_PUBLIC_POSTHOG_KEY: ${NEXT_PUBLIC_POSTHOG_KEY:-}
+      NEXT_PUBLIC_SENTRY_DSN: ${NEXT_PUBLIC_SENTRY_DSN:-}
+      NEXT_PUBLIC_SENTRY_TRACES_SAMPLE_RATE: ${NEXT_PUBLIC_SENTRY_TRACES_SAMPLE_RATE:-0.1}
+      NODE_ENV: production
+      SENTRY_AUTH_TOKEN: ${SENTRY_AUTH_TOKEN:-}
+      WEB_PORT: 3001
+    networks:
+      - backend
+    read_only: true
+    restart: unless-stopped
+    tmpfs:
+      - /tmp
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    environment:
+      API_CORS_ORIGINS: ${API_CORS_ORIGINS:?set the official UI origin}
+      API_KEY_PREFIX: ${API_KEY_PREFIX:-bh360_live}
+      API_PORT: 3000
+      AUTH_BCRYPT_SALT_ROUNDS: ${AUTH_BCRYPT_SALT_ROUNDS:-12}
+      AUTH_MFA_ENCRYPTION_KEY: ${AUTH_MFA_ENCRYPTION_KEY:?set a production key}
+      AUTH_MFA_ISSUER: ${AUTH_MFA_ISSUER:-BirthHub360}
+      BILLING_GRACE_PERIOD_DAYS: ${BILLING_GRACE_PERIOD_DAYS:-3}
+      DATABASE_URL: ${DATABASE_URL:?use a production PostgreSQL URL with sslmode=require}
+      DIRECT_DATABASE_URL: ${DIRECT_DATABASE_URL:-}
+      EXTERNAL_HEALTHCHECK_URLS: ${EXTERNAL_HEALTHCHECK_URLS:-}
+      JOB_HMAC_GLOBAL_SECRET: ${JOB_HMAC_GLOBAL_SECRET:?set a production secret}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:?set the public HTTPS app URL}
+      NODE_ENV: production
+      OTEL_EXPORTER_OTLP_ENDPOINT: ${OTEL_EXPORTER_OTLP_ENDPOINT:-}
+      OTEL_SERVICE_NAME: ${OTEL_SERVICE_NAME:-birthub-api}
+      QUEUE_NAME: ${QUEUE_NAME:-birthub-v1}
+      REDIS_URL: ${REDIS_URL:?use a TLS-enabled Redis URL}
+      REQUIRE_SECURE_COOKIES: "true"
+      SENTRY_DSN: ${SENTRY_DSN:-}
+      SENTRY_ENVIRONMENT: ${SENTRY_ENVIRONMENT:-production}
+      SESSION_SECRET: ${SESSION_SECRET:?set a production session secret}
+      STRIPE_CANCEL_URL: ${STRIPE_CANCEL_URL:?set a production HTTPS cancel URL}
+      STRIPE_PORTAL_RETURN_URL: ${STRIPE_PORTAL_RETURN_URL:?set a production HTTPS portal URL}
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY:?set a live Stripe secret}
+      STRIPE_SUCCESS_URL: ${STRIPE_SUCCESS_URL:?set a production HTTPS success URL}
+      STRIPE_WEBHOOK_SECRET: ${STRIPE_WEBHOOK_SECRET:?set a live Stripe webhook secret}
+      WEB_BASE_URL: ${NEXT_PUBLIC_APP_URL:?set the public HTTPS app URL}
+    expose:
+      - "3000"
+    init: true
+    networks:
+      - backend
+    read_only: true
+    restart: unless-stopped
+    tmpfs:
+      - /tmp
+
+  worker:
+    build:
+      context: .
+      dockerfile: apps/worker/Dockerfile
+    depends_on:
+      api:
+        condition: service_healthy
+    environment:
+      BILLING_EXPORT_LOCAL_DIR: /app/artifacts/billing-exports
+      BILLING_EXPORT_STORAGE_MODE: ${BILLING_EXPORT_STORAGE_MODE:-local}
+      BILLING_GRACE_PERIOD_DAYS: ${BILLING_GRACE_PERIOD_DAYS:-3}
+      DATABASE_URL: ${DATABASE_URL:?use a production PostgreSQL URL with sslmode=require}
+      EMAIL_FROM_ADDRESS: ${EMAIL_FROM_ADDRESS:-noreply@localhost}
+      JOB_HMAC_GLOBAL_SECRET: ${JOB_HMAC_GLOBAL_SECRET:?set a production secret}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      NODE_ENV: production
+      QUEUE_NAME: ${QUEUE_NAME:-birthub-v1}
+      REDIS_URL: ${REDIS_URL:?use a TLS-enabled Redis URL}
+      SENTRY_DSN: ${SENTRY_DSN:-}
+      SENTRY_ENVIRONMENT: ${SENTRY_ENVIRONMENT:-production}
+      WEB_BASE_URL: ${NEXT_PUBLIC_APP_URL:?set the public HTTPS app URL}
+      WORKER_CONCURRENCY: ${WORKER_CONCURRENCY:-5}
+      WORKER_HEALTH_PORT: 3002
+    expose:
+      - "3002"
+    init: true
+    networks:
+      - backend
+    read_only: true
+    restart: unless-stopped
+    tmpfs:
+      - /tmp
+    volumes:
+      - worker_exports:/app/artifacts/billing-exports
+
+networks:
+  edge:
+    driver: bridge
+  backend:
+    driver: bridge
+
+volumes:
+  caddy_config:
+  caddy_data:
+  worker_exports:

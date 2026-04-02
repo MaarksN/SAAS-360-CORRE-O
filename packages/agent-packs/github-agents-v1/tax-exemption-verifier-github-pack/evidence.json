@@ -1,0 +1,25 @@
+{
+  "agentId": "tax-exemption-verifier-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent tax-exemption-verifier-github-pack (TaxExemptionVerifier Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"tax-exemption-verifier-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"tax-exemption-verifier-github-pack.tool.read\",\n    \"tax-exemption-verifier-github-pack.tool.search\",\n    \"tax-exemption-verifier-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "8863e8fa20b1f3ee5feb8e71a284ce7226ae3c1423f6f96f8e0dc2c8af67f216"
+  },
+  "generatedAt": "2026-03-24T04:54:32.314Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "tax-exemption-verifier-github-pack",
+    "TaxExemptionVerifier Agent"
+  ],
+  "sourceChecksum": "ad86f7e8b3143625aa3e8b0cc21d393f5e7dce24d538607b87ed34cf311275fa",
+  "sourcePath": ".github/agents/cycle-12/tax-exemption-verifier.agent.md"
+}

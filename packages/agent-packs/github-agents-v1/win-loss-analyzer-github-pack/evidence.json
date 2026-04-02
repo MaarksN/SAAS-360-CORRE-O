@@ -1,0 +1,25 @@
+{
+  "agentId": "win-loss-analyzer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent win-loss-analyzer-github-pack (WinLossAnalyzer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"win-loss-analyzer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"win-loss-analyzer-github-pack.tool.read\",\n    \"win-loss-analyzer-github-pack.tool.search\",\n    \"win-loss-analyzer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "97ecd21e3f6c5e491db9d89f1d347abd1a8bfc9800c4e02ac0686f9ad375251e"
+  },
+  "generatedAt": "2026-03-24T04:54:31.077Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "win-loss-analyzer-github-pack",
+    "WinLossAnalyzer Agent"
+  ],
+  "sourceChecksum": "753fe4aacb982b7853a4da30f46b527b859f898b5228691ddd3df3ca4cc43078",
+  "sourcePath": ".github/agents/cycle-06/win-loss-analyzer.agent.md"
+}

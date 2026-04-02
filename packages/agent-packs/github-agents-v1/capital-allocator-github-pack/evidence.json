@@ -1,0 +1,25 @@
+{
+  "agentId": "capital-allocator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent capital-allocator-github-pack (CapitalAllocator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"capital-allocator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"capital-allocator-github-pack.tool.read\",\n    \"capital-allocator-github-pack.tool.search\",\n    \"capital-allocator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "725f4efd305099b7c2980938abbb4fd930aaeae477e0e9ab8e3cf7474d544bcb"
+  },
+  "generatedAt": "2026-03-24T04:54:30.180Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "capital-allocator-github-pack",
+    "CapitalAllocator Agent"
+  ],
+  "sourceChecksum": "508ce9fe2237b9fa27fe2680fd73c0557e62f0a388e403fd078ff0eef1cb773c",
+  "sourcePath": ".github/agents/cycle-01/capital-allocator.agent.md"
+}

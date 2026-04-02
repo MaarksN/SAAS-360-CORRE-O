@@ -1,0 +1,25 @@
+{
+  "agentId": "gl-anomaly-detector-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent gl-anomaly-detector-github-pack (GLAnomalyDetector Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"gl-anomaly-detector-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"gl-anomaly-detector-github-pack.tool.read\",\n    \"gl-anomaly-detector-github-pack.tool.search\",\n    \"gl-anomaly-detector-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "dbc283e4bc2daa40d880fda334aa69b006009c8944b8be36d28442e6285a53bb"
+  },
+  "generatedAt": "2026-03-24T04:54:32.416Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "gl-anomaly-detector-github-pack",
+    "GLAnomalyDetector Agent"
+  ],
+  "sourceChecksum": "1b35044c9dddb6e7d5c3e622adf9a738fb557b5659eabe1a34ca266e9139b1fa",
+  "sourcePath": ".github/agents/cycle-13/gl-anomaly-detector.agent.md"
+}

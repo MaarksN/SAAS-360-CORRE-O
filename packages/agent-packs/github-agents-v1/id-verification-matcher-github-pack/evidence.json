@@ -1,0 +1,25 @@
+{
+  "agentId": "id-verification-matcher-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent id-verification-matcher-github-pack (IDVerificationMatcher Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"id-verification-matcher-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"id-verification-matcher-github-pack.tool.read\",\n    \"id-verification-matcher-github-pack.tool.search\",\n    \"id-verification-matcher-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "7c69e725ed218086bfd65e4ae272f63ff2408d22169b27c843ad247e65d466a3"
+  },
+  "generatedAt": "2026-03-24T04:54:32.502Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "id-verification-matcher-github-pack",
+    "IDVerificationMatcher Agent"
+  ],
+  "sourceChecksum": "d7c483c268f78b4b0b9bb2a3c0b317c90049ec65e6aef34584aa266add62e51c",
+  "sourcePath": ".github/agents/cycle-14/id-verification-matcher.agent.md"
+}

@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-03-23T02:41:31.058Z",
+  "nextBuildDir": "apps/web/.next",
+  "chunks": {
+    "files": 44,
+    "totalBytes": 2293839,
+    "totalKiB": 2240.08,
+    "top10": [
+      {
+        "file": "apps/web/.next/static/chunks/0i161bnz72xm0.js",
+        "bytes": 513007
+      },
+      {
+        "file": "apps/web/.next/static/chunks/0bne91v9vu3p-.js",
+        "bytes": 341829
+      },
+      {
+        "file": "apps/web/.next/static/chunks/16jxj9jfdnfwh.js",
+        "bytes": 282733
+      },
+      {
+        "file": "apps/web/.next/static/chunks/04phlj5h7kdab.js",
+        "bytes": 232267
+      },
+      {
+        "file": "apps/web/.next/static/chunks/0a1q74ztjlk2q.js",
+        "bytes": 231026
+      },
+      {
+        "file": "apps/web/.next/static/chunks/0zup1k23rbfdx.js",
+        "bytes": 139409
+      },
+      {
+        "file": "apps/web/.next/static/chunks/0yfo0cx26v9is.js",
+        "bytes": 122968
+      },
+      {
+        "file": "apps/web/.next/static/chunks/03~yq9q893hmn.js",
+        "bytes": 112594
+      },
+      {
+        "file": "apps/web/.next/static/chunks/0jqcj36097rga.js",
+        "bytes": 52144
+      },
+      {
+        "file": "apps/web/.next/static/chunks/16o0~d4ow4q1s.js",
+        "bytes": 44841
+      }
+    ]
+  },
+  "pages": [
+    {
+      "page": "/_app",
+      "assetsCount": 0,
+      "assets": []
+    }
+  ]
+}

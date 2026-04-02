@@ -1,0 +1,25 @@
+{
+  "agentId": "roi-scenario-modeler-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent roi-scenario-modeler-github-pack (ROIScenarioModeler Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"roi-scenario-modeler-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"roi-scenario-modeler-github-pack.tool.read\",\n    \"roi-scenario-modeler-github-pack.tool.search\",\n    \"roi-scenario-modeler-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "57ab97fb558ad1b094a4ef1d720b483520aa2b1feda1e395a36957d6c4ebb29f"
+  },
+  "generatedAt": "2026-03-24T04:54:31.022Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "roi-scenario-modeler-github-pack",
+    "ROIScenarioModeler Agent"
+  ],
+  "sourceChecksum": "f0e2413edf776d63a43d3a80914927aec394d9386e5e5e6f1515edc92e07e292",
+  "sourcePath": ".github/agents/cycle-06/roi-scenario-modeler.agent.md"
+}

@@ -1,0 +1,79 @@
+services:
+  webhook-receiver:
+    image: mendhak/http-https-echo:37
+    container_name: birthub-monitoring-webhook-receiver
+    restart: unless-stopped
+    ports:
+      - "18080:8080"
+
+  alertmanager:
+    image: prom/alertmanager:v0.28.1
+    container_name: birthub-alertmanager
+    restart: unless-stopped
+    command:
+      - "--config.file=/etc/alertmanager/alertmanager.yml"
+      - "--storage.path=/alertmanager"
+      - "--web.listen-address=:9093"
+    depends_on:
+      - webhook-receiver
+    ports:
+      - "9093:9093"
+    volumes:
+      - ./alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+
+  prometheus:
+    image: prom/prometheus:v2.54.1
+    container_name: birthub-prometheus
+    restart: unless-stopped
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--web.enable-lifecycle"
+    depends_on:
+      - alertmanager
+      - postgres-exporter
+      - redis-exporter
+    ports:
+      - "9090:9090"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./alert.rules.yml:/etc/prometheus/alert.rules.yml:ro
+
+  postgres-exporter:
+    image: prometheuscommunity/postgres-exporter:v0.17.1
+    container_name: birthub-postgres-exporter
+    restart: unless-stopped
+    environment:
+      DATA_SOURCE_NAME: postgresql://postgres:postgrespassword@host.docker.internal:5432/birthub_cycle1?sslmode=disable
+    ports:
+      - "9187:9187"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  redis-exporter:
+    image: oliver006/redis_exporter:v1.74.0
+    container_name: birthub-redis-exporter
+    restart: unless-stopped
+    environment:
+      REDIS_ADDR: redis://host.docker.internal:6379
+    ports:
+      - "9121:9121"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  grafana:
+    image: grafana/grafana:11.5.2
+    container_name: birthub-grafana
+    restart: unless-stopped
+    depends_on:
+      - prometheus
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro

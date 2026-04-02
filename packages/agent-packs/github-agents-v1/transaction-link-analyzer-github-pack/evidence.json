@@ -1,0 +1,25 @@
+{
+  "agentId": "transaction-link-analyzer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent transaction-link-analyzer-github-pack (TransactionLinkAnalyzer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"transaction-link-analyzer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"transaction-link-analyzer-github-pack.tool.read\",\n    \"transaction-link-analyzer-github-pack.tool.search\",\n    \"transaction-link-analyzer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "cafa366db16e0b51eb5a602174e71edef62698ecc220373d66c766bf048d3fa3"
+  },
+  "generatedAt": "2026-03-24T04:54:32.572Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "transaction-link-analyzer-github-pack",
+    "TransactionLinkAnalyzer Agent"
+  ],
+  "sourceChecksum": "157be686b57c88cf3cce415f48e4a8876bb62e0825c50a89f0d1cd8e5d95782c",
+  "sourcePath": ".github/agents/cycle-14/transaction-link-analyzer.agent.md"
+}

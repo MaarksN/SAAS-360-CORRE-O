@@ -1,0 +1,25 @@
+{
+  "agentId": "gamification-master-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent gamification-master-github-pack (GamificationMaster Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"gamification-master-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"gamification-master-github-pack.tool.read\",\n    \"gamification-master-github-pack.tool.search\",\n    \"gamification-master-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "11c2ed57be0896f0ad6887f5544286f900c672e114a9b5b2da25b04f007360e5"
+  },
+  "generatedAt": "2026-03-24T04:54:30.695Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "gamification-master-github-pack",
+    "GamificationMaster Agent"
+  ],
+  "sourceChecksum": "f9bf5a35b153ce8e6e142f80d9dae7428787093843cb9963d1944fa6950c0403",
+  "sourcePath": ".github/agents/cycle-04/gamification-master.agent.md"
+}

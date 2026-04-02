@@ -1,0 +1,25 @@
+{
+  "agentId": "cannibalization-detector-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent cannibalization-detector-github-pack (CannibalizationDetector Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"cannibalization-detector-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"cannibalization-detector-github-pack.tool.read\",\n    \"cannibalization-detector-github-pack.tool.search\",\n    \"cannibalization-detector-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "ffea6b3e2003fa13907cd23a3c47853e140f507d614776fe2ad797e09586ea7c"
+  },
+  "generatedAt": "2026-03-24T04:54:31.282Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "cannibalization-detector-github-pack",
+    "CannibalizationDetector Agent"
+  ],
+  "sourceChecksum": "6d32a6f8749a98a3b786fbf18969d5ff746bcecc559fb7f920923fbe8712b517",
+  "sourcePath": ".github/agents/cycle-08/cannibalization-detector.agent.md"
+}

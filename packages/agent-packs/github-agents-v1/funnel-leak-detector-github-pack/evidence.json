@@ -1,0 +1,25 @@
+{
+  "agentId": "funnel-leak-detector-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent funnel-leak-detector-github-pack (FunnelLeakDetector Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"funnel-leak-detector-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"funnel-leak-detector-github-pack.tool.read\",\n    \"funnel-leak-detector-github-pack.tool.search\",\n    \"funnel-leak-detector-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "b5bca4a827243166f8bcbff0190ba4398cfdadae44d1fa018a728ef08888ae58"
+  },
+  "generatedAt": "2026-03-24T04:54:31.826Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "funnel-leak-detector-github-pack",
+    "FunnelLeakDetector Agent"
+  ],
+  "sourceChecksum": "cdda41054030a63bfe24fa07d6e5ce24c0c15b23add197425bc7c9a094f84991",
+  "sourcePath": ".github/agents/cycle-10/funnel-leak-detector.agent.md"
+}

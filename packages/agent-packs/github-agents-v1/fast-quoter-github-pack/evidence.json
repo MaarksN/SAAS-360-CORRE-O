@@ -1,0 +1,25 @@
+{
+  "agentId": "fast-quoter-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent fast-quoter-github-pack (FastQuoter Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"fast-quoter-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"fast-quoter-github-pack.tool.read\",\n    \"fast-quoter-github-pack.tool.search\",\n    \"fast-quoter-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "202626960ae79bfb2216601971e0eaed3630338a9d017ce1a4425d0b3411e387"
+  },
+  "generatedAt": "2026-03-24T04:54:30.814Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "fast-quoter-github-pack",
+    "FastQuoter Agent"
+  ],
+  "sourceChecksum": "a2ffdf6842fbd2c00939139f42c03aef52e0b2b4752bfc058fd498cd7c28480d",
+  "sourcePath": ".github/agents/cycle-05/fast-quoter.agent.md"
+}

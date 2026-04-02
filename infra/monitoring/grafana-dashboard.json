@@ -1,0 +1,181 @@
+{
+  "title": "BirthHub SLA Severity Dashboard",
+  "uid": "birthub-sla-severity",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "30s",
+  "time": {
+    "from": "now-24h",
+    "to": "now"
+  },
+  "panels": [
+    {
+      "id": 1,
+      "type": "stat",
+      "title": "Incidentes P0 Ativos",
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 6,
+        "h": 4
+      },
+      "targets": [
+        {
+          "expr": "sum(ALERTS{alertstate='firing',sla_severity='P0',alertname!~'SlaAtRiskP[0-3]|SlaBreachedP[0-3]'})"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "stat",
+      "title": "Incidentes P1 Ativos",
+      "gridPos": {
+        "x": 6,
+        "y": 0,
+        "w": 6,
+        "h": 4
+      },
+      "targets": [
+        {
+          "expr": "sum(ALERTS{alertstate='firing',sla_severity='P1',alertname!~'SlaAtRiskP[0-3]|SlaBreachedP[0-3]'})"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "stat",
+      "title": "Incidentes P2 Ativos",
+      "gridPos": {
+        "x": 12,
+        "y": 0,
+        "w": 6,
+        "h": 4
+      },
+      "targets": [
+        {
+          "expr": "sum(ALERTS{alertstate='firing',sla_severity='P2',alertname!~'SlaAtRiskP[0-3]|SlaBreachedP[0-3]'})"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "stat",
+      "title": "Incidentes P3 Ativos",
+      "gridPos": {
+        "x": 18,
+        "y": 0,
+        "w": 6,
+        "h": 4
+      },
+      "targets": [
+        {
+          "expr": "sum(ALERTS{alertstate='firing',sla_severity='P3',alertname!~'SlaAtRiskP[0-3]|SlaBreachedP[0-3]'})"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "stat",
+      "title": "SLA em Risco (75%)",
+      "gridPos": {
+        "x": 0,
+        "y": 4,
+        "w": 12,
+        "h": 5
+      },
+      "targets": [
+        {
+          "expr": "sum(ALERTS{alertstate='firing',alertname=~'SlaAtRiskP[0-3]'})"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "stat",
+      "title": "SLA Violado (100%)",
+      "gridPos": {
+        "x": 12,
+        "y": 4,
+        "w": 12,
+        "h": 5
+      },
+      "targets": [
+        {
+          "expr": "sum(ALERTS{alertstate='firing',alertname=~'SlaBreachedP[0-3]'})"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "timeseries",
+      "title": "Incidentes Ativos por Severidade",
+      "gridPos": {
+        "x": 0,
+        "y": 9,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "sum by (sla_severity) (ALERTS{alertstate='firing',sla_severity=~'P0|P1|P2|P3',alertname!~'SlaAtRiskP[0-3]|SlaBreachedP[0-3]'})",
+          "legendFormat": "{{sla_severity}}"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "timeseries",
+      "title": "Risco vs Violacao de SLA",
+      "gridPos": {
+        "x": 12,
+        "y": 9,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "sum(ALERTS{alertstate='firing',alertname=~'SlaAtRiskP[0-3]'})",
+          "legendFormat": "At Risk 75%"
+        },
+        {
+          "expr": "sum(ALERTS{alertstate='firing',alertname=~'SlaBreachedP[0-3]'})",
+          "legendFormat": "Breached 100%"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "timeseries",
+      "title": "At Risk por Severidade",
+      "gridPos": {
+        "x": 0,
+        "y": 17,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "sum by (sla_severity) (ALERTS{alertstate='firing',alertname=~'SlaAtRiskP[0-3]'})",
+          "legendFormat": "{{sla_severity}}"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "timeseries",
+      "title": "Breach por Severidade",
+      "gridPos": {
+        "x": 12,
+        "y": 17,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "expr": "sum by (sla_severity) (ALERTS{alertstate='firing',alertname=~'SlaBreachedP[0-3]'})",
+          "legendFormat": "{{sla_severity}}"
+        }
+      ]
+    }
+  ]
+}

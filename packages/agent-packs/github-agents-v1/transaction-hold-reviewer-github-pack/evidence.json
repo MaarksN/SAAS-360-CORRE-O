@@ -1,0 +1,25 @@
+{
+  "agentId": "transaction-hold-reviewer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent transaction-hold-reviewer-github-pack (TransactionHoldReviewer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"transaction-hold-reviewer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"transaction-hold-reviewer-github-pack.tool.read\",\n    \"transaction-hold-reviewer-github-pack.tool.search\",\n    \"transaction-hold-reviewer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "4c926fcc9842555cd15c4cc4e9191887243f475ac297b816c181c3428cef8e60"
+  },
+  "generatedAt": "2026-03-24T04:54:32.736Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "transaction-hold-reviewer-github-pack",
+    "TransactionHoldReviewer Agent"
+  ],
+  "sourceChecksum": "9f8d6e749473a929efd6c70aaf734844c6105e62f7e1f5220347f944101e4452",
+  "sourcePath": ".github/agents/cycle-15/transaction-hold-reviewer.agent.md"
+}

@@ -1,0 +1,25 @@
+{
+  "agentId": "data-hygiene-monitor-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent data-hygiene-monitor-github-pack (DataHygieneMonitor Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"data-hygiene-monitor-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"data-hygiene-monitor-github-pack.tool.read\",\n    \"data-hygiene-monitor-github-pack.tool.search\",\n    \"data-hygiene-monitor-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "ef0bed09f62fa49482eb4ce5a7e33489529e27197c3f163f1679d77a1757ff4d"
+  },
+  "generatedAt": "2026-03-24T04:54:31.324Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "data-hygiene-monitor-github-pack",
+    "DataHygieneMonitor Agent"
+  ],
+  "sourceChecksum": "64d3d39e4ec7fd7a20296d0a977bf1bce405dd73f9d3fd89e315108c3b8d67a8",
+  "sourcePath": ".github/agents/cycle-08/data-hygiene-monitor.agent.md"
+}

@@ -1,0 +1,25 @@
+{
+  "agentId": "sla-monitor-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent sla-monitor-github-pack (SLAMonitor Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"sla-monitor-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"sla-monitor-github-pack.tool.read\",\n    \"sla-monitor-github-pack.tool.search\",\n    \"sla-monitor-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "f26218fad6ff52ca91cd3f8836a481a6c7a7b691ba85595d4310932c4781d28b"
+  },
+  "generatedAt": "2026-03-24T04:54:31.669Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "sla-monitor-github-pack",
+    "SLAMonitor Agent"
+  ],
+  "sourceChecksum": "5b6e776289e912b73eb62a48358787e77d17ef6fefbff1c81d82e80dcf16339c",
+  "sourcePath": ".github/agents/cycle-09/sla-monitor.agent.md"
+}

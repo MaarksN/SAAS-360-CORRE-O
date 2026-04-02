@@ -1,0 +1,25 @@
+{
+  "agentId": "tech-stack-auditor-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent tech-stack-auditor-github-pack (TechStackAuditor Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"tech-stack-auditor-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"tech-stack-auditor-github-pack.tool.read\",\n    \"tech-stack-auditor-github-pack.tool.search\",\n    \"tech-stack-auditor-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "c06c8d70d126f5afe6cf2b2f2351a680fc674690d7f803968f3f890a356e1892"
+  },
+  "generatedAt": "2026-03-24T04:54:31.053Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "tech-stack-auditor-github-pack",
+    "TechStackAuditor Agent"
+  ],
+  "sourceChecksum": "4dbaa9afbf8ef690c5c149b7028639f15a161dfde2617bf197a8538181096a96",
+  "sourcePath": ".github/agents/cycle-06/tech-stack-auditor.agent.md"
+}

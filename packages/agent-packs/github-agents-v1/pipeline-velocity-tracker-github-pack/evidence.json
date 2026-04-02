@@ -1,0 +1,25 @@
+{
+  "agentId": "pipeline-velocity-tracker-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent pipeline-velocity-tracker-github-pack (PipelineVelocityTracker Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"pipeline-velocity-tracker-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"pipeline-velocity-tracker-github-pack.tool.read\",\n    \"pipeline-velocity-tracker-github-pack.tool.search\",\n    \"pipeline-velocity-tracker-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "a6e68d500855e6201cbd3f2b6f316216776a69a1c9184c5f1edc38888b550abf"
+  },
+  "generatedAt": "2026-03-24T04:54:32.097Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "pipeline-velocity-tracker-github-pack",
+    "PipelineVelocityTracker Agent"
+  ],
+  "sourceChecksum": "05e17740a9a0429eaa2b186857de4190973c4598a19463115a2eec19ca7254c7",
+  "sourcePath": ".github/agents/cycle-11/pipeline-velocity-tracker.agent.md"
+}

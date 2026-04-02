@@ -1,0 +1,25 @@
+{
+  "agentId": "promise-to-pay-tracker-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent promise-to-pay-tracker-github-pack (PromiseToPayTracker Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"promise-to-pay-tracker-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"promise-to-pay-tracker-github-pack.tool.read\",\n    \"promise-to-pay-tracker-github-pack.tool.search\",\n    \"promise-to-pay-tracker-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "0a5e8513b484bfcf30595e74470f00f62c6f45b1ab812a16c476ce7c395bd5f0"
+  },
+  "generatedAt": "2026-03-24T04:54:32.277Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "promise-to-pay-tracker-github-pack",
+    "PromiseToPayTracker Agent"
+  ],
+  "sourceChecksum": "1429fd4a9f763fda268d2bf71ce5efce86c1d76eb186ab76e91b3fc31c05909a",
+  "sourcePath": ".github/agents/cycle-12/promise-to-pay-tracker.agent.md"
+}

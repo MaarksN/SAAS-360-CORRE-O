@@ -1,0 +1,25 @@
+{
+  "agentId": "distribution-automator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent distribution-automator-github-pack (DistributionAutomator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"distribution-automator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"distribution-automator-github-pack.tool.read\",\n    \"distribution-automator-github-pack.tool.search\",\n    \"distribution-automator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "5007f37604c031c21f9e3d78a524a80239d732db2bb0f677310b5d01c071ae93"
+  },
+  "generatedAt": "2026-03-24T04:54:31.331Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "distribution-automator-github-pack",
+    "DistributionAutomator Agent"
+  ],
+  "sourceChecksum": "5df015d7333758a622041085a58e1e296b47e0377678440bbe54cf8c47b3562d",
+  "sourcePath": ".github/agents/cycle-08/distribution-automator.agent.md"
+}

@@ -1,0 +1,25 @@
+{
+  "agentId": "poc-tracker-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent poc-tracker-github-pack (PoCTracker Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"poc-tracker-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"poc-tracker-github-pack.tool.read\",\n    \"poc-tracker-github-pack.tool.search\",\n    \"poc-tracker-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "f468d40b94464f1ead6420044f1e2f180f5bbb9c995d0664cf7228c320851245"
+  },
+  "generatedAt": "2026-03-24T04:54:31.006Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "poc-tracker-github-pack",
+    "PoCTracker Agent"
+  ],
+  "sourceChecksum": "8036ed817484a6dd66fa972e4417d3ded839648f11f9a76210084314f5a83b6c",
+  "sourcePath": ".github/agents/cycle-06/poc-tracker.agent.md"
+}

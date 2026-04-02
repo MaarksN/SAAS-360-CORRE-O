@@ -1,0 +1,25 @@
+{
+  "agentId": "risk-exposure-quantifier-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent risk-exposure-quantifier-github-pack (RiskExposureQuantifier Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"risk-exposure-quantifier-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"risk-exposure-quantifier-github-pack.tool.read\",\n    \"risk-exposure-quantifier-github-pack.tool.search\",\n    \"risk-exposure-quantifier-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "66962846f3594f08cc6622d035f3a03090d2ddae7a1ec5b872d8ecac5d1ad4c8"
+  },
+  "generatedAt": "2026-03-24T04:54:32.299Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "risk-exposure-quantifier-github-pack",
+    "RiskExposureQuantifier Agent"
+  ],
+  "sourceChecksum": "7a2f5eac7c38fefea4d5d63f3effd73f46d878ec38ff1f7eb1dd1555cbcaf2c5",
+  "sourcePath": ".github/agents/cycle-12/risk-exposure-quantifier.agent.md"
+}

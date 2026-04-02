@@ -1,0 +1,566 @@
+name: CD
+
+on:
+  workflow_run:
+    workflows:
+      - CI
+    types:
+      - completed
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      deploy_target:
+        description: Deployment target
+        required: true
+        default: production
+        type: choice
+        options:
+          - production
+      rollback_rehearsal_evidence:
+        description: URL/document path proving latest rollback rehearsal
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  staging-preflight:
+    name: staging-preflight
+    if: >
+      github.event_name == 'workflow_run' &&
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    concurrency:
+      group: cd-staging-main
+      cancel-in-progress: false
+    environment: staging
+    env:
+      API_CORS_ORIGINS: ${{ vars.API_CORS_ORIGINS }}
+      AUTH_MFA_ENCRYPTION_KEY: ${{ secrets.AUTH_MFA_ENCRYPTION_KEY }}
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      JOB_HMAC_GLOBAL_SECRET: ${{ secrets.JOB_HMAC_GLOBAL_SECRET }}
+      NEXT_PUBLIC_API_URL: ${{ vars.NEXT_PUBLIC_API_URL }}
+      NEXT_PUBLIC_APP_URL: ${{ vars.NEXT_PUBLIC_APP_URL }}
+      NEXT_PUBLIC_CSP_REPORT_ONLY: ${{ vars.NEXT_PUBLIC_CSP_REPORT_ONLY }}
+      NEXT_PUBLIC_SENTRY_DSN: ${{ vars.NEXT_PUBLIC_SENTRY_DSN }}
+      REDIS_URL: ${{ secrets.REDIS_URL }}
+      RENDER_STAGING_DEPLOY_HOOK_URL: ${{ secrets.RENDER_STAGING_DEPLOY_HOOK_URL }}
+      REQUIRE_SECURE_COOKIES: ${{ vars.REQUIRE_SECURE_COOKIES }}
+      SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+      SESSION_SECRET: ${{ secrets.SESSION_SECRET }}
+      STRIPE_CANCEL_URL: ${{ vars.STRIPE_CANCEL_URL }}
+      STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+      STRIPE_SUCCESS_URL: ${{ vars.STRIPE_SUCCESS_URL }}
+      STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+      WEB_BASE_URL: ${{ vars.WEB_BASE_URL }}
+    steps:
+      - name: Checkout source from CI run
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 9.1.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Mask configured secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+          for key in AUTH_MFA_ENCRYPTION_KEY DATABASE_URL JOB_HMAC_GLOBAL_SECRET REDIS_URL RENDER_STAGING_DEPLOY_HOOK_URL SENTRY_DSN SESSION_SECRET STRIPE_SECRET_KEY STRIPE_WEBHOOK_SECRET; do
+            value="${!key:-}"
+            if [[ -n "${value}" ]]; then
+              echo "::add-mask::${value}"
+            fi
+          done
+
+      - name: Validate required staging configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          required_secrets=(
+            RENDER_STAGING_DEPLOY_HOOK_URL
+            DATABASE_URL
+            REDIS_URL
+            SESSION_SECRET
+            JOB_HMAC_GLOBAL_SECRET
+            AUTH_MFA_ENCRYPTION_KEY
+            STRIPE_SECRET_KEY
+            STRIPE_WEBHOOK_SECRET
+            SENTRY_DSN
+          )
+
+          required_vars=(
+            API_CORS_ORIGINS
+            WEB_BASE_URL
+            NEXT_PUBLIC_API_URL
+            NEXT_PUBLIC_APP_URL
+            NEXT_PUBLIC_SENTRY_DSN
+            NEXT_PUBLIC_CSP_REPORT_ONLY
+            REQUIRE_SECURE_COOKIES
+            STRIPE_SUCCESS_URL
+            STRIPE_CANCEL_URL
+          )
+
+          missing=()
+
+          for key in "${required_secrets[@]}"; do
+            if [[ -z "${!key:-}" ]]; then
+              missing+=("${key} (secret)")
+            fi
+          done
+
+          for key in "${required_vars[@]}"; do
+            if [[ -z "${!key:-}" ]]; then
+              missing+=("${key} (variable)")
+            fi
+          done
+
+          if (( ${#missing[@]} > 0 )); then
+            printf 'Missing required staging configuration:\n' >&2
+            printf ' - %s\n' "${missing[@]}" >&2
+            echo "::error title=Missing staging configuration::Configure missing keys in Environment staging (Secrets/Variables)." >&2
+            exit 1
+          fi
+
+          if [[ "${NEXT_PUBLIC_CSP_REPORT_ONLY}" != "false" ]]; then
+            echo "::error title=Invalid staging variable::NEXT_PUBLIC_CSP_REPORT_ONLY must be set to false in Environment staging variables." >&2
+            exit 1
+          fi
+
+          if [[ "${REQUIRE_SECURE_COOKIES}" != "true" ]]; then
+            echo "::error title=Invalid staging variable::REQUIRE_SECURE_COOKIES must be set to true in Environment staging variables." >&2
+            exit 1
+          fi
+
+      - name: Run staging preflight
+        run: pnpm release:preflight:staging
+
+      - name: Upload staging preflight evidence
+        uses: actions/upload-artifact@v7
+        with:
+          name: staging-preflight-evidence
+          path: artifacts/release/staging-preflight-summary.*
+
+  release-sbom:
+    name: release-sbom
+    if: >
+      (github.event_name == 'workflow_run' &&
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_branch == 'main') ||
+      (github.event_name == 'workflow_dispatch' &&
+      github.event.inputs.deploy_target == 'production')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout release source from CI run
+        if: github.event_name == 'workflow_run'
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+
+      - name: Checkout release source from manual dispatch
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 9.1.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate CycloneDX SBOM
+        run: pnpm release:sbom
+
+      - name: Materialize release bundle manifests
+        run: pnpm release:materialize -- --tag=v1.0.0
+
+      - name: Upload SBOM artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: release-sbom
+          path: |
+            artifacts/sbom/bom.xml
+            artifacts/sbom/sbom.spdx.json
+
+      - name: Upload release manifests
+        uses: actions/upload-artifact@v7
+        with:
+          name: release-manifests
+          path: |
+            artifacts/release/checksums-manifest.sha256
+            artifacts/release/release-artifact-catalog.json
+            releases/manifests/release_artifact_catalog.md
+            releases/notes/v1.0.0.md
+
+  production-preflight:
+    name: production-preflight
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.deploy_target == 'production'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    concurrency:
+      group: cd-production
+      cancel-in-progress: false
+    environment: production
+    env:
+      API_CORS_ORIGINS: ${{ vars.API_CORS_ORIGINS }}
+      AUTH_MFA_ENCRYPTION_KEY: ${{ secrets.AUTH_MFA_ENCRYPTION_KEY }}
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      JOB_HMAC_GLOBAL_SECRET: ${{ secrets.JOB_HMAC_GLOBAL_SECRET }}
+      NEXT_PUBLIC_API_URL: ${{ vars.NEXT_PUBLIC_API_URL }}
+      NEXT_PUBLIC_APP_URL: ${{ vars.NEXT_PUBLIC_APP_URL }}
+      NEXT_PUBLIC_CSP_REPORT_ONLY: ${{ vars.NEXT_PUBLIC_CSP_REPORT_ONLY }}
+      NEXT_PUBLIC_SENTRY_DSN: ${{ vars.NEXT_PUBLIC_SENTRY_DSN }}
+      REDIS_URL: ${{ secrets.REDIS_URL }}
+      RENDER_PRODUCTION_DEPLOY_HOOK_URL: ${{ secrets.RENDER_PRODUCTION_DEPLOY_HOOK_URL }}
+      REQUIRE_SECURE_COOKIES: ${{ vars.REQUIRE_SECURE_COOKIES }}
+      SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+      SESSION_SECRET: ${{ secrets.SESSION_SECRET }}
+      STRIPE_CANCEL_URL: ${{ vars.STRIPE_CANCEL_URL }}
+      STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+      STRIPE_SUCCESS_URL: ${{ vars.STRIPE_SUCCESS_URL }}
+      STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+      WEB_BASE_URL: ${{ vars.WEB_BASE_URL }}
+    steps:
+      - name: Checkout release source from manual dispatch
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 9.1.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Mask configured secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+          for key in AUTH_MFA_ENCRYPTION_KEY DATABASE_URL JOB_HMAC_GLOBAL_SECRET REDIS_URL RENDER_PRODUCTION_DEPLOY_HOOK_URL SENTRY_DSN SESSION_SECRET STRIPE_SECRET_KEY STRIPE_WEBHOOK_SECRET; do
+            value="${!key:-}"
+            if [[ -n "${value}" ]]; then
+              echo "::add-mask::${value}"
+            fi
+          done
+
+      - name: Validate required production configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          required_secrets=(
+            RENDER_PRODUCTION_DEPLOY_HOOK_URL
+            DATABASE_URL
+            REDIS_URL
+            SESSION_SECRET
+            JOB_HMAC_GLOBAL_SECRET
+            AUTH_MFA_ENCRYPTION_KEY
+            STRIPE_SECRET_KEY
+            STRIPE_WEBHOOK_SECRET
+            SENTRY_DSN
+          )
+
+          required_vars=(
+            API_CORS_ORIGINS
+            WEB_BASE_URL
+            NEXT_PUBLIC_API_URL
+            NEXT_PUBLIC_APP_URL
+            NEXT_PUBLIC_SENTRY_DSN
+            NEXT_PUBLIC_CSP_REPORT_ONLY
+            REQUIRE_SECURE_COOKIES
+            STRIPE_SUCCESS_URL
+            STRIPE_CANCEL_URL
+          )
+
+          missing=()
+
+          for key in "${required_secrets[@]}"; do
+            if [[ -z "${!key:-}" ]]; then
+              missing+=("${key} (secret)")
+            fi
+          done
+
+          for key in "${required_vars[@]}"; do
+            if [[ -z "${!key:-}" ]]; then
+              missing+=("${key} (variable)")
+            fi
+          done
+
+          if (( ${#missing[@]} > 0 )); then
+            printf 'Missing required production configuration:\n' >&2
+            printf ' - %s\n' "${missing[@]}" >&2
+            echo "::error title=Missing production configuration::Configure missing keys in Environment production (Secrets/Variables)." >&2
+            exit 1
+          fi
+
+          if [[ "${NEXT_PUBLIC_CSP_REPORT_ONLY}" != "false" ]]; then
+            echo "::error title=Invalid production variable::NEXT_PUBLIC_CSP_REPORT_ONLY must be set to false in Environment production variables." >&2
+            exit 1
+          fi
+
+          if [[ "${REQUIRE_SECURE_COOKIES}" != "true" ]]; then
+            echo "::error title=Invalid production variable::REQUIRE_SECURE_COOKIES must be set to true in Environment production variables." >&2
+            exit 1
+          fi
+
+      - name: Run production preflight
+        run: pnpm release:preflight:production --env-file=ops/release/sealed/.env.production.sealed
+
+      - name: Upload production preflight evidence
+        uses: actions/upload-artifact@v7
+        with:
+          name: production-preflight-evidence
+          path: artifacts/release/production-preflight-summary.*
+
+  release-smoke-gate:
+    name: release-smoke-gate
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.deploy_target == 'production'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    needs:
+      - release-sbom
+      - production-preflight
+    concurrency:
+      group: cd-production
+      cancel-in-progress: false
+    environment: production
+    steps:
+      - name: Checkout release source from manual dispatch
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 9.1.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run release smoke gate
+        run: pnpm release:smoke
+
+      - name: Upload smoke evidence
+        uses: actions/upload-artifact@v7
+        with:
+          name: release-smoke-evidence
+          path: artifacts/release/smoke-summary.*
+
+  release-e2e-gate:
+    name: release-e2e-gate
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.deploy_target == 'production'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    needs:
+      - release-smoke-gate
+    concurrency:
+      group: cd-production
+      cancel-in-progress: false
+    environment: production
+    steps:
+      - name: Checkout release source from manual dispatch
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 9.1.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run release E2E gate
+        run: pnpm test:e2e:release
+
+      - name: Upload E2E evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: release-e2e-evidence
+          path: |
+            playwright-report
+            test-results
+
+  rollback-rehearsal-evidence-gate:
+    name: rollback-rehearsal-evidence-gate
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.deploy_target == 'production'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs:
+      - release-e2e-gate
+    steps:
+      - name: Checkout release source from manual dispatch
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 9.1.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify rollback rehearsal evidence
+        env:
+          ROLLBACK_REHEARSAL_EVIDENCE: ${{ github.event.inputs.rollback_rehearsal_evidence }}
+        run: pnpm release:rollback:evidence --evidence="${ROLLBACK_REHEARSAL_EVIDENCE}"
+
+      - name: Upload rollback rehearsal evidence
+        uses: actions/upload-artifact@v7
+        with:
+          name: rollback-rehearsal-evidence
+          path: |
+            artifacts/release/production-rollback-evidence.txt
+            artifacts/release/production-rollback-evidence.json
+
+  deploy-staging:
+    name: deploy-staging
+    if: >
+      github.event_name == 'workflow_run' &&
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs:
+      - staging-preflight
+      - release-sbom
+    concurrency:
+      group: cd-staging-main
+      cancel-in-progress: false
+    environment: staging
+    steps:
+      - name: Mask deploy hook
+        shell: bash
+        env:
+          RENDER_STAGING_DEPLOY_HOOK_URL: ${{ secrets.RENDER_STAGING_DEPLOY_HOOK_URL }}
+        run: |
+          set -euo pipefail
+          if [[ -n "${RENDER_STAGING_DEPLOY_HOOK_URL:-}" ]]; then
+            echo "::add-mask::${RENDER_STAGING_DEPLOY_HOOK_URL}"
+          fi
+
+      - name: Trigger Render deploy hook (staging)
+        shell: bash
+        env:
+          RENDER_STAGING_DEPLOY_HOOK_URL: ${{ secrets.RENDER_STAGING_DEPLOY_HOOK_URL }}
+        run: |
+          set -euo pipefail
+
+          if [[ -z "${RENDER_STAGING_DEPLOY_HOOK_URL:-}" ]]; then
+            echo "::error title=Missing secret::RENDER_STAGING_DEPLOY_HOOK_URL is not configured in Environment staging secrets." >&2
+            exit 1
+          fi
+
+          if ! [[ "${RENDER_STAGING_DEPLOY_HOOK_URL}" =~ ^https://[^[:space:]]+$ ]]; then
+            echo "::error title=Invalid secret::RENDER_STAGING_DEPLOY_HOOK_URL must be a valid HTTPS URL." >&2
+            exit 1
+          fi
+
+          curl --fail --show-error --silent --retry 3 --retry-delay 5 --request POST "${RENDER_STAGING_DEPLOY_HOOK_URL}"
+
+  deploy-production:
+    name: deploy-production
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.deploy_target == 'production'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs:
+      - release-sbom
+      - production-preflight
+      - release-smoke-gate
+      - release-e2e-gate
+      - rollback-rehearsal-evidence-gate
+    concurrency:
+      group: cd-production
+      cancel-in-progress: false
+    environment: production
+    steps:
+      - name: Guard production deployment branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "${GITHUB_REF}" != "refs/heads/main" ]]; then
+            echo "::error title=Invalid branch::Production deploy can only run from main." >&2
+            exit 1
+          fi
+
+      - name: Mask deploy hook
+        shell: bash
+        env:
+          RENDER_PRODUCTION_DEPLOY_HOOK_URL: ${{ secrets.RENDER_PRODUCTION_DEPLOY_HOOK_URL }}
+        run: |
+          set -euo pipefail
+          if [[ -n "${RENDER_PRODUCTION_DEPLOY_HOOK_URL:-}" ]]; then
+            echo "::add-mask::${RENDER_PRODUCTION_DEPLOY_HOOK_URL}"
+          fi
+
+      - name: Trigger Render deploy hook (production)
+        shell: bash
+        env:
+          RENDER_PRODUCTION_DEPLOY_HOOK_URL: ${{ secrets.RENDER_PRODUCTION_DEPLOY_HOOK_URL }}
+        run: |
+          set -euo pipefail
+
+          if [[ -z "${RENDER_PRODUCTION_DEPLOY_HOOK_URL:-}" ]]; then
+            echo "::error title=Missing secret::RENDER_PRODUCTION_DEPLOY_HOOK_URL is not configured in Environment production secrets." >&2
+            exit 1
+          fi
+
+          if ! [[ "${RENDER_PRODUCTION_DEPLOY_HOOK_URL}" =~ ^https://[^[:space:]]+$ ]]; then
+            echo "::error title=Invalid secret::RENDER_PRODUCTION_DEPLOY_HOOK_URL must be a valid HTTPS URL." >&2
+            exit 1
+          fi
+
+          curl --fail --show-error --silent --retry 3 --retry-delay 5 --request POST "${RENDER_PRODUCTION_DEPLOY_HOOK_URL}"

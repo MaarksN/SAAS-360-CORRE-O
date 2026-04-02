@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-03-25T19:21:33.342Z",
+  "envFile": null,
+  "ok": true,
+  "requiredKeys": [
+    {
+      "missing": [],
+      "present": [
+        "API_CORS_ORIGINS",
+        "AUTH_MFA_ENCRYPTION_KEY",
+        "DATABASE_URL",
+        "JOB_HMAC_GLOBAL_SECRET",
+        "REDIS_URL",
+        "SENTRY_DSN",
+        "SESSION_SECRET",
+        "STRIPE_SECRET_KEY",
+        "STRIPE_WEBHOOK_SECRET",
+        "WEB_BASE_URL"
+      ],
+      "scope": "api"
+    },
+    {
+      "missing": [],
+      "present": [
+        "NEXT_PUBLIC_API_URL",
+        "NEXT_PUBLIC_APP_URL",
+        "NEXT_PUBLIC_SENTRY_DSN"
+      ],
+      "scope": "web"
+    },
+    {
+      "missing": [],
+      "present": [
+        "DATABASE_URL",
+        "JOB_HMAC_GLOBAL_SECRET",
+        "REDIS_URL",
+        "SENTRY_DSN",
+        "WEB_BASE_URL"
+      ],
+      "scope": "worker"
+    }
+  ],
+  "results": [
+    {
+      "issues": [],
+      "ok": true,
+      "scope": "api"
+    },
+    {
+      "issues": [],
+      "ok": true,
+      "scope": "web"
+    },
+    {
+      "issues": [],
+      "ok": true,
+      "scope": "worker"
+    }
+  ],
+  "target": "production"
+}

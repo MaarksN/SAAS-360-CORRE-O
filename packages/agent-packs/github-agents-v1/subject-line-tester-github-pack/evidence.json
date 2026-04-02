@@ -1,0 +1,25 @@
+{
+  "agentId": "subject-line-tester-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent subject-line-tester-github-pack (SubjectLineTester Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"subject-line-tester-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"subject-line-tester-github-pack.tool.read\",\n    \"subject-line-tester-github-pack.tool.search\",\n    \"subject-line-tester-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "3280399b0fba6b9e589116e4f1bc981b3cb7b384b196c5fae246c2970b4f3348"
+  },
+  "generatedAt": "2026-03-24T04:54:31.419Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "subject-line-tester-github-pack",
+    "SubjectLineTester Agent"
+  ],
+  "sourceChecksum": "b83a6a7a4f3d2acaba382313219bd34f0ced99b007011063d205e23897775d84",
+  "sourcePath": ".github/agents/cycle-08/subject-line-tester.agent.md"
+}

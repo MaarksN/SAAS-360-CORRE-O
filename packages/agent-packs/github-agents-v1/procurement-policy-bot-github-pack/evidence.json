@@ -1,0 +1,25 @@
+{
+  "agentId": "procurement-policy-bot-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent procurement-policy-bot-github-pack (ProcurementPolicyBot Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"procurement-policy-bot-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"procurement-policy-bot-github-pack.tool.read\",\n    \"procurement-policy-bot-github-pack.tool.search\",\n    \"procurement-policy-bot-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "9e329d87a283e0bb3d933c9c3d70810924ba43f7bff79e3124a2274eed34f7b4"
+  },
+  "generatedAt": "2026-03-24T04:54:30.458Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "procurement-policy-bot-github-pack",
+    "ProcurementPolicyBot Agent"
+  ],
+  "sourceChecksum": "971302c602ee4c4070b529fe82aaac825a31403b61727d82ea64f35e7c3e124f",
+  "sourcePath": ".github/agents/cycle-02/procurement-policy-bot.agent.md"
+}

@@ -1,0 +1,25 @@
+{
+  "agentId": "board-prep-ai-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent board-prep-ai-github-pack (BoardPrep AI Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"board-prep-ai-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"board-prep-ai-github-pack.tool.read\",\n    \"board-prep-ai-github-pack.tool.search\",\n    \"board-prep-ai-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "5bd927c10182aaeb3b9830d0f541d0ce326511613188056e1d6bda34e7d87128"
+  },
+  "generatedAt": "2026-03-24T04:54:30.147Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "board-prep-ai-github-pack",
+    "BoardPrep AI Agent"
+  ],
+  "sourceChecksum": "a9f85d3396985cef1f834cb477d6181f55c51567f6e871fff1eabe509fc5b0ce",
+  "sourcePath": ".github/agents/cycle-01/board-prep-ai.agent.md"
+}

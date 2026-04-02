@@ -1,0 +1,25 @@
+{
+  "agentId": "patch-update-alerter-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent patch-update-alerter-github-pack (PatchUpdateAlerter Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"patch-update-alerter-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"patch-update-alerter-github-pack.tool.read\",\n    \"patch-update-alerter-github-pack.tool.search\",\n    \"patch-update-alerter-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "7734c181f6b2d677e761d73fe94fff541c65fbec5f8265d5462a287d055f772b"
+  },
+  "generatedAt": "2026-03-24T04:54:31.589Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "patch-update-alerter-github-pack",
+    "PatchUpdateAlerter Agent"
+  ],
+  "sourceChecksum": "d583f620da2a5641da5e19b43d966a8062a94369b69ba7f9a77b6c3b9278bfb7",
+  "sourcePath": ".github/agents/cycle-09/patch-update-alerter.agent.md"
+}

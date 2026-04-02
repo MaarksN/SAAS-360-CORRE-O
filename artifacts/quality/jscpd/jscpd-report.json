@@ -1,0 +1,4085 @@
+{
+  "statistics": {
+    "detectionDate": "2026-03-23T02:19:04.912Z",
+    "formats": {
+      "javascript": {
+        "sources": {
+          "apps/web/app/(dashboard)/workflows/[id]/runs/page.tsx": {
+            "lines": 170,
+            "tokens": 1643,
+            "sources": 1,
+            "clones": 6,
+            "duplicatedLines": 78,
+            "duplicatedTokens": 1100,
+            "percentage": 45.88,
+            "percentageTokens": 66.95,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/workflows/[id]/edit/workflow-editor-helpers.tsx": {
+            "lines": 8,
+            "tokens": 163,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/workflows/[id]/edit/page.tsx": {
+            "lines": 302,
+            "tokens": 2536,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/developers/webhooks/page.tsx": {
+            "lines": 301,
+            "tokens": 2319,
+            "sources": 1,
+            "clones": 3,
+            "duplicatedLines": 107,
+            "duplicatedTokens": 866,
+            "percentage": 35.55,
+            "percentageTokens": 37.34,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/agents/[id]/run/page.tsx": {
+            "lines": 7,
+            "tokens": 125,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/agents/[id]/policies/page.tsx": {
+            "lines": 4,
+            "tokens": 31,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/users/page.tsx": {
+            "lines": 80,
+            "tokens": 1070,
+            "sources": 1,
+            "clones": 8,
+            "duplicatedLines": 110,
+            "duplicatedTokens": 1632,
+            "percentage": 137.5,
+            "percentageTokens": 152.52,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/team/page.tsx": {
+            "lines": 51,
+            "tokens": 641,
+            "sources": 1,
+            "clones": 3,
+            "duplicatedLines": 69,
+            "duplicatedTokens": 776,
+            "percentage": 135.29,
+            "percentageTokens": 121.06,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/security/page.tsx": {
+            "lines": 48,
+            "tokens": 634,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 40,
+            "duplicatedTokens": 476,
+            "percentage": 83.33,
+            "percentageTokens": 75.08,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/privacy/privacy-settings-page.tsx": {
+            "lines": 67,
+            "tokens": 713,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/members/page.tsx": {
+            "lines": 4,
+            "tokens": 49,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/billing/page.tsx": {
+            "lines": 346,
+            "tokens": 3437,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/audit/page.tsx": {
+            "lines": 0,
+            "tokens": 15,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/profile/security/page.tsx": {
+            "lines": 77,
+            "tokens": 739,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/profile/notifications/page.tsx": {
+            "lines": 272,
+            "tokens": 2254,
+            "sources": 1,
+            "clones": 3,
+            "duplicatedLines": 107,
+            "duplicatedTokens": 866,
+            "percentage": 39.34,
+            "percentageTokens": 38.42,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/marketplace/compare/page.tsx": {
+            "lines": 39,
+            "tokens": 415,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/developers/apikeys/page.tsx": {
+            "lines": 85,
+            "tokens": 994,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 40,
+            "duplicatedTokens": 533,
+            "percentage": 47.06,
+            "percentageTokens": 53.62,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/billing/budgets/page.tsx": {
+            "lines": 93,
+            "tokens": 1128,
+            "sources": 1,
+            "clones": 4,
+            "duplicatedLines": 41,
+            "duplicatedTokens": 714,
+            "percentage": 44.09,
+            "percentageTokens": 63.3,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/agents/[id]/page.tsx": {
+            "lines": 14,
+            "tokens": 212,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/legal/terms/page.tsx": {
+            "lines": 23,
+            "tokens": 277,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 24,
+            "duplicatedTokens": 295,
+            "percentage": 104.35,
+            "percentageTokens": 106.5,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/legal/privacy/page.tsx": {
+            "lines": 24,
+            "tokens": 295,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 24,
+            "duplicatedTokens": 295,
+            "percentage": 100,
+            "percentageTokens": 100,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/invites/accept/page.tsx": {
+            "lines": 28,
+            "tokens": 263,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/billing/success/page.tsx": {
+            "lines": 0,
+            "tokens": 25,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/admin/dashboard/page.tsx": {
+            "lines": 355,
+            "tokens": 3488,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/admin/cs/page.tsx": {
+            "lines": 47,
+            "tokens": 448,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/admin/analytics/page.tsx": {
+            "lines": 0,
+            "tokens": 5,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/packs/page.tsx": {
+            "lines": 59,
+            "tokens": 651,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 8,
+            "duplicatedTokens": 129,
+            "percentage": 13.56,
+            "percentageTokens": 19.82,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/outputs/page.tsx": {
+            "lines": 116,
+            "tokens": 1486,
+            "sources": 1,
+            "clones": 5,
+            "duplicatedLines": 59,
+            "duplicatedTokens": 1047,
+            "percentage": 50.86,
+            "percentageTokens": 70.46,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/marketplace/page.tsx": {
+            "lines": 176,
+            "tokens": 1820,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/billing/page.tsx": {
+            "lines": 0,
+            "tokens": 5,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/agents/page.tsx": {
+            "lines": 102,
+            "tokens": 1308,
+            "sources": 1,
+            "clones": 5,
+            "duplicatedLines": 79,
+            "duplicatedTokens": 1026,
+            "percentage": 77.45,
+            "percentageTokens": 78.44,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/app/logs/page.tsx": {
+            "lines": 17,
+            "tokens": 213,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/app/finance/page.tsx": {
+            "lines": 69,
+            "tokens": 777,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/app/deals/page.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/app/customers/page.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/app/contracts/page.tsx": {
+            "lines": 41,
+            "tokens": 422,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/app/analytics/page.tsx": {
+            "lines": 0,
+            "tokens": 5,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/dashboard/pipeline/page.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/dashboard/metrics/page.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/dashboard/logs/page.tsx": {
+            "lines": 0,
+            "tokens": 5,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/(auth)/login/page.tsx": {
+            "lines": 0,
+            "tokens": 162,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/wizards/PackInstaller.tsx": {
+            "lines": 120,
+            "tokens": 1161,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/outputs/OutputApprovalButton.tsx": {
+            "lines": 24,
+            "tokens": 193,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/layout/Navbar.tsx": {
+            "lines": 213,
+            "tokens": 1577,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/brand/BrandLogo.tsx": {
+            "lines": 147,
+            "tokens": 783,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/agents/PolicyManager.tsx": {
+            "lines": 224,
+            "tokens": 2039,
+            "sources": 1,
+            "clones": 8,
+            "duplicatedLines": 196,
+            "duplicatedTokens": 1490,
+            "percentage": 87.5,
+            "percentageTokens": 73.08,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/agents/FeedbackWidget.tsx": {
+            "lines": 113,
+            "tokens": 899,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/agents/agent-run-panel.tsx": {
+            "lines": 77,
+            "tokens": 669,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/agents/agent-detail-tabs.tsx": {
+            "lines": 186,
+            "tokens": 1809,
+            "sources": 1,
+            "clones": 6,
+            "duplicatedLines": 102,
+            "duplicatedTokens": 1189,
+            "percentage": 54.84,
+            "percentageTokens": 65.73,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/pricing/page.tsx": {
+            "lines": 48,
+            "tokens": 494,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/login/page.tsx": {
+            "lines": 52,
+            "tokens": 355,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/components/kanban-board.tsx": {
+            "lines": 28,
+            "tokens": 340,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/components/health-board.tsx": {
+            "lines": 43,
+            "tokens": 353,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/components/dashboard-shell.tsx": {
+            "lines": 43,
+            "tokens": 501,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/app/page.tsx": {
+            "lines": 13,
+            "tokens": 194,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/app/layout.tsx": {
+            "lines": 0,
+            "tokens": 5,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sales-os/ToolView.tsx": {
+            "lines": 124,
+            "tokens": 1393,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sales-os/ToolCard.tsx": {
+            "lines": 20,
+            "tokens": 243,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sales-os/RoleplayView.tsx": {
+            "lines": 52,
+            "tokens": 597,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sales-os/HubView.tsx": {
+            "lines": 51,
+            "tokens": 614,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sales-os/Header.tsx": {
+            "lines": 25,
+            "tokens": 257,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sales-os/GridView.tsx": {
+            "lines": 7,
+            "tokens": 100,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sales-os/ChatMessage.tsx": {
+            "lines": 10,
+            "tokens": 137,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sales-os/ChatMentor.tsx": {
+            "lines": 39,
+            "tokens": 595,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/sdr/page.tsx": {
+            "lines": 6,
+            "tokens": 69,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/sales/page.tsx": {
+            "lines": 190,
+            "tokens": 2134,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/pipeline/page.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/migrations/page.tsx": {
+            "lines": 0,
+            "tokens": 9,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/health-score/page.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/financeiro/page.tsx": {
+            "lines": 0,
+            "tokens": 5,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/contratos/page.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/atividades/page.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/analytics/page.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/ae/page.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "packages/emails/templates/workflow-finished.tsx": {
+            "lines": 34,
+            "tokens": 414,
+            "sources": 1,
+            "clones": 4,
+            "duplicatedLines": 53,
+            "duplicatedTokens": 776,
+            "percentage": 155.88,
+            "percentageTokens": 187.44,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "packages/emails/templates/org-invite.tsx": {
+            "lines": 35,
+            "tokens": 443,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 22,
+            "duplicatedTokens": 361,
+            "percentage": 62.86,
+            "percentageTokens": 81.49,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "packages/emails/templates/critical-error.tsx": {
+            "lines": 37,
+            "tokens": 444,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 31,
+            "duplicatedTokens": 415,
+            "percentage": 83.78,
+            "percentageTokens": 93.47,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/providers/AppProviders.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/providers/AnalyticsProvider.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/paywall-provider.tsx": {
+            "lines": 2,
+            "tokens": 19,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/login-form.tsx": {
+            "lines": 112,
+            "tokens": 855,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/cookie-consent-banner.tsx": {
+            "lines": 25,
+            "tokens": 217,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/global-error.tsx": {
+            "lines": 10,
+            "tokens": 96,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/tenant-live-feed.tsx": {
+            "lines": 0,
+            "tokens": 13,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sidebar-ops.tsx": {
+            "lines": 2,
+            "tokens": 31,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/session-actions.tsx": {
+            "lines": 2,
+            "tokens": 55,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/platform-settings.tsx": {
+            "lines": 29,
+            "tokens": 727,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/platform-provider.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/pipeline-board.tsx": {
+            "lines": 8,
+            "tokens": 152,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/nav-links.tsx": {
+            "lines": 3,
+            "tokens": 38,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/manifest-diff-viewer.tsx": {
+            "lines": 6,
+            "tokens": 39,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/health-score-board.tsx": {
+            "lines": 9,
+            "tokens": 159,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/experience-lab.tsx": {
+            "lines": 74,
+            "tokens": 689,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/contracts-board.tsx": {
+            "lines": 4,
+            "tokens": 100,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/button.tsx": {
+            "lines": 1,
+            "tokens": 13,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/auth-provider.tsx": {
+            "lines": 0,
+            "tokens": 9,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/analytics-board.tsx": {
+            "lines": 4,
+            "tokens": 100,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/agent-activity-log.tsx": {
+            "lines": 0,
+            "tokens": 5,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/page.tsx": {
+            "lines": 11,
+            "tokens": 228,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 5288,
+          "tokens": 53183,
+          "sources": 99,
+          "clones": 33,
+          "duplicatedLines": 595,
+          "duplicatedTokens": 6993,
+          "percentage": 11.25,
+          "percentageTokens": 13.15,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "tsx": {
+        "sources": {
+          "apps/web/app/(dashboard)/workflows/[id]/runs/page.tsx": {
+            "lines": 387,
+            "tokens": 3911,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 14,
+            "duplicatedTokens": 104,
+            "percentage": 3.62,
+            "percentageTokens": 2.66,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/workflows/[id]/edit/workflow-editor-helpers.tsx": {
+            "lines": 321,
+            "tokens": 2797,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 14,
+            "duplicatedTokens": 104,
+            "percentage": 4.36,
+            "percentageTokens": 3.72,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/workflows/[id]/edit/page.tsx": {
+            "lines": 420,
+            "tokens": 3453,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/developers/webhooks/page.tsx": {
+            "lines": 418,
+            "tokens": 3292,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/agents/[id]/run/page.tsx": {
+            "lines": 27,
+            "tokens": 293,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/agents/[id]/policies/page.tsx": {
+            "lines": 59,
+            "tokens": 525,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/users/page.tsx": {
+            "lines": 184,
+            "tokens": 1926,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 68,
+            "percentage": 3.26,
+            "percentageTokens": 3.53,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/team/page.tsx": {
+            "lines": 147,
+            "tokens": 1465,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 18,
+            "duplicatedTokens": 227,
+            "percentage": 12.24,
+            "percentageTokens": 15.49,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/security/page.tsx": {
+            "lines": 121,
+            "tokens": 1227,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 12,
+            "duplicatedTokens": 159,
+            "percentage": 9.92,
+            "percentageTokens": 12.96,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/privacy/privacy-settings-page.tsx": {
+            "lines": 160,
+            "tokens": 1515,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/privacy/page.tsx": {
+            "lines": 4,
+            "tokens": 31,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/members/page.tsx": {
+            "lines": 73,
+            "tokens": 687,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/billing/page.tsx": {
+            "lines": 480,
+            "tokens": 4454,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/settings/audit/page.tsx": {
+            "lines": 84,
+            "tokens": 730,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/profile/security/page.tsx": {
+            "lines": 151,
+            "tokens": 1378,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/profile/notifications/page.tsx": {
+            "lines": 293,
+            "tokens": 2412,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/marketplace/compare/page.tsx": {
+            "lines": 55,
+            "tokens": 522,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/developers/apikeys/page.tsx": {
+            "lines": 184,
+            "tokens": 1822,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/billing/budgets/page.tsx": {
+            "lines": 114,
+            "tokens": 1350,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/agents/[id]/page.tsx": {
+            "lines": 31,
+            "tokens": 362,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/(app)/settings/billing/page.tsx": {
+            "lines": 9,
+            "tokens": 118,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/legal/terms/page.tsx": {
+            "lines": 73,
+            "tokens": 509,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 26,
+            "duplicatedTokens": 176,
+            "percentage": 35.62,
+            "percentageTokens": 34.58,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/legal/privacy/page.tsx": {
+            "lines": 74,
+            "tokens": 527,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 26,
+            "duplicatedTokens": 176,
+            "percentage": 35.14,
+            "percentageTokens": 33.4,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/invites/accept/page.tsx": {
+            "lines": 109,
+            "tokens": 861,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/billing/success/page.tsx": {
+            "lines": 40,
+            "tokens": 399,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/billing/cancel/page.tsx": {
+            "lines": 20,
+            "tokens": 200,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/admin/dashboard/page.tsx": {
+            "lines": 443,
+            "tokens": 4085,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/admin/cs/page.tsx": {
+            "lines": 131,
+            "tokens": 1121,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/admin/analytics/page.tsx": {
+            "lines": 152,
+            "tokens": 1546,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/packs/page.tsx": {
+            "lines": 149,
+            "tokens": 1378,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/outputs/page.tsx": {
+            "lines": 160,
+            "tokens": 1939,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 12,
+            "duplicatedTokens": 117,
+            "percentage": 7.5,
+            "percentageTokens": 6.03,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/marketplace/page.tsx": {
+            "lines": 246,
+            "tokens": 2416,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 12,
+            "duplicatedTokens": 117,
+            "percentage": 4.88,
+            "percentageTokens": 4.84,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/billing/page.tsx": {
+            "lines": 49,
+            "tokens": 576,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/agents/page.tsx": {
+            "lines": 130,
+            "tokens": 1567,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/app/logs/page.tsx": {
+            "lines": 48,
+            "tokens": 504,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/app/finance/page.tsx": {
+            "lines": 84,
+            "tokens": 922,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/app/deals/page.tsx": {
+            "lines": 31,
+            "tokens": 254,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/app/customers/page.tsx": {
+            "lines": 18,
+            "tokens": 156,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/app/contracts/page.tsx": {
+            "lines": 74,
+            "tokens": 742,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/app/analytics/page.tsx": {
+            "lines": 60,
+            "tokens": 661,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/dashboard/pipeline/page.tsx": {
+            "lines": 17,
+            "tokens": 202,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/dashboard/metrics/page.tsx": {
+            "lines": 25,
+            "tokens": 239,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/dashboard/logs/page.tsx": {
+            "lines": 31,
+            "tokens": 396,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/dashboard/chat/page.tsx": {
+            "lines": 13,
+            "tokens": 174,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/(auth)/login/page.tsx": {
+            "lines": 44,
+            "tokens": 645,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/(app)/agents/page.tsx": {
+            "lines": 12,
+            "tokens": 123,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/wizards/PackInstaller.tsx": {
+            "lines": 182,
+            "tokens": 1672,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/outputs/OutputApprovalButton.tsx": {
+            "lines": 50,
+            "tokens": 394,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/layout/Navbar.tsx": {
+            "lines": 315,
+            "tokens": 2538,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/brand/BrandLogo.tsx": {
+            "lines": 241,
+            "tokens": 1448,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/agents/PolicyManager.tsx": {
+            "lines": 289,
+            "tokens": 2606,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/agents/FeedbackWidget.tsx": {
+            "lines": 252,
+            "tokens": 1995,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/agents/agent-run-panel.tsx": {
+            "lines": 196,
+            "tokens": 1722,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/agents/agent-detail-tabs.tsx": {
+            "lines": 236,
+            "tokens": 2243,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/pricing/page.tsx": {
+            "lines": 201,
+            "tokens": 1684,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/login/page.tsx": {
+            "lines": 68,
+            "tokens": 478,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/(dashboard)/layout.tsx": {
+            "lines": 17,
+            "tokens": 152,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/components/realtime-provider.tsx": {
+            "lines": 18,
+            "tokens": 155,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/components/kanban-board.tsx": {
+            "lines": 92,
+            "tokens": 805,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/components/health-board.tsx": {
+            "lines": 86,
+            "tokens": 768,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/components/dashboard-shell.tsx": {
+            "lines": 77,
+            "tokens": 739,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/app/page.tsx": {
+            "lines": 54,
+            "tokens": 586,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/src/app/layout.tsx": {
+            "lines": 27,
+            "tokens": 213,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sales-os/ToolView.tsx": {
+            "lines": 266,
+            "tokens": 2989,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sales-os/ToolCard.tsx": {
+            "lines": 57,
+            "tokens": 696,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sales-os/RoleplayView.tsx": {
+            "lines": 128,
+            "tokens": 1516,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sales-os/HubView.tsx": {
+            "lines": 90,
+            "tokens": 1040,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sales-os/Header.tsx": {
+            "lines": 62,
+            "tokens": 658,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sales-os/GridView.tsx": {
+            "lines": 39,
+            "tokens": 431,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sales-os/ChatMessage.tsx": {
+            "lines": 25,
+            "tokens": 263,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sales-os/ChatMentor.tsx": {
+            "lines": 142,
+            "tokens": 1909,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/sdr/page.tsx": {
+            "lines": 32,
+            "tokens": 309,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/sales/page.tsx": {
+            "lines": 378,
+            "tokens": 3946,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/pipeline/page.tsx": {
+            "lines": 12,
+            "tokens": 122,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/migrations/page.tsx": {
+            "lines": 86,
+            "tokens": 652,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/ldr/page.tsx": {
+            "lines": 24,
+            "tokens": 260,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/health-score/page.tsx": {
+            "lines": 12,
+            "tokens": 122,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/financeiro/page.tsx": {
+            "lines": 19,
+            "tokens": 181,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/dashboard/layout.tsx": {
+            "lines": 9,
+            "tokens": 100,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/contratos/page.tsx": {
+            "lines": 12,
+            "tokens": 122,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/atividades/page.tsx": {
+            "lines": 19,
+            "tokens": 163,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/analytics/page.tsx": {
+            "lines": 12,
+            "tokens": 122,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/ae/page.tsx": {
+            "lines": 56,
+            "tokens": 612,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "packages/emails/templates/workflow-finished.tsx": {
+            "lines": 66,
+            "tokens": 593,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 26,
+            "duplicatedTokens": 472,
+            "percentage": 39.39,
+            "percentageTokens": 79.6,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "packages/emails/templates/org-invite.tsx": {
+            "lines": 66,
+            "tokens": 638,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 13,
+            "duplicatedTokens": 236,
+            "percentage": 19.7,
+            "percentageTokens": 36.99,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "packages/emails/templates/critical-error.tsx": {
+            "lines": 71,
+            "tokens": 634,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 13,
+            "duplicatedTokens": 236,
+            "percentage": 18.31,
+            "percentageTokens": 37.22,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/providers/EngagementProvider.tsx": {
+            "lines": 40,
+            "tokens": 336,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/providers/AppProviders.tsx": {
+            "lines": 35,
+            "tokens": 263,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/providers/AnalyticsProvider.tsx": {
+            "lines": 261,
+            "tokens": 2010,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/paywall-provider.tsx": {
+            "lines": 92,
+            "tokens": 706,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/login-form.tsx": {
+            "lines": 204,
+            "tokens": 1604,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/legal-footer.tsx": {
+            "lines": 21,
+            "tokens": 236,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/dashboard-billing-gate.tsx": {
+            "lines": 84,
+            "tokens": 741,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/components/cookie-consent-banner.tsx": {
+            "lines": 78,
+            "tokens": 605,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/page.tsx": {
+            "lines": 4,
+            "tokens": 33,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/layout.tsx": {
+            "lines": 30,
+            "tokens": 233,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/web/app/global-error.tsx": {
+            "lines": 39,
+            "tokens": 299,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/tenant-live-feed.tsx": {
+            "lines": 27,
+            "tokens": 398,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sidebar.tsx": {
+            "lines": 14,
+            "tokens": 180,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/sidebar-ops.tsx": {
+            "lines": 27,
+            "tokens": 276,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/session-actions.tsx": {
+            "lines": 25,
+            "tokens": 269,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/realtime-banner.tsx": {
+            "lines": 42,
+            "tokens": 387,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/premium-command-center.tsx": {
+            "lines": 11,
+            "tokens": 119,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/platform-settings.tsx": {
+            "lines": 56,
+            "tokens": 1032,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/platform-provider.tsx": {
+            "lines": 59,
+            "tokens": 783,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/pipeline-board.tsx": {
+            "lines": 46,
+            "tokens": 561,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/nav-links.tsx": {
+            "lines": 41,
+            "tokens": 331,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/manifest-diff-viewer.tsx": {
+            "lines": 25,
+            "tokens": 168,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/health-score-board.tsx": {
+            "lines": 41,
+            "tokens": 537,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/experience-lab.tsx": {
+            "lines": 212,
+            "tokens": 2039,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/contracts-board.tsx": {
+            "lines": 36,
+            "tokens": 469,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/button.tsx": {
+            "lines": 20,
+            "tokens": 160,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/auth-provider.tsx": {
+            "lines": 48,
+            "tokens": 466,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/analytics-board.tsx": {
+            "lines": 33,
+            "tokens": 466,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/components/agent-activity-log.tsx": {
+            "lines": 145,
+            "tokens": 1252,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/page.tsx": {
+            "lines": 55,
+            "tokens": 894,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/dashboard/app/layout.tsx": {
+            "lines": 17,
+            "tokens": 188,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 11907,
+          "tokens": 112729,
+          "sources": 117,
+          "clones": 7,
+          "duplicatedLines": 96,
+          "duplicatedTokens": 1096,
+          "percentage": 0.81,
+          "percentageTokens": 0.97,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 17195,
+      "tokens": 165912,
+      "sources": 216,
+      "clones": 40,
+      "duplicatedLines": 691,
+      "duplicatedTokens": 8089,
+      "percentage": 4.02,
+      "percentageTokens": 4.88,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "javascript",
+      "lines": 21,
+      "fragment": "}}>{metrics.successes}</div>\n        </div>\n        <div>\n          <small style={{ color: \"#4f5d75\" }}>Falhas</small>\n          <div style={{ fontSize: 22, fontWeight: 700 }}>{metrics.failures}</div>\n        </div>\n        <div>\n          <small style={{ color: \"#4f5d75\" }}>Duracao media</small>\n          <div style={{ fontSize: 22, fontWeight: 700 }}>{Math.round(metrics.meanDuration)} ms</div>\n        </div>\n        <div>\n          <small style={{ color: \"#4f5d75\" }}>Gargalo</small>\n          <div style={{ fontSize: 22, fontWeight: 700 }}>\n            {metrics.bottleneck ? metrics.bottleneck.nodeId : \"n/a\"}\n          </div>\n        </div>\n      </div>\n\n      <div\n        style={{\n          background",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\workflows\\[id]\\runs\\page.tsx",
+        "start": 233,
+        "end": 253,
+        "startLoc": {
+          "line": 233,
+          "column": 2,
+          "position": 2455
+        },
+        "endLoc": {
+          "line": 253,
+          "column": 21,
+          "position": 2694
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\workflows\\[id]\\runs\\page.tsx",
+        "start": 229,
+        "end": 240,
+        "startLoc": {
+          "line": 229,
+          "column": 9,
+          "position": 2406
+        },
+        "endLoc": {
+          "line": 240,
+          "column": 7,
+          "position": 2546
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 10,
+      "fragment": " }}>Run</th>\n              <th style={{ padding: \"0.65rem\", textAlign: \"left\" }}>Status</th>\n              <th style={{ padding: \"0.65rem\", textAlign: \"left\" }}>Data</th>\n              <th style={{ padding: \"0.65rem\", textAlign: \"left\" }}>Duracao</th>\n              <th style={{ padding: \"0.65rem\", textAlign: \"left\" }}>Acoes</th>\n            </tr>\n          </thead>\n          <tbody>\n            {runs.map((run) => (\n              <tr key={run",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\workflows\\[id]\\runs\\page.tsx",
+        "start": 262,
+        "end": 271,
+        "startLoc": {
+          "line": 262,
+          "column": 7,
+          "position": 2780
+        },
+        "endLoc": {
+          "line": 271,
+          "column": 4,
+          "position": 2929
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\workflows\\[id]\\runs\\page.tsx",
+        "start": 260,
+        "end": 265,
+        "startLoc": {
+          "line": 260,
+          "column": 10,
+          "position": 2753
+        },
+        "endLoc": {
+          "line": 265,
+          "column": 2,
+          "position": 2848
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 11,
+      "fragment": "}>{run.id}</td>\n                <td style={{ borderTop: \"1px solid #e2e8f0\", padding: \"0.65rem\" }}>{run.status}</td>\n                <td style={{ borderTop: \"1px solid #e2e8f0\", padding: \"0.65rem\" }}>\n                  {new Date(run.completedAt ?? run.startedAt).toLocaleString(\"pt-BR\")}\n                </td>\n                <td style={{ borderTop: \"1px solid #e2e8f0\", padding: \"0.65rem\" }}>\n                  {run.durationMs ?? 0} ms\n                </td>\n                <td style={{ borderTop: \"1px solid #e2e8f0\", padding: \"0.65rem\" }}>\n                  <button\n                    onClick={(",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\workflows\\[id]\\runs\\page.tsx",
+        "start": 272,
+        "end": 282,
+        "startLoc": {
+          "line": 272,
+          "column": 2,
+          "position": 2954
+        },
+        "endLoc": {
+          "line": 282,
+          "column": 2,
+          "position": 3116
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\workflows\\[id]\\runs\\page.tsx",
+        "start": 271,
+        "end": 280,
+        "startLoc": {
+          "line": 271,
+          "column": 3,
+          "position": 2932
+        },
+        "endLoc": {
+          "line": 280,
+          "column": 2,
+          "position": 3094
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 15,
+      "fragment": ".transitions.map((transition, index) => ({\n    id: `edge_${index + 1}`,\n    label: transition.route === \"ALWAYS\" ? undefined : transition.route,\n    source: transition.source,\n    target: transition.target,\n    type: \"smoothstep\"\n  }));\n\n  return {\n    edges,\n    nodes\n  };\n}\n\nexport",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\workflows\\[id]\\edit\\workflow-editor-helpers.tsx",
+        "start": 170,
+        "end": 184,
+        "startLoc": {
+          "line": 170,
+          "column": 7,
+          "position": 1459
+        },
+        "endLoc": {
+          "line": 184,
+          "column": 7,
+          "position": 1563
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\workflows\\[id]\\runs\\page.tsx",
+        "start": 62,
+        "end": 73,
+        "startLoc": {
+          "line": 62,
+          "column": 11,
+          "position": 551
+        },
+        "endLoc": {
+          "line": 73,
+          "column": 9,
+          "position": 652
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 6,
+      "fragment": "}>{user.name}</td>\n                <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>{user.email}</td>\n                <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>{user.role}</td>\n                <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>{user.status}</td>\n                <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>\n                  <div style={{ display",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\users\\page.tsx",
+        "start": 152,
+        "end": 157,
+        "startLoc": {
+          "line": 152,
+          "column": 2,
+          "position": 1532
+        },
+        "endLoc": {
+          "line": 157,
+          "column": 9,
+          "position": 1663
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\users\\page.tsx",
+        "start": 151,
+        "end": 156,
+        "startLoc": {
+          "line": 151,
+          "column": 3,
+          "position": 1510
+        },
+        "endLoc": {
+          "line": 156,
+          "column": 11,
+          "position": 1641
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 30,
+      "fragment": "}>\n          Owner promove admin; admin promove member/readonly. Owner nunca pode ser removido por admin.\n        </p>\n      </header>\n\n      {error ? <p style={{ color: \"#a11d2d\", margin: 0 }}>{error}</p> : null}\n      {isLoading ? <p>Carregando...</p> : null}\n\n      {!isLoading ? (\n        <div style={{ border: \"1px solid var(--border)\", borderRadius: \"1rem\", overflow: \"hidden\" }}>\n          <table style={{ borderCollapse: \"collapse\", width: \"100%\" }}>\n            <thead>\n              <tr>\n                <th align=\"left\" style={{ padding: \"0.75rem\" }}>\n                  Usuario\n                </th>\n                <th align=\"left\" style={{ padding: \"0.75rem\" }}>\n                  Email\n                </th>\n                <th align=\"left\" style={{ padding: \"0.75rem\" }}>\n                  Role\n                </th>\n                <th align=\"left\" style={{ padding: \"0.75rem\" }}>\n                  Status\n                </th>\n              </tr>\n            </thead>\n            <tbody>\n              {members.map((member) => (\n                <tr key={member",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\team\\page.tsx",
+        "start": 89,
+        "end": 118,
+        "startLoc": {
+          "line": 89,
+          "column": 2,
+          "position": 833
+        },
+        "endLoc": {
+          "line": 118,
+          "column": 7,
+          "position": 1166
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\users\\page.tsx",
+        "start": 118,
+        "end": 144,
+        "startLoc": {
+          "line": 118,
+          "column": 7,
+          "position": 1155
+        },
+        "endLoc": {
+          "line": 144,
+          "column": 2,
+          "position": 1453
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 10,
+      "fragment": ".id}>\n                  <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>\n                    {member.name}\n                  </td>\n                  <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>\n                    {member.email}\n                  </td>\n                  <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>\n                    <select\n                      disabled={!",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\team\\page.tsx",
+        "start": 118,
+        "end": 127,
+        "startLoc": {
+          "line": 118,
+          "column": 7,
+          "position": 1167
+        },
+        "endLoc": {
+          "line": 127,
+          "column": 2,
+          "position": 1269
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\users\\page.tsx",
+        "start": 151,
+        "end": 155,
+        "startLoc": {
+          "line": 151,
+          "column": 5,
+          "position": 1508
+        },
+        "endLoc": {
+          "line": 155,
+          "column": 2,
+          "position": 1610
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 7,
+      "fragment": ">\n                      <option value=\"OWNER\">Owner</option>\n                      <option value=\"ADMIN\">Admin</option>\n                      <option value=\"MEMBER\">Member</option>\n                      <option value=\"READONLY\">Readonly</option>\n                    </select>\n                  </",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\team\\page.tsx",
+        "start": 130,
+        "end": 136,
+        "startLoc": {
+          "line": 130,
+          "column": 21,
+          "position": 1317
+        },
+        "endLoc": {
+          "line": 136,
+          "column": 3,
+          "position": 1385
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\users\\page.tsx",
+        "start": 110,
+        "end": 116,
+        "startLoc": {
+          "line": 110,
+          "column": 7,
+          "position": 1043
+        },
+        "endLoc": {
+          "line": 116,
+          "column": 2,
+          "position": 1111
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 30,
+      "fragment": "} type=\"button\">\n          Sign out from all devices\n        </button>\n      </header>\n\n      {error ? <p style={{ color: \"#a11d2d\", margin: 0 }}>{error}</p> : null}\n      {isLoading ? <p>Carregando...</p> : null}\n\n      {!isLoading ? (\n        <div style={{ border: \"1px solid var(--border)\", borderRadius: \"1rem\", overflow: \"hidden\" }}>\n          <table style={{ borderCollapse: \"collapse\", width: \"100%\" }}>\n            <thead>\n              <tr>\n                <th align=\"left\" style={{ padding: \"0.75rem\" }}>\n                  Device\n                </th>\n                <th align=\"left\" style={{ padding: \"0.75rem\" }}>\n                  IP\n                </th>\n                <th align=\"left\" style={{ padding: \"0.75rem\" }}>\n                  Ultima atividade\n                </th>\n                <th align=\"left\" style={{ padding: \"0.75rem\" }}>\n                  Acao\n                </th>\n              </tr>\n            </thead>\n            <tbody>\n              {sessions.map((session) => (\n                <tr key={session",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\security\\page.tsx",
+        "start": 70,
+        "end": 99,
+        "startLoc": {
+          "line": 70,
+          "column": 2,
+          "position": 673
+        },
+        "endLoc": {
+          "line": 99,
+          "column": 8,
+          "position": 993
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\users\\page.tsx",
+        "start": 118,
+        "end": 144,
+        "startLoc": {
+          "line": 118,
+          "column": 7,
+          "position": 1155
+        },
+        "endLoc": {
+          "line": 144,
+          "column": 2,
+          "position": 1453
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 12,
+      "fragment": ".id}>\n                  <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>\n                    {session.userAgent ?? \"Desconhecido\"}\n                  </td>\n                  <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>\n                    {session.ipAddress ?? \"N/A\"}\n                  </td>\n                  <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>\n                    {new Date(session.lastActivityAt).toLocaleString(\"pt-BR\")}\n                  </td>\n                  <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>\n                    <button onClick={(",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\security\\page.tsx",
+        "start": 99,
+        "end": 110,
+        "startLoc": {
+          "line": 99,
+          "column": 8,
+          "position": 994
+        },
+        "endLoc": {
+          "line": 110,
+          "column": 2,
+          "position": 1150
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\users\\page.tsx",
+        "start": 151,
+        "end": 156,
+        "startLoc": {
+          "line": 151,
+          "column": 5,
+          "position": 1508
+        },
+        "endLoc": {
+          "line": 156,
+          "column": 2,
+          "position": 1640
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 13,
+      "fragment": ">\n      </header>\n\n      {error ? <p style={{ color: \"#a11d2d\", margin: 0 }}>{error}</p> : null}\n      {isLoading ? <p>Carregando...</p> : null}\n\n      {!isLoading ? (\n        <div style={{ border: \"1px solid var(--border)\", borderRadius: \"1rem\", overflow: \"hidden\" }}>\n          <table style={{ borderCollapse: \"collapse\", width: \"100%\" }}>\n            <thead>\n              <tr>\n                <th align=\"left\" style={{ padding: \"0.75rem\" }}>\n                  Device",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\security\\page.tsx",
+        "start": 72,
+        "end": 84,
+        "startLoc": {
+          "line": 72,
+          "column": 7,
+          "position": 696
+        },
+        "endLoc": {
+          "line": 84,
+          "column": 7,
+          "position": 855
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\team\\page.tsx",
+        "start": 91,
+        "end": 103,
+        "startLoc": {
+          "line": 91,
+          "column": 2,
+          "position": 871
+        },
+        "endLoc": {
+          "line": 103,
+          "column": 8,
+          "position": 1030
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 22,
+      "fragment": "={{ padding: \"1.5rem\" }}>\n        <div className=\"panel\">\n          <h1 style={{ marginTop: 0 }}>Notificacoes e consentimento</h1>\n          <p>Realize login para configurar preferencias de email, in-app e telemetria.</p>\n        </div>\n      </main>\n    );\n  }\n\n  return (\n    <main style={{ display: \"grid\", gap: \"1rem\", padding: \"1.5rem\" }}>\n      <section className=\"hero-card\">\n        <span className=\"badge\">Engajamento do usuario</span>\n        <h1>Preferencias de notificacao</h1>\n        <p style={{ marginBottom: 0 }}>\n          Controle email, feed in-app, base de push e consentimento de analytics em um unico lugar.\n        </p>\n      </section>\n\n      <section\n        style={{\n          display",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\profile\\notifications\\page.tsx",
+        "start": 76,
+        "end": 97,
+        "startLoc": {
+          "line": 76,
+          "column": 6,
+          "position": 716
+        },
+        "endLoc": {
+          "line": 97,
+          "column": 18,
+          "position": 960
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\developers\\webhooks\\page.tsx",
+        "start": 115,
+        "end": 137,
+        "startLoc": {
+          "line": 115,
+          "column": 6,
+          "position": 950
+        },
+        "endLoc": {
+          "line": 137,
+          "column": 23,
+          "position": 1191
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 65,
+      "fragment": "}}\n      >\n        <ToggleCard\n          checked={preferences.inAppNotifications}\n          description=\"Mantem badge e feed na navbar com polling leve.\"\n          disabled={prefSaving || !prefHydrated}\n          label=\"Notificacoes in-app\"\n          onChange={(checked) => {\n            void updatePreferences({\n              inAppNotifications: checked\n            });\n          }}\n        />\n        <ToggleCard\n          checked={preferences.emailNotifications}\n          description=\"Emails transacionais como workflow concluido e erro critico.\"\n          disabled={prefSaving || !prefHydrated}\n          label=\"Emails transacionais\"\n          onChange={(checked) => {\n            void updatePreferences({\n              emailNotifications: checked\n            });\n          }}\n        />\n        <ToggleCard\n          checked={preferences.marketingEmails}\n          description=\"Exemplo de opt-out para emails promocionais.\"\n          disabled={prefSaving || !prefHydrated}\n          label=\"Emails promocionais\"\n          onChange={(checked) => {\n            void updatePreferences({\n              marketingEmails: checked\n            });\n          }}\n        />\n        <ToggleCard\n          checked={preferences.pushNotifications}\n          description=\"Fundacao pronta para web push V2 com service worker.\"\n          disabled={prefSaving || !prefHydrated}\n          label=\"Push web\"\n          onChange={(checked) => {\n            void updatePreferences({\n              pushNotifications: checked\n            });\n          }}\n        />\n      </section>\n\n      <section className=\"panel\">\n        <div\n          style={{\n            alignItems: \"center\",\n            display: \"flex\",\n            flexWrap: \"wrap\",\n            gap: \"0.75rem\",\n            justifyContent: \"space-between\"\n          }}\n        >\n          <div>\n            <h2 style={{ marginTop: 0 }}>Consentimento de cookies</h2>\n            <p style={{ color: \"var(--muted)\", marginBottom: 0 }}>\n              O provider de analytics so inicializa quando o consentimento estiver aceito.\n            </p>\n          </div>\n          <div style={{",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\profile\\notifications\\page.tsx",
+        "start": 100,
+        "end": 164,
+        "startLoc": {
+          "line": 100,
+          "column": 9,
+          "position": 975
+        },
+        "endLoc": {
+          "line": 164,
+          "column": 2,
+          "position": 1420
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\developers\\webhooks\\page.tsx",
+        "start": 129,
+        "end": 152,
+        "startLoc": {
+          "line": 129,
+          "column": 2,
+          "position": 1124
+        },
+        "endLoc": {
+          "line": 152,
+          "column": 2,
+          "position": 1319
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 23,
+      "fragment": " marginBottom: 0 }}>{prefError}</p> : null}\n      </section>\n\n      <section className=\"panel\">\n        <div\n          style={{\n            alignItems: \"center\",\n            display: \"flex\",\n            flexWrap: \"wrap\",\n            gap: \"0.75rem\",\n            justifyContent: \"space-between\"\n          }}\n        >\n          <div>\n            <h2 style={{ marginTop: 0 }}>Feed de notificacoes</h2>\n            <p style={{ color: \"var(--muted)\", marginBottom: 0 }}>\n              Ultimas entradas agrupadas por recencia para leitura rapida.\n            </p>\n          </div>\n          <button\n            className=\"ghost-button\"\n            onClick={() => {\n              void markAllAsRead",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\profile\\notifications\\page.tsx",
+        "start": 194,
+        "end": 216,
+        "startLoc": {
+          "line": 194,
+          "column": 2,
+          "position": 1633
+        },
+        "endLoc": {
+          "line": 216,
+          "column": 14,
+          "position": 1810
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\developers\\webhooks\\page.tsx",
+        "start": 129,
+        "end": 153,
+        "startLoc": {
+          "line": 129,
+          "column": 2,
+          "position": 1119
+        },
+        "endLoc": {
+          "line": 153,
+          "column": 14,
+          "position": 1328
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 32,
+      "fragment": " }}>\n            <strong>Exibida uma unica vez:</strong> <code>{createdKey}</code>\n          </p>\n        ) : null}\n      </article>\n\n      {error ? <p style={{ color: \"#a11d2d\", margin: 0 }}>{error}</p> : null}\n\n      <div style={{ border: \"1px solid var(--border)\", borderRadius: \"1rem\", overflow: \"hidden\" }}>\n        <table style={{ borderCollapse: \"collapse\", width: \"100%\" }}>\n          <thead>\n            <tr>\n              <th align=\"left\" style={{ padding: \"0.75rem\" }}>\n                Label\n              </th>\n              <th align=\"left\" style={{ padding: \"0.75rem\" }}>\n                Ultimos 4\n              </th>\n              <th align=\"left\" style={{ padding: \"0.75rem\" }}>\n                Scopes\n              </th>\n              <th align=\"left\" style={{ padding: \"0.75rem\" }}>\n                Status\n              </th>\n              <th align=\"left\" style={{ padding: \"0.75rem\" }}>\n                Acoes\n              </th>\n            </tr>\n          </thead>\n          <tbody>\n            {items.map((item) => (\n              <tr key={item",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\developers\\apikeys\\page.tsx",
+        "start": 130,
+        "end": 161,
+        "startLoc": {
+          "line": 130,
+          "column": 2,
+          "position": 1184
+        },
+        "endLoc": {
+          "line": 161,
+          "column": 5,
+          "position": 1525
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\team\\page.tsx",
+        "start": 89,
+        "end": 151,
+        "startLoc": {
+          "line": 89,
+          "column": 14,
+          "position": 831
+        },
+        "endLoc": {
+          "line": 151,
+          "column": 5,
+          "position": 1507
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 10,
+      "fragment": ".id}>\n                <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>{item.label}</td>\n                <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>{item.last4}</td>\n                <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>\n                  {item.scopes.join(\", \")}\n                </td>\n                <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>{item.status}</td>\n                <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>\n                  <div style={{ display: \"flex\", gap: \"0.5rem\" }}>\n                    <button onClick={() => void rotateKey",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\developers\\apikeys\\page.tsx",
+        "start": 161,
+        "end": 170,
+        "startLoc": {
+          "line": 161,
+          "column": 5,
+          "position": 1526
+        },
+        "endLoc": {
+          "line": 170,
+          "column": 10,
+          "position": 1718
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\users\\page.tsx",
+        "start": 151,
+        "end": 158,
+        "startLoc": {
+          "line": 151,
+          "column": 5,
+          "position": 1508
+        },
+        "endLoc": {
+          "line": 158,
+          "column": 12,
+          "position": 1691
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 25,
+      "fragment": "={{ display: \"grid\", gap: \"1.5rem\", margin: \"0 auto\", maxWidth: 920, padding: \"2rem 1.5rem 3rem\" }}>\n      <header style={{ display: \"grid\", gap: \"0.5rem\" }}>\n        <span className=\"badge\">LGPD / Privacy</span>\n        <h1 style={{ margin: 0 }}>Politica de Privacidade</h1>\n        <p style={{ color: \"var(--muted)\", margin: 0 }}>\n          Documento publico e estatico para a release 1.0, com foco em operacao corporativa e\n          compliance de producao.\n        </p>\n      </header>\n\n      {sections.map((section) => (\n        <section\n          key={section.title}\n          style={{\n            background: \"rgba(255,255,255,0.82)\",\n            border: \"1px solid var(--border)\",\n            borderRadius: 20,\n            display: \"grid\",\n            gap: \"0.75rem\",\n            padding: \"1.25rem\"\n          }}\n        >\n          <h2 style={{ margin: 0 }}>{section.title}</h2>\n          {section.body.map((paragraph) => (\n            <p key={paragraph} style={{ margin: 0 }}",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\legal\\privacy\\page.tsx",
+        "start": 43,
+        "end": 67,
+        "startLoc": {
+          "line": 43,
+          "column": 6,
+          "position": 195
+        },
+        "endLoc": {
+          "line": 67,
+          "column": 2,
+          "position": 490
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\legal\\terms\\page.tsx",
+        "start": 43,
+        "end": 66,
+        "startLoc": {
+          "line": 43,
+          "column": 6,
+          "position": 195
+        },
+        "endLoc": {
+          "line": 66,
+          "column": 2,
+          "position": 472
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 27,
+      "fragment": ".\n        </p>\n      </header>\n\n      {sections.map((section) => (\n        <section\n          key={section.title}\n          style={{\n            background: \"rgba(255,255,255,0.82)\",\n            border: \"1px solid var(--border)\",\n            borderRadius: 20,\n            display: \"grid\",\n            gap: \"0.75rem\",\n            padding: \"1.25rem\"\n          }}\n        >\n          <h2 style={{ margin: 0 }}>{section.title}</h2>\n          {section.body.map((paragraph) => (\n            <p key={paragraph} style={{ margin: 0 }}>\n              {paragraph}\n            </p>\n          ))}\n        </section>\n      ))}\n    </main>\n  );\n}",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\legal\\privacy\\page.tsx",
+        "start": 49,
+        "end": 75,
+        "startLoc": {
+          "line": 49,
+          "column": 9,
+          "position": 351
+        },
+        "endLoc": {
+          "line": 75,
+          "column": 2,
+          "position": 527
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\legal\\terms\\page.tsx",
+        "start": 48,
+        "end": 74,
+        "startLoc": {
+          "line": 48,
+          "column": 11,
+          "position": 333
+        },
+        "endLoc": {
+          "line": 74,
+          "column": 2,
+          "position": 509
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 9,
+      "fragment": ", padding: \"1.5rem\" }}>\n      <header style={{ display: \"grid\", gap: \"0.4rem\" }}>\n        <h1 style={{ margin: 0 }}>Status dos Packs Instalados</h1>\n        <p style={{ color: \"var(--muted)\", margin: 0 }}>\n          Painel para monitorar packs `active`, `degraded`, `failed` e acionar update para v2.0.\n        </p>\n      </header>\n\n      <div style={{ display",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\packs\\page.tsx",
+        "start": 88,
+        "end": 96,
+        "startLoc": {
+          "line": 88,
+          "column": 7,
+          "position": 716
+        },
+        "endLoc": {
+          "line": 96,
+          "column": 9,
+          "position": 845
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\billing\\budgets\\page.tsx",
+        "start": 13,
+        "end": 23,
+        "startLoc": {
+          "line": 13,
+          "column": 9,
+          "position": 183
+        },
+        "endLoc": {
+          "line": 23,
+          "column": 21,
+          "position": 306
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 12,
+      "fragment": "} name=\"type\" placeholder=\"technical-log ou executive-report\" type=\"text\" />\n        <button type=\"submit\">Filtrar</button>\n      </form>\n\n      <div style={{ overflowX: \"auto\" }}>\n        <table style={{ background: \"rgba(255,255,255,0.8)\", borderCollapse: \"collapse\", width: \"100%\" }}>\n          <thead>\n            <tr>\n              <th style={{ borderBottom: \"1px solid var(--border)\", padding: \"0.5rem\", textAlign: \"left\" }}>Output ID</th>\n              <th style={{ borderBottom: \"1px solid var(--border)\", padding: \"0.5rem\", textAlign: \"left\" }}>Agent</th>\n              <th style={{ borderBottom: \"1px solid var(--border)\", padding: \"0.5rem\", textAlign: \"left\" }}>Tipo</th>\n              <th style={{",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\outputs\\page.tsx",
+        "start": 52,
+        "end": 63,
+        "startLoc": {
+          "line": 52,
+          "column": 11,
+          "position": 663
+        },
+        "endLoc": {
+          "line": 63,
+          "column": 2,
+          "position": 862
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\billing\\budgets\\page.tsx",
+        "start": 62,
+        "end": 75,
+        "startLoc": {
+          "line": 62,
+          "column": 2,
+          "position": 718
+        },
+        "endLoc": {
+          "line": 75,
+          "column": 2,
+          "position": 917
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 12,
+      "fragment": " }}>Output ID</th>\n              <th style={{ borderBottom: \"1px solid var(--border)\", padding: \"0.5rem\", textAlign: \"left\" }}>Agent</th>\n              <th style={{ borderBottom: \"1px solid var(--border)\", padding: \"0.5rem\", textAlign: \"left\" }}>Tipo</th>\n              <th style={{ borderBottom: \"1px solid var(--border)\", padding: \"0.5rem\", textAlign: \"left\" }}>Status</th>\n              <th style={{ borderBottom: \"1px solid var(--border)\", padding: \"0.5rem\", textAlign: \"left\" }}>Hash</th>\n              <th style={{ borderBottom: \"1px solid var(--border)\", padding: \"0.5rem\", textAlign: \"left\" }}>Acoes</th>\n            </tr>\n          </thead>\n          <tbody>\n            {data.outputs.length === 0 ? (\n              <tr>\n                <td colSpan={6",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\outputs\\page.tsx",
+        "start": 60,
+        "end": 71,
+        "startLoc": {
+          "line": 60,
+          "column": 7,
+          "position": 782
+        },
+        "endLoc": {
+          "line": 71,
+          "column": 2,
+          "position": 991
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\billing\\budgets\\page.tsx",
+        "start": 64,
+        "end": 75,
+        "startLoc": {
+          "line": 64,
+          "column": 7,
+          "position": 766
+        },
+        "endLoc": {
+          "line": 75,
+          "column": 2,
+          "position": 917
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 14,
+      "fragment": "}>{output.id}</td>\n                  <td style={{ borderBottom: \"1px solid var(--border)\", padding: \"0.5rem\" }}>{output.agentId}</td>\n                  <td style={{ borderBottom: \"1px solid var(--border)\", padding: \"0.5rem\" }}>{output.type}</td>\n                  <td style={{ borderBottom: \"1px solid var(--border)\", padding: \"0.5rem\" }}>{output.status}</td>\n                  <td style={{ borderBottom: \"1px solid var(--border)\", padding: \"0.5rem\" }}>\n                    <code>{output.outputHash.slice(0, 16)}...</code>\n                  </td>\n                  <td style={{ borderBottom: \"1px solid var(--border)\", padding: \"0.5rem\" }}>\n                    <Link\n                      href={`/outputs?type=${encodeURIComponent(typeFilter)}${executionId ? `&executionId=${encodeURIComponent(executionId)}` : \"\"}&outputId=${encodeURIComponent(output.id)}`}\n                    >\n                      Detalhes\n                    </Link>{\" \"}\n                    <a href={`",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\outputs\\page.tsx",
+        "start": 76,
+        "end": 89,
+        "startLoc": {
+          "line": 76,
+          "column": 2,
+          "position": 1075
+        },
+        "endLoc": {
+          "line": 89,
+          "column": 2,
+          "position": 1306
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\outputs\\page.tsx",
+        "start": 75,
+        "end": 80,
+        "startLoc": {
+          "line": 75,
+          "column": 3,
+          "position": 1053
+        },
+        "endLoc": {
+          "line": 80,
+          "column": 2,
+          "position": 1183
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 12,
+      "fragment": "}>{output.type}</td>\n                  <td style={{ borderBottom: \"1px solid var(--border)\", padding: \"0.5rem\" }}>{output.status}</td>\n                  <td style={{ borderBottom: \"1px solid var(--border)\", padding: \"0.5rem\" }}>\n                    <code>{output.outputHash.slice(0, 16)}...</code>\n                  </td>\n                  <td style={{ borderBottom: \"1px solid var(--border)\", padding: \"0.5rem\" }}>\n                    <Link\n                      href={`/outputs?type=${encodeURIComponent(typeFilter)}${executionId ? `&executionId=${encodeURIComponent(executionId)}` : \"\"}&outputId=${encodeURIComponent(output.id)}`}\n                    >\n                      Detalhes\n                    </Link>{\" \"}\n                    <a href={`${config.NEXT_PUBLIC_API_URL}/api/v1/outputs/",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\outputs\\page.tsx",
+        "start": 78,
+        "end": 89,
+        "startLoc": {
+          "line": 78,
+          "column": 2,
+          "position": 1135
+        },
+        "endLoc": {
+          "line": 89,
+          "column": 17,
+          "position": 1312
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\billing\\budgets\\page.tsx",
+        "start": 79,
+        "end": 89,
+        "startLoc": {
+          "line": 79,
+          "column": 2,
+          "position": 989
+        },
+        "endLoc": {
+          "line": 89,
+          "column": 28,
+          "position": 1139
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 13,
+      "fragment": "} from \"../../../lib/marketplace-api.server\";\n\ntype SearchParams = Record<string, string | string[] | undefined>;\n\nfunction readParam(value: string | string[] | undefined): string {\n  if (!value) {\n    return \"\";\n  }\n\n  return Array.isArray(value) ? value[0] ?? \"\" : value;\n}\n\nexport default async function MarketplacePage",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\marketplace\\page.tsx",
+        "start": 10,
+        "end": 22,
+        "startLoc": {
+          "line": 10,
+          "column": 1,
+          "position": 55
+        },
+        "endLoc": {
+          "line": 22,
+          "column": 16,
+          "position": 172
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\outputs\\page.tsx",
+        "start": 6,
+        "end": 18,
+        "startLoc": {
+          "line": 6,
+          "column": 2,
+          "position": 58
+        },
+        "endLoc": {
+          "line": 18,
+          "column": 12,
+          "position": 175
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 12,
+      "fragment": " }}>Nome</th>\n              <th style={{ padding: \"0.75rem\", textAlign: \"left\" }}>Versao</th>\n              <th style={{ padding: \"0.75rem\", textAlign: \"left\" }}>Status</th>\n              <th style={{ padding: \"0.75rem\", textAlign: \"left\" }}>Catalogo</th>\n              <th style={{ padding: \"0.75rem\", textAlign: \"left\" }}>Ultima execucao</th>\n              <th style={{ padding: \"0.75rem\", textAlign: \"left\" }}>Fail rate</th>\n              <th style={{ padding: \"0.75rem\", textAlign: \"left\" }}>Acoes</th>\n            </tr>\n          </thead>\n          <tbody>\n            {agents.map((agent) => (\n              <tr key={agent",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\agents\\page.tsx",
+        "start": 95,
+        "end": 106,
+        "startLoc": {
+          "line": 95,
+          "column": 7,
+          "position": 994
+        },
+        "endLoc": {
+          "line": 106,
+          "column": 6,
+          "position": 1199
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\agents\\page.tsx",
+        "start": 93,
+        "end": 98,
+        "startLoc": {
+          "line": 93,
+          "column": 26,
+          "position": 967
+        },
+        "endLoc": {
+          "line": 98,
+          "column": 2,
+          "position": 1062
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 14,
+      "fragment": ".id}>\n                <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>{agent.name}</td>\n                <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>{agent.version}</td>\n                <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>{agent.status}</td>\n                <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>{agent.catalogAgentId}</td>\n                <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>\n                  {agent.lastRun ? new Date(agent.lastRun).toLocaleString(\"pt-BR\") : \"Nunca executado\"}\n                </td>\n                <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>\n                  {toPercent(agent.failRate)}\n                </td>\n                <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.75rem\" }}>\n                  <div style={{ display: \"flex\", gap: \"0.5rem\" }}>\n                    <Link href={`/agents/",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\app\\(dashboard)\\agents\\page.tsx",
+        "start": 106,
+        "end": 119,
+        "startLoc": {
+          "line": 106,
+          "column": 6,
+          "position": 1200
+        },
+        "endLoc": {
+          "line": 119,
+          "column": 10,
+          "position": 1467
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\settings\\users\\page.tsx",
+        "start": 151,
+        "end": 158,
+        "startLoc": {
+          "line": 151,
+          "column": 5,
+          "position": 1508
+        },
+        "endLoc": {
+          "line": 158,
+          "column": 2,
+          "position": 1684
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 50,
+      "fragment": " }}>\n          {([\"standard\", \"readonly\", \"admin\"] as const).map((template) => (\n            <button\n              key={template}\n              disabled={isPending}\n              onClick={() => {\n                setError(null);\n                startTransition(() => {\n                  void (async () => {\n                    try {\n                      const payload = await postJson<{ managedPolicies: ManagedPolicy[] }>(\n                        `/api/v1/agents/installed/${agentId}/policies/templates`,\n                        \"POST\",\n                        {\n                          replaceExisting: false,\n                          template\n                        }\n                      );\n                      setManagedPolicies(payload.managedPolicies);\n                    } catch (templateError) {\n                      setError(\n                        templateError instanceof Error\n                          ? templateError.message\n                          : \"Falha ao aplicar template.\"\n                      );\n                    }\n                  })();\n                });\n              }}\n              type=\"button\"\n            >\n              Aplicar template {template}\n            </button>\n          ))}\n        </div>\n      </div>\n\n      <div\n        style={{\n          background: \"var(--card)\",\n          border: \"1px solid var(--border)\",\n          borderRadius: \"1rem\",\n          display: \"grid\",\n          gap: \"0.75rem\",\n          padding: \"1rem\"\n        }}\n      >\n        <h3 style={{ margin: 0 }}>Managed Policies</h3>\n        {managedPolicies.length === 0 ? (\n          <p style={{ color: \"var(--muted)\", margin",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\components\\agents\\PolicyManager.tsx",
+        "start": 78,
+        "end": 127,
+        "startLoc": {
+          "line": 78,
+          "column": 9,
+          "position": 713
+        },
+        "endLoc": {
+          "line": 127,
+          "column": 8,
+          "position": 1063
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\components\\agents\\PolicyManager.tsx",
+        "start": 60,
+        "end": 73,
+        "startLoc": {
+          "line": 60,
+          "column": 7,
+          "position": 534
+        },
+        "endLoc": {
+          "line": 73,
+          "column": 14,
+          "position": 621
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 17,
+      "fragment": " }}>{policy.reason}</p> : null}\n          </article>\n        ))}\n      </div>\n\n      <div\n        style={{\n          background: \"var(--card)\",\n          border: \"1px solid var(--border)\",\n          borderRadius: \"1rem\",\n          display: \"grid\",\n          gap: \"0.75rem\",\n          padding: \"1rem\"\n        }}\n      >\n        <h3 style={{ margin: 0 }}>Nova Managed Policy</h3>\n        <label style={{ display",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\components\\agents\\PolicyManager.tsx",
+        "start": 180,
+        "end": 196,
+        "startLoc": {
+          "line": 180,
+          "column": 2,
+          "position": 1556
+        },
+        "endLoc": {
+          "line": 196,
+          "column": 9,
+          "position": 1666
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\components\\agents\\PolicyManager.tsx",
+        "start": 60,
+        "end": 73,
+        "startLoc": {
+          "line": 60,
+          "column": 7,
+          "position": 534
+        },
+        "endLoc": {
+          "line": 73,
+          "column": 7,
+          "position": 616
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 17,
+      "fragment": " }}>{error}</small> : null}\n      </div>\n\n      <div\n        style={{\n          background: \"var(--card)\",\n          border: \"1px solid var(--border)\",\n          borderRadius: \"1rem\",\n          display: \"grid\",\n          gap: \"0.75rem\",\n          padding: \"1rem\"\n        }}\n      >\n        <h3 style={{ margin: 0 }}>Policies do Manifesto</h3>\n        {initialManifestPolicies.map((policy) => (\n          <article\n            key={policy",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\components\\agents\\PolicyManager.tsx",
+        "start": 254,
+        "end": 270,
+        "startLoc": {
+          "line": 254,
+          "column": 10,
+          "position": 2314
+        },
+        "endLoc": {
+          "line": 270,
+          "column": 7,
+          "position": 2425
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\components\\agents\\PolicyManager.tsx",
+        "start": 60,
+        "end": 73,
+        "startLoc": {
+          "line": 60,
+          "column": 7,
+          "position": 534
+        },
+        "endLoc": {
+          "line": 73,
+          "column": 2,
+          "position": 615
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 18,
+      "fragment": " margin: 0 }}>Policies do Manifesto</h3>\n        {initialManifestPolicies.map((policy) => (\n          <article\n            key={policy.id}\n            style={{\n              border: \"1px solid var(--border)\",\n              borderRadius: \"0.75rem\",\n              display: \"grid\",\n              gap: \"0.45rem\",\n              padding: \"0.75rem\"\n            }}\n          >\n            <div style={{ alignItems: \"center\", display: \"flex\", justifyContent: \"space-between\" }}>\n              <strong>{policy.name}</strong>\n              <span>{policy.effect}</span>\n            </div>\n            <small style={{ color: \"var(--muted)\" }}>{policy.id}</small>\n            <p style={{ margin: 0 }}",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\components\\agents\\PolicyManager.tsx",
+        "start": 267,
+        "end": 284,
+        "startLoc": {
+          "line": 267,
+          "column": 2,
+          "position": 2387
+        },
+        "endLoc": {
+          "line": 284,
+          "column": 2,
+          "position": 2561
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\components\\agents\\PolicyManager.tsx",
+        "start": 127,
+        "end": 177,
+        "startLoc": {
+          "line": 127,
+          "column": 2,
+          "position": 1063
+        },
+        "endLoc": {
+          "line": 177,
+          "column": 2,
+          "position": 1503
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 16,
+      "fragment": " margin: 0 }}>\n              Status instalado: <strong>{agent.status}</strong> · status fonte: <strong>{agent.sourceStatus}</strong>\n            </p>\n            <p style={{ margin: 0 }}>\n              Catalogo: <strong>{agent.catalogAgentId}</strong> · versao instalada: <strong>{agent.version}</strong>\n            </p>\n            <p style={{ margin: 0 }}>\n              Runtime: <strong>{agent.runtimeProvider}</strong>\n            </p>\n            <p style={{ margin: 0 }}>Tags: {agent.tags.join(\", \")}</p>\n            <p style={{ margin: 0 }}>Keywords: {agent.keywords.join(\", \")}</p>\n          </div>\n\n          <div\n            style={{\n              background",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\components\\agents\\agent-detail-tabs.tsx",
+        "start": 79,
+        "end": 94,
+        "startLoc": {
+          "line": 79,
+          "column": 2,
+          "position": 690
+        },
+        "endLoc": {
+          "line": 94,
+          "column": 25,
+          "position": 916
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\components\\agents\\agent-detail-tabs.tsx",
+        "start": 78,
+        "end": 89,
+        "startLoc": {
+          "line": 78,
+          "column": 2,
+          "position": 665
+        },
+        "endLoc": {
+          "line": 89,
+          "column": 8,
+          "position": 877
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 15,
+      "fragment": "}>{execution.id}</td>\n                  <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.45rem 0\" }}>{execution.status}</td>\n                  <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.45rem 0\" }}>{execution.mode}</td>\n                  <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.45rem 0\" }}>\n                    {new Date(execution.startedAt).toLocaleString(\"pt-BR\")}\n                  </td>\n                  <td style={{ borderTop: \"1px solid var(--border)\", padding: \"0.45rem 0\" }}>\n                    {execution.durationMs}ms\n                  </td>\n                </tr>\n              ))}\n            </tbody>\n          </table>\n          {agent.executions.length === 0 ? (\n            <p style={{ color",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\components\\agents\\agent-detail-tabs.tsx",
+        "start": 171,
+        "end": 185,
+        "startLoc": {
+          "line": 171,
+          "column": 2,
+          "position": 1639
+        },
+        "endLoc": {
+          "line": 185,
+          "column": 7,
+          "position": 1833
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\components\\agents\\agent-detail-tabs.tsx",
+        "start": 170,
+        "end": 177,
+        "startLoc": {
+          "line": 170,
+          "column": 3,
+          "position": 1617
+        },
+        "endLoc": {
+          "line": 177,
+          "column": 11,
+          "position": 1762
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 24,
+      "fragment": " }}>\n                    {execution.durationMs}ms\n                  </td>\n                </tr>\n              ))}\n            </tbody>\n          </table>\n          {agent.executions.length === 0 ? (\n            <p style={{ color: \"var(--muted)\", marginBottom: 0 }}>Nenhuma execucao persistida ainda.</p>\n          ) : null}\n        </article>\n      ) : null}\n\n      {activeTab === \"logs\" ? (\n        <article\n          style={{\n            background: \"var(--card)\",\n            border: \"1px solid var(--border)\",\n            borderRadius: \"1rem\",\n            padding: \"1rem\"\n          }}\n        >\n          <h3 style={{ marginTop: 0 }}>Logs recentes</h3>\n          <ul style={{ marginBottom",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\components\\agents\\agent-detail-tabs.tsx",
+        "start": 177,
+        "end": 200,
+        "startLoc": {
+          "line": 177,
+          "column": 12,
+          "position": 1771
+        },
+        "endLoc": {
+          "line": 200,
+          "column": 14,
+          "position": 1956
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\agents\\page.tsx",
+        "start": 21,
+        "end": 37,
+        "startLoc": {
+          "line": 21,
+          "column": 2,
+          "position": 242
+        },
+        "endLoc": {
+          "line": 37,
+          "column": 7,
+          "position": 399
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 22,
+      "fragment": "}>{logLine}</li>\n            ))}\n          </ul>\n          {agent.logs.length === 0 ? (\n            <p style={{ color: \"var(--muted)\", marginBottom: 0 }}>Nenhum log persistido ainda.</p>\n          ) : null}\n        </article>\n      ) : null}\n\n      {activeTab === \"manifest\" ? (\n        <article\n          style={{\n            background: \"var(--card)\",\n            border: \"1px solid var(--border)\",\n            borderRadius: \"1rem\",\n            padding: \"1rem\"\n          }}\n        >\n          <h3 style={{ marginTop: 0 }}>Manifest</h3>\n          <pre\n            style={{\n              background",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\web\\components\\agents\\agent-detail-tabs.tsx",
+        "start": 202,
+        "end": 223,
+        "startLoc": {
+          "line": 202,
+          "column": 8,
+          "position": 1999
+        },
+        "endLoc": {
+          "line": 223,
+          "column": 25,
+          "position": 2163
+        }
+      },
+      "secondFile": {
+        "name": "apps\\web\\app\\(dashboard)\\agents\\page.tsx",
+        "start": 21,
+        "end": 37,
+        "startLoc": {
+          "line": 21,
+          "column": 2,
+          "position": 244
+        },
+        "endLoc": {
+          "line": 37,
+          "column": 7,
+          "position": 399
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 9,
+      "fragment": "={{ background: \"#f5efe4\", color: \"#102a43\", fontFamily: \"Arial, sans-serif\", margin: 0 }}>\n        <table role=\"presentation\" width=\"100%\" cellPadding=\"0\" cellSpacing=\"0\" style={{ padding: 24 }}>\n          <tbody>\n            <tr>\n              <td align=\"center\">\n                <table role=\"presentation\" width=\"640\" cellPadding=\"0\" cellSpacing=\"0\" style={{ background: \"#ffffff\", border: \"1px solid #d9e2ec\", borderRadius: 18 }}>\n                  <tbody>\n                    <tr>\n                      <td style={{ background: \"#135d66\"",
+      "tokens": 0,
+      "firstFile": {
+        "name": "packages\\emails\\templates\\org-invite.tsx",
+        "start": 18,
+        "end": 26,
+        "startLoc": {
+          "line": 18,
+          "column": 6,
+          "position": 108
+        },
+        "endLoc": {
+          "line": 26,
+          "column": 10,
+          "position": 269
+        }
+      },
+      "secondFile": {
+        "name": "packages\\emails\\templates\\workflow-finished.tsx",
+        "start": 16,
+        "end": 24,
+        "startLoc": {
+          "line": 16,
+          "column": 6,
+          "position": 98
+        },
+        "endLoc": {
+          "line": 24,
+          "column": 10,
+          "position": 259
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 15,
+      "fragment": ", color: \"#ffffff\", padding: \"20px 28px\" }}>\n                        <div style={{ fontSize: 12, letterSpacing: \"0.16em\", opacity: 0.82, textTransform: \"uppercase\" }}>\n                          Organization Invite\n                        </div>\n                        <h1 style={{ fontSize: 28, lineHeight: 1.2, margin: \"10px 0 0\" }}>Convite para a org {organizationName}</h1>\n                      </td>\n                    </tr>\n                    <tr>\n                      <td style={{ padding: 28 }}>\n                        <p style={{ marginTop: 0 }}>\n                          O usuario <strong>{email}</strong> foi convidado para entrar como <strong>{role}</strong>.\n                        </p>\n                        <p>\n                          <a\n                            href={acceptUrl",
+      "tokens": 0,
+      "firstFile": {
+        "name": "packages\\emails\\templates\\org-invite.tsx",
+        "start": 26,
+        "end": 40,
+        "startLoc": {
+          "line": 26,
+          "column": 10,
+          "position": 270
+        },
+        "endLoc": {
+          "line": 40,
+          "column": 10,
+          "position": 470
+        }
+      },
+      "secondFile": {
+        "name": "packages\\emails\\templates\\workflow-finished.tsx",
+        "start": 24,
+        "end": 42,
+        "startLoc": {
+          "line": 24,
+          "column": 10,
+          "position": 260
+        },
+        "endLoc": {
+          "line": 42,
+          "column": 5,
+          "position": 474
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 14,
+      "fragment": ">) {\n  return (\n    <html lang=\"pt-BR\">\n      <body style={{ background: \"#f5efe4\", color: \"#102a43\", fontFamily: \"Arial, sans-serif\", margin: 0 }}>\n        <table role=\"presentation\" width=\"100%\" cellPadding=\"0\" cellSpacing=\"0\" style={{ padding: 24 }}>\n          <tbody>\n            <tr>\n              <td align=\"center\">\n                <table role=\"presentation\" width=\"640\" cellPadding=\"0\" cellSpacing=\"0\" style={{ background: \"#ffffff\", border: \"1px solid #d9e2ec\", borderRadius: 18 }}>\n                  <tbody>\n                    <tr>\n                      <td style={{ background: \"#135d66\", color: \"#ffffff\", padding: \"20px 28px\" }}>\n                        <div style={{ fontSize: 12, letterSpacing: \"0.16em\", opacity: 0.82, textTransform: \"uppercase\" }}>\n                          Organization",
+      "tokens": 0,
+      "firstFile": {
+        "name": "packages\\emails\\templates\\org-invite.tsx",
+        "start": 15,
+        "end": 28,
+        "startLoc": {
+          "line": 15,
+          "column": 29,
+          "position": 82
+        },
+        "endLoc": {
+          "line": 28,
+          "column": 13,
+          "position": 318
+        }
+      },
+      "secondFile": {
+        "name": "packages\\emails\\templates\\workflow-finished.tsx",
+        "start": 13,
+        "end": 26,
+        "startLoc": {
+          "line": 13,
+          "column": 27,
+          "position": 72
+        },
+        "endLoc": {
+          "line": 26,
+          "column": 9,
+          "position": 308
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 9,
+      "fragment": "={{ background: \"#f5efe4\", color: \"#102a43\", fontFamily: \"Arial, sans-serif\", margin: 0 }}>\n        <table role=\"presentation\" width=\"100%\" cellPadding=\"0\" cellSpacing=\"0\" style={{ padding: 24 }}>\n          <tbody>\n            <tr>\n              <td align=\"center\">\n                <table role=\"presentation\" width=\"640\" cellPadding=\"0\" cellSpacing=\"0\" style={{ background: \"#ffffff\", border: \"1px solid #d9e2ec\", borderRadius: 18 }}>\n                  <tbody>\n                    <tr>\n                      <td style={{ background: \"#b42318\"",
+      "tokens": 0,
+      "firstFile": {
+        "name": "packages\\emails\\templates\\critical-error.tsx",
+        "start": 18,
+        "end": 26,
+        "startLoc": {
+          "line": 18,
+          "column": 6,
+          "position": 109
+        },
+        "endLoc": {
+          "line": 26,
+          "column": 10,
+          "position": 270
+        }
+      },
+      "secondFile": {
+        "name": "packages\\emails\\templates\\workflow-finished.tsx",
+        "start": 16,
+        "end": 24,
+        "startLoc": {
+          "line": 16,
+          "column": 6,
+          "position": 98
+        },
+        "endLoc": {
+          "line": 24,
+          "column": 10,
+          "position": 259
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 24,
+      "fragment": ", color: \"#ffffff\", padding: \"20px 28px\" }}>\n                        <div style={{ fontSize: 12, letterSpacing: \"0.16em\", opacity: 0.82, textTransform: \"uppercase\" }}>\n                          Critical Error\n                        </div>\n                        <h1 style={{ fontSize: 28, lineHeight: 1.2, margin: \"10px 0 0\" }}>Erro critico detectado</h1>\n                      </td>\n                    </tr>\n                    <tr>\n                      <td style={{ padding: 28 }}>\n                        <p style={{ marginTop: 0 }}>\n                          Detectamos uma falha critica durante a execucao do agente <strong>{agentId}</strong>.\n                        </p>\n                        <p>\n                          <strong>Execucao:</strong> {executionId}\n                        </p>\n                        <p>\n                          <strong>Erro:</strong> {errorMessage}\n                        </p>\n                        {link ? (\n                          <p>\n                            <a\n                              href={link}\n                              style={{\n                                background: \"#b42318\"",
+      "tokens": 0,
+      "firstFile": {
+        "name": "packages\\emails\\templates\\critical-error.tsx",
+        "start": 26,
+        "end": 49,
+        "startLoc": {
+          "line": 26,
+          "column": 10,
+          "position": 271
+        },
+        "endLoc": {
+          "line": 49,
+          "column": 10,
+          "position": 525
+        }
+      },
+      "secondFile": {
+        "name": "packages\\emails\\templates\\workflow-finished.tsx",
+        "start": 24,
+        "end": 44,
+        "startLoc": {
+          "line": 24,
+          "column": 10,
+          "position": 260
+        },
+        "endLoc": {
+          "line": 44,
+          "column": 10,
+          "position": 484
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 14,
+      "fragment": ">) {\n  return (\n    <html lang=\"pt-BR\">\n      <body style={{ background: \"#f5efe4\", color: \"#102a43\", fontFamily: \"Arial, sans-serif\", margin: 0 }}>\n        <table role=\"presentation\" width=\"100%\" cellPadding=\"0\" cellSpacing=\"0\" style={{ padding: 24 }}>\n          <tbody>\n            <tr>\n              <td align=\"center\">\n                <table role=\"presentation\" width=\"640\" cellPadding=\"0\" cellSpacing=\"0\" style={{ background: \"#ffffff\", border: \"1px solid #d9e2ec\", borderRadius: 18 }}>\n                  <tbody>\n                    <tr>\n                      <td style={{ background: \"#b42318\", color: \"#ffffff\", padding: \"20px 28px\" }}>\n                        <div style={{ fontSize: 12, letterSpacing: \"0.16em\", opacity: 0.82, textTransform: \"uppercase\" }}>\n                          Critical",
+      "tokens": 0,
+      "firstFile": {
+        "name": "packages\\emails\\templates\\critical-error.tsx",
+        "start": 15,
+        "end": 28,
+        "startLoc": {
+          "line": 15,
+          "column": 24,
+          "position": 83
+        },
+        "endLoc": {
+          "line": 28,
+          "column": 9,
+          "position": 319
+        }
+      },
+      "secondFile": {
+        "name": "packages\\emails\\templates\\workflow-finished.tsx",
+        "start": 13,
+        "end": 26,
+        "startLoc": {
+          "line": 13,
+          "column": 27,
+          "position": 72
+        },
+        "endLoc": {
+          "line": 26,
+          "column": 9,
+          "position": 308
+        }
+      }
+    }
+  ]
+}

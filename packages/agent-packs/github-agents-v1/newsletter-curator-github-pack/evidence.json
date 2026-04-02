@@ -1,0 +1,25 @@
+{
+  "agentId": "newsletter-curator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent newsletter-curator-github-pack (NewsletterCurator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"newsletter-curator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"newsletter-curator-github-pack.tool.read\",\n    \"newsletter-curator-github-pack.tool.search\",\n    \"newsletter-curator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "a7197c998845487d21bbd2b7f7913fed2d0e7ca0b18c95d1bde5f80eb3b37d13"
+  },
+  "generatedAt": "2026-03-24T04:54:31.371Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "newsletter-curator-github-pack",
+    "NewsletterCurator Agent"
+  ],
+  "sourceChecksum": "e0c39bbe6ada728c3ca003269e0d93e71fd1adb7c76d42aeeedbe5d7a8bb15c4",
+  "sourcePath": ".github/agents/cycle-08/newsletter-curator.agent.md"
+}

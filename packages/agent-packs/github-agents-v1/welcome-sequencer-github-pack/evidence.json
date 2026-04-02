@@ -1,0 +1,25 @@
+{
+  "agentId": "welcome-sequencer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent welcome-sequencer-github-pack (WelcomeSequencer Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"welcome-sequencer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"welcome-sequencer-github-pack.tool.read\",\n    \"welcome-sequencer-github-pack.tool.search\",\n    \"welcome-sequencer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "e3e27b5d2e3893a7ef34b7f8ca2ad4b503bd1631028fda9d0dee4f96e2243cfb"
+  },
+  "generatedAt": "2026-03-24T04:54:31.709Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "welcome-sequencer-github-pack",
+    "WelcomeSequencer Agent"
+  ],
+  "sourceChecksum": "fca70c22cc9fdb4d363657870b3e8b41ec238fc78842ae730f7116f469f1a416",
+  "sourcePath": ".github/agents/cycle-09/welcome-sequencer.agent.md"
+}

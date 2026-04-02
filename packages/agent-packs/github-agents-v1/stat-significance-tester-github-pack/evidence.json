@@ -1,0 +1,25 @@
+{
+  "agentId": "stat-significance-tester-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent stat-significance-tester-github-pack (StatSignificanceTester Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"stat-significance-tester-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"stat-significance-tester-github-pack.tool.read\",\n    \"stat-significance-tester-github-pack.tool.search\",\n    \"stat-significance-tester-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "973dbe807e76bc4f886e787be6bd265e3e4cd1c36ec5f452b6aa513097bd8dcc"
+  },
+  "generatedAt": "2026-03-24T04:54:32.158Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "stat-significance-tester-github-pack",
+    "StatSignificanceTester Agent"
+  ],
+  "sourceChecksum": "5ebb00c266b85f76a3c69fea0ed873a3cd8782f264b442d20cf4a769d21501db",
+  "sourcePath": ".github/agents/cycle-11/stat-significance-tester.agent.md"
+}

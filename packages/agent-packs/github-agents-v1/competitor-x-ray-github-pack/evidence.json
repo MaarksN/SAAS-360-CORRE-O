@@ -1,0 +1,25 @@
+{
+  "agentId": "competitor-x-ray-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent competitor-x-ray-github-pack (CompetitorX-Ray Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"competitor-x-ray-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"competitor-x-ray-github-pack.tool.read\",\n    \"competitor-x-ray-github-pack.tool.search\",\n    \"competitor-x-ray-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "f89da46e889b95f4b7a5e1d51cf0a71a5aec1e7e8d1849d8ce49cecb5a84ad6a"
+  },
+  "generatedAt": "2026-03-24T04:54:30.206Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "competitor-x-ray-github-pack",
+    "CompetitorX-Ray Agent"
+  ],
+  "sourceChecksum": "5cd72330044802c9aa99ee8f7f8afc0ab46f40ff57d5092c47543653ffdddb08",
+  "sourcePath": ".github/agents/cycle-01/competitor-x-ray.agent.md"
+}

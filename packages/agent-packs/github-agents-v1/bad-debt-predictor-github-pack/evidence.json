@@ -1,0 +1,25 @@
+{
+  "agentId": "bad-debt-predictor-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent bad-debt-predictor-github-pack (BadDebtPredictor Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"bad-debt-predictor-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"bad-debt-predictor-github-pack.tool.read\",\n    \"bad-debt-predictor-github-pack.tool.search\",\n    \"bad-debt-predictor-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "a1825e7fdecde098e4435c0650ab1a1ffb928e4a6cf7b41d15b96116852b8b2e"
+  },
+  "generatedAt": "2026-03-24T04:54:32.189Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "bad-debt-predictor-github-pack",
+    "BadDebtPredictor Agent"
+  ],
+  "sourceChecksum": "dae690b6b7c1b98d47d948d3e96a218c69f03b864e08c79fb57c1ab3ef91a4a3",
+  "sourcePath": ".github/agents/cycle-12/bad-debt-predictor.agent.md"
+}

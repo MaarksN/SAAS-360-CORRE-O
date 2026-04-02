@@ -1,0 +1,25 @@
+{
+  "agentId": "remittance-extractor-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent remittance-extractor-github-pack (RemittanceExtractor Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"remittance-extractor-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"remittance-extractor-github-pack.tool.read\",\n    \"remittance-extractor-github-pack.tool.search\",\n    \"remittance-extractor-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "f1a776320de7c0e62f461d00147ab85ead30eab6cf7f8d32848face0c82a6862"
+  },
+  "generatedAt": "2026-03-24T04:54:32.440Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "remittance-extractor-github-pack",
+    "RemittanceExtractor Agent"
+  ],
+  "sourceChecksum": "aab02d48c0b46eb6471bff4ef8499be9c6562f273308693cb30c933fe39d4737",
+  "sourcePath": ".github/agents/cycle-13/remittance-extractor.agent.md"
+}

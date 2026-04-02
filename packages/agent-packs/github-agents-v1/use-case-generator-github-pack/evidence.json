@@ -1,0 +1,25 @@
+{
+  "agentId": "use-case-generator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent use-case-generator-github-pack (UseCaseGenerator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"use-case-generator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"use-case-generator-github-pack.tool.read\",\n    \"use-case-generator-github-pack.tool.search\",\n    \"use-case-generator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "6fe7168e8e6ec2cc5f6328daeb51f85246f34cc6b1fc806ea6364489abe09a10"
+  },
+  "generatedAt": "2026-03-24T04:54:31.061Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "use-case-generator-github-pack",
+    "UseCaseGenerator Agent"
+  ],
+  "sourceChecksum": "a240783d60865f45f40a14e8997968416c97f5ad7cfc67c1742ff2de7cd300c9",
+  "sourcePath": ".github/agents/cycle-06/use-case-generator.agent.md"
+}

@@ -1,0 +1,47 @@
+{
+  "[SOURCE]": "BirthHub360_Agentes_Parallel_Plan - CapitalAllocator",
+  "source_traceability": "BirthHub360_Agentes_Parallel_Plan - CapitalAllocator",
+  "input": {
+    "constraints": {
+      "currency": "BRL",
+      "language": "pt-BR",
+      "maxActions": 5
+    },
+    "requestId": "seed-capitalallocator-001",
+    "sections": [
+      "allocation_rebalance",
+      "forecast_drift",
+      "scenario_buffers",
+      "spend_velocity",
+      "variance_hotspots"
+    ],
+    "segments": [
+      "enterprise",
+      "mid_market",
+      "demand_gen"
+    ],
+    "targetBudgetEfficiencyPct": 68,
+    "tenantId": "tenant_exec_seed",
+    "window": {
+      "endDate": "2026-03-31",
+      "startDate": "2026-03-01"
+    }
+  },
+  "mock_external_sources": {
+    "spend_telemetry_feed": {
+      "burnRatePct": 112.4,
+      "efficiencyScorePct": 63.9,
+      "overspendRiskPct": 27.5
+    },
+    "forecast_drift_engine": {
+      "cashRunwayDeltaMonths": -1.7,
+      "topDriftDriver": "campaign commitments exceeding planned conversion capacity",
+      "varianceToPlanPct": 11.2
+    },
+    "scenario_stress_feed": {
+      "downsideRiskPct": 31.8,
+      "upsideLeveragePct": 44.6,
+      "volatilityIndex": 36.9
+    }
+  }
+}

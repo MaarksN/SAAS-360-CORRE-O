@@ -1,0 +1,25 @@
+{
+  "agentId": "strategic-kpi-aggregator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent strategic-kpi-aggregator-github-pack (StrategicKPIAggregator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"strategic-kpi-aggregator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"strategic-kpi-aggregator-github-pack.tool.read\",\n    \"strategic-kpi-aggregator-github-pack.tool.search\",\n    \"strategic-kpi-aggregator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "9d8d4b33c6b1ba8b910f6bfcdee78226a46c61886bd43aa4515d976963c17c5b"
+  },
+  "generatedAt": "2026-03-24T04:54:32.173Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "strategic-kpi-aggregator-github-pack",
+    "StrategicKPIAggregator Agent"
+  ],
+  "sourceChecksum": "6fe3509aca3246ae7ddb8124307b5d6209044e513832b531e1a408ba22adb635",
+  "sourcePath": ".github/agents/cycle-11/strategic-kpi-aggregator.agent.md"
+}

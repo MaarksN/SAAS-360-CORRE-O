@@ -1,0 +1,46 @@
+{
+  "source_traceability": "BirthHub360_Agentes_Parallel_Plan - BrandGuardian",
+  "input": {
+    "constraints": {
+      "currency": "BRL",
+      "language": "pt-BR",
+      "maxActions": 5
+    },
+    "requestId": "seed-brandguardian-001",
+    "sections": [
+      "reputation_risk",
+      "narrative_consistency",
+      "guideline_drift",
+      "pr_response",
+      "campaign_exposure"
+    ],
+    "segments": [
+      "enterprise",
+      "mid_market",
+      "strategic_accounts"
+    ],
+    "targetBrandSentimentPct": 75,
+    "tenantId": "tenant_exec_seed",
+    "window": {
+      "endDate": "2026-03-31",
+      "startDate": "2026-03-01"
+    }
+  },
+  "mock_external_sources": {
+    "brand_sentiment_feed": {
+      "currentSentimentPct": 68.7,
+      "dominantNarrative": "customer outcomes perceived as strong but support response speed is questioned",
+      "volatilityPct": 17.9
+    },
+    "guideline_compliance_engine": {
+      "complianceScorePct": 79.4,
+      "driftDriver": "localized social creatives bypassing global review",
+      "highRiskAssetsPct": 11.6
+    },
+    "pr_incident_monitor": {
+      "activeIncidentCount": 2,
+      "responseReadinessPct": 81.3,
+      "severityIndex": 26.8
+    }
+  }
+}

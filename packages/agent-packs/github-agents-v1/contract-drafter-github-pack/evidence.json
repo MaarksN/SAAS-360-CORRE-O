@@ -1,0 +1,25 @@
+{
+  "agentId": "contract-drafter-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent contract-drafter-github-pack (ContractDrafter Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"contract-drafter-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"contract-drafter-github-pack.tool.read\",\n    \"contract-drafter-github-pack.tool.search\",\n    \"contract-drafter-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "45cd575cf9d5bc8158a6e8f72dadb680f675caead9b24b8abe74d1783dd0c290"
+  },
+  "generatedAt": "2026-03-24T04:54:30.765Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "contract-drafter-github-pack",
+    "ContractDrafter Agent"
+  ],
+  "sourceChecksum": "9fdc98c26cb5c634c0e7d0b16a134da0495a8832192f42aacb781926c195d012",
+  "sourcePath": ".github/agents/cycle-05/contract-drafter.agent.md"
+}

@@ -1,0 +1,25 @@
+{
+  "agentId": "user-story-writer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent user-story-writer-github-pack (UserStoryWriter Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"user-story-writer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"user-story-writer-github-pack.tool.read\",\n    \"user-story-writer-github-pack.tool.search\",\n    \"user-story-writer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "4115a9842c714e1dba86ee82e52c863a3a47b538893e809d030fe937af2edc54"
+  },
+  "generatedAt": "2026-03-24T04:54:32.181Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "user-story-writer-github-pack",
+    "UserStoryWriter Agent"
+  ],
+  "sourceChecksum": "09cc2e37dce02e91fada529e03e7247b56ee77c0e6929809cb8c889062c109af",
+  "sourcePath": ".github/agents/cycle-11/user-story-writer.agent.md"
+}

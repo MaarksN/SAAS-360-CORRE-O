@@ -1,0 +1,132 @@
+[
+  {
+    "issue_id": "logger-transport-stability",
+    "severity": "high",
+    "source_paths": [
+      "packages/logger/src/index.ts"
+    ],
+    "target_paths": [
+      "autofix/snapshots/packages/logger/src/index.ts"
+    ],
+    "verification_commands": [
+      "corepack pnpm --filter @birthub/logger test",
+      "corepack pnpm --filter @birthub/api test:security"
+    ]
+  },
+  {
+    "issue_id": "utils-logger-alignment",
+    "severity": "high",
+    "source_paths": [
+      "packages/utils/src/logger.ts",
+      "packages/utils/package.json",
+      "packages/utils/index.ts",
+      "packages/utils/src/index.ts"
+    ],
+    "target_paths": [
+      "autofix/snapshots/packages/utils/src/logger.ts",
+      "autofix/snapshots/packages/utils/package.json",
+      "autofix/snapshots/packages/utils/index.ts",
+      "autofix/snapshots/packages/utils/src/index.ts"
+    ],
+    "verification_commands": [
+      "corepack pnpm --filter @birthub/utils typecheck"
+    ]
+  },
+  {
+    "issue_id": "queue-manager-hardening",
+    "severity": "critical",
+    "source_paths": [
+      "packages/queue/src/index.ts",
+      "packages/queue/src/definitions.ts",
+      "packages/queue/package.json"
+    ],
+    "target_paths": [
+      "autofix/snapshots/packages/queue/src/index.ts",
+      "autofix/snapshots/packages/queue/src/definitions.ts",
+      "autofix/snapshots/packages/queue/package.json"
+    ],
+    "verification_commands": [
+      "corepack pnpm --filter @birthub/queue typecheck"
+    ]
+  },
+  {
+    "issue_id": "api-security-suite-listener-stability",
+    "severity": "medium",
+    "source_paths": [
+      "apps/api/tests/security.test.ts",
+      "packages/logger/src/index.ts"
+    ],
+    "target_paths": [
+      "autofix/snapshots/apps/api/tests/security.test.ts",
+      "autofix/snapshots/packages/logger/src/index.ts"
+    ],
+    "verification_commands": [
+      "corepack pnpm --filter @birthub/api test:security"
+    ]
+  },
+  {
+    "issue_id": "api-error-handler-snapshot",
+    "severity": "medium",
+    "source_paths": [
+      "apps/api/src/middleware/error-handler.ts"
+    ],
+    "target_paths": [
+      "autofix/snapshots/apps/api/src/middleware/error-handler.ts"
+    ],
+    "verification_commands": [
+      "corepack pnpm --filter @birthub/api typecheck"
+    ]
+  },
+  {
+    "issue_id": "api-rate-limit-snapshot",
+    "severity": "medium",
+    "source_paths": [
+      "apps/api/src/middleware/rate-limit.ts"
+    ],
+    "target_paths": [
+      "autofix/snapshots/apps/api/src/middleware/rate-limit.ts"
+    ],
+    "verification_commands": [
+      "corepack pnpm --filter @birthub/api typecheck"
+    ]
+  },
+  {
+    "issue_id": "api-authentication-snapshot",
+    "severity": "medium",
+    "source_paths": [
+      "apps/api/src/middleware/authentication.ts"
+    ],
+    "target_paths": [
+      "autofix/snapshots/apps/api/src/middleware/authentication.ts"
+    ],
+    "verification_commands": [
+      "corepack pnpm --filter @birthub/api typecheck"
+    ]
+  },
+  {
+    "issue_id": "worker-runtime-snapshot",
+    "severity": "medium",
+    "source_paths": [
+      "apps/worker/src/worker.ts"
+    ],
+    "target_paths": [
+      "autofix/snapshots/apps/worker/src/worker.ts"
+    ],
+    "verification_commands": [
+      "corepack pnpm --filter @birthub/worker typecheck"
+    ]
+  },
+  {
+    "issue_id": "metrics-service-snapshot",
+    "severity": "medium",
+    "source_paths": [
+      "apps/api/src/modules/agents/metrics.service.ts"
+    ],
+    "target_paths": [
+      "autofix/snapshots/apps/api/src/modules/agents/metrics.service.ts"
+    ],
+    "verification_commands": [
+      "corepack pnpm --filter @birthub/api typecheck"
+    ]
+  }
+]

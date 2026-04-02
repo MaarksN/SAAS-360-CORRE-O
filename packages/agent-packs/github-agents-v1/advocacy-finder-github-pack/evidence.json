@@ -1,0 +1,25 @@
+{
+  "agentId": "advocacy-finder-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent advocacy-finder-github-pack (AdvocacyFinder Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"advocacy-finder-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"advocacy-finder-github-pack.tool.read\",\n    \"advocacy-finder-github-pack.tool.search\",\n    \"advocacy-finder-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "a66f508bce1ff8b336c822d96849890452c498b2f99e0eefe203931f1b6ccfe3"
+  },
+  "generatedAt": "2026-03-24T04:54:30.126Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "advocacy-finder-github-pack",
+    "AdvocacyFinder Agent"
+  ],
+  "sourceChecksum": "d4c8460563245f5ba3d3164f34800c02a903335dc5bd92439fb2f095535c71dc",
+  "sourcePath": ".github/agents/cycle-01/advocacy-finder.agent.md"
+}

@@ -1,0 +1,194 @@
+# [SOURCE] BirthHub360_Agentes_Parallel_Plan - QuotaArchitect
+name: QuotaArchitect
+domain: executivos
+cycle: 1
+description: Analisa a cobertura de territorio e performance de vendas para sugerir realocacoes de metas e maximizar o atingimento de cotas.
+
+preconditions:
+  - Input valido validado contra QuotaArchitectInputSchema.
+  - Dependencias de engine (tools) configuradas para telemetria e historico.
+
+postconditions:
+  - Output strict retornado aderente ao QuotaArchitectOutputSchema.
+  - Eventos de telemetria despachados.
+
+input_schema:
+  type: object
+  strict: true
+  properties:
+    tenantId:
+      type: string
+    requestId:
+      type: string
+    targetQuotaAttainmentPct:
+      type: number
+    window:
+      type: object
+      strict: true
+      properties:
+        startDate:
+          type: string
+        endDate:
+          type: string
+    segments:
+      type: array
+      items:
+        type: string
+    sections:
+      type: array
+      items:
+        type: string
+    constraints:
+      type: object
+      strict: true
+      properties:
+        maxActions:
+          type: number
+        language:
+          type: string
+        currency:
+          type: string
+
+output_schema:
+  type: object
+  strict: true
+  properties:
+    agent:
+      type: string
+      value: QuotaArchitect
+    domain:
+      type: string
+      value: executivos
+    status:
+      type: string
+      enum: [success, fallback, error]
+    summary:
+      type: string
+    generatedAt:
+      type: string
+    quotaBrief:
+      type: object
+      strict: true
+      properties:
+        headline:
+          type: string
+        projectedAttainmentPct:
+          type: number
+        recommendedQuotaDeltaPct:
+          type: number
+        signals:
+          type: array
+          items:
+            type: object
+            strict: true
+            properties:
+              metric:
+                type: string
+              value:
+                type: number
+              interpretation:
+                type: string
+              confidence:
+                type: string
+                enum: [high, medium, low]
+        riskSignals:
+          type: array
+          items:
+            type: object
+            strict: true
+            properties:
+              signal:
+                type: string
+              severity:
+                type: string
+                enum: [critical, high, medium, low]
+              mitigation:
+                type: string
+        actions:
+          type: array
+          items:
+            type: object
+            strict: true
+            properties:
+              recommendation:
+                type: string
+              owner:
+                type: string
+              targetDate:
+                type: string
+              priority:
+                type: string
+                enum: [critical, high, medium, low]
+    observability:
+      type: object
+      strict: true
+      properties:
+        metrics:
+          type: object
+          strict: true
+          properties:
+            durationMs:
+              type: number
+            toolCalls:
+              type: number
+            toolFailures:
+              type: number
+            retries:
+              type: number
+        events:
+          type: array
+          items:
+            type: object
+    fallback:
+      type: object
+      strict: true
+      properties:
+        applied:
+          type: boolean
+        mode:
+          type: string
+        reasons:
+          type: array
+          items:
+            type: string
+
+failure_behavior: degraded_report
+
+fallback:
+  strategy: canonical
+  retry:
+    maxAttempts: 3
+    baseDelayMs: 500
+
+raci:
+  responsible: QuotaArchitect
+  accountable: Sales Ops
+  consulted: RevOps
+  informed: CFO
+
+security:
+  access_level: executive-only
+  pii_handled: false
+  data_retention: transient
+
+observability:
+  events:
+    - quotaarchitect.request.received
+    - quotaarchitect.contract.loaded
+    - quotaarchitect.tool.call.started
+    - quotaarchitect.tool.call.succeeded
+    - quotaarchitect.tool.call.failed
+    - quotaarchitect.retry.scheduled
+    - quotaarchitect.fallback.applied
+    - quotaarchitect.response.generated
+  metrics:
+    - duration_ms
+    - tool_calls
+    - tool_failures
+    - retries
+  alerts:
+    - tool_failures > 5
+    - duration_ms > 15000
+
+runtime_enforcement: false
+runtime_cycle: 16

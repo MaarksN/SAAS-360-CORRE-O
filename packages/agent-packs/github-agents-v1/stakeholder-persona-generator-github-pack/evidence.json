@@ -1,0 +1,25 @@
+{
+  "agentId": "stakeholder-persona-generator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent stakeholder-persona-generator-github-pack (StakeholderPersonaGenerator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"stakeholder-persona-generator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"stakeholder-persona-generator-github-pack.tool.read\",\n    \"stakeholder-persona-generator-github-pack.tool.search\",\n    \"stakeholder-persona-generator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "d22ba4294ff1b8c0f94cb40325b3029809db05fb0ddab552b03e9a92f1604de5"
+  },
+  "generatedAt": "2026-03-24T04:54:30.741Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "stakeholder-persona-generator-github-pack",
+    "StakeholderPersonaGenerator Agent"
+  ],
+  "sourceChecksum": "b6a6d9babbc21ab5cb78c32919b3a9e28551e8b541a291afbd2a0e61d0f3321a",
+  "sourcePath": ".github/agents/cycle-04/stakeholder-persona-generator.agent.md"
+}

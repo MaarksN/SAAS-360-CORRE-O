@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BirthHub360 — Master Checklist v3</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#050810;--s1:rgba(255,255,255,.035);--s2:rgba(255,255,255,.055);
+  --hov:rgba(255,255,255,.055);--brd:rgba(255,255,255,.07);
+  --brd2:rgba(120,200,255,.18);--txt:#dde4f0;--mut:#5a6880;--mut2:#3d4d63;
+  --r:12px;--tr:.2s cubic-bezier(.4,0,.2,1);
+  --c1:#00d4ff;--c2:#7c3aed;--c3:#06ffa5;--c4:#ffb347;--c5:#ff5f5f;
+  --c6:#c4b5fd;--c7:#7dd3fc;--c8:#f472b6;
+  --codex:#00d4ff;--jules:#c4b5fd;--marcelo:#ffb347;
+  --p0bg:rgba(255,60,60,.12);--p0b:rgba(255,80,80,.35);--p0t:#ff7070;
+  --p1bg:rgba(255,179,71,.1);--p1b:rgba(255,179,71,.3);--p1t:#ffb347;
+  --p2bg:rgba(90,104,128,.12);--p2b:rgba(90,104,128,.25);--p2t:#6b7a94;
+  --dng:rgba(6,255,165,.07);--dnb:rgba(6,255,165,.2);
+  --b1:#ff9f43;--b2:#00d4ff;--b3:#06ffa5;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--txt);font-family:'Syne',sans-serif;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background:
+  radial-gradient(ellipse 80% 40% at 8% -5%,rgba(0,212,255,.065) 0%,transparent 55%),
+  radial-gradient(ellipse 55% 45% at 92% 15%,rgba(124,58,237,.08) 0%,transparent 50%),
+  radial-gradient(ellipse 45% 35% at 50% 105%,rgba(6,255,165,.045) 0%,transparent 55%);
+  pointer-events:none;z-index:0;}
+.wrap{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:44px 20px 80px;}
+
+/* HEADER */
+header{text-align:center;margin-bottom:40px;}
+.badge{display:inline-flex;align-items:center;gap:7px;background:rgba(0,212,255,.09);border:1px solid rgba(0,212,255,.22);border-radius:100px;padding:5px 15px;font-family:'Space Mono',monospace;font-size:10px;color:var(--c1);letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px;}
+h1{font-size:clamp(24px,4.5vw,40px);font-weight:800;letter-spacing:-.03em;background:linear-gradient(130deg,#dde4f0 0%,var(--c1) 55%,var(--c2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px;}
+.sub{color:var(--mut);font-size:13px;letter-spacing:.04em;}
+
+/* MASTER PROGRESS */
+.master{background:var(--s1);border:1px solid var(--brd);border-radius:var(--r);padding:20px 24px;margin-bottom:14px;backdrop-filter:blur(14px);}
+.master-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px;}
+.master-pct{font-family:'Space Mono',monospace;font-size:28px;font-weight:700;color:var(--c3);line-height:1;}
+.master-lbl{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);}
+.prog-track{height:5px;background:rgba(255,255,255,.05);border-radius:100px;overflow:hidden;margin-bottom:14px;}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--c1),var(--c3));border-radius:100px;transition:width .5s cubic-bezier(.4,0,.2,1);box-shadow:0 0 10px rgba(6,255,165,.35);}
+.stats{display:flex;flex-wrap:wrap;gap:18px;align-items:center;}
+.stat{display:flex;flex-direction:column;gap:1px;}
+.stat-n{font-family:'Space Mono',monospace;font-size:16px;font-weight:700;}
+.stat-l{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.07em;}
+.stat-n.green{color:var(--c3);}.stat-n.red{color:var(--p0t);}.stat-n.gold{color:var(--marcelo);}
+
+/* BLOCK PROGRESS ROW */
+.bprog-row{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap;}
+.bprog{flex:1;min-width:140px;background:var(--s1);border:1px solid var(--brd);border-radius:8px;padding:10px 14px;}
+.bprog-top{display:flex;justify-content:space-between;margin-bottom:6px;}
+.bprog-title{font-family:'Space Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;}
+.bprog-pct{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;}
+.bprog-track{height:3px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden;}
+.bprog-fill{height:100%;border-radius:100px;transition:width .4s ease;}
+.bprog.b1-blk .bprog-title,.bprog.b1-blk .bprog-pct{color:var(--b1);}
+.bprog.b1-blk .bprog-fill{background:var(--b1);}
+.bprog.b2-blk .bprog-title,.bprog.b2-blk .bprog-pct{color:var(--b2);}
+.bprog.b2-blk .bprog-fill{background:var(--b2);}
+.bprog.b3-blk .bprog-title,.bprog.b3-blk .bprog-pct{color:var(--b3);}
+.bprog.b3-blk .bprog-fill{background:var(--b3);}
+
+/* FILTER BAR */
+.filter-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;align-items:center;}
+.fbtn{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:7px 13px;border-radius:8px;cursor:pointer;border:1px solid var(--brd);background:var(--s1);color:var(--mut);transition:var(--tr);white-space:nowrap;}
+.fbtn:hover{background:var(--hov);color:var(--txt);}
+.fbtn.active{background:var(--s2);border-color:var(--brd2);color:var(--txt);}
+.fbtn.f-p0.active{border-color:var(--p0b);color:var(--p0t);background:var(--p0bg);}
+.fbtn.f-pend.active{border-color:var(--p1b);color:var(--p1t);background:var(--p1bg);}
+.fbtn.f-done.active{border-color:var(--dnb);color:var(--c3);background:var(--dng);}
+.reset-btn{margin-left:auto;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:7px 13px;border-radius:8px;cursor:pointer;border:1px solid rgba(255,95,95,.22);background:rgba(255,95,95,.08);color:var(--p0t);transition:var(--tr);}
+.reset-btn:hover{background:rgba(255,95,95,.15);border-color:rgba(255,95,95,.4);}
+
+/* BLOCK HEADER */
+.blk-hdr{display:flex;align-items:center;gap:14px;margin:28px 0 12px;padding:14px 18px;border-radius:var(--r);border-left:3px solid;background:var(--s1);}
+.blk-hdr.b1{border-color:var(--b1);background:rgba(255,159,67,.05);}
+.blk-hdr.b2{border-color:var(--b2);background:rgba(0,212,255,.04);}
+.blk-hdr.b3{border-color:var(--b3);background:rgba(6,255,165,.04);}
+.blk-glyph{font-size:20px;line-height:1;}
+.blk-info{flex:1;}
+.blk-title{font-size:14px;font-weight:800;letter-spacing:.02em;text-transform:uppercase;}
+.blk-hdr.b1 .blk-title{color:var(--b1);}.blk-hdr.b2 .blk-title{color:var(--b2);}.blk-hdr.b3 .blk-title{color:var(--b3);}
+.blk-sub{font-family:'Space Mono',monospace;font-size:10px;color:var(--mut);letter-spacing:.06em;margin-top:2px;}
+.blk-count{font-family:'Space Mono',monospace;font-size:10px;color:var(--mut);white-space:nowrap;}
+
+/* INFO CARD (cronograma / rules) */
+.info-card{background:var(--s1);border:1px solid var(--brd);border-radius:var(--r);padding:18px 20px;margin-bottom:10px;}
+.info-card-title{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);margin-bottom:12px;}
+.crono-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;}
+.crono-cell{background:rgba(255,255,255,.03);border:1px solid var(--brd);border-radius:7px;padding:8px 10px;text-align:center;}
+.crono-day{font-family:'Space Mono',monospace;font-size:9px;color:var(--mut);letter-spacing:.08em;margin-bottom:2px;}
+.crono-pr{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:var(--b1);margin-bottom:1px;}
+.crono-focus{font-size:10px;color:var(--mut);line-height:1.3;}
+.rules-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;}
+.rule-item{background:rgba(255,80,80,.06);border:1px solid rgba(255,80,80,.15);border-radius:7px;padding:8px 10px;font-size:11px;color:rgba(255,200,200,.7);display:flex;gap:7px;align-items:flex-start;}
+.rule-x{color:var(--p0t);font-weight:700;flex-shrink:0;}
+.cond-grid{display:flex;flex-direction:column;gap:6px;}
+.cond-item{display:flex;align-items:flex-start;gap:10px;padding:8px 10px;background:rgba(6,255,165,.04);border:1px solid rgba(6,255,165,.15);border-radius:7px;font-size:12px;color:rgba(180,255,220,.75);}
+.cond-n{font-family:'Space Mono',monospace;font-size:10px;color:var(--c3);flex-shrink:0;margin-top:1px;}
+
+/* SECTION */
+.sec{margin-bottom:10px;border-radius:var(--r);border:1px solid var(--brd);background:var(--s1);backdrop-filter:blur(10px);overflow:hidden;transition:border-color var(--tr),opacity var(--tr);}
+.sec:hover{border-color:var(--brd2);}
+.sec.gated{opacity:.5;pointer-events:none;}
+.sec.filter-hidden{display:none;}
+.sec-hdr{display:flex;align-items:center;gap:11px;padding:14px 18px;cursor:pointer;user-select:none;transition:background var(--tr);}
+.sec-hdr:hover{background:var(--hov);}
+.sec.gated .sec-hdr{cursor:default;}
+.sec-num{flex-shrink:0;width:38px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.02em;}
+.sec-info{flex:1;min-width:0;}
+.sec-title{font-size:14px;font-weight:700;letter-spacing:-.01em;margin-bottom:1px;}
+.sec-meta{font-family:'Space Mono',monospace;font-size:10px;color:var(--mut);letter-spacing:.04em;}
+.sec-right{display:flex;align-items:center;gap:9px;flex-shrink:0;}
+.mini-bar{width:68px;height:3px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden;}
+.mini-fill{height:100%;border-radius:100px;transition:width .4s ease;}
+.mini-pct{font-family:'Space Mono',monospace;font-size:10px;color:var(--mut);min-width:30px;text-align:right;}
+.chev{color:var(--mut);font-size:9px;transition:transform var(--tr);}
+.sec.open .chev{transform:rotate(180deg);}
+.gate-lk{display:none;align-items:center;gap:5px;font-family:'Space Mono',monospace;font-size:9px;color:var(--p0t);letter-spacing:.05em;padding:2px 8px;border-radius:100px;background:var(--p0bg);border:1px solid var(--p0b);}
+.sec.gated .gate-lk{display:flex;}
+.done-bdg{display:none;font-family:'Space Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;padding:2px 8px;border-radius:100px;background:var(--dng);color:var(--c3);border:1px solid var(--dnb);}
+.sec.complete .done-bdg{display:block;}
+.day-bdg{flex-shrink:0;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.08em;padding:2px 7px;border-radius:5px;background:rgba(255,159,67,.1);border:1px solid rgba(255,159,67,.25);color:var(--b1);}
+
+/* TASKS */
+.tasks{display:none;flex-direction:column;padding:2px 18px 14px;}
+.sec.open .tasks{display:flex;}
+.outcome{margin:6px 0 8px;padding:8px 12px;border-radius:7px;background:rgba(0,212,255,.04);border-left:2px solid rgba(0,212,255,.25);font-size:11.5px;color:rgba(180,210,240,.65);font-style:italic;}
+.outcome strong{color:var(--c1);font-style:normal;font-weight:600;}
+.twrap{margin-bottom:2px;}
+.task{display:flex;align-items:flex-start;gap:10px;padding:8px 10px;border-radius:8px;cursor:pointer;transition:background var(--tr);border:1px solid transparent;}
+.task:hover{background:var(--hov);}
+.task.checked{background:var(--dng);border-color:var(--dnb);}
+.task.filter-hidden{display:none;}
+.task-cb{flex-shrink:0;width:16px;height:16px;border-radius:4px;border:1.5px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;margin-top:2px;transition:var(--tr);font-size:9px;color:transparent;}
+.task.checked .task-cb{background:rgba(6,255,165,.18);border-color:rgba(6,255,165,.55);color:var(--c3);}
+.task-body{flex:1;min-width:0;}
+.task-top{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:2px;}
+.task-txt{font-size:12.5px;line-height:1.45;color:var(--txt);flex:1;min-width:180px;}
+.task.checked .task-txt{color:var(--mut);text-decoration:line-through;text-decoration-color:rgba(6,255,165,.25);}
+.pbdg{flex-shrink:0;font-family:'Space Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.07em;padding:1px 6px;border-radius:4px;border:1px solid;}
+.pbdg.P0{background:var(--p0bg);border-color:var(--p0b);color:var(--p0t);}
+.pbdg.P1{background:var(--p1bg);border-color:var(--p1b);color:var(--p1t);}
+.pbdg.P2{background:var(--p2bg);border-color:var(--p2b);color:var(--p2t);}
+.obdg{flex-shrink:0;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.06em;padding:1px 6px;border-radius:4px;border:1px solid;}
+.obdg.CODEX{background:rgba(0,212,255,.08);border-color:rgba(0,212,255,.25);color:var(--codex);}
+.obdg.JULES{background:rgba(196,181,253,.08);border-color:rgba(196,181,253,.22);color:var(--jules);}
+.obdg.MARCELO{background:rgba(255,179,71,.08);border-color:rgba(255,179,71,.22);color:var(--marcelo);}
+.ev-btn{flex-shrink:0;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.05em;text-transform:uppercase;padding:1px 7px;border-radius:4px;cursor:pointer;border:1px solid var(--brd);background:transparent;color:var(--mut);transition:var(--tr);}
+.ev-btn:hover{border-color:var(--brd2);color:var(--txt);}
+.ev-btn.has-ev{border-color:rgba(6,255,165,.3);color:var(--c3);background:rgba(6,255,165,.06);}
+.ev-area{display:none;margin-top:5px;padding:7px 9px;background:rgba(255,255,255,.03);border:1px solid var(--brd);border-radius:6px;}
+.ev-area.open{display:block;}
+.ev-inp{width:100%;background:transparent;border:none;color:var(--txt);font-family:'Space Mono',monospace;font-size:10px;resize:none;outline:none;line-height:1.5;}
+.ev-inp::placeholder{color:var(--mut2);}
+.ev-hint{margin-top:3px;font-family:'Space Mono',monospace;font-size:9px;color:var(--mut);letter-spacing:.04em;}
+.tn{flex-shrink:0;font-family:'Space Mono',monospace;font-size:9px;color:rgba(255,255,255,.12);margin-top:3px;min-width:20px;}
+
+/* SECTION COLOR THEMES */
+/* PRs (amber) */
+.pr1 .sec-num,.pr2 .sec-num,.pr3 .sec-num,.pr4 .sec-num,.pr5 .sec-num,
+.pr6 .sec-num,.pr7 .sec-num,.pr8 .sec-num,.pr9 .sec-num,.pr10 .sec-num{background:rgba(255,159,67,.1);color:var(--b1);}
+.pr1 .sec-title,.pr2 .sec-title,.pr3 .sec-title,.pr4 .sec-title,.pr5 .sec-title,
+.pr6 .sec-title,.pr7 .sec-title,.pr8 .sec-title,.pr9 .sec-title,.pr10 .sec-title{color:#ffe4b3;}
+.pr1 .mini-fill,.pr2 .mini-fill,.pr3 .mini-fill,.pr4 .mini-fill,.pr5 .mini-fill,
+.pr6 .mini-fill,.pr7 .mini-fill,.pr8 .mini-fill,.pr9 .mini-fill{background:var(--b1);}
+.pr10 .mini-fill{background:linear-gradient(90deg,#ffd700,var(--c3));}
+.pr10 .sec-num{background:rgba(255,215,0,.12);color:#ffd700;}
+.pr10 .sec-title{color:#fff3b3;}
+
+/* Etapas (cyan family, from v2) */
+.e1 .sec-num{background:rgba(0,212,255,.1);color:var(--c1);}
+.e2 .sec-num{background:rgba(124,58,237,.14);color:var(--c6);}
+.e3 .sec-num{background:rgba(6,255,165,.09);color:var(--c3);}
+.e4 .sec-num{background:rgba(255,179,71,.11);color:var(--c4);}
+.e5 .sec-num{background:rgba(255,95,95,.11);color:var(--c5);}
+.e6 .sec-num{background:rgba(196,181,253,.11);color:var(--c6);}
+.e7 .sec-num{background:rgba(125,211,252,.1);color:var(--c7);}
+.e1 .sec-title{color:#b5e8ff;}.e2 .sec-title{color:#d4caff;}.e3 .sec-title{color:#b3ffe4;}
+.e4 .sec-title{color:#ffe8b3;}.e5 .sec-title{color:#ffcaca;}.e6 .sec-title{color:#e4dbff;}.e7 .sec-title{color:#c5e9ff;}
+.e1 .mini-fill{background:var(--c1);}.e2 .mini-fill{background:var(--c6);}.e3 .mini-fill{background:var(--c3);}
+.e4 .mini-fill{background:var(--c4);}.e5 .mini-fill{background:var(--c5);}.e6 .mini-fill{background:var(--c6);}.e7 .mini-fill{background:var(--c7);}
+
+/* World-class (green/teal family) */
+.w1 .sec-num,.w4 .sec-num,.w7 .sec-num{background:rgba(6,255,165,.09);color:var(--c3);}
+.w2 .sec-num,.w5 .sec-num,.w8 .sec-num{background:rgba(56,189,248,.1);color:#38bdf8;}
+.w3 .sec-num,.w6 .sec-num,.w9 .sec-num{background:rgba(167,139,250,.1);color:var(--c6);}
+.w1 .sec-title,.w4 .sec-title,.w7 .sec-title{color:#b3ffe4;}
+.w2 .sec-title,.w5 .sec-title,.w8 .sec-title{color:#baeeff;}
+.w3 .sec-title,.w6 .sec-title,.w9 .sec-title{color:#e4dbff;}
+.w1 .mini-fill,.w4 .mini-fill,.w7 .mini-fill{background:var(--c3);}
+.w2 .mini-fill,.w5 .mini-fill,.w8 .mini-fill{background:#38bdf8;}
+.w3 .mini-fill,.w6 .mini-fill,.w9 .mini-fill{background:var(--c6);}
+
+/* LEGEND */
+.legend{display:flex;gap:14px;flex-wrap:wrap;align-items:center;padding:10px 14px;background:var(--s1);border:1px solid var(--brd);border-radius:var(--r);margin-bottom:14px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.05em;}
+.leg-sep{color:var(--mut2);}
+.leg{display:flex;align-items:center;gap:4px;}
+.ldot{width:7px;height:7px;border-radius:2px;}
+
+@media(max-width:580px){
+  .crono-grid{grid-template-columns:repeat(2,1fr);}
+  .bprog-row{flex-direction:column;}
+  .stats{gap:12px;}
+  h1{font-size:22px;}
+  .sec-hdr{padding:12px 14px;}
+  .tasks{padding:2px 14px 12px;}
+  .mini-bar{width:50px;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="badge">◈ BirthHub360 · Master Governance v3</div>
+  <h1>Master Checklist de Auditoria</h1>
+  <p class="sub">3 blocos · 26 seções · 202 ações · go-live gate</p>
+</header>
+
+<div class="master">
+  <div class="master-top"><span class="master-lbl">Progresso Global</span><span class="master-pct" id="gPct">0%</span></div>
+  <div class="prog-track"><div class="prog-fill" id="gBar" style="width:0%"></div></div>
+  <div class="stats">
+    <div class="stat"><span class="stat-n green" id="sDone">0</span><span class="stat-l">Concluídas</span></div>
+    <div class="stat"><span class="stat-n" id="sAll">202</span><span class="stat-l">Total</span></div>
+    <div class="stat"><span class="stat-n red" id="sP0">0</span><span class="stat-l">P0 Pendentes</span></div>
+    <div class="stat"><span class="stat-n gold" id="sEv">0</span><span class="stat-l">Com evidência</span></div>
+    <div class="stat"><span class="stat-n" id="sSecs">0/26</span><span class="stat-l">Seções OK</span></div>
+    <button class="reset-btn" id="resetBtn">↺ Reset</button>
+  </div>
+</div>
+
+<div class="bprog-row" id="bprogRow"></div>
+
+<div class="legend">
+  <span class="leg-sep">OWNER →</span>
+  <div class="leg"><div class="ldot" style="background:var(--codex)"></div><span style="color:var(--codex)">CODEX</span></div>
+  <div class="leg"><div class="ldot" style="background:var(--jules)"></div><span style="color:var(--jules)">JULES</span></div>
+  <div class="leg"><div class="ldot" style="background:var(--marcelo)"></div><span style="color:var(--marcelo)">MARCELO</span></div>
+  <span class="leg-sep" style="margin-left:8px">PRIORIDADE →</span>
+  <div class="leg"><div class="ldot" style="background:var(--p0t)"></div><span style="color:var(--p0t)">P0 bloqueador</span></div>
+  <div class="leg"><div class="ldot" style="background:var(--p1t)"></div><span style="color:var(--p1t)">P1 importante</span></div>
+  <div class="leg"><div class="ldot" style="background:var(--mut)"></div><span style="color:var(--mut)">P2 higiene</span></div>
+</div>
+
+<div class="filter-bar">
+  <button class="fbtn active" data-f="all">Todos</button>
+  <button class="fbtn f-p0"   data-f="p0">P0 Bloqueadores</button>
+  <button class="fbtn f-pend" data-f="pending">Pendentes</button>
+  <button class="fbtn f-done" data-f="done">Concluídos</button>
+  <button class="reset-btn" id="resetBtn2">↺ Reset</button>
+</div>
+
+<div id="root"></div>
+</div>
+<script>
+const BLOCKS=[
+  {id:'b1',title:'BLOCO I — PLANO DE EXECUÇÃO',sub:'10 PRs · 10 dias · 1 PR/dia · sequencial',color:'var(--b1)',cls:'b1-blk'},
+  {id:'b2',title:'BLOCO II — AUDITORIA TÉCNICA',sub:'7 etapas · go-live gate · evidência obrigatória',color:'var(--b2)',cls:'b2-blk'},
+  {id:'b3',title:'BLOCO III — PADRÕES WORLD-CLASS SAAS',sub:'9 domínios · escala global · melhores práticas',color:'var(--b3)',cls:'b3-blk'},
+];
+
+const SECTIONS=[
+  // ══════════════════════════════════════════════
+  // BLOCO I — EXECUÇÃO
+  // ══════════════════════════════════════════════
+  {type:'info',block:'b1',id:'cronograma'},
+  {type:'stage',block:'b1',id:'pr01',n:'PR-01',day:1,cls:'pr1',
+   title:'Travamento de Produção',
+   outcome:'Pipeline de deploy com bloqueio real — nenhum push entra em prod sem gates.',
+   tasks:[
+    {t:'Inventariar todas as envs críticas de staging e production',o:'MARCELO',p:'P0'},
+    {t:'Criar matriz de ownership por segredo crítico',o:'MARCELO',p:'P0'},
+    {t:'Preparar .env.staging e .env.production selados',o:'CODEX',p:'P0'},
+    {t:'Criar job production-preflight no workflow de CD',o:'CODEX',p:'P0'},
+    {t:'Tornar deploy-production dependente do preflight',o:'CODEX',p:'P0'},
+    {t:'Integrar gate release:smoke no pipeline',o:'CODEX',p:'P0'},
+    {t:'Integrar gate test:e2e:release no pipeline',o:'CODEX',p:'P0'},
+    {t:'Executar e validar preflight em staging com resultado verde',o:'CODEX',p:'P0'},
+    {t:'Executar e validar preflight em production com resultado verde',o:'CODEX',p:'P0'},
+    {t:'Registrar evidência de rollback rehearsal bem-sucedido',o:'JULES',p:'P0'},
+  ]},
+  {type:'stage',block:'b1',id:'pr02',n:'PR-02',day:2,cls:'pr2',
+   title:'Governança do Core',
+   outcome:'1 única verdade arquitetural documentada, reconhecida por código e operação.',
+   tasks:[
+    {t:'Definir oficialmente core: apps/web, apps/api, apps/worker, packages/database, packages/agent-packs',o:'JULES',p:'P1'},
+    {t:'Atualizar README.md removendo referências a legado como default',o:'CODEX',p:'P1'},
+    {t:'Atualizar docs/service-catalog.md com core canônico',o:'JULES',p:'P1'},
+    {t:'Atualizar docs/service-criticality.md',o:'JULES',p:'P1'},
+    {t:'Rebaixar api-gateway, agent-orchestrator, dashboard → legacy/quarentena',o:'JULES',p:'P1'},
+    {t:'Publicar índice único: core vs legacy vs satellites',o:'JULES',p:'P1'},
+    {t:'Atualizar CODEOWNERS com novas fronteiras de ownership',o:'CODEX',p:'P1'},
+  ]},
+  {type:'stage',block:'b1',id:'pr03',n:'PR-03',day:3,cls:'pr3',
+   title:'Health + Readiness Real',
+   outcome:'Nenhum serviço core com health fake — monitoramento funcional de verdade.',
+   tasks:[
+    {t:'Definir contrato de health/readiness para apps/web',o:'JULES',p:'P1'},
+    {t:'Implementar health/readiness real em apps/web',o:'CODEX',p:'P1'},
+    {t:'Definir contrato de readiness para apps/worker',o:'JULES',p:'P1'},
+    {t:'Implementar readiness real em apps/worker',o:'CODEX',p:'P1'},
+    {t:'Criar testes de falha de dependência obrigatória em web e worker',o:'CODEX',p:'P1'},
+    {t:'Reescrever infra/monitoring/alert.rules.yml orientado ao core real',o:'CODEX',p:'P0'},
+    {t:'Criar alertas de backlog, DLQ e fail-rate do worker',o:'CODEX',p:'P1'},
+    {t:'Criar alertas de latência e disponibilidade da web',o:'CODEX',p:'P1'},
+    {t:'Simular falha de dependência e registrar resposta dos endpoints',o:'JULES',p:'P1'},
+  ]},
+  {type:'stage',block:'b1',id:'pr04',n:'PR-04',day:4,cls:'pr4',
+   title:'Consolidação de Dados',
+   outcome:'1 fonte de dados — packages/database é a única verdade.',
+   tasks:[
+    {t:'Inventariar todos os consumidores de packages/db',o:'JULES',p:'P0'},
+    {t:'Classificar consumidores por criticidade de migração',o:'JULES',p:'P1'},
+    {t:'Publicar mapa de migração packages/db → packages/database',o:'JULES',p:'P1'},
+    {t:'Migrar consumidores de baixo risco primeiro',o:'CODEX',p:'P1'},
+    {t:'Validar migrations, seed, backup e restore no pacote canônico',o:'CODEX',p:'P0'},
+    {t:'Validar ausência de drift de schema entre os pacotes',o:'JULES',p:'P0'},
+    {t:'Iniciar sunset físico de packages/db após validação completa',o:'CODEX',p:'P1'},
+  ]},
+  {type:'stage',block:'b1',id:'pr05',n:'PR-05',day:5,cls:'pr5',
+   title:'Cutover do Legado',
+   outcome:'Runtime único — nenhum fluxo crítico passa por legado.',
+   tasks:[
+    {t:'Mapear todos os fluxos ativos em api-gateway',o:'JULES',p:'P1'},
+    {t:'Mapear todos os fluxos ativos em agent-orchestrator',o:'JULES',p:'P1'},
+    {t:'Migrar contratos remanescentes api-gateway → apps/api',o:'CODEX',p:'P1'},
+    {t:'Migrar execuções assíncronas agent-orchestrator → apps/worker',o:'CODEX',p:'P1'},
+    {t:'Validar equivalência funcional com smoke tests e testes direcionados',o:'CODEX',p:'P1'},
+    {t:'Rebaixar dashboard para legado controlado',o:'JULES',p:'P1'},
+    {t:'Mover api-gateway, agent-orchestrator, dashboard → apps/legacy/*',o:'CODEX',p:'P1'},
+  ]},
+  {type:'stage',block:'b1',id:'pr06',n:'PR-06',day:6,cls:'pr6',
+   title:'Cirurgia dos Agentes — Corte',
+   outcome:'−70% do volume de agentes — apenas os defensáveis sobrevivem.',
+   tasks:[
+    {t:'Congelar criação de qualquer agente fora de packages/agent-packs',o:'MARCELO',p:'P0'},
+    {t:'Arquivar .github/agents fora da árvore operacional',o:'CODEX',p:'P1'},
+    {t:'Remover duplicações: pre_sales/pre_vendas, partners/parcerias, pos-venda/pos_venda',o:'CODEX',p:'P1'},
+    {t:'Remover agentes mortos sem consumidor identificado',o:'CODEX',p:'P1'},
+    {t:'Validar que packages/agents não tem consumidor ativo',o:'JULES',p:'P1'},
+    {t:'Arquivar packages/agents após validação de ausência de uso',o:'CODEX',p:'P1'},
+  ]},
+  {type:'stage',block:'b1',id:'pr07',n:'PR-07',day:7,cls:'pr7',
+   title:'Cirurgia dos Agentes — Consolidação',
+   outcome:'~27 agentes canônicos com contratos padronizados.',
+   tasks:[
+    {t:'Consolidar SDR/BDR/LDR → agente único com configuração de persona',o:'CODEX',p:'P1'},
+    {t:'Consolidar AE/Executivo de Contas → agente único',o:'CODEX',p:'P1'},
+    {t:'Consolidar KAM/Account Manager → agente único',o:'CODEX',p:'P1'},
+    {t:'Transformar todas as personas em arquivos de configuração YAML/JSON',o:'JULES',p:'P1'},
+    {t:'Padronizar contrato mínimo: input, output, guardrails, fallback, observability, approval gates',o:'JULES',p:'P1'},
+    {t:'Migrar agentes defensáveis restantes para packages/agent-packs',o:'CODEX',p:'P1'},
+    {t:'Confirmar e documentar: meta de ~27 agentes canônicos atingida',o:'JULES',p:'P1'},
+  ]},
+  {type:'stage',block:'b1',id:'pr08',n:'PR-08',day:8,cls:'pr8',
+   title:'Limpeza do Repositório',
+   outcome:'Repo limpo — sem peso morto, sem binários, sem artefatos gerados.',
+   tasks:[
+    {t:'Remover .coverage, .lint_output.txt da árvore versionada',o:'CODEX',p:'P2'},
+    {t:'Remover logs zipados e ZIPs de auditoria commitados',o:'CODEX',p:'P2'},
+    {t:'Remover binários rg.exe e rg.cmd',o:'CODEX',p:'P2'},
+    {t:'Remover bundles HTML regeneráveis com fonte JSON ou geração on-demand',o:'CODEX',p:'P2'},
+    {t:'Externalizar artefatos de CI para storage de auditoria externo',o:'CODEX',p:'P2'},
+    {t:'Mover programas internos e material não-produto para eixo documental',o:'MARCELO',p:'P2'},
+    {t:'Normalizar naming paralelo em agents/ e docs/',o:'CODEX',p:'P2'},
+    {t:'Atualizar .gitignore com padrões corretos para todos os artefatos',o:'CODEX',p:'P2'},
+  ]},
+  {type:'stage',block:'b1',id:'pr09',n:'PR-09',day:9,cls:'pr9',
+   title:'Reorganização Final do Monorepo',
+   outcome:'Estrutura clara — core, legacy e satellites em eixos separados.',
+   tasks:[
+    {t:'Criar estrutura definitiva: apps/core, apps/legacy, apps/satellites',o:'CODEX',p:'P2'},
+    {t:'Mover serviços core para apps/core',o:'CODEX',p:'P2'},
+    {t:'Mover serviços legados para apps/legacy',o:'CODEX',p:'P2'},
+    {t:'Ajustar todos os imports afetados pela reorganização',o:'CODEX',p:'P2'},
+    {t:'Atualizar turbo.json e workspace configs do monorepo',o:'CODEX',p:'P2'},
+    {t:'Validar build completo após reorganização sem erros',o:'CODEX',p:'P2'},
+    {t:'Atualizar documentação de estrutura e onboarding',o:'JULES',p:'P2'},
+  ]},
+  {type:'stage',block:'b1',id:'pr10',n:'PR-10',day:10,cls:'pr10',
+   title:'Go-Live Gate — GO / NO-GO',
+   outcome:'Decisão documentada e assinada — produção liberada com segurança total.',
+   tasks:[
+    {t:'Executar preflight completo em staging — resultado verde',o:'CODEX',p:'P0'},
+    {t:'Executar smoke tests em staging — 100% passing',o:'CODEX',p:'P0'},
+    {t:'Executar suite E2E completa — 100% passing',o:'CODEX',p:'P0'},
+    {t:'Executar e documentar rehearsal de rollback bem-sucedido',o:'CODEX',p:'P0'},
+    {t:'Validar 5 condições mínimas de saída — todas verdes',o:'JULES',p:'P0'},
+    {t:'Validar checklist de auditoria — seções críticas 100%',o:'JULES',p:'P0'},
+    {t:'Decisão GO / NO-GO documentada, assinada e registrada',o:'MARCELO',p:'P0'},
+  ]},
+
+  // ══════════════════════════════════════════════
+  // BLOCO II — AUDITORIA TÉCNICA
+  // ══════════════════════════════════════════════
+  {type:'stage',block:'b2',id:'e1',n:'E-01',cls:'e1',
+   title:'Blindar Produção Primeiro',
+   outcome:'Produção deixa de ser "deploy por confiança" e vira "deploy por evidência".',
+   tasks:[
+    {t:'Inventariar todas as secrets e variables exigidas por staging e production',o:'MARCELO',p:'P0'},
+    {t:'Criar matriz de ownership por segredo crítico',o:'MARCELO',p:'P0'},
+    {t:'Preparar equivalentes selados de .env.staging e .env.production',o:'CODEX',p:'P0'},
+    {t:'Executar release:preflight:staging com resultado positivo',o:'CODEX',p:'P0'},
+    {t:'Executar release:preflight:production com resultado positivo',o:'CODEX',p:'P0'},
+    {t:'Criar production-preflight no workflow de CD',o:'CODEX',p:'P0'},
+    {t:'Tornar deploy-production dependente desse preflight',o:'CODEX',p:'P0'},
+    {t:'Adicionar gate obrigatório de release:smoke',o:'CODEX',p:'P0'},
+    {t:'Adicionar gate obrigatório de test:e2e:release',o:'CODEX',p:'P0'},
+    {t:'Exigir evidência de rollback rehearsal antes do hook final',o:'JULES',p:'P0'},
+  ]},
+  {type:'stage',block:'b2',id:'e2',n:'E-02',cls:'e2',
+   title:'Reconciliar Core vs Legado',
+   outcome:'Uma única verdade operacional.',
+   tasks:[
+    {t:'Atualizar docs/service-catalog.md para refletir o core canônico',o:'JULES',p:'P1'},
+    {t:'Rebaixar superfícies legadas para "legacy/quarentena"',o:'JULES',p:'P1'},
+    {t:'Atualizar docs/service-criticality.md',o:'JULES',p:'P1'},
+    {t:'Atualizar docs/observability-alerts.md com foco no core',o:'JULES',p:'P1'},
+    {t:'Revisar README.md e remover instruções que sugerem legado como default',o:'CODEX',p:'P1'},
+    {t:'Publicar índice único: core vs legacy vs satellites',o:'JULES',p:'P1'},
+    {t:'Validar CODEOWNERS contra as novas fronteiras de ownership',o:'JULES',p:'P1'},
+  ]},
+  {type:'stage',block:'b2',id:'e3',n:'E-03',cls:'e3',
+   title:'Corrigir Health, Readiness e Observabilidade',
+   outcome:'O core passa a ser monitorável de verdade.',
+   tasks:[
+    {t:'Definir dependências obrigatórias do health da web',o:'JULES',p:'P1'},
+    {t:'Implementar health/readiness real em apps/web',o:'CODEX',p:'P1'},
+    {t:'Definir contrato mínimo de readiness do worker',o:'JULES',p:'P1'},
+    {t:'Implementar readiness real em apps/worker',o:'CODEX',p:'P1'},
+    {t:'Criar testes para falha de dependência obrigatória em web e worker',o:'CODEX',p:'P1'},
+    {t:'Reescrever infra/monitoring/alert.rules.yml priorizando api, web, worker, database e queue',o:'CODEX',p:'P0'},
+    {t:'Criar alertas de backlog, DLQ e fail-rate do worker',o:'CODEX',p:'P1'},
+    {t:'Criar alertas de disponibilidade e latência da web',o:'CODEX',p:'P1'},
+    {t:'Simular indisponibilidade de dependência e registrar resposta real dos endpoints',o:'JULES',p:'P1'},
+  ]},
+  {type:'stage',block:'b2',id:'e4',n:'E-04',cls:'e4',
+   title:'Fechar a Superfície de Dados',
+   outcome:'Uma única fonte de verdade de dados.',
+   tasks:[
+    {t:'Inventariar todos os consumidores atuais de packages/db',o:'JULES',p:'P0'},
+    {t:'Classificar esses consumidores por criticidade',o:'JULES',p:'P1'},
+    {t:'Publicar mapa de migração para packages/database',o:'JULES',p:'P1'},
+    {t:'Migrar primeiro consumidores de baixo risco',o:'CODEX',p:'P1'},
+    {t:'Validar migrations, seed, backup e restore no pacote canônico',o:'CODEX',p:'P0'},
+    {t:'Iniciar sunset físico de packages/db somente após validação completa',o:'CODEX',p:'P1'},
+  ]},
+  {type:'stage',block:'b2',id:'e5',n:'E-05',cls:'e5',
+   title:'Tirar o Legado do Caminho Crítico',
+   outcome:'Runtime único, sem trilha paralela escondida.',
+   tasks:[
+    {t:'Mapear todos os fluxos ainda executados via api-gateway',o:'JULES',p:'P1'},
+    {t:'Mapear todos os fluxos ainda executados via agent-orchestrator',o:'JULES',p:'P1'},
+    {t:'Migrar contratos remanescentes para apps/api',o:'CODEX',p:'P1'},
+    {t:'Migrar execuções assíncronas remanescentes para apps/worker',o:'CODEX',p:'P1'},
+    {t:'Validar equivalência funcional com smoke e testes direcionados',o:'CODEX',p:'P1'},
+    {t:'Rebaixar dashboard para legado controlado',o:'JULES',p:'P1'},
+    {t:'Mover api-gateway, agent-orchestrator e dashboard → apps/legacy/* ou remover',o:'CODEX',p:'P1'},
+  ]},
+  {type:'stage',block:'b2',id:'e6',n:'E-06',cls:'e6',
+   title:'Cirurgia do Sistema de Agentes',
+   outcome:'Sistema de agentes sai de catálogo inflado para arquitetura operacional.',
+   tasks:[
+    {t:'Congelar crescimento fora de packages/agent-packs',o:'MARCELO',p:'P0'},
+    {t:'Arquivar .github/agents fora da árvore operacional',o:'CODEX',p:'P1'},
+    {t:'Remover duplicações: pre_sales/pre_vendas, partners/parcerias, pos-venda/pos_venda',o:'CODEX',p:'P1'},
+    {t:'Consolidar SDR/BDR/LDR; AE/executivo; KAM/account manager',o:'JULES',p:'P1'},
+    {t:'Tratar persona como configuração, não como agente novo',o:'JULES',p:'P1'},
+    {t:'Padronizar contrato mínimo: input, output, guardrails, fallback, observability, approval gates',o:'JULES',p:'P1'},
+    {t:'Migrar o que for defensável do legado para a linha canônica',o:'CODEX',p:'P2'},
+    {t:'Remover agentes sem equivalência canônica',o:'CODEX',p:'P2'},
+  ]},
+  {type:'stage',block:'b2',id:'e7',n:'E-07',cls:'e7',
+   title:'Higiene Final e Redução de Ruído',
+   outcome:'Repositório mais limpo, menor ruído e onboarding mais claro.',
+   tasks:[
+    {t:'Externalizar logs e artefatos regeneráveis para storage de CI/auditoria',o:'CODEX',p:'P2'},
+    {t:'Remover arquivos temporários versionados na raiz',o:'CODEX',p:'P2'},
+    {t:'Remover binários utilitários commitados (rg.exe, rg.cmd)',o:'CODEX',p:'P2'},
+    {t:'Remover bundles HTML regeneráveis quando houver fonte JSON ou geração on-demand',o:'CODEX',p:'P2'},
+    {t:'Mover programas internos e material não-produto para eixo documental controlado',o:'MARCELO',p:'P2'},
+    {t:'Normalizar naming paralelo em agents/ e docs/',o:'CODEX',p:'P2'},
+  ]},
+
+  // ══════════════════════════════════════════════
+  // BLOCO III — WORLD-CLASS SAAS
+  // ══════════════════════════════════════════════
+  {type:'stage',block:'b3',id:'w1',n:'W-01',cls:'w1',
+   title:'Segurança & Compliance',
+   outcome:'Superfície de ataque documentada, scanners ativos, pen test agendado.',
+   tasks:[
+    {t:'SAST configurado no CI: CodeQL ou Semgrep com regras customizadas',o:'CODEX',p:'P1'},
+    {t:'DAST automatizado rodando em staging a cada deploy',o:'CODEX',p:'P1'},
+    {t:'Audit de dependências com Snyk ou Dependabot — alertas P0 bloqueiam PR',o:'CODEX',p:'P1'},
+    {t:'Secret scanning ativo: GitGuardian ou GitHub Advanced Security',o:'CODEX',p:'P0'},
+    {t:'Política de rotação de secrets documentada e implementada (< 90 dias)',o:'MARCELO',p:'P1'},
+    {t:'WAF configurado e testado em produção',o:'CODEX',p:'P1'},
+    {t:'Rate limiting por IP e por tenant implementado',o:'CODEX',p:'P1'},
+    {t:'Penetration test agendado e executado (mínimo anual)',o:'MARCELO',p:'P1'},
+    {t:'Responsible disclosure / bug bounty policy publicada',o:'MARCELO',p:'P2'},
+    {t:'Headers de segurança HTTP validados: CSP, HSTS, X-Frame-Options, X-Content-Type',o:'CODEX',p:'P1'},
+  ]},
+  {type:'stage',block:'b3',id:'w2',n:'W-02',cls:'w2',
+   title:'Multi-tenancy & Isolamento',
+   outcome:'Zero vazamento cross-tenant — isolamento verificável por teste automatizado.',
+   tasks:[
+    {t:'RLS (Row Level Security) validado em todos os modelos Prisma',o:'JULES',p:'P0'},
+    {t:'Tenant ID obrigatório em todas as queries — lint rule ativo no CI',o:'CODEX',p:'P0'},
+    {t:'Teste automatizado de isolamento cross-tenant rodando em CI',o:'CODEX',p:'P0'},
+    {t:'Rate limiting por tenant configurado (burst + sustained)',o:'CODEX',p:'P1'},
+    {t:'Billing usage tracking granular por tenant e por feature',o:'CODEX',p:'P1'},
+    {t:'Onboarding de novo tenant automatizado: < 5 minutos end-to-end',o:'CODEX',p:'P1'},
+    {t:'Offboarding com data export completo e soft-delete verificável',o:'CODEX',p:'P1'},
+    {t:'Tenant suspension sem perda de dados com reativação funcional',o:'CODEX',p:'P1'},
+  ]},
+  {type:'stage',block:'b3',id:'w3',n:'W-03',cls:'w3',
+   title:'Billing & Revenue',
+   outcome:'Revenue engine sem vazamento — cobrança confiável do trial ao churn.',
+   tasks:[
+    {t:'Stripe integration testada end-to-end em staging (checkout, upgrade, downgrade)',o:'CODEX',p:'P1'},
+    {t:'Webhook de billing com idempotência garantida e replay seguro',o:'CODEX',p:'P1'},
+    {t:'Dunning management configurado para cartões falhos (3 tentativas + email)',o:'CODEX',p:'P1'},
+    {t:'Metering de uso por feature e por tenant com granularidade de hora',o:'CODEX',p:'P1'},
+    {t:'Free trial com expiração e conversão automatizada ao plano pago',o:'CODEX',p:'P1'},
+    {t:'Invoice generation automática por período com PDF enviado por email',o:'CODEX',p:'P1'},
+    {t:'Proration correta em upgrade e downgrade de plano',o:'CODEX',p:'P2'},
+    {t:'Revenue recognition documentada para conformidade contábil',o:'MARCELO',p:'P2'},
+  ]},
+  {type:'stage',block:'b3',id:'w4',n:'W-04',cls:'w4',
+   title:'SRE & Confiabilidade',
+   outcome:'SLOs definidos, error budget monitorado, DR testado — pronto para falha.',
+   tasks:[
+    {t:'SLOs definidos: availability ≥ 99.9%, latency P99 < 500ms, error rate < 0.1%',o:'JULES',p:'P0'},
+    {t:'Error budget tracking com alertas automáticos de consumo acelerado',o:'CODEX',p:'P1'},
+    {t:'Runbook documentado para cada alerta P0 com SLA de resposta',o:'JULES',p:'P1'},
+    {t:'Chaos engineering básico: kill pod, network partition, disk full',o:'CODEX',p:'P2'},
+    {t:'DR drill documentado, agendado e executado com registro de resultado',o:'JULES',p:'P1'},
+    {t:'RTO < 4h e RPO < 1h definidos, testados e documentados',o:'JULES',p:'P0'},
+    {t:'Post-mortem template e processo de RCA estabelecidos formalmente',o:'JULES',p:'P1'},
+    {t:'On-call rotation definida com escalonamento e contatos claros',o:'MARCELO',p:'P1'},
+  ]},
+  {type:'stage',block:'b3',id:'w5',n:'W-05',cls:'w5',
+   title:'Performance & Escala',
+   outcome:'Baseline de performance estabelecida, gargalos conhecidos, auto-scale validado.',
+   tasks:[
+    {t:'Load testing com K6 ou Locust — baseline de throughput e latência estabelecida',o:'CODEX',p:'P1'},
+    {t:'CDN configurado para todos os assets estáticos (imagens, JS, CSS)',o:'CODEX',p:'P1'},
+    {t:'Database connection pooling configurado (PgBouncer ou Prisma pool)',o:'CODEX',p:'P1'},
+    {t:'Slow query log ativo com alertas para queries > 100ms',o:'CODEX',p:'P1'},
+    {t:'Cache strategy definida com TTL explícitos e invalidação controlada',o:'JULES',p:'P1'},
+    {t:'API response time P99 < 500ms documentado e alertado em produção',o:'CODEX',p:'P1'},
+    {t:'Auto-scaling configurado para worker e api com métricas de trigger',o:'CODEX',p:'P2'},
+    {t:'Horizontal scaling testado sem degradação de isolamento de tenant',o:'CODEX',p:'P2'},
+  ]},
+  {type:'stage',block:'b3',id:'w6',n:'W-06',cls:'w6',
+   title:'Developer Experience',
+   outcome:'Dev novo rodando em < 5 min — CI rápido, features flags, deploys seguros.',
+   tasks:[
+    {t:'Local dev setup documentado: zero to running em < 5 minutos (validado por dev novo)',o:'JULES',p:'P1'},
+    {t:'Seed de dados realista para dev e staging com fixtures coerentes',o:'CODEX',p:'P1'},
+    {t:'Feature flags implementados: toggles sem redeploy para features em progresso',o:'CODEX',p:'P1'},
+    {t:'Blue-green ou canary deployment configurado no pipeline de CD',o:'CODEX',p:'P1'},
+    {t:'Preview environments por PR ativo para review de UI/UX',o:'CODEX',p:'P2'},
+    {t:'Conventional commits enforçado + changelog automatizado por release',o:'CODEX',p:'P2'},
+    {t:'Linting, formatting e type-check no pre-commit hook (Husky + lint-staged)',o:'CODEX',p:'P1'},
+    {t:'Turborepo cache otimizado para CI completar em < 5 minutos no steady state',o:'CODEX',p:'P2'},
+  ]},
+  {type:'stage',block:'b3',id:'w7',n:'W-07',cls:'w7',
+   title:'Customer Success & Onboarding',
+   outcome:'Time-to-value ≤ 10 min — usuário novo alcança primeiro resultado sozinho.',
+   tasks:[
+    {t:'Onboarding flow com ≤ 3 passos até primeiro valor concreto do produto',o:'MARCELO',p:'P1'},
+    {t:'Empty states e tooltips in-app implementados em todas as telas principais',o:'CODEX',p:'P1'},
+    {t:'Welcome email sequence automatizada pós-signup (D0, D3, D7)',o:'MARCELO',p:'P1'},
+    {t:'NPS survey automatizado aos 30 dias pós-ativação com tracking de score',o:'MARCELO',p:'P2'},
+    {t:'In-app support widget integrado (Crisp, Intercom, Chatwoot ou equivalente)',o:'MARCELO',p:'P1'},
+    {t:'Product tours para features principais com skip e replay disponíveis',o:'CODEX',p:'P2'},
+    {t:'Knowledge base pública com artigos de ajuda por feature principal',o:'MARCELO',p:'P2'},
+    {t:'Activation rate e time-to-value rastreados como métricas primárias de produto',o:'CODEX',p:'P1'},
+  ]},
+  {type:'stage',block:'b3',id:'w8',n:'W-08',cls:'w8',
+   title:'Documentação & Decisões',
+   outcome:'Todo dev novo entende o sistema em 1 dia — ADRs rastreiam o porquê.',
+   tasks:[
+    {t:'API docs gerados automaticamente via OpenAPI/Swagger com exemplos',o:'CODEX',p:'P1'},
+    {t:'ADRs (Architecture Decision Records) para as 10 decisões mais críticas',o:'JULES',p:'P1'},
+    {t:'Runbooks operacionais por serviço core com contatos e SLAs',o:'JULES',p:'P1'},
+    {t:'README técnico com onboarding de dev novo (pré-requisitos, setup, comandos)',o:'JULES',p:'P1'},
+    {t:'Changelog público mantido e atualizado a cada release',o:'CODEX',p:'P2'},
+    {t:'Status page pública configurada (Statuspage.io, BetterUptime ou similar)',o:'MARCELO',p:'P1'},
+    {t:'Diagrama de arquitetura atualizado, versionado e linkado no README',o:'JULES',p:'P2'},
+    {t:'Glossário de domínio (ubiquitous language do BirthHub360) documentado',o:'JULES',p:'P2'},
+  ]},
+  {type:'stage',block:'b3',id:'w9',n:'W-09',cls:'w9',
+   title:'Analytics & Business Intelligence',
+   outcome:'Decisões guiadas por dados — MRR, churn, CAC e LTV visíveis em tempo real.',
+   tasks:[
+    {t:'Product analytics implementado: Mixpanel, Amplitude ou PostHog em produção',o:'CODEX',p:'P1'},
+    {t:'Dashboard de métricas de negócio: MRR, Churn, CAC, LTV atualizado diariamente',o:'MARCELO',p:'P1'},
+    {t:'Audit log imutável para todas as ações críticas de tenant (LGPD Art. 37)',o:'CODEX',p:'P0'},
+    {t:'Data retention policy definida e implementada em conformidade com LGPD',o:'JULES',p:'P1'},
+    {t:'Endpoint de data export funcional por tenant (LGPD Art. 18 — portabilidade)',o:'CODEX',p:'P0'},
+    {t:'Endpoint de data deletion funcional por tenant (LGPD Art. 18 — exclusão)',o:'CODEX',p:'P0'},
+    {t:'Funil de conversão rastreado end-to-end: visitor → trial → paid → churned',o:'CODEX',p:'P1'},
+    {t:'Alertas de anomalia em métricas de negócio (spike de churn, queda de activation)',o:'CODEX',p:'P2'},
+  ]},
+];
+
+const KEY='bh360_v3';
+let ST={};
+let AF='all';
+
+function load(){
+  try{
+    ST=JSON.parse(localStorage.getItem(KEY))||{};
+  }catch{
+    ST={};
+  }
+
+  // -- START AUTO INJECTED AUDIT STATUS --
+  const autoData = {"pr01_t0":true,"pr01_e0":"Jules Audit: .env.example .env.vps.example","pr01_t1":false,"pr01_e1":"Jules Audit: Pending verification","pr01_t2":true,"pr01_e2":"Jules Audit: -rw-rw-r--  1 jules jules   8000 Mar 25 04:22 .env.example -rw-rw-r--  1 jules jules   2624 Mar 25 0","pr01_t3":true,"pr01_e3":"Jules Audit: .github/workflows/cd.yml:  production-preflight: .github/workflows/cd.yml:    name: production-prefl","pr01_t4":false,"pr01_e4":"Jules Audit: Pending verification","pr01_t5":true,"pr01_e5":"Jules Audit: package.json:    \"release:smoke\": \"tsx scripts/release/global-smoke.ts\",","pr01_t6":false,"pr01_e6":"Jules Audit: Pending verification","pr01_t7":false,"pr01_e7":"Jules Audit: Pending verification","pr01_t8":false,"pr01_e8":"Jules Audit: Pending verification","pr01_t9":false,"pr01_e9":"Jules Audit: Pending verification","pr02_t0":true,"pr02_e0":"Jules Audit: Verified via packages/database schema","pr02_t1":false,"pr02_e1":"Jules Audit: Pending verification","pr02_t2":false,"pr02_e2":"Jules Audit: Pending verification","pr02_t3":false,"pr02_e3":"Jules Audit: Pending verification","pr02_t4":false,"pr02_e4":"Jules Audit: Pending verification","pr02_t5":false,"pr02_e5":"Jules Audit: Pending verification","pr02_t6":false,"pr02_e6":"Jules Audit: Pending verification","pr03_t0":false,"pr03_e0":"Jules Audit: Pending verification","pr03_t1":false,"pr03_e1":"Jules Audit: Pending verification","pr03_t2":false,"pr03_e2":"Jules Audit: Pending verification","pr03_t3":false,"pr03_e3":"Jules Audit: Pending verification","pr03_t4":false,"pr03_e4":"Jules Audit: Pending verification","pr03_t5":false,"pr03_e5":"Jules Audit: Pending verification","pr03_t6":false,"pr03_e6":"Jules Audit: Pending verification","pr03_t7":false,"pr03_e7":"Jules Audit: Pending verification","pr03_t8":false,"pr03_e8":"Jules Audit: Pending verification","pr04_t0":false,"pr04_e0":"Jules Audit: Pending verification","pr04_t1":false,"pr04_e1":"Jules Audit: Pending verification","pr04_t2":true,"pr04_e2":"Jules Audit: Verified via packages/database schema","pr04_t3":false,"pr04_e3":"Jules Audit: Pending verification","pr04_t4":false,"pr04_e4":"Jules Audit: Pending verification","pr04_t5":false,"pr04_e5":"Jules Audit: Pending verification","pr04_t6":false,"pr04_e6":"Jules Audit: Pending verification","pr05_t0":false,"pr05_e0":"Jules Audit: Pending verification","pr05_t1":false,"pr05_e1":"Jules Audit: Pending verification","pr05_t2":false,"pr05_e2":"Jules Audit: Pending verification","pr05_t3":false,"pr05_e3":"Jules Audit: Pending verification","pr05_t4":false,"pr05_e4":"Jules Audit: Pending verification","pr05_t5":false,"pr05_e5":"Jules Audit: Pending verification","pr05_t6":false,"pr05_e6":"Jules Audit: Pending verification","pr06_t0":false,"pr06_e0":"Jules Audit: Pending verification","pr06_t1":false,"pr06_e1":"Jules Audit: Pending verification","pr06_t2":false,"pr06_e2":"Jules Audit: Pending verification","pr06_t3":false,"pr06_e3":"Jules Audit: Pending verification","pr06_t4":false,"pr06_e4":"Jules Audit: Pending verification","pr06_t5":false,"pr06_e5":"Jules Audit: Pending verification","pr07_t0":false,"pr07_e0":"Jules Audit: Pending verification","pr07_t1":false,"pr07_e1":"Jules Audit: Pending verification","pr07_t2":false,"pr07_e2":"Jules Audit: Pending verification","pr07_t3":false,"pr07_e3":"Jules Audit: Pending verification","pr07_t4":false,"pr07_e4":"Jules Audit: Pending verification","pr07_t5":false,"pr07_e5":"Jules Audit: Pending verification","pr07_t6":false,"pr07_e6":"Jules Audit: Pending verification","pr08_t0":true,"pr08_e0":"Jules Audit: Verified via eslint.config.mjs & scripts","pr08_t1":false,"pr08_e1":"Jules Audit: Pending verification","pr08_t2":false,"pr08_e2":"Jules Audit: Pending verification","pr08_t3":false,"pr08_e3":"Jules Audit: Pending verification","pr08_t4":false,"pr08_e4":"Jules Audit: Pending verification","pr08_t5":false,"pr08_e5":"Jules Audit: Pending verification","pr08_t6":false,"pr08_e6":"Jules Audit: Pending verification","pr08_t7":false,"pr08_e7":"Jules Audit: Pending verification","pr09_t0":false,"pr09_e0":"Jules Audit: Pending verification","pr09_t1":false,"pr09_e1":"Jules Audit: Pending verification","pr09_t2":false,"pr09_e2":"Jules Audit: Pending verification","pr09_t3":false,"pr09_e3":"Jules Audit: Pending verification","pr09_t4":false,"pr09_e4":"Jules Audit: Pending verification","pr09_t5":false,"pr09_e5":"Jules Audit: Pending verification","pr09_t6":false,"pr09_e6":"Jules Audit: Pending verification","pr10_t0":false,"pr10_e0":"Jules Audit: Pending verification","pr10_t1":false,"pr10_e1":"Jules Audit: Pending verification","pr10_t2":false,"pr10_e2":"Jules Audit: Pending verification","pr10_t3":false,"pr10_e3":"Jules Audit: Pending verification","pr10_t4":false,"pr10_e4":"Jules Audit: Pending verification","pr10_t5":false,"pr10_e5":"Jules Audit: Pending verification","pr10_t6":false,"pr10_e6":"Jules Audit: Pending verification","e1_t0":false,"e1_e0":"Jules Audit: Pending verification","e1_t1":false,"e1_e1":"Jules Audit: Pending verification","e1_t2":false,"e1_e2":"Jules Audit: Pending verification","e1_t3":false,"e1_e3":"Jules Audit: Pending verification","e1_t4":false,"e1_e4":"Jules Audit: Pending verification","e1_t5":false,"e1_e5":"Jules Audit: Pending verification","e1_t6":false,"e1_e6":"Jules Audit: Pending verification","e1_t7":true,"e1_e7":"Jules Audit: package.json:    \"release:smoke\": \"tsx scripts/release/global-smoke.ts\",","e1_t8":false,"e1_e8":"Jules Audit: Pending verification","e1_t9":false,"e1_e9":"Jules Audit: Pending verification","e2_t0":false,"e2_e0":"Jules Audit: Pending verification","e2_t1":false,"e2_e1":"Jules Audit: Pending verification","e2_t2":false,"e2_e2":"Jules Audit: Pending verification","e2_t3":false,"e2_e3":"Jules Audit: Pending verification","e2_t4":false,"e2_e4":"Jules Audit: Pending verification","e2_t5":false,"e2_e5":"Jules Audit: Pending verification","e2_t6":false,"e2_e6":"Jules Audit: Pending verification","e3_t0":false,"e3_e0":"Jules Audit: Pending verification","e3_t1":false,"e3_e1":"Jules Audit: Pending verification","e3_t2":false,"e3_e2":"Jules Audit: Pending verification","e3_t3":false,"e3_e3":"Jules Audit: Pending verification","e3_t4":false,"e3_e4":"Jules Audit: Pending verification","e3_t5":true,"e3_e5":"Jules Audit: Verified via packages/database schema","e3_t6":false,"e3_e6":"Jules Audit: Pending verification","e3_t7":false,"e3_e7":"Jules Audit: Pending verification","e3_t8":false,"e3_e8":"Jules Audit: Pending verification","e4_t0":false,"e4_e0":"Jules Audit: Pending verification","e4_t1":false,"e4_e1":"Jules Audit: Pending verification","e4_t2":true,"e4_e2":"Jules Audit: Verified via packages/database schema","e4_t3":false,"e4_e3":"Jules Audit: Pending verification","e4_t4":false,"e4_e4":"Jules Audit: Pending verification","e4_t5":false,"e4_e5":"Jules Audit: Pending verification","e5_t0":false,"e5_e0":"Jules Audit: Pending verification","e5_t1":false,"e5_e1":"Jules Audit: Pending verification","e5_t2":false,"e5_e2":"Jules Audit: Pending verification","e5_t3":false,"e5_e3":"Jules Audit: Pending verification","e5_t4":false,"e5_e4":"Jules Audit: Pending verification","e5_t5":false,"e5_e5":"Jules Audit: Pending verification","e5_t6":false,"e5_e6":"Jules Audit: Pending verification","e6_t0":false,"e6_e0":"Jules Audit: Pending verification","e6_t1":false,"e6_e1":"Jules Audit: Pending verification","e6_t2":false,"e6_e2":"Jules Audit: Pending verification","e6_t3":false,"e6_e3":"Jules Audit: Pending verification","e6_t4":false,"e6_e4":"Jules Audit: Pending verification","e6_t5":false,"e6_e5":"Jules Audit: Pending verification","e6_t6":false,"e6_e6":"Jules Audit: Pending verification","e6_t7":false,"e6_e7":"Jules Audit: Pending verification","e7_t0":false,"e7_e0":"Jules Audit: Pending verification","e7_t1":false,"e7_e1":"Jules Audit: Pending verification","e7_t2":false,"e7_e2":"Jules Audit: Pending verification","e7_t3":false,"e7_e3":"Jules Audit: Pending verification","e7_t4":false,"e7_e4":"Jules Audit: Pending verification","e7_t5":false,"e7_e5":"Jules Audit: Pending verification","w1_t0":true,"w1_e0":"Jules Audit: .github/workflows/security-scan.yml:  semgrep: .github/workflows/security-scan.yml:    name: semgrep","w1_t1":false,"w1_e1":"Jules Audit: Pending verification","w1_t2":true,"w1_e2":"Jules Audit: .github/dependabot.yml","w1_t3":true,"w1_e3":"Jules Audit: .github/workflows/ci.yml:  gitleaks: .github/workflows/ci.yml:    name: gitleaks .github/workflows/c","w1_t4":false,"w1_e4":"Jules Audit: Pending verification","w1_t5":false,"w1_e5":"Jules Audit: Check failed or missing","w1_t6":true,"w1_e6":"Jules Audit: apps/api/src/app/auth-routes.ts:import { createLoginRateLimitMiddleware } from \"../middleware/rate-l","w1_t7":false,"w1_e7":"Jules Audit: Pending verification","w1_t8":false,"w1_e8":"Jules Audit: Pending verification","w1_t9":false,"w1_e9":"Jules Audit: Pending verification","w2_t0":true,"w2_e0":"Jules Audit: packages/database/test/rls.test.ts:void testIfDatabase(\"RLS bloqueia SELECT de tenant B quando a ses","w2_t1":true,"w2_e1":"Jules Audit: packages/database/test/migration.test.ts:        tenantId: organizationA.tenantId packages/database/","w2_t2":false,"w2_e2":"Jules Audit: Pending verification","w2_t3":false,"w2_e3":"Jules Audit: Pending verification","w2_t4":false,"w2_e4":"Jules Audit: Pending verification","w2_t5":false,"w2_e5":"Jules Audit: Pending verification","w2_t6":false,"w2_e6":"Jules Audit: Pending verification","w2_t7":false,"w2_e7":"Jules Audit: Pending verification","w3_t0":true,"w3_e0":"Jules Audit: apps/api/test/__mocks__/stripe.ts:import type Stripe from \"stripe\"; apps/api/test/__mocks__/stripe.t","w3_t1":false,"w3_e1":"Jules Audit: Pending verification","w3_t2":false,"w3_e2":"Jules Audit: Pending verification","w3_t3":false,"w3_e3":"Jules Audit: Pending verification","w3_t4":false,"w3_e4":"Jules Audit: Pending verification","w3_t5":false,"w3_e5":"Jules Audit: Pending verification","w3_t6":false,"w3_e6":"Jules Audit: Pending verification","w3_t7":false,"w3_e7":"Jules Audit: Pending verification","w4_t0":false,"w4_e0":"Jules Audit: Pending verification","w4_t1":false,"w4_e1":"Jules Audit: Pending verification","w4_t2":false,"w4_e2":"Jules Audit: Pending verification","w4_t3":false,"w4_e3":"Jules Audit: Pending verification","w4_t4":false,"w4_e4":"Jules Audit: Pending verification","w4_t5":false,"w4_e5":"Jules Audit: Pending verification","w4_t6":false,"w4_e6":"Jules Audit: Pending verification","w4_t7":false,"w4_e7":"Jules Audit: Pending verification","w5_t0":false,"w5_e0":"Jules Audit: Check failed or missing","w5_t1":false,"w5_e1":"Jules Audit: Pending verification","w5_t2":true,"w5_e2":"Jules Audit: Verified via packages/database schema","w5_t3":false,"w5_e3":"Jules Audit: Pending verification","w5_t4":false,"w5_e4":"Jules Audit: Pending verification","w5_t5":false,"w5_e5":"Jules Audit: Pending verification","w5_t6":false,"w5_e6":"Jules Audit: Pending verification","w5_t7":false,"w5_e7":"Jules Audit: Pending verification","w6_t0":false,"w6_e0":"Jules Audit: Pending verification","w6_t1":false,"w6_e1":"Jules Audit: Pending verification","w6_t2":false,"w6_e2":"Jules Audit: Pending verification","w6_t3":false,"w6_e3":"Jules Audit: Pending verification","w6_t4":false,"w6_e4":"Jules Audit: Pending verification","w6_t5":false,"w6_e5":"Jules Audit: Pending verification","w6_t6":true,"w6_e6":"Jules Audit: Verified via eslint.config.mjs & scripts","w6_t7":true,"w6_e7":"Jules Audit: \"!.next/cache/**\",       \"cache\": false,       \"cache\": false,","w7_t0":false,"w7_e0":"Jules Audit: Pending verification","w7_t1":false,"w7_e1":"Jules Audit: Pending verification","w7_t2":false,"w7_e2":"Jules Audit: Pending verification","w7_t3":false,"w7_e3":"Jules Audit: Pending verification","w7_t4":false,"w7_e4":"Jules Audit: Pending verification","w7_t5":false,"w7_e5":"Jules Audit: Pending verification","w7_t6":false,"w7_e6":"Jules Audit: Pending verification","w7_t7":false,"w7_e7":"Jules Audit: Pending verification","w8_t0":false,"w8_e0":"Jules Audit: Pending verification","w8_t1":false,"w8_e1":"Jules Audit: Pending verification","w8_t2":false,"w8_e2":"Jules Audit: Pending verification","w8_t3":false,"w8_e3":"Jules Audit: Pending verification","w8_t4":false,"w8_e4":"Jules Audit: Pending verification","w8_t5":false,"w8_e5":"Jules Audit: Pending verification","w8_t6":false,"w8_e6":"Jules Audit: Pending verification","w8_t7":false,"w8_e7":"Jules Audit: Pending verification","w9_t0":false,"w9_e0":"Jules Audit: Pending verification","w9_t1":false,"w9_e1":"Jules Audit: Pending verification","w9_t2":false,"w9_e2":"Jules Audit: Pending verification","w9_t3":false,"w9_e3":"Jules Audit: Pending verification","w9_t4":false,"w9_e4":"Jules Audit: Pending verification","w9_t5":false,"w9_e5":"Jules Audit: Pending verification","w9_t6":false,"w9_e6":"Jules Audit: Pending verification","w9_t7":false,"w9_e7":"Jules Audit: Pending verification"};
+
+  // Inject real audit data
+  for (const k in autoData) {
+    ST[k] = autoData[k];
+  }
+  // -- END AUTO INJECTED AUDIT STATUS --
+}
+function save(){localStorage.setItem(KEY,JSON.stringify(ST));}
+function tk(s,i){return s+'_t'+i;}
+function ek(s,i){return s+'_e'+i;}
+function eok(s,i){return s+'_eo'+i;}
+function opk(s){return 'op_'+s;}
+function isChk(s,i){return !!ST[tk(s,i)];}
+function getEv(s,i){return ST[ek(s,i)]||'';}
+function isOp(s){return ST[opk(s)]!==false;}
+
+// Gate logic: within same block, previous section must have P0s done
+function isGated(idx){
+  const cur=SECTIONS.filter(s=>s.type==='stage')[idx];
+  if(!cur) return false;
+  const stages=SECTIONS.filter(s=>s.type==='stage');
+  const si=stages.indexOf(cur);
+  if(si===0) return false;
+  // find prev in same block
+  let prev=null;
+  for(let i=si-1;i>=0;i--){
+    if(stages[i].block===cur.block){prev=stages[i];break;}
+  }
+  if(!prev) return false;
+  // BLOCO III: no gates
+  if(cur.block==='b3') return false;
+  return prev.tasks.some((t,ti)=>t.p==='P0'&&!isChk(prev.id,ti));
+}
+
+function renderAll(){
+  const root=document.getElementById('root');
+  root.innerHTML='';
+  let tDone=0,tAll=0,tP0=0,tEv=0,sOK=0;
+  const bStats={b1:{done:0,all:0},b2:{done:0,all:0},b3:{done:0,all:0}};
+
+  // Block headers map
+  const blkSeen={};
+  const stages=SECTIONS.filter(s=>s.type==='stage');
+
+  SECTIONS.forEach((sec,idx)=>{
+    // Block header
+    if(!blkSeen[sec.block]){
+      blkSeen[sec.block]=true;
+      const blk=BLOCKS.find(b=>b.id===sec.block);
+      const bEl=document.createElement('div');
+      bEl.className=`blk-hdr ${sec.block}`;
+      const glyph=sec.block==='b1'?'⚡':sec.block==='b2'?'🔬':'🌐';
+      bEl.innerHTML=`<span class="blk-glyph">${glyph}</span><div class="blk-info"><div class="blk-title">${blk.title}</div><div class="blk-sub">${blk.sub}</div></div>`;
+      root.appendChild(bEl);
+    }
+
+    // Info card (cronograma + rules)
+    if(sec.type==='info'&&sec.id==='cronograma'){
+      const crono=[
+        {day:1,pr:'PR-01',focus:'Produção'},
+        {day:2,pr:'PR-02',focus:'Governança'},
+        {day:3,pr:'PR-03',focus:'Observabilidade'},
+        {day:4,pr:'PR-04',focus:'Dados'},
+        {day:5,pr:'PR-05',focus:'Legado'},
+        {day:6,pr:'PR-06',focus:'Agentes (corte)'},
+        {day:7,pr:'PR-07',focus:'Agentes (consolidação)'},
+        {day:8,pr:'PR-08',focus:'Limpeza'},
+        {day:9,pr:'PR-09',focus:'Estrutura'},
+        {day:10,pr:'PR-10',focus:'Go-Live'},
+      ];
+      const rules=[
+        'NÃO criar novas features',
+        'NÃO expandir agentes',
+        'NÃO mexer em UI sem necessidade',
+        'NÃO preservar legado por apego',
+        'NÃO avançar com teste falhando',
+      ];
+      const conds=[
+        'Deploy de produção bloqueado por preflight real',
+        'Core canônico reconhecido por código, docs e operação',
+        'Legados fora do caminho crítico',
+        'packages/database como única fonte de dados',
+        'packages/agent-packs como única linha canônica de agentes',
+      ];
+      const iEl=document.createElement('div');
+      iEl.style.display='grid';iEl.style.gap='10px';iEl.style.marginBottom='10px';
+      iEl.innerHTML=`
+        <div class="info-card">
+          <div class="info-card-title">◈ Cronograma — 10 dias</div>
+          <div class="crono-grid">
+            ${crono.map(c=>`<div class="crono-cell"><div class="crono-day">DIA ${c.day}</div><div class="crono-pr">${c.pr}</div><div class="crono-focus">${c.focus}</div></div>`).join('')}
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;flex-wrap:wrap">
+          <div class="info-card">
+            <div class="info-card-title">🚫 Regras durante execução</div>
+            <div class="rules-grid">
+              ${rules.map(r=>`<div class="rule-item"><span class="rule-x">✕</span>${r}</div>`).join('')}
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-title">✅ 5 condições mínimas de saída</div>
+            <div class="cond-grid">
+              ${conds.map((c,i)=>`<div class="cond-item"><span class="cond-n">${i+1}</span>${c}</div>`).join('')}
+            </div>
+          </div>
+        </div>`;
+      root.appendChild(iEl);
+      return;
+    }
+
+    if(sec.type!=='stage') return;
+
+    const si=stages.indexOf(sec);
+    const gated=isGated(si);
+    const open=isOp(sec.id)&&!gated;
+    const done=sec.tasks.filter((_,ti)=>isChk(sec.id,ti)).length;
+    const total=sec.tasks.length;
+    const pct=total?Math.round(done/total*100):0;
+    const complete=done===total;
+    const p0pend=sec.tasks.filter((t,ti)=>t.p==='P0'&&!isChk(sec.id,ti)).length;
+
+    tDone+=done;tAll+=total;
+    if(p0pend) tP0+=p0pend;
+    sec.tasks.forEach((_,ti)=>{if(getEv(sec.id,ti)) tEv++;});
+    if(complete) sOK++;
+    bStats[sec.block].done+=done;bStats[sec.block].all+=total;
+
+    // Filter: does this section have any visible tasks?
+    let hasVis=false;
+    if(AF==='all') hasVis=true;
+    else if(AF==='p0') hasVis=sec.tasks.some(t=>t.p==='P0');
+    else if(AF==='pending') hasVis=sec.tasks.some((_,ti)=>!isChk(sec.id,ti));
+    else if(AF==='done') hasVis=sec.tasks.some((_,ti)=>isChk(sec.id,ti));
+
+    const dayBdg=sec.day?`<span class="day-bdg">DIA ${sec.day}</span>`:'';
+
+    let taskRows='';
+    sec.tasks.forEach((task,ti)=>{
+      const chk=isChk(sec.id,ti);
+      const ev=getEv(sec.id,ti);
+      const evOp=ST[eok(sec.id,ti)];
+      let vis=true;
+      if(AF==='p0') vis=task.p==='P0';
+      else if(AF==='pending') vis=!chk;
+      else if(AF==='done') vis=chk;
+      taskRows+=`
+        <div class="twrap">
+          <div class="task ${chk?'checked':''} ${!vis?'filter-hidden':''}" onclick="toggleTask('${sec.id}',${ti},event)">
+            <span class="tn">${String(ti+1).padStart(2,'0')}</span>
+            <div class="task-cb">${chk?'✓':''}</div>
+            <div class="task-body">
+              <div class="task-top">
+                <span class="task-txt">${task.t}</span>
+                <span class="pbdg ${task.p}">${task.p}</span>
+                <span class="obdg ${task.o}">${task.o}</span>
+                <button class="ev-btn ${ev?'has-ev':''}" onclick="toggleEv('${sec.id}',${ti},event)">${ev?'● ev':'+ ev'}</button>
+              </div>
+              <div class="ev-area ${evOp?'open':''}" id="ea-${sec.id}-${ti}">
+                <textarea class="ev-inp" rows="2" placeholder="Commit hash, PR link, nota de evidência…" onchange="saveEv('${sec.id}',${ti},this.value)" onclick="event.stopPropagation()">${ev}</textarea>
+                <div class="ev-hint">↑ salvo no localStorage automaticamente</div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+    });
+
+    const el=document.createElement('div');
+    el.className=`sec ${sec.cls} ${complete?'complete':''} ${open?'open':''} ${gated?'gated':''} ${!hasVis?'filter-hidden':''}`;
+    el.id=`s-${sec.id}`;
+    el.innerHTML=`
+      <div class="sec-hdr" onclick="toggleSec('${sec.id}',${gated})">
+        <div class="sec-num">${sec.n}</div>
+        <div class="sec-info">
+          <div class="sec-title">${sec.title}</div>
+          <div class="sec-meta">${done}/${total} tarefas${p0pend?' · '+p0pend+' P0 pendentes':' · P0 ok'}</div>
+        </div>
+        <div class="sec-right">
+          ${dayBdg}
+          <div class="gate-lk">🔒 Gate — finalize P0 anterior</div>
+          <span class="done-bdg">✓ Completo</span>
+          <div class="mini-bar"><div class="mini-fill" style="width:${pct}%"></div></div>
+          <span class="mini-pct">${pct}%</span>
+          <span class="chev">▾</span>
+        </div>
+      </div>
+      <div class="tasks">
+        <div class="outcome"><strong>▸ Resultado esperado:</strong> ${sec.outcome}</div>
+        ${taskRows}
+      </div>`;
+    root.appendChild(el);
+  });
+
+  // Global stats
+  const gp=tAll?Math.round(tDone/tAll*100):0;
+  document.getElementById('gPct').textContent=gp+'%';
+  document.getElementById('gBar').style.width=gp+'%';
+  document.getElementById('sDone').textContent=tDone;
+  document.getElementById('sAll').textContent=tAll;
+  document.getElementById('sP0').textContent=tP0;
+  document.getElementById('sEv').textContent=tEv;
+  document.getElementById('sSecs').textContent=sOK+'/'+stages.length;
+
+  // Block progress row
+  const bpr=document.getElementById('bprogRow');
+  bpr.innerHTML=BLOCKS.map(b=>{
+    const bp=bStats[b.id];
+    const p=bp.all?Math.round(bp.done/bp.all*100):0;
+    return `<div class="bprog ${b.cls}"><div class="bprog-top"><span class="bprog-title">${b.title.replace('BLOCO ','').split('—')[0].trim()}</span><span class="bprog-pct">${p}%</span></div><div class="bprog-track"><div class="bprog-fill" style="width:${p}%"></div></div></div>`;
+  }).join('');
+}
+
+function toggleTask(sid,ti,e){e.stopPropagation();ST[tk(sid,ti)]=!ST[tk(sid,ti)];save();renderAll();}
+function toggleSec(sid,gated){if(gated)return;ST[opk(sid)]=isOp(sid)?false:true;save();renderAll();}
+function toggleEv(sid,ti,e){
+  e.stopPropagation();
+  const k=eok(sid,ti);ST[k]=!ST[k];save();renderAll();
+  setTimeout(()=>{const ta=document.querySelector(`#ea-${sid}-${ti} .ev-inp`);if(ta&&ST[k])ta.focus();},40);
+}
+function saveEv(sid,ti,val){ST[ek(sid,ti)]=val.trim();save();renderAll();}
+function resetAll(){if(!confirm('Resetar todo o progresso, checks e evidências?'))return;ST={};save();init();
+  // Force save the auto injected data
+  save();}
+
+document.querySelectorAll('.fbtn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');AF=b.dataset.f;renderAll();
+}));
+document.getElementById('resetBtn').addEventListener('click',resetAll);
+document.getElementById('resetBtn2').addEventListener('click',resetAll);
+
+function init(){
+  load();
+  SECTIONS.filter(s=>s.type==='stage').forEach(s=>{
+    if(ST[opk(s.id)]===undefined) ST[opk(s.id)]=true;
+  });
+  renderAll();
+}
+init();
+</script>
+</body>
+</html>

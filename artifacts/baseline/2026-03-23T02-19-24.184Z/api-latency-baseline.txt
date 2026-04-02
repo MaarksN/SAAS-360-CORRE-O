@@ -1,0 +1,11 @@
+# API Latency Baseline
+generatedAt: 2026-03-23T02:19:26.724Z
+target: http://127.0.0.1:3000/health
+iterations: 250
+concurrency: 25
+p50Ms: 146.129
+p95Ms: 207.006
+p99Ms: 237.467
+avgMs: 139.014
+minMs: 25.442
+maxMs: 240.481

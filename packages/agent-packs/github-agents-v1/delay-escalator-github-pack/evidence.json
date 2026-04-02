@@ -1,0 +1,25 @@
+{
+  "agentId": "delay-escalator-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent delay-escalator-github-pack (DelayEscalator Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"delay-escalator-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"delay-escalator-github-pack.tool.read\",\n    \"delay-escalator-github-pack.tool.search\",\n    \"delay-escalator-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "203ae1975e7b3901fea9a385aaa312b4ddcb4bc1d74938f6103b33658877ae29"
+  },
+  "generatedAt": "2026-03-24T04:54:31.518Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "delay-escalator-github-pack",
+    "DelayEscalator Agent"
+  ],
+  "sourceChecksum": "4732636482d32b77f80c87970e2c2d28f956e5bc5562222230cf967ab4026360",
+  "sourcePath": ".github/agents/cycle-09/delay-escalator.agent.md"
+}

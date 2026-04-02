@@ -1,0 +1,25 @@
+{
+  "agentId": "product-feedback-looper-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent product-feedback-looper-github-pack (ProductFeedbackLooper Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"product-feedback-looper-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"product-feedback-looper-github-pack.tool.read\",\n    \"product-feedback-looper-github-pack.tool.search\",\n    \"product-feedback-looper-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "5d19c2321481a81ed7a30a658b7bdd492d4439e365f2d1fe8e0a3f588bf2a52e"
+  },
+  "generatedAt": "2026-03-24T04:54:30.901Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "product-feedback-looper-github-pack",
+    "ProductFeedbackLooper Agent"
+  ],
+  "sourceChecksum": "e1dbde24059c8138a9cd6d51078f30da0aee2fac8d1e37f4bb1b0b10949f8c5a",
+  "sourcePath": ".github/agents/cycle-05/product-feedback-looper.agent.md"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@birthub/worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx watch src/index.ts",
+    "lint": "eslint .",
+    "load:test": "node --import tsx src/load/parallelLoad.test.ts",
+    "start": "node dist/apps/worker/src/index.js",
+    "test": "node --import tsx --test src/**/*.test.ts test/**/*.test.ts",
+    "test:isolation": "node --import tsx --test test/**/*.test.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1019.0",
+    "@birthub/agents-core": "workspace:*",
+    "@birthub/config": "workspace:*",
+    "@birthub/database": "workspace:*",
+    "@birthub/logger": "workspace:*",
+    "@birthub/testing": "workspace:*",
+    "@birthub/workflows-core": "workspace:*",
+    "bullmq": "^5.71.0",
+    "ioredis": "^5.10.1",
+    "p-map": "^7.0.4",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "msw": "^2.12.14",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

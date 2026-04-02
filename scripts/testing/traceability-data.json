@@ -1,0 +1,98 @@
+{
+  "generatedFrom": "F5.html",
+  "modules": [
+    {
+      "id": "billing",
+      "title": "Billing and Stripe webhooks",
+      "threshold": 90,
+      "criticalModules": [
+        "apps/api/src/modules/billing/**/*.ts",
+        "apps/api/src/modules/webhooks/stripe.router.ts",
+        "apps/worker/src/jobs/billingExport.ts"
+      ],
+      "flows": [
+        { "name": "checkout creation, locale and tax handling", "tests": ["apps/api/tests/billing.checkout.test.ts"] },
+        { "name": "webhook validation and audit trail", "tests": ["apps/api/tests/billing.webhook.test.ts", "apps/api/tests/billing.webhook-audit.test.ts", "apps/api/tests/billing.webhook-delegation.test.ts"] },
+        { "name": "grace period, cache and idempotency guards", "tests": ["apps/api/tests/billing.cache.test.ts", "apps/api/tests/billing.grace-period.test.ts", "apps/api/tests/billing.idempotency.test.ts"] },
+        { "name": "proration credit, paywall and refund-sensitive states", "tests": ["apps/api/tests/billing.proration-credit.test.ts", "apps/api/tests/billing.paywall.test.ts", "apps/api/tests/billing.snapshot.test.ts"] },
+        { "name": "temporary IP lock and export processing", "tests": ["apps/api/tests/billing.ip-ban.test.ts", "apps/worker/src/jobs/billingExport.test.ts"] }
+      ],
+      "gaps": [
+        "Mutation testing is not automated in the current workspace.",
+        "Release-candidate performance evidence depends on environment-backed executors."
+      ]
+    },
+    {
+      "id": "auth",
+      "title": "Auth, MFA and session lifecycle",
+      "threshold": 90,
+      "criticalModules": [
+        "apps/api/src/modules/auth/**/*.ts",
+        "apps/api/src/modules/sessions/**/*.ts",
+        "apps/api/src/middleware/authentication.ts",
+        "apps/web/app/api/auth/**/*.ts",
+        "packages/auth/src/**/*.ts"
+      ],
+      "flows": [
+        { "name": "login and session creation", "tests": ["apps/api/tests/auth.test.ts", "packages/auth/src/__tests__/auth.test.ts"] },
+        { "name": "MFA enrollment, challenge verification and replay prevention", "tests": ["apps/api/tests/auth.test.ts"] },
+        { "name": "logout, expired sessions and idle timeout enforcement", "tests": ["apps/api/tests/auth.test.ts", "apps/web/tests/auth-session-route.test.ts"] },
+        { "name": "tenant hardening and security edge cases", "tests": ["apps/api/tests/tenant-auth-hardening.test.ts", "apps/api/tests/security.test.ts"] }
+      ],
+      "gaps": [
+        "Lockout counters and mutation resistance still need a dedicated mutation lane.",
+        "Tagged slow/e2e auth flows remain separated from the critical coverage lane."
+      ]
+    },
+    {
+      "id": "agents",
+      "title": "Agents runtime and policy execution",
+      "threshold": 80,
+      "criticalModules": [
+        "packages/agents-core/src/**/*.ts",
+        "packages/agent-runtime/src/**/*.ts",
+        "apps/worker/src/agents/**/*.ts",
+        "apps/worker/src/engine/runner.ts"
+      ],
+      "flows": [
+        { "name": "manifest parsing and runtime contracts", "tests": ["packages/agents-core/src/__tests__/manifest-parser.test.ts", "packages/agents-core/src/__tests__/agent-api-manifest-parser.test.ts", "packages/agent-runtime/src/__tests__/runtime.test.ts"] },
+        { "name": "policy and approval evaluation", "tests": ["packages/agents-core/test/policy.test.ts", "packages/agents-core/test/policyEngine.test.ts"] },
+        { "name": "agent execution, retries and runtime smoke path", "tests": ["apps/worker/src/engine/runner.agent.smoke.test.ts", "apps/worker/src/engine/runner.cancel.test.ts", "apps/worker/src/engine/runner.transitions.test.ts"] }
+      ],
+      "gaps": [
+        "Dead-letter-path assertions still depend on broader orchestrator/python suites.",
+        "Mutation coverage for agents-core is not automated."
+      ]
+    },
+    {
+      "id": "worker",
+      "title": "Worker boot, processing and overload behavior",
+      "threshold": 85,
+      "criticalModules": [
+        "apps/worker/src/**/*.ts"
+      ],
+      "flows": [
+        { "name": "boot contract and request correlation", "tests": ["apps/worker/src/worker.test.ts", "apps/worker/src/job-security.test.ts"] },
+        { "name": "normal processing and workflow execution chain", "tests": ["apps/worker/src/planExecutor.test.ts", "apps/worker/src/engine/runner.workflow-chain.test.ts", "apps/worker/src/engine/runner.http.msw.test.ts"] },
+        { "name": "queue isolation, cleanup and graceful failure paths", "tests": ["apps/worker/test/queue.isolation.test.ts", "apps/worker/test/userCleanup.test.ts", "apps/worker/test/outbound.webhooks.test.ts"] },
+        { "name": "overload and load-sensitive processing", "tests": ["apps/worker/src/load/parallelLoad.test.ts"] }
+      ],
+      "gaps": [
+        "Soak and chaos execution require provisioned Redis/API dependencies.",
+        "Worker modularization report is generated by scripts, not by a single node:test suite."
+      ]
+    }
+  ],
+  "criticalRegressions": [
+    { "id": "billing-proration-credit-idempotency", "tests": ["apps/api/tests/billing.proration-credit.test.ts"] },
+    { "id": "billing-ip-ban-regression", "tests": ["apps/api/tests/billing.ip-ban.test.ts"] },
+    { "id": "auth-mfa-challenge-reuse", "tests": ["apps/api/tests/auth.test.ts"] },
+    { "id": "auth-idle-session-expiry", "tests": ["apps/api/tests/auth.test.ts"] },
+    { "id": "worker-request-correlation-contract", "tests": ["apps/worker/src/worker.test.ts"] }
+  ],
+  "functionalCoverageGaps": [
+    "Mutation testing lane for billing and auth is not yet automated in this workspace.",
+    "Chaos, resilience and soak executions are modeled by scripts and environment gates, not by every default CI run.",
+    "Python orchestration runtime remains partially outside the TS/JS coverage dashboard and is tracked separately by pytest coverage."
+  ]
+}

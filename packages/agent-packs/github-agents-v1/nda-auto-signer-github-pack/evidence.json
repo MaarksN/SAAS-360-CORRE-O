@@ -1,0 +1,25 @@
+{
+  "agentId": "nda-auto-signer-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent nda-auto-signer-github-pack (NDAAutoSigner Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"nda-auto-signer-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"nda-auto-signer-github-pack.tool.read\",\n    \"nda-auto-signer-github-pack.tool.search\",\n    \"nda-auto-signer-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "df5f14eeb9af7b6e741eb07a676b2f4eb5ba4ae884c59743a5cca653e6c304e9"
+  },
+  "generatedAt": "2026-03-24T04:54:32.263Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "nda-auto-signer-github-pack",
+    "NDAAutoSigner Agent"
+  ],
+  "sourceChecksum": "57a9b3ccff8e2dcbbf2291c0e30e17124c320502527584ca985a6226d398a38c",
+  "sourcePath": ".github/agents/cycle-12/nda-auto-signer.agent.md"
+}

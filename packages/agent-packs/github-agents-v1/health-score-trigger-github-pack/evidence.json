@@ -1,0 +1,25 @@
+{
+  "agentId": "health-score-trigger-github-pack",
+  "dryRun": {
+    "logs": [
+      "Simulating agent health-score-trigger-github-pack (HealthScoreTrigger Agent)",
+      "Simulating LLM call...",
+      "Returning MOCK_DATA"
+    ],
+    "output": "{\n  \"agentId\": \"health-score-trigger-github-pack\",\n  \"message\": \"MOCK_DATA\",\n  \"tools\": [\n    \"health-score-trigger-github-pack.tool.read\",\n    \"health-score-trigger-github-pack.tool.search\",\n    \"health-score-trigger-github-pack.tool.agent\"\n  ]\n}",
+    "outputHash": "289a99db4f597718396d07935ef7b516ee350b41f0f718fc15fe6f1e3456183d"
+  },
+  "generatedAt": "2026-03-24T04:54:31.541Z",
+  "runtimeBindings": {
+    "apiBinding": "apps/api/src/modules/marketplace/marketplace-service.ts",
+    "policyEngine": "packages/agents-core/src/policy/engine.ts",
+    "toolAdapterFactory": "apps/worker/src/agents/runtime.tools.ts",
+    "workerBinding": "apps/worker/src/agents/runtime.shared.ts"
+  },
+  "searchQueries": [
+    "health-score-trigger-github-pack",
+    "HealthScoreTrigger Agent"
+  ],
+  "sourceChecksum": "354102822e0fded1bd7029be646232df12d9ff3a7a27b9bd33d8b1433d59eeb8",
+  "sourcePath": ".github/agents/cycle-09/health-score-trigger.agent.md"
+}

@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "type": "command",
+        "windows": ".github/hooks/scripts/pretool-guard.ps1",
+        "timeout": 15
+      }
+    ],
+    "PostToolUse": [
+      {
+        "type": "command",
+        "windows": ".github/hooks/scripts/posttool-validate.ps1",
+        "timeout": 20
+      }
+    ]
+  }
+}
