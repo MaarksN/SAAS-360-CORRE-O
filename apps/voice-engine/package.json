@@ -14,7 +14,7 @@
     "@deepgram/sdk": "^5.0.0",
     "express": "^5.2.1",
     "redis": "^5.11.0",
-    "twilio": "^5.13.0",
+    "twilio": "^5.13.1",
     "ws": "^8.20.0"
   },
   "devDependencies": {
