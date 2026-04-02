@@ -1,5 +1,6 @@
 export * from "./clients/crm";
 export * from "./clients/fiscal";
+export * from "./clients/http";
 export * from "./clients/llm";
 export * from "./clients/payments-br";
 export * from "./clients/signatures";

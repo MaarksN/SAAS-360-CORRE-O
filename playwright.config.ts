@@ -28,6 +28,7 @@ export default defineConfig({
     url: "http://127.0.0.1:3001/",
     reuseExistingServer: true,
     env: {
+      E2E_AGENT_STUDIO_FIXTURE: "1",
       NEXT_PUBLIC_API_URL: "http://127.0.0.1:3001",
       NEXT_PUBLIC_APP_URL: "http://127.0.0.1:3001",
       NEXT_PUBLIC_ENVIRONMENT: "test",

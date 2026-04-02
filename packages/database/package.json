@@ -24,6 +24,7 @@
     "db:seed": "prisma db seed --schema prisma/schema.prisma",
     "lint": "eslint .",
     "test": "node --import tsx --test src/**/*.test.ts test/**/*.test.ts",
+    "test:proof": "node --import tsx --test test/migration.test.ts test/rls.test.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "db:check:all": "node --import tsx scripts/post-migration-checklist.ts",
     "db:check:drift": "node --import tsx scripts/check-schema-drift.ts",

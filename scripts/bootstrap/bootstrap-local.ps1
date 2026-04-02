@@ -181,6 +181,37 @@ if (-not $dockerVersion) {
     Write-Warning "Docker is still missing. Local Postgres 16 / Redis 7 bootstrap via compose remains blocked."
 }
 
+function Invoke-Pnpm {
+    param(
+        [string[]]$Arguments
+    )
+
+    if (Test-Path $portablePnpm) {
+        & $portablePnpm @Arguments
+        return
+    }
+
+    if ($pnpmCommand) {
+        & $pnpmCommand.Source @Arguments
+        return
+    }
+
+    throw "pnpm is required to complete the local bootstrap."
+}
+
+$tsxShim = Join-Path $repoRoot "node_modules\.bin\tsx.cmd"
+$workspaceInstalled = Test-Path $tsxShim
+
+if (-not $workspaceInstalled) {
+    Write-Host ""
+    Write-Host "[bootstrap] Installing workspace dependencies"
+    Invoke-Pnpm @("install", "--frozen-lockfile")
+}
+
+Write-Host ""
+Write-Host "[bootstrap] Generating canonical Prisma client"
+Invoke-Pnpm @("db:generate")
+
 Write-Host ""
 Write-Host "[bootstrap] Next commands"
 Write-Host "  1. pwsh ./ci-local.ps1"

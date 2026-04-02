@@ -3,8 +3,9 @@ import { performance } from "node:perf_hooks";
 import test from "node:test";
 
 import { createPrismaClient } from "@birthub/database";
+import { resolveDatabaseProofUrl } from "../../../tests/support/database-proof.js";
 
-const databaseUrl = process.env.DATABASE_URL ?? "";
+const databaseUrl = resolveDatabaseProofUrl("apps/api/test/performance.test.ts");
 const testIfDatabase = databaseUrl ? test : test.skip;
 
 void testIfDatabase("query com 10k registros de um tenant unico fica abaixo de 100ms", async () => {

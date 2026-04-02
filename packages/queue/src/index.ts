@@ -24,8 +24,8 @@ const DEFAULT_REMOVE_ON_FAIL = { count: 500 };
 const logger = createLogger("queue-manager");
 
 type QueueIdentifier = QueueName | string;
-type ManagedQueue = Queue<any, any, string>;
-type ManagedWorker = Worker<any, any, string>;
+type ManagedQueue = Queue<unknown, unknown, string>;
+type ManagedWorker = Worker<unknown, unknown, string>;
 type ManagedQueueEvents = QueueEvents;
 
 export interface QueueManagerOptions {

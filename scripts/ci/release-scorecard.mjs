@@ -33,10 +33,20 @@ try {
     (doctor.status ?? 1) === 0,
     (doctor.status ?? 1) === 0 ? 'No critical findings in the canonical go-live scope' : 'Critical findings found'
   );
+
+  const databaseProof = runNodeScript('scripts/ci/db-proof-gate.mjs');
+  gate(
+    'Database proof gate',
+    (databaseProof.status ?? 1) === 0,
+    (databaseProof.status ?? 1) === 0
+      ? 'Database proof suites executed with mandatory provisioning'
+      : 'Database proof gate failed'
+  );
 } catch (error) {
   const detail = error instanceof Error ? error.message : String(error);
   gate('Workspace audit',false,detail);
   gate('Monorepo doctor',false,detail);
+  gate('Database proof gate',false,detail);
 }
 
 const hasSecurityReport=fs.existsSync('docs/security/security-coverage-report.md');

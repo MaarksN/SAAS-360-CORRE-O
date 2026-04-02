@@ -1,4 +1,4 @@
-import { postJson } from "./http";
+import { getJson, postJson } from "./http";
 
 export interface FiscalInvoice {
   referenceId: string;
@@ -26,11 +26,40 @@ export interface IFiscalClient {
   getStatus(id: string): Promise<FiscalResponse>;
 }
 
+interface ENotasInvoiceResponse {
+  id: string;
+  linkPdf?: string;
+  linkXml?: string;
+  numeroNfse?: string;
+  status: string;
+}
+
 export class ENotasClient implements IFiscalClient {
   constructor(
     private readonly apiKey: string,
     private readonly baseUrl = "https://api.enotasgw.com.br/v2",
+    private readonly companyId = process.env.ENOTAS_COMPANY_ID ?? "default",
   ) {}
+
+  private buildHeaders(): Record<string, string> {
+    return {
+      Authorization: `Basic ${Buffer.from(`${this.apiKey}:`).toString("base64")}`,
+    };
+  }
+
+  private buildCompanyScopedPath(resourcePath: string): string {
+    return `${this.baseUrl}/empresas/${encodeURIComponent(this.companyId)}${resourcePath}`;
+  }
+
+  private mapFiscalResponse(response: ENotasInvoiceResponse): FiscalResponse {
+    return {
+      id: response.id,
+      status: response.status,
+      ...(response.numeroNfse ? { nfeKey: response.numeroNfse } : {}),
+      ...(response.linkPdf ? { nfeUrl: response.linkPdf } : {}),
+      ...(response.linkXml ? { xmlUrl: response.linkXml } : {}),
+    };
+  }
 
   async emitNFe(
     invoice: FiscalInvoice,
@@ -60,42 +89,39 @@ export class ENotasClient implements IFiscalClient {
       tags: [tenantId],
     };
 
-    const response = await postJson<any>(`${this.baseUrl}/empresas/{empresaId}/nfs-e`, payload, {
-      apiKey: this.apiKey, // eNotas uses Basic Auth or Header API Key
+    const response = await postJson<ENotasInvoiceResponse>(this.buildCompanyScopedPath("/nfs-e"), payload, {
       headers: {
-        Authorization: `Basic ${Buffer.from(this.apiKey + ":").toString("base64")}`,
+        ...this.buildHeaders(),
+        "x-birthub-tenant-id": tenantId,
       },
     });
 
-    return {
-      id: response.id,
-      status: response.status,
-      nfeUrl: response.linkPdf,
-      xmlUrl: response.linkXml,
-    };
+    return this.mapFiscalResponse(response);
   }
 
   async cancelNFe(id: string, reason: string): Promise<FiscalResponse> {
-    // Implement cancellation logic
-    // DELETE /nfs-e/{nfeId}
-    const response = await postJson<any>(
-      `${this.baseUrl}/nfs-e/${id}`,
-      { motivo: reason }, // Usually delete or specific endpoint
+    const response = await postJson<ENotasInvoiceResponse>(
+      this.buildCompanyScopedPath(`/nfs-e/${encodeURIComponent(id)}/cancelar`),
+      { motivo: reason },
       {
-        headers: {
-          Authorization: `Basic ${Buffer.from(this.apiKey + ":").toString("base64")}`,
-        },
+        headers: this.buildHeaders(),
       },
     );
-    return {
-      id,
-      status: "canceled",
-    };
+
+    return this.mapFiscalResponse({
+      ...response,
+      status: response.status || "canceled",
+    });
   }
 
   async getStatus(id: string): Promise<FiscalResponse> {
-    // Implement status check logic (GET)
-    // For now, mock or throw
-    throw new Error("Method not implemented.");
+    const response = await getJson<ENotasInvoiceResponse>(
+      this.buildCompanyScopedPath(`/nfs-e/${encodeURIComponent(id)}`),
+      {
+        headers: this.buildHeaders(),
+      },
+    );
+
+    return this.mapFiscalResponse(response);
   }
 }

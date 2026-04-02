@@ -61,6 +61,84 @@ export interface AgentPoliciesSnapshot {
   runtimeProvider: "manifest-runtime" | "python-orchestrator";
 }
 
+const agentStudioFixture: AgentSnapshot[] = [
+  {
+    catalogAgentId: "catalog-growth-analyst",
+    connectors: {
+      hubspot: true,
+      slack: true
+    },
+    executionCount: 4,
+    executions: [
+      {
+        durationMs: 812,
+        id: "exec-agent-e2e-1",
+        mode: "LIVE",
+        startedAt: "2026-03-30T11:58:00.000Z",
+        status: "SUCCESS"
+      },
+      {
+        durationMs: 1330,
+        id: "exec-agent-e2e-2",
+        mode: "LIVE",
+        startedAt: "2026-03-30T12:10:00.000Z",
+        status: "FAILED"
+      }
+    ],
+    failRate: 0.25,
+    id: "agent-e2e",
+    keywords: ["growth", "pipeline", "signal"],
+    lastRun: "2026-03-30T12:10:00.000Z",
+    logs: ["budget approved", "crm sync complete"],
+    manifest: {
+      agent: {
+        description: "Analisa sinais de pipeline e prepara resposta operacional com memoria compartilhada.",
+        prompt: "Voce e um agente de growth orientado a execucao. Priorize contexto real, risco, orquestracao e saida objetiva."
+      },
+      policies: [
+        {
+          actions: ["tool:execute", "output:write"],
+          effect: "allow",
+          id: "policy-default",
+          name: "Default runtime policy"
+        }
+      ]
+    },
+    name: "Growth Analyst",
+    promptVersions: [],
+    runtimeProvider: "manifest-runtime",
+    sourceStatus: "SYNCED",
+    status: "ACTIVE",
+    tags: ["growth", "ops"],
+    version: "1.4.0"
+  }
+];
+
+const agentStudioPoliciesFixture: AgentPoliciesSnapshot = {
+  managedPolicies: [
+    {
+      actions: ["tool:execute", "output:write"],
+      effect: "allow",
+      enabled: true,
+      id: "managed-default",
+      name: "Managed default"
+    }
+  ],
+  manifestPolicies: [
+    {
+      actions: ["tool:execute", "output:write"],
+      effect: "allow",
+      id: "policy-default",
+      name: "Default runtime policy"
+    }
+  ],
+  runtimeProvider: "manifest-runtime"
+};
+
+function shouldUseAgentStudioFixture(): boolean {
+  return process.env.E2E_AGENT_STUDIO_FIXTURE === "1";
+}
+
 function normalizePromptVersions(manifest: Record<string, unknown>): string[] {
   const manifestAgent =
     "agent" in manifest && typeof manifest.agent === "object" && manifest.agent !== null
@@ -103,6 +181,10 @@ async function fetchJson<T>(path: string): Promise<T> {
 }
 
 export async function listInstalledAgents(): Promise<AgentSnapshot[]> {
+  if (shouldUseAgentStudioFixture()) {
+    return agentStudioFixture.map((agent) => normalizeAgent(agent));
+  }
+
   try {
     const payload = await fetchJson<InstalledAgentsResponse>("/api/v1/agents/installed");
     return payload.agents.map((agent) => normalizeAgent(agent));
@@ -112,6 +194,11 @@ export async function listInstalledAgents(): Promise<AgentSnapshot[]> {
 }
 
 export async function getInstalledAgentById(id: string): Promise<AgentSnapshot | null> {
+  if (shouldUseAgentStudioFixture()) {
+    const agent = agentStudioFixture.find((item) => item.id === id);
+    return agent ? normalizeAgent(agent) : null;
+  }
+
   try {
     const payload = await fetchJson<InstalledAgentResponse>(`/api/v1/agents/installed/${encodeURIComponent(id)}`);
     return normalizeAgent(payload.agent);
@@ -121,6 +208,12 @@ export async function getInstalledAgentById(id: string): Promise<AgentSnapshot |
 }
 
 export async function getInstalledAgentPolicies(id: string): Promise<AgentPoliciesSnapshot | null> {
+  if (shouldUseAgentStudioFixture()) {
+    return agentStudioFixture.some((agent) => agent.id === id)
+      ? agentStudioPoliciesFixture
+      : null;
+  }
+
   try {
     const payload = await fetchJson<{
       policies: AgentPoliciesSnapshot;

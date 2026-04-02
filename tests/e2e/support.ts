@@ -271,3 +271,40 @@ export async function mockEvidenceWorkflowEditor(page: Page): Promise<void> {
     });
   });
 }
+
+export async function mockAgentStudio(page: Page): Promise<void> {
+  await page.route("**/api/v1/agents/installed/agent-e2e/run", async (route) => {
+    await route.fulfill({
+      body: JSON.stringify({
+        executionId: "exec-agent-stream-1",
+        mode: "LIVE"
+      }),
+      contentType: "application/json",
+      status: 202
+    });
+  });
+
+  await page.route("**/api/v1/agents/installed/agent-e2e/run/stream?*", async (route) => {
+    await route.fulfill({
+      body: [
+        'event: log',
+        'data: {"index":1,"message":"Planner validated tenant context."}',
+        "",
+        'event: log',
+        'data: {"index":2,"message":"CRM sync finished without policy violations."}',
+        "",
+        'event: done',
+        'data: {"executionId":"exec-agent-stream-1","status":"SUCCESS","totalLogs":2,"output":{"summary":"Pipeline review completed"}}',
+        ""
+      ].join("\n"),
+      contentType: "text/event-stream",
+      headers: {
+        "cache-control": "no-cache",
+        connection: "keep-alive"
+      },
+      status: 200
+    });
+  });
+
+  await mockExecutionFeedback(page, "exec-agent-stream-1");
+}

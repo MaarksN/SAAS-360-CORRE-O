@@ -1,4 +1,4 @@
-import { postJson } from "./http";
+import { getJson, postJson } from "./http";
 
 export interface Signer {
   email: string;
@@ -32,6 +32,26 @@ export interface ISignaturesClient {
 
   sendForSignature(documentId: string): Promise<void>; // Usually automatic in ClickSign upon creation if configured, or specific action
   getStatus(documentId: string): Promise<SignatureDocument>;
+}
+
+interface ClickSignSignerResponse {
+  email?: string;
+  name?: string;
+  signed_at?: string | null;
+}
+
+interface ClickSignDocumentResponse {
+  downloads?: {
+    original_file_url?: string;
+    signed_file_url?: string;
+  };
+  filename?: string;
+  key?: string;
+  list?: {
+    signers?: ClickSignSignerResponse[];
+  };
+  signers?: ClickSignSignerResponse[];
+  status?: string;
 }
 
 export class ClickSignClient implements ISignaturesClient {
@@ -71,7 +91,7 @@ export class ClickSignClient implements ISignaturesClient {
     // Note: ClickSign API is more complex (upload doc, add signers to list, add list to doc).
     // This is a simplified abstraction.
 
-    const response = await postJson<any>(
+    const response = await postJson<{ document: ClickSignDocumentResponse }>(
       `${this.baseUrl}/documents?access_token=${this.accessToken}`,
       payload,
     );
@@ -89,16 +109,36 @@ export class ClickSignClient implements ISignaturesClient {
   }
 
   async getStatus(documentId: string): Promise<SignatureDocument> {
-    // Need GET request
-    throw new Error("Method not implemented.");
+    const response = await getJson<{ document: ClickSignDocumentResponse }>(
+      `${this.baseUrl}/documents/${documentId}?access_token=${this.accessToken}`,
+    );
+
+    return this._mapResponse(response.document);
   }
 
-  private _mapResponse(doc: any): SignatureDocument {
+  private _mapResponse(doc: ClickSignDocumentResponse): SignatureDocument {
+    const signers = doc.signers ?? doc.list?.signers ?? [];
+    const downloads = doc.downloads
+      ? {
+          ...(doc.downloads.original_file_url
+            ? { original_file_url: doc.downloads.original_file_url }
+            : {}),
+          ...(doc.downloads.signed_file_url
+            ? { signed_file_url: doc.downloads.signed_file_url }
+            : {}),
+        }
+      : undefined;
+
     return {
-      id: doc.key,
-      name: doc.filename,
-      status: doc.status,
-      signers: [], // Map signers from response
+      id: doc.key ?? "",
+      name: doc.filename ?? "",
+      signers: signers.map((signer) => ({
+        email: signer.email ?? "",
+        signed: Boolean(signer.signed_at),
+        ...(signer.signed_at ? { signedAt: new Date(signer.signed_at) } : {}),
+      })),
+      status: doc.status ?? "unknown",
+      ...(downloads && Object.keys(downloads).length > 0 ? { downloads } : {}),
     };
   }
 }

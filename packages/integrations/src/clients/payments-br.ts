@@ -1,4 +1,4 @@
-import { postJson } from "./http";
+import { getJson, postJson } from "./http";
 
 export interface PaymentCustomer {
   name: string;
@@ -37,11 +37,53 @@ export interface IPaymentsClient {
   confirmPayment(paymentId: string, tenantId: string): Promise<PaymentResponse>;
 }
 
+interface PagarmeTransaction {
+  amount?: number;
+  line?: string;
+  qr_code?: string;
+  qr_code_url?: string;
+  url?: string;
+}
+
+interface PagarmeCharge {
+  id: string;
+  last_transaction?: PagarmeTransaction;
+  status: string;
+}
+
+interface PagarmeOrderResponse {
+  charges: PagarmeCharge[];
+  id: string;
+}
+
 export class PagarmeClient implements IPaymentsClient {
   constructor(
     private readonly apiKey: string,
     private readonly baseUrl = "https://api.pagar.me/core/v5",
   ) {}
+
+  private buildHeaders(tenantId?: string): Record<string, string> {
+    return {
+      Authorization: `Basic ${Buffer.from(`${this.apiKey}:`).toString("base64")}`,
+      ...(tenantId ? { "x-birthub-tenant-id": tenantId } : {}),
+    };
+  }
+
+  private mapPaymentResponse(response: PagarmeOrderResponse, fallbackAmount: number): PaymentResponse {
+    const charge = response.charges[0];
+    const transaction = charge?.last_transaction;
+
+    return {
+      id: response.id,
+      status: charge?.status ?? "unknown",
+      amount: transaction?.amount ? transaction.amount / 100 : fallbackAmount,
+      ...(charge?.id ? { gatewayId: charge.id } : {}),
+      ...(transaction?.line ? { barCode: transaction.line } : {}),
+      ...(transaction?.url ? { boletoUrl: transaction.url } : {}),
+      ...(transaction?.qr_code ? { qrCode: transaction.qr_code } : {}),
+      ...(transaction?.qr_code_url ? { qrCodeUrl: transaction.qr_code_url } : {}),
+    };
+  }
 
   async generatePix(
     amount: number,
@@ -84,26 +126,10 @@ export class PagarmeClient implements IPaymentsClient {
       },
     };
 
-    const response = await postJson<any>(`${this.baseUrl}/orders`, payload, {
-      apiKey: this.apiKey, // Uses Basic Auth actually, but let's assume Bearer or header injection in postJson handles it if adapted.
-      // Pagar.me uses Basic Auth with API Key as username and empty password.
-      // postJson uses Bearer. I might need to adjust or override headers.
-      headers: {
-        Authorization: `Basic ${Buffer.from(this.apiKey + ":").toString("base64")}`,
-      },
+    const response = await postJson<PagarmeOrderResponse>(`${this.baseUrl}/orders`, payload, {
+      headers: this.buildHeaders(tenantId),
     });
-
-    const charge = response.charges[0];
-    const txn = charge.last_transaction;
-
-    return {
-      id: response.id,
-      gatewayId: charge.id,
-      status: charge.status,
-      amount: amount,
-      qrCode: txn.qr_code,
-      qrCodeUrl: txn.qr_code_url,
-    };
+    return this.mapPaymentResponse(response, amount);
   }
 
   async generateBoleto(
@@ -142,34 +168,23 @@ export class PagarmeClient implements IPaymentsClient {
       },
     };
 
-    const response = await postJson<any>(`${this.baseUrl}/orders`, payload, {
-      headers: {
-        Authorization: `Basic ${Buffer.from(this.apiKey + ":").toString("base64")}`,
-      },
+    const response = await postJson<PagarmeOrderResponse>(`${this.baseUrl}/orders`, payload, {
+      headers: this.buildHeaders(tenantId),
     });
-
-    const charge = response.charges[0];
-    const txn = charge.last_transaction;
-
-    return {
-      id: response.id,
-      gatewayId: charge.id,
-      status: charge.status,
-      amount: amount,
-      boletoUrl: txn.url,
-      barCode: txn.line,
-    };
+    return this.mapPaymentResponse(response, amount);
   }
 
   async confirmPayment(
     paymentId: string,
     tenantId: string,
   ): Promise<PaymentResponse> {
-    // Usually via Webhook, but if manual check is needed:
-    // GET /orders/{id}
-    // postJson only supports POST. I might need getJson in http.ts or just fetch here.
-    // For now, I'll simulate or skip.
-    // Assuming we implement GET support later.
-    throw new Error("Method not implemented.");
+    const response = await getJson<PagarmeOrderResponse>(
+      `${this.baseUrl}/orders/${encodeURIComponent(paymentId)}`,
+      {
+        headers: this.buildHeaders(tenantId),
+      },
+    );
+
+    return this.mapPaymentResponse(response, 0);
   }
 }

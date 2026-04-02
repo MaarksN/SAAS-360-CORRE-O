@@ -66,6 +66,7 @@
     "test:satellites": "node scripts/ci/run-satellites.mjs test",
     "test:workspace": "turbo run test",
     "test:isolation": "node scripts/ci/run-pnpm.mjs -r --if-present --filter=@birthub/api --filter=@birthub/worker run test:isolation",
+    "test:db:proof": "corepack pnpm --filter @birthub/database test:proof && corepack pnpm --filter @birthub/api test:performance",
     "test:workflows": "corepack pnpm --filter @birthub/workflows-core test && corepack pnpm --filter @birthub/worker test && corepack pnpm workflow:coverage",
     "workflow:coverage": "node --import tsx scripts/verify-workflow-step-coverage.ts",
     "test:auth": "corepack pnpm --filter @birthub/api test:auth",

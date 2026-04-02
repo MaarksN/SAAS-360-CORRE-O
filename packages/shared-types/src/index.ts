@@ -1,4 +1,13 @@
-export interface BaseResponse<T = any> {
+export type JsonPrimitive = boolean | null | number | string;
+export type JsonValue = JsonArray | JsonObject | JsonPrimitive;
+
+export interface JsonArray extends Array<JsonValue> {}
+
+export interface JsonObject {
+  [key: string]: JsonValue;
+}
+
+export interface BaseResponse<T = unknown> {
   success: boolean;
   data?: T;
   error?: string;
@@ -174,15 +183,15 @@ export interface Lead {
   icpScore: number;
   icpTier?: string | null;
   intentScore: number;
-  techStack?: any | null; // Json
-  orgChart?: any | null; // Json
-  financialData?: any | null; // Json
-  intentSignals?: any | null; // Json
+  techStack?: JsonValue | null;
+  orgChart?: JsonValue | null;
+  financialData?: JsonValue | null;
+  intentSignals?: JsonValue | null;
   emailValid: boolean;
   emailStatus?: string | null;
   status: LeadStatus;
   source?: string | null;
-  utmData?: any | null; // Json
+  utmData?: JsonValue | null;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -201,12 +210,12 @@ export interface Deal {
   forecastCategory?: string | null;
   expectedCloseDate?: Date | null;
   actualCloseDate?: Date | null;
-  products?: any | null; // Json
+  products?: JsonValue | null;
   discountPct: number;
   finalValue?: number | null;
-  competitors?: any | null; // Json
-  stakeholders?: any | null; // Json
-  objections?: any | null; // Json
+  competitors?: JsonValue | null;
+  stakeholders?: JsonValue | null;
+  objections?: JsonValue | null;
   callNotes?: string | null;
   createdAt: Date;
   updatedAt: Date;
@@ -219,7 +228,7 @@ export interface Activity {
   agentId: string;
   type: ActivityType;
   channel?: string | null;
-  content: any; // Json
+  content: JsonValue;
   outcome?: string | null;
   createdAt: Date;
 }
@@ -248,7 +257,7 @@ export interface Customer {
   healthStatus: string;
   lastLoginAt?: Date | null;
   loginFrequency?: number | null;
-  featureAdoption?: any | null; // Json
+  featureAdoption?: JsonValue | null;
   supportSentiment?: string | null;
   mrr: number;
   planId: string;
@@ -273,17 +282,17 @@ export interface Contract {
   fileUrl?: string | null;
   version: number;
   riskScore?: number | null;
-  redFlags?: any | null; // Json
+  redFlags?: JsonValue | null;
   summary?: string | null;
   docusignId?: string | null;
   clicksignId?: string | null;
-  signatories?: any | null; // Json
+  signatories?: JsonValue | null;
   signedAt?: Date | null;
   startDate?: Date | null;
   endDate?: Date | null;
   renewalDate?: Date | null;
   kycStatus?: string | null;
-  kycData?: any | null; // Json
+  kycData?: JsonValue | null;
   amlStatus?: string | null;
   createdAt: Date;
   updatedAt: Date;
@@ -345,8 +354,8 @@ export interface AgentLog {
   agentName: string;
   jobId?: string | null;
   action: string;
-  input?: any | null; // Json
-  output?: any | null; // Json
+  input?: JsonValue | null;
+  output?: JsonValue | null;
   tokensIn?: number | null;
   tokensOut?: number | null;
   durationMs?: number | null;

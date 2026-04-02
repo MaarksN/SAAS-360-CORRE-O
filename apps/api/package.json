@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "start": "node dist/apps/api/src/server.js",
     "test:auth": "node --import tsx --test tests/auth.test.ts",
+    "test:performance": "node --import tsx --test test/performance.test.ts",
     "test:rbac": "node --import tsx --test tests/rbac.test.ts",
     "test:security": "node --import tsx --test tests/security.test.ts",
     "test": "node --import tsx --test tests/**/*.test.ts test/**/*.test.ts",

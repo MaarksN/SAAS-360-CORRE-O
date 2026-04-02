@@ -76,6 +76,11 @@ const stepDefinitions = {
   "build:core": { kind: "pnpm", args: ["build:core"], env: { NODE_ENV: "production" } },
   "build:satellites": { kind: "pnpm", args: ["build:satellites"], env: { NODE_ENV: "production" } },
   "db:generate": { kind: "pnpm", args: ["db:generate"] },
+  "db:proof": {
+    kind: "pnpm",
+    args: ["test:db:proof"],
+    env: { REQUIRE_DATABASE_PROOF: "1" }
+  },
   install: { kind: "pnpm", args: ["install", "--frozen-lockfile"] },
   "lint:workflows": { kind: "pnpm", args: ["lint:workflows"] },
   lint: { kind: "pnpm", args: ["lint"] },
@@ -131,6 +136,7 @@ const taskGroups = {
     "lint:core",
     "typecheck:core",
     "test:core",
+    "db:proof",
     "test:isolation",
     "build:core"
   ],
@@ -213,6 +219,16 @@ const target = parseTarget(mode, rest);
 const ciEnvironmentDefaults = await buildCiEnvironmentDefaults();
 
 logInfrastructureWarnings(ciEnvironmentDefaults);
+
+if (
+  ["core", "full", "platform"].includes(target) &&
+  !("DATABASE_URL" in ciEnvironmentDefaults)
+) {
+  console.error(
+    "[agent-ci] DATABASE_URL is required for canonical core/full validation because the database proof gate is mandatory."
+  );
+  process.exit(1);
+}
 
 try {
   runTask(target, ciEnvironmentDefaults);

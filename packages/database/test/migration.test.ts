@@ -3,9 +3,10 @@ import test from "node:test";
 
 import { WorkflowStatus } from "@prisma/client";
 
+import { resolveDatabaseProofUrl } from "../../../tests/support/database-proof.js";
 import { createPrismaClient } from "../src/client.js";
 
-const databaseUrl = process.env.DATABASE_URL ?? "";
+const databaseUrl = resolveDatabaseProofUrl("packages/database/test/migration.test.ts");
 const testIfDatabase = databaseUrl ? test : test.skip;
 
 void testIfDatabase("migracao preserva integridade referencial por tenant", async () => {

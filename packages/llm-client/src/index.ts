@@ -20,6 +20,10 @@ export interface LLMConfig {
   fallbackOrder?: LLMProvider[];
 }
 
+function toError(error: unknown, fallbackMessage: string): Error {
+  return error instanceof Error ? error : new Error(fallbackMessage);
+}
+
 export class LLMClient implements ILLMClient {
   private clients: Partial<Record<LLMProvider, ILLMClient>> = {};
   private fallbackOrder: LLMProvider[];
@@ -55,7 +59,7 @@ export class LLMClient implements ILLMClient {
     messages: Message[],
     options?: CompletionOptions,
   ): Promise<CompletionResponse> {
-    let lastError: any;
+    let lastError: unknown;
 
     for (const provider of this.fallbackOrder) {
       const client = this.clients[provider];
@@ -66,19 +70,19 @@ export class LLMClient implements ILLMClient {
         const result = await client.chat(messages, options);
         return result;
       } catch (error) {
-        logger.warn(`LLM call failed with provider ${provider}:`, error);
+        logger.warn(`LLM call failed with provider ${provider}.`, error);
         lastError = error;
       }
     }
 
-    throw lastError || new Error("All LLM providers failed or not configured.");
+    throw toError(lastError, "All LLM providers failed or not configured.");
   }
 
   async *stream(
     messages: Message[],
     options?: CompletionOptions,
   ): AsyncGenerator<string, void, unknown> {
-    let lastError: any;
+    let lastError: unknown;
 
     for (const provider of this.fallbackOrder) {
       const client = this.clients[provider];
@@ -91,11 +95,11 @@ export class LLMClient implements ILLMClient {
         }
         return;
       } catch (error) {
-        logger.warn(`LLM stream failed with provider ${provider}:`, error);
+        logger.warn(`LLM stream failed with provider ${provider}.`, error);
         lastError = error;
       }
     }
 
-    throw lastError || new Error("All LLM providers failed or not configured.");
+    throw toError(lastError, "All LLM providers failed or not configured.");
   }
 }
