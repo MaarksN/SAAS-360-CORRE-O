@@ -14,7 +14,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1019.0",
+    "@aws-sdk/client-s3": "^3.1022.0",
     "@birthub/agents-core": "workspace:*",
     "@birthub/config": "workspace:*",
     "@birthub/database": "workspace:*",
