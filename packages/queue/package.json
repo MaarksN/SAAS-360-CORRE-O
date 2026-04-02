@@ -6,7 +6,7 @@
   "dependencies": {
     "@birthub/logger": "workspace:*",
     "@birthub/shared-types": "workspace:*",
-    "bullmq": "^5.71.0",
+    "bullmq": "^5.72.1",
     "ioredis": "^5.10.1"
   },
   "devDependencies": {

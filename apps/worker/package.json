@@ -21,7 +21,7 @@
     "@birthub/logger": "workspace:*",
     "@birthub/testing": "workspace:*",
     "@birthub/workflows-core": "workspace:*",
-    "bullmq": "^5.71.0",
+    "bullmq": "^5.72.1",
     "ioredis": "^5.10.1",
     "p-map": "^7.0.4",
     "zod": "^4.3.6"
