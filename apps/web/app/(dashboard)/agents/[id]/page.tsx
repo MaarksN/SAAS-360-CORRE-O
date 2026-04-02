@@ -4,8 +4,13 @@ import { notFound } from "next/navigation";
 import { AgentDetailTabs } from "../../../../components/agents/agent-detail-tabs";
 import { getInstalledAgentById } from "../../../../lib/agents";
 
-export default async function AgentDetailPage({ params }: Readonly<{ params: { id: string } }>) {
-  const agent = await getInstalledAgentById(params.id);
+interface AgentDetailPageProps {
+  params: Promise<{ id: string }>;
+}
+
+export default async function AgentDetailPage({ params }: Readonly<AgentDetailPageProps>) {
+  const { id } = await params;
+  const agent = await getInstalledAgentById(id);
 
   if (!agent) {
     notFound();

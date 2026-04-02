@@ -60,13 +60,14 @@
       "id": "TD-005",
       "title": "OpenAPI coverage is still partial for the full apps/api surface",
       "domain": "api",
-      "status": "open",
+      "status": "closed",
       "priority": "P1",
       "owner": "API Core",
-      "residualRisk": "high",
+      "residualRisk": "low",
       "evidence": [
+        "apps/api/src/docs/openapi.catalog.ts",
         "apps/api/src/docs/openapi.ts",
-        "docs/f10/architecture.md"
+        "apps/api/tests/openapi.coverage.test.ts"
       ]
     },
     {
@@ -110,7 +111,7 @@
     {
       "sprint": "2026-S12",
       "opened": 2,
-      "closed": 4
+      "closed": 5
     }
   ],
   "debtFeatureRatio": [
@@ -128,16 +129,16 @@
     },
     {
       "sprint": "2026-S12",
-      "debtClosed": 4,
+      "debtClosed": 5,
       "featuresClosed": 8,
-      "ratio": 0.5
+      "ratio": 0.63
     }
   ],
   "focusAreas": [
     {
       "domain": "api",
-      "risk": "high",
-      "action": "Expand OpenAPI route registration from the canonical modules before the next external integration release."
+      "risk": "low",
+      "action": "Maintain the canonical OpenAPI catalog and the coverage test to keep runtime routes and public contract aligned."
     },
     {
       "domain": "architecture",

@@ -295,6 +295,7 @@ export async function mockAgentStudio(page: Page): Promise<void> {
         "",
         'event: done',
         'data: {"executionId":"exec-agent-stream-1","status":"SUCCESS","totalLogs":2,"output":{"summary":"Pipeline review completed"}}',
+        "",
         ""
       ].join("\n"),
       contentType: "text/event-stream",

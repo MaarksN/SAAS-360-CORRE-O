@@ -13,6 +13,10 @@ All notable technical debt changes are documented here by sprint.
 ### Fixed
 - Corrected root documentation entrypoints in `README.md`.
 - Replaced thin onboarding and operations notes with operationally useful guides.
+- Expanded the canonical OpenAPI registry in `apps/api` and added an automated coverage proof for runtime route parity.
+- Added a mandatory database proof gate to CI/release validation for RLS and performance coverage.
+- Completed the BR payments, fiscal and signature integration status flows with shared HTTP retry/error handling and contract tests.
+- Unblocked the Agent Studio E2E critical flow with fixture-backed installed agents and a valid SSE mock.
 
 ### Evidence
 - `README.md`
@@ -20,6 +24,11 @@ All notable technical debt changes are documented here by sprint.
 - `docs/runbooks/deploy-canonical-stack.md`
 - `scripts/docs/check-doc-links.mjs`
 - `.github/workflows/ci.yml`
+- `apps/api/src/docs/openapi.catalog.ts`
+- `apps/api/tests/openapi.coverage.test.ts`
+- `scripts/ci/db-proof-gate.mjs`
+- `packages/integrations/src/clients/http.test.ts`
+- `tests/e2e/agent-studio.spec.ts`
 
 ## [2026-S11]
 
